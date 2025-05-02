@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plantas &amp; Gatos</title>
+<style>
+    :root {
+      --cor-branca: #FFFFFF;
+      --verde-oceanico: #367D8A;
+      --verde-profundo: #285F6B;
+      --verde-escuro: #133336;
+      --preto-absoluto: #010001;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background-color: var(--preto-absoluto);
+      color: var(--cor-branca);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--verde-profundo);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    nav {
+      background-color: var(--verde-escuro);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: var(--cor-branca);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    section h2 {
+      color: var(--verde-oceanico);
+      margin-bottom: 1rem;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .galeria div {
+      background-color: var(--verde-escuro);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .galeria div img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: var(--verde-profundo);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+<header>
+<h1>Plantas &amp; Gatos</h1>
+<p>Estética, segurança e natureza para felinos e humanos</p>
+</header>
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#seguras">Plantas Seguras</a>
+<a href="#toxicas">Tóxicas</a>
+<a href="#paisagistas">Para Paisagistas</a>
+<a href="#contato">Contato</a>
+<a href="sobre.html" style="color: var(--cor-branca); text-decoration: none; font-weight: bold;">Sobre o Projeto</a></nav>
+<section id="sobre">
+<h2>Sobre o Projeto</h2>
+<p>Nosso objetivo é harmonizar o amor por plantas e gatos, fornecendo conhecimento confiável e bom gosto. Criamos um guia visual e técnico que auxilia tutores e paisagistas a fazer escolhas seguras e elegantes.</p>
+</section>
+<section id="seguras">
+<h2>Plantas Seguras</h2>
+<div class="galeria">
+<div><img alt="Calathea" src="img/calathea.jpg"/><p>Calathea</p></div>
+<div><img alt="Palmeira Areca" src="img/areca.jpg"/><p>Palmeira Areca</p></div>
+<div><img alt="Fittonia" src="img/fittonia.jpg"/><p>Fittonia</p></div>
+</div>
+</section>
+<section id="toxicas">
+<h2>Plantas Tóxicas</h2>
+<div class="galeria">
+<div><img alt="Lírio" src="img/lirio.jpg"/><p>Lírio</p></div>
+<div><img alt="Comigo-ninguém-pode" src="img/comigo-ninguem-pode.jpg"/><p>Comigo-ninguém-pode</p></div>
+<div><img alt="Espada de São Jorge" src="img/espada-sao-jorge.jpg"/><p>Espada de São Jorge</p></div>
+</div>
+</section>
+<section id="paisagistas">
+<h2>Para Paisagistas</h2>
+<p>Este espaço é dedicado a profissionais que desejam projetar ambientes elegantes e seguros. Oferecemos sugestões, estudos de caso e lista de plantas compatíveis com ambientes internos e pets.</p>
+</section>
+<section id="contato">
+<h2>Contato</h2>
+<p>Envie dúvidas, sugestões ou parcerias para: <a href="mailto:contato@plantasegatos.com" style="color: var(--verde-oceanico);">contato@plantasegatos.com</a></p>
+</section>
+<footer>
+<p>© 2025 Plantas &amp; Gatos. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
