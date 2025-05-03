@@ -3,13 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre</title>
+  <title>Sobre o Projeto Plantas & Gatos</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    main {
+      margin-left: 40px;
+      margin-right: 340px;
+      padding: 2em 1em 2em 1.5em;
+      width: calc(100% - 500px);
+      max-width: none;
+    }
+
+    aside {
+      position: fixed;
+      top: 350px;
+      right: 0;
+      height: calc(100% - 100px);
+      width: 340px;
+      background-color: #1A3A36;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      padding-top: 1em;
+      z-index: 998;
+    }
+
+    aside nav ul {
+      list-style: none;
+      padding: 0 1em;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    aside nav ul li {
+      margin: 1em 0;
+    }
+
+    aside nav ul li a {
+      color: #E8DCC3;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 1024px) {
+      aside {
+        position: static;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1em;
+      }
+
+      aside nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+      }
+
+      aside nav ul li {
+        margin: 0.5em 1em;
+      }
+
+      main {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      aside nav ul li a {
+        font-size: 1em;
+      }
+
+      img[alt="Safira e nossa história"] {
+        position: static !important;
+        max-width: 80vw;
+        display: block;
+        margin: 1em auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Plantas & Gatos</h1>
+    <img src="IMG/safira-sobre.png" alt="Safira e nossa história" style="
+      position: fixed;
+      top: 120px;
+      right: 40px;
+      max-width: 300px;
+      width: 25vw;
+      z-index: 999;
+      pointer-events: none;
+      filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));">
     <p>Estética, verdura e segurança para amigos felinos</p>
+  </header>
+
+  <main>
+    <section class="conteudo-sobre" style="padding: 2em 1em; background-color: #E8DCC3;">
+      <h2>Sobre o projeto</h2>
+      <p>Plantas & Gatos nasceu da paixão por ambientes verdes e seguros, onde o design encontra o bem-estar animal. Nosso objetivo é informar, inspirar e ajudar tutores a cultivar beleza sem abrir mão da segurança dos seus felinos.</p>
+    </section>
+  </main>
+
+  <aside>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -21,25 +125,7 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
-  </header>
-
-  <!-- SAFIRA E SUA TUTORA FLUTUANTE -->
-  <img src="IMG/safira-sobre.png" alt="Safira com sua tutora" style="
-    position: fixed;
-    top: 120px;
-    right: 40px;
-    max-width: 280px;
-    width: 24vw;
-    z-index: 999;
-    pointer-events: none;
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));">
-
-  <main>
-    <section class="conteudo-sobre" style="padding: 2em 1em; background-color: #E8DCC3;">
-      <h2>Sobre o Projeto</h2>
-      <p>Este site nasceu do carinho por uma companheira felina especial — a Safira — e da busca por harmonia entre plantas, beleza e segurança em casa. Aqui, reunimos tudo o que aprendemos sobre criar ambientes bonitos e seguros para nossos amigos de quatro patas, com afeto, cuidado e inspiração.</p>
-    </section>
-  </main>
+  </aside>
 
   <footer>
     <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
