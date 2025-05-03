@@ -23,37 +23,18 @@
     </nav>
   </header>
 
-  <!-- Banner Rotativo - Carousel Simples para index.html -->
-  <div class="carousel" style="position: relative; overflow: hidden; max-width: 100%; height: 360px; background-color: #E8DCC3;">
-    <div class="slides" style="display: flex; transition: transform 0.5s ease; width: 300%;">
+  <!-- SAFIRA FLUTUANTE FIXA -->
+  <img src="IMG/Safira-esguia.png" alt="Safira esguia flutuante" style="
+    position: fixed;
+    top: 120px;
+    right: 40px;
+    max-width: 300px;
+    width: 25vw;
+    z-index: 999;
+    pointer-events: none;
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));">
 
-      <!-- Slide 1 -->
-      <div class="slide" style="flex: 1 0 100%; display: flex; align-items: center; justify-content: center;">
-        <img src="IMG/safira-plantas.png" alt="Plantas seguras" style="max-height: 320px;">
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="slide" style="flex: 1 0 100%; display: flex; align-items: center; justify-content: center;">
-        <img src="IMG/safira-decoracao.png" alt="Decoração aconchegante" style="max-height: 320px;">
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="slide" style="flex: 1 0 100%; display: flex; align-items: center; justify-content: center;">
-        <img src="IMG/safira-produtos.png" alt="Produtos recomendados" style="max-height: 320px;">
-      </div>
-    </div>
-  </div>
-
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelector('.slides');
-    const totalSlides = 3;
-
-    setInterval(() => {
-      slideIndex = (slideIndex + 1) % totalSlides;
-      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-    }, 15000);
-  </script>
+  
 
   <main>
     <section class="post-preview">
@@ -81,3 +62,4 @@
   </footer>
 </body>
 </html>
+
