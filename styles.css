@@ -1,1 +1,95 @@
-/* Paleta de cores e estilos aplicados */...
+/* Paleta base:
+   #1A3A36 – Verde escuro (fundo/header)
+   #287D72 – Verde médio (detalhes/hover)
+   #E8DCC3 – Bege claro (fundo suave/texto)
+   #D9A744 – Amarelo queimado (chamada/links)
+   #B66527 – Marrom telha (botões/destaques)
+*/
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #E8DCC3;
+  color: #1A3A36;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1A3A36;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #E8DCC3;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #E8DCC3;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #287D72;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.post-preview {
+  background-color: #fff;
+  border-left: 5px solid #B66527;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.post-preview h2 {
+  margin-top: 0;
+  color: #1A3A36;
+}
+
+.post-preview a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #D9A744;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.post-preview a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #1A3A36;
+  color: #E8DCC3;
+  margin-top: 3rem;
+}
