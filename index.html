@@ -27,6 +27,7 @@
       flex-direction: column;
       padding-top: 1em;
       z-index: 998;
+      transition: transform 0.3s ease;
     }
 
     aside nav ul {
@@ -49,28 +50,39 @@
       font-weight: bold;
     }
 
-    /* Responsividade para tablets */
+    /* Botão do menu */
+    #menu-toggle {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      background: none;
+      border: none;
+      color: #1A3A36;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    /* Responsividade para tablets e celulares */
     @media screen and (max-width: 1024px) {
       aside {
-        position: static;
-        width: 100%;
-        height: auto;
-        box-shadow: none;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 1em;
+        transform: translateX(100%);
+        width: 260px;
+        top: 0;
+        right: 0;
+        height: 100%;
+        position: fixed;
+        padding-top: 4em;
+        background-color: #1A3A36;
       }
 
-      aside nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
+      aside.active {
+        transform: translateX(0);
       }
 
-      aside nav ul li {
-        margin: 0.5em 1em;
+      #menu-toggle {
+        display: block;
       }
 
       main {
@@ -79,7 +91,6 @@
       }
     }
 
-    /* Responsividade para celulares */
     @media screen and (max-width: 768px) {
       aside nav ul li a {
         font-size: 1em;
@@ -95,6 +106,8 @@
   </style>
 </head>
 <body>
+  <button id="menu-toggle">&#9776;</button>
+
   <header>
     <h1>Plantas & Gatos</h1>
     <img src="IMG/Safira-esguia.png" alt="Safira no cabeçalho" style="
@@ -111,32 +124,30 @@
   </header>
 
   <main>
-   <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-  <h2>Fitônias. Seus lares mais verdes e bichanos seguros</h2>
-  <p>Descubra por que essa planta vibrante e segura é a favorita entre quem ama gatos e ambientes vivos.</p>
-  <a href="fitonia.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-</section>
+    <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
+      <h2>Fitônias. Seus lares mais verdes e bichanos seguros</h2>
+      <p>Descubra por que essa planta vibrante e segura é a favorita entre quem ama gatos e ambientes vivos.</p>
+      <a href="fitonia.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
+    </section>
 
     <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-  <h2>Quer fazer uma surpresa a alguém?</h2>
-  <p>Antes de entregar flores, descubra quais encantam sem colocar os gatos em risco.</p>
-  <a href="surpresa.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-</section>
-
+      <h2>Quer fazer uma surpresa a alguém?</h2>
+      <p>Antes de entregar flores, descubra quais encantam sem colocar os gatos em risco.</p>
+      <a href="surpresa.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
+    </section>
 
     <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-  <h2>Óleos essenciais, gatos e plantas: cuidado redobrado</h2>
-  <p>O aroma que relaxa você pode intoxicar seu gato — e até suas plantas. Descubra como proteger todos os sentidos do seu lar.</p>
-  <a href="oleos.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-</section>
+      <h2>Óleos essenciais, gatos e plantas: cuidado redobrado</h2>
+      <p>O aroma que relaxa você pode intoxicar seu gato — e até suas plantas. Descubra como proteger todos os sentidos do seu lar.</p>
+      <a href="oleos.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
+    </section>
 
-  <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-  <img src="IMG/decor-prateleira.png" alt="Decoração segura com prateleiras e plantas" style="width: 100%; border-radius: 12px; margin-bottom: 1em;" />
-  <h2>3 ideias para decorar com charme e segurança</h2>
-  <p>Ambientes lindos, vivos e seguros para todos — inclusive seus felinos.</p>
-  <a href="decor-dicas.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-</section>
-
+    <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
+      <img src="IMG/decor-prateleira.png" alt="Decoração segura com prateleiras e plantas" style="width: 100%; border-radius: 12px; margin-bottom: 1em;" />
+      <h2>3 ideias para decorar com charme e segurança</h2>
+      <p>Ambientes lindos, vivos e seguros para todos — inclusive seus felinos.</p>
+      <a href="decor-dicas.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
+    </section>
   </main>
 
   <aside>
@@ -153,7 +164,7 @@
     </nav>
   </aside>
 
-    <footer>
+  <footer>
     <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
     <p>Contato: <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a></p>
     <p>
@@ -163,6 +174,14 @@
     </p>
   </footer>
 
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const asideMenu = document.querySelector('aside');
+
+    toggleBtn.addEventListener('click', () => {
+      asideMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
 
