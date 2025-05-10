@@ -1,150 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plantas Seguras para Gatos</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantas Seguras</title>
   <style>
-    main {
-      margin-left: 40px;
-      margin-right: 340px;
-      padding: 2em 1em 2em 1.5em;
-      width: calc(100% - 500px);
-      max-width: none;
-    }
-
-    aside {
-      position: fixed;
-      top: 350px;
-      right: 0;
-      height: calc(100% - 100px);
-      width: 340px;
-      background-color: #1A3A36;
-      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfcfb;
       display: flex;
       flex-direction: column;
-      padding-top: 1em;
-      z-index: 998;
+      align-items: center;
+      gap: 2em;
+      padding: 2em;
     }
-
-    aside nav ul {
-      list-style: none;
-      padding: 0 1em;
+    .filtros {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .filtros button {
+      background: #285F6B;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .filtros button:hover {
+      background: #133336;
+    }
+    .plant-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+      max-width: 1200px;
+    }
+    .plant-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.6s ease;
+    }
+    .plant-card:hover {
+      transform: rotateY(10deg) scale(1.03);
+    }
+    .plant-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .plant-card .content {
+      padding: 1em;
+    }
+    .plant-card h2 {
       margin: 0;
+      font-size: 1.2em;
+    }
+    .sci-name {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 0.5em;
+    }
+    .icons {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      gap: 0.4em;
     }
-
-    aside nav ul li {
-      margin: 1em 0;
+    .icons p {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin: 0;
+      font-size: 0.9em;
     }
-
-    aside nav ul li a {
-      color: #E8DCC3;
+    .description {
+      margin-top: 1em;
+      font-size: 0.85em;
+      color: #333;
+    }
+    .voltar {
+      margin-top: 2em;
+    }
+    .voltar a {
       text-decoration: none;
-      font-size: 1.2em;
-      font-weight: bold;
+      background: #285F6B;
+      color: white;
+      padding: 0.6em 1.2em;
+      border-radius: 8px;
+      font-size: 0.95em;
+      transition: background 0.3s;
     }
-
-    @media screen and (max-width: 1024px) {
-      aside {
-        position: static;
-        width: 100%;
-        height: auto;
-        box-shadow: none;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 1em;
-      }
-
-      aside nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-      }
-
-      aside nav ul li {
-        margin: 0.5em 1em;
-      }
-
-      main {
-        margin: 0;
-        width: 100%;
-      }
+    .voltar a:hover {
+      background: #133336;
     }
-
-    @media screen and (max-width: 768px) {
-      aside nav ul li a {
-        font-size: 1em;
-      }
-
-      img[alt="Safira entre as plantas"] {
-        position: static !important;
-        max-width: 80vw;
-        display: block;
-        margin: 1em auto;
-      }
+    .hidden {
+      display: none !important;
     }
   </style>
 </head>
 <body>
-  <button id="menu-toggle">&#9776;</button>
+  <div class="filtros">
+    <button onclick="filtrar('luz-baixa')">Luz Baixa</button>
+    <button onclick="filtrar('rega-frequente')">Rega Frequente</button>
+    <button onclick="filtrar('resistente')">Resistente</button>
+    <button onclick="filtrar('todos')">Mostrar Todas</button>
+  </div>
 
-  <header>
-    <h1>Plantas & Gatos</h1>
-    <img src="IMG/safira-plantas.png" alt="Safira entre as plantas" style="
-      position: fixed;
-      top: 120px;
-      right: 40px;
-      max-width: 300px;
-      width: 25vw;
-      z-index: 999;
-      pointer-events: none;
-      filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));">
-    <p>Estética, verdura e segurança para amigos felinos</p>
-  </header>
+  <div class="plant-grid">
+    <div class="plant-card luz-baixa" onclick="location.href='pilea.html'">
+      <img src="img/pilea.jpg" alt="Pilea Peperomioides">
+      <div class="content">
+        <h2>Pilea Peperomioides</h2>
+        <div class="sci-name">Pilea peperomioides</div>
+        <div class="icons">
+          <p>🐾 Atóxica</p>
+          <p>☀️ Luz indireta</p>
+          <p>💧 1x por semana</p>
+          <p>🌡️ Temperatura amena</p>
+        </div>
+        <div class="description">
+          Folhas arredondadas e visual moderno. Ótima para ambientes internos.
+        </div>
+      </div>
+    </div>
 
-  <main>
-    <section class="conteudo-plantas" style="padding: 2em 1em; background-color: #E8DCC3;">
-      <h2>Plantas seguras para conviver com gatos</h2>
-      <p>Explore espécies ornamentais que embelezam sua casa sem colocar seu felino em risco.</p>
-    </section>
-  </main>
+    <div class="plant-card luz-baixa rega-frequente" onclick="location.href='calathea.html'">
+      <img src="img/calathea.jpg" alt="Calathea Orbifolia">
+      <div class="content">
+        <h2>Calathea Orbifolia</h2>
+        <div class="sci-name">Calathea orbifolia</div>
+        <div class="icons">
+          <p>🐾 Atóxica</p>
+          <p>☀️ Luz indireta</p>
+          <p>💧 Rega frequente</p>
+          <p>🌿 Ambientes úmidos</p>
+        </div>
+        <div class="description">
+          Folhagem decorativa, ótima para espaços sombreados e úmidos.
+        </div>
+      </div>
+    </div>
 
-  <aside>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="plantas.html">Plantas</a></li>
-        <li><a href="decoracao.html">Decoração</a></li>
-        <li><a href="ebooks.html">E-books/Livros</a></li>
-        <li><a href="produtos.html">Produtos Recomendados</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </aside>
+    <div class="plant-card resistente" onclick="location.href='spiderplant.html'">
+      <img src="img/spiderplant.jpg" alt="Planta-Aranha">
+      <div class="content">
+        <h2>Planta-Aranha</h2>
+        <div class="sci-name">Chlorophytum comosum</div>
+        <div class="icons">
+          <p>🐾 Atóxica</p>
+          <p>🌤 Meia-sombra</p>
+          <p>💧 1x por semana</p>
+          <p>💪 Resistente</p>
+        </div>
+        <div class="description">
+          Planta fácil de cuidar e ótima para purificação do ar.
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
-    <p>Contato: <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a></p>
-  </footer>
-  
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById('menu-toggle');
-    const asideMenu = document.querySelector('aside');
-    if (toggleBtn && asideMenu) {
-      toggleBtn.addEventListener('click', () => {
-        asideMenu.classList.toggle('active');
+  <div class="voltar">
+    <a href="index.html">← Voltar ao Início</a>
+  </div>
+
+  <script>
+    function filtrar(classe) {
+      const cards = document.querySelectorAll('.plant-card');
+      cards.forEach(card => {
+        if (classe === 'todos') {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.toggle('hidden', !card.classList.contains(classe));
+        }
       });
     }
-  });
-</script>
+  </script>
 </body>
 </html>
 
