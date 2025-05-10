@@ -6,19 +6,32 @@
   <title>Plantas Seguras</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #fdfcfb;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2em;
-      padding: 2em;
+      background-color: #E8DCC3;
+      color: #1A3A36;
+    }
+    header {
+      background-color: #1A3A36;
+      color: white;
+      text-align: center;
+      padding: 2em 1em 1em;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    header p {
+      margin: 0.5em 0 0;
+      font-size: 1em;
+      color: #E8DCC3;
     }
     .filtros {
       display: flex;
       gap: 1em;
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 1em;
     }
     .filtros button {
       background: #285F6B;
@@ -36,7 +49,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 2em;
-      max-width: 1200px;
+      padding: 2em;
     }
     .plant-card {
       background: #fff;
@@ -44,11 +57,11 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       width: 300px;
       overflow: hidden;
+      transition: transform 0.3s;
       cursor: pointer;
-      transition: transform 0.6s ease;
     }
     .plant-card:hover {
-      transform: rotateY(10deg) scale(1.03);
+      transform: scale(1.03);
     }
     .plant-card img {
       width: 100%;
@@ -85,7 +98,8 @@
       color: #333;
     }
     .voltar {
-      margin-top: 2em;
+      margin: 2em auto;
+      text-align: center;
     }
     .voltar a {
       text-decoration: none;
@@ -105,6 +119,11 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1>Plantas & Gatos</h1>
+    <p>Estética, verdura e segurança para amigos felinos</p>
+  </header>
+
   <div class="filtros">
     <button onclick="filtrar('luz-baixa')">Luz Baixa</button>
     <button onclick="filtrar('rega-frequente')">Rega Frequente</button>
@@ -183,4 +202,5 @@
   </script>
 </body>
 </html>
+
 
