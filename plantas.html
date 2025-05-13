@@ -40,13 +40,14 @@
       background: #133336;
     }
     .plant-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2em;
       padding: 2em;
       max-width: 1600px;
       margin: 0 auto;
+      width: 100%;
+      align-items: stretch;
     }
     .plant-card {
       background: #fff;
@@ -57,7 +58,7 @@
       transition: transform 0.3s;
       display: flex;
       flex-direction: column;
-      width: 300px;
+      width: 100%;
       min-height: 500px;
     }
     .plant-card:hover {
