@@ -6,7 +6,7 @@
   <title>Plantas</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
+   body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #E8DCC3;
@@ -53,11 +53,13 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       width: 100%;
-      max-width: 300px;
-      margin: auto;
       overflow: hidden;
       cursor: pointer;
       transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      max-width: 280px;
+      margin: 0 auto;
     }
     .plant-card:hover {
       transform: scale(1.03);
@@ -69,6 +71,7 @@
     }
     .plant-card .content {
       padding: 1em;
+      flex-grow: 1;
     }
     .plant-card h2 {
       margin: 0;
@@ -98,7 +101,8 @@
     }
     .voltar {
       text-align: center;
-      margin: 2rem 0;
+      margin-top: auto;
+      padding: 2rem;
     }
     .voltar a {
       background: #285F6B;
