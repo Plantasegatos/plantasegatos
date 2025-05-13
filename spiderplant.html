@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Planta-Aranha</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #E8DCC3;
+      font-family: Arial, sans-serif;
+      margin: 0;
       color: #1A3A36;
     }
     header {
@@ -17,72 +18,48 @@
       text-align: center;
       padding: 2em 1em 1em;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    header p {
-      margin: 0.5em 0 0;
-      font-size: 1em;
-      color: #E8DCC3;
-    }
-    main {
+    .container {
       max-width: 800px;
-      margin: auto;
-      background: #fdfcfb;
-      border-radius: 12px;
+      margin: 2em auto;
       padding: 2em;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     h2 {
+      text-align: center;
       font-size: 1.8em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.3em;
     }
     .sci-name {
+      text-align: center;
       font-style: italic;
-      color: #555;
-      margin-bottom: 1em;
+      color: #666;
+      margin-bottom: 1.5em;
     }
     img {
       max-width: 100%;
+      display: block;
+      margin: auto;
       border-radius: 12px;
-      margin-bottom: 1em;
-    }
-    .caracteristicas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      margin-bottom: 2em;
-    }
-    .caracteristicas div {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 0.8em 1em;
-      flex: 1 1 150px;
-      display: flex;
-      gap: 0.5em;
-      align-items: center;
     }
     .descricao {
       font-size: 1em;
-      line-height: 1.6;
+      line-height: 1.6em;
+      margin-top: 2em;
+      text-align: justify;
     }
     .voltar {
-      margin-top: 2em;
       text-align: center;
+      margin-top: 2em;
     }
     .voltar a {
-      text-decoration: none;
       background: #285F6B;
       color: white;
-      padding: 0.6em 1.2em;
+      padding: 0.75em 1.5em;
       border-radius: 8px;
-      font-size: 0.95em;
-      transition: background 0.3s;
-    }
-    .voltar a:hover {
-      background: #133336;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -92,18 +69,16 @@
     <p>Estética, verdura e segurança para amigos felinos</p>
   </header>
 
-  <main>
+  <div class="container">
     <h2>Planta-Aranha</h2>
     <div class="sci-name">Chlorophytum comosum</div>
     <img src="img/spiderplant.jpg" alt="Planta-Aranha">
 
-    <div class="caracteristicas">
-      <div>🐾 Atóxica para gatos</div>
-      <div>🌤 Meia-sombra</div>
-      <div>💧 Rega semanal</div>
-      <div>📉 Crescimento lento</div>
-      <div>💪 Muito resistente</div>
-    </div>
+    <div class="descricao">
+      <p><strong>Nome científico:</strong> <em>Chlorophytum comosum</em></p>
+      <p><strong>Tóxica para gatos:</strong> Não</p>
+      <p><strong>Luz ideal:</strong> Meia-sombra ou luz indireta</p>
+      <p><strong>Rega:</strong> Semanal</p>
 
     <div class="descricao">
       A <strong>Planta-Aranha</strong> é uma das plantas ornamentais mais fáceis de cuidar e extremamente resistente. Suas folhas finas, longas e arqueadas apresentam uma coloração verde com listras claras, formando uma estética leve e elegante.
@@ -111,7 +86,6 @@
       Ideal para iniciantes ou para locais com pouca manutenção constante, ela se adapta bem à meia-sombra e tolera períodos curtos de seca. Além disso, é segura para pets e possui a capacidade de purificar o ar.
       <br><br>
       Pode ser cultivada em vasos suspensos ou diretamente em vasos comuns. Com o tempo, produz pequenas mudas nas extremidades das folhas que podem ser replantadas facilmente.
-    </div>
 
     <div class="curiosidade">
   <h3>💡 Curiosidade</h3>
