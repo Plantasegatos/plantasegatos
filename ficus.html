@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ficus</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficus Benjamina</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       background-color: #E8DCC3;
@@ -12,10 +12,19 @@
       margin: 0;
       color: #1A3A36;
     }
+    header {
+      background-color: #1A3A36;
+      color: white;
+      text-align: center;
+      padding: 2em 1em 1em;
+    }
     .container {
       max-width: 800px;
-      margin: auto;
+      margin: 2em auto;
       padding: 2em;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     h1 {
       text-align: center;
@@ -24,6 +33,7 @@
       max-width: 100%;
       display: block;
       margin: auto;
+      border-radius: 12px;
     }
     .infos {
       margin-top: 1.5em;
@@ -43,28 +53,23 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .safira {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      width: 25vw;
-      max-width: 300px;
-      z-index: 10;
-      pointer-events: none;
-    }
   </style>
 </head>
 <body>
-  <img class="safira" src="img/safira.png" alt="Mascote Safira">
+  <header>
+    <h1>Plantas & Gatos</h1>
+    <p>Estética, verdura e segurança para amigos felinos</p>
+  </header>
+
   <div class="container">
-    <h1>Ficus</h1>
-    <img src="img/ficus.jpg" alt="Ficus">
+    <h1>Ficus Benjamina</h1>
+    <img src="img/ficus.jpg" alt="Ficus Benjamina">
     <div class="infos">
       <p><strong>Nome científico:</strong> <em>Ficus benjamina</em></p>
       <p><strong>Tóxica para gatos:</strong> Sim</p>
       <p><strong>Luz ideal:</strong> Luz indireta brilhante</p>
       <p><strong>Rega:</strong> Moderada</p>
-      <p><strong>Descrição:</strong> Árvore ornamental popular por sua aparência elegante e capacidade de purificar o ar. Apesar de ser linda, deve ser mantida longe dos gatos devido à sua toxicidade.</p>
+      <p><strong>Descrição:</strong> Árvore ornamental leve e elegante. Deve ser mantida fora do alcance dos gatos, pois sua seiva pode causar irritações.</p>
     </div>
     <div class="voltar">
       <a href="plantas.html">← Voltar</a>
@@ -72,3 +77,4 @@
   </div>
 </body>
 </html>
+
