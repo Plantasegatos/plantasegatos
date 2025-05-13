@@ -26,8 +26,16 @@
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h1 {
+    h2 {
       text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 0.3em;
+    }
+    .sci-name {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin-bottom: 1.5em;
     }
     img {
       max-width: 100%;
@@ -35,11 +43,26 @@
       margin: auto;
       border-radius: 12px;
     }
-    .infos {
-      margin-top: 1.5em;
+    .caracteristicas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      margin: 2em 0;
+      font-size: 1em;
     }
-    .infos p {
-      margin: 0.5em 0;
+    .caracteristicas div {
+      background-color: #fff;
+      padding: 0.7em 1.2em;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .descricao {
+      font-size: 1em;
+      line-height: 1.6em;
+      margin-top: 2em;
+      text-align: justify;
     }
     .voltar {
       text-align: center;
@@ -62,24 +85,25 @@
   </header>
 
   <div class="container">
-    <h1>Ficus Benjamina</h1>
+    <h2>Ficus Benjamina</h2>
+    <div class="sci-name">Ficus benjamina</div>
     <img src="img/ficus.jpg" alt="Ficus Benjamina">
+
     <div class="caracteristicas">
-  <div>☠️ Tóxica para gatos</div>
-  <div>☀️ Luz indireta brilhante</div>
-  <div>💧 Rega moderada</div>
-  <div>🌿 Ambiente tropical</div>
-</div>
-      <p><strong>Descrição:</strong> Planta arbustiva de origem tropical, o Ficus Benjamina apresenta folhas pequenas e brilhantes, ideal para interiores bem iluminados. Apesar de seu aspecto delicado, é relativamente resistente e exige apenas regas moderadas. Por conter seiva tóxica, deve ser mantido fora do alcance de pets, especialmente gatos, que podem sofrer irritações ao contato ou ingestão.</p>
+      <div>☠️ Tóxica para gatos</div>
+      <div>☀️ Luz indireta brilhante</div>
+      <div>💧 Rega moderada</div>
+      <div>🌿 Ambiente tropical</div>
     </div>
 
-    <div class="curiosidade">
-  <h3>💡 Curiosidade</h3>
-  <p>Essa planta pode reagir com queda de folhas ao ser movida de lugar. Também é reconhecida por seu potencial de purificação do ar, segundo estudos da NASA.</p>
-</div>
+    <div class="descricao">
+      Planta arbustiva de origem tropical, o <strong>Ficus Benjamina</strong> apresenta folhas pequenas e brilhantes, ideal para interiores bem iluminados. É frequentemente utilizada como planta ornamental em escritórios e residências devido ao seu porte elegante e fácil adaptação a ambientes internos.
+      <br><br>
+      Apesar de seu aspecto delicado, trata-se de uma planta relativamente resistente, que exige apenas regas moderadas e tolera ambientes com ar-condicionado ou ventilação artificial. No entanto, por conter seiva tóxica, deve ser mantida fora do alcance de pets, especialmente gatos, que podem sofrer irritações ao contato ou ingestão.
+    </div>
 
     <div class="voltar">
-      <a href="plantas.html">← Voltar</a>
+      <a href="plantas.html">← Voltar para Plantas</a>
     </div>
   </div>
 </body>
