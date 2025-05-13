@@ -1,36 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lírio-da-paz</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #E8DCC3;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #1A3A36;
+    }
+    header {
+      background-color: #1A3A36;
+      color: white;
+      text-align: center;
+      padding: 2em 1em 1em;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 0.3em;
+    }
+    .sci-name {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin-bottom: 1.5em;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      margin: auto;
+      border-radius: 12px;
+    }
+    .descricao {
+      font-size: 1em;
+      line-height: 1.6em;
+      margin-top: 2em;
+      text-align: justify;
+    }
+    .voltar {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .voltar a {
+      background: #285F6B;
+      color: white;
+      padding: 0.75em 1.5em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
+  <header>
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
   </header>
 
-  <main class="plant-detail">
-    <div class="plant-card-detalhe" style="background: #fff; padding: 2rem; max-width: 720px; margin: 2rem auto; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <h2 style="margin-top: 0; font-size: 2rem; color: #1A3A36;">Lírio-da-paz</h2>
-      <div class="sci-name" style="font-style: italic; margin-bottom: 1rem;">Spathiphyllum wallisii</div>
+  <div class="container">
+    <h2>Lírio-da-paz</h2>
+    <div class="sci-name">Spathiphyllum wallisii</div>
+    <img src="img/lirio.jpg" alt="Lírio-da-paz">
 
-      <img src="img/lirio.jpg" alt="Lírio-da-paz" class="plant-image" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;" />
-
-      <div class="tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
-        <span class="tag" style="background: #f0f4f2; padding: 0.5rem 1rem; border-radius: 8px;">☠️ Tóxica para gatos</span>
-        <span class="tag" style="background: #f0f4f2; padding: 0.5rem 1rem; border-radius: 8px;">☀️ Luz média</span>
-        <span class="tag" style="background: #f0f4f2; padding: 0.5rem 1rem; border-radius: 8px;">💧 Rega moderada</span>
-        <span class="tag" style="background: #f0f4f2; padding: 0.5rem 1rem; border-radius: 8px;">🌿 Floresce com luz indireta</span>
-      </div>
+    <div class="descricao">
+      <p><strong>Nome científico:</strong> <em>Spathiphyllum wallisii</em></p>
+      <p><strong>Tóxica para gatos:</strong> Sim</p>
+      <p><strong>Luz ideal:</strong> Luz média ou indireta</p>
+      <p><strong>Rega:</strong> Moderada</p>
 
       <div class="description" style="line-height: 1.6; color: #333;">
         <p><strong>O Lírio-da-paz</strong> é uma das plantas mais populares para ambientes internos graças à sua elegância e capacidade de florescer mesmo com luz indireta. Suas folhas verdes brilhantes contrastam com as flores brancas em formato de lança.</p>
         <p>Essa planta prefere solo levemente úmido e responde bem a ambientes com umidade moderada. Quando falta água, suas folhas murcham visivelmente, o que facilita a identificação de sua necessidade hídrica.</p>
         <p>Apesar de suas qualidades decorativas e purificadoras de ar, <strong>o lírio-da-paz é tóxico para gatos</strong>, podendo causar irritações se ingerido. Por isso, o ideal é mantê-lo fora do alcance dos pets.</p>
-      </div>
 
       <div class="curiosidade">
   <h3>💡 Curiosidade</h3>
