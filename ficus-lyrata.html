@@ -26,8 +26,16 @@
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h1 {
+    h2 {
       text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 0.3em;
+    }
+    .sci-name {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin-bottom: 1.5em;
     }
     img {
       max-width: 100%;
@@ -35,11 +43,26 @@
       margin: auto;
       border-radius: 12px;
     }
-    .infos {
-      margin-top: 1.5em;
+    .caracteristicas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      margin: 2em 0;
+      font-size: 1em;
     }
-    .infos p {
-      margin: 0.5em 0;
+    .caracteristicas div {
+      background-color: #fff;
+      padding: 0.7em 1.2em;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .descricao {
+      font-size: 1em;
+      line-height: 1.6em;
+      margin-top: 2em;
+      text-align: justify;
     }
     .voltar {
       text-align: center;
@@ -62,15 +85,19 @@
   </header>
 
   <div class="container">
-    <h1>Ficus Lira</h1>
-    <img src="img/ficus-lyrata.jpg" alt="Ficus Lyrata">
-    <div class="infos">
-      <p><strong>Nome científico:</strong> <em>Ficus lyrata</em></p>
-      <p><strong>Tóxica para gatos:</strong> Sim</p>
-      <p><strong>Luz ideal:</strong> Luz intensa indireta</p>
-      <p><strong>Rega:</strong> Moderada</p>
+    <h2>Ficus Lira</h2>
+    <div class="sci-name">Ficus lyrata</div>
+    <img src="img/ficus-lyrata.jpg" alt="Ficus Lira">
+
+    <div class="caracteristicas">
+      <div>☠️ Tóxica para gatos</div>
+      <div>☀️ Luz intensa indireta</div>
+      <div>💧 Rega moderada</div>
+      <div>🌿 Planta decorativa</div>
+    </div>
       <p><strong>Descrição:</strong> Famosa por suas grandes folhas em formato de lira, essa planta traz imponência e sofisticação para qualquer ambiente. É indicada para espaços amplos com boa iluminação indireta. Requer cuidados moderados, incluindo rega regular e rotação do vaso para crescimento equilibrado. Tóxica para gatos, deve ser posicionada com segurança em locais elevados ou inacessíveis.</p>
     </div>
+    
 <div class="curiosidade">
   <h3>💡 Curiosidade</h3>
   <p>Gire o vaso semanalmente para manter o crescimento simétrico. Suas folhas são sensíveis ao vento direto e ar-condicionado.</p>
