@@ -39,15 +39,16 @@
     .filtros button:hover {
       background: #133336;
     }
-    .plant-grid {
+.plant-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2em;
   padding: 2em;
   max-width: 1600px;
   margin: 0 auto;
   width: 100%;
-  justify-items: center; /* garante centralização */
+  justify-content: center;
+  align-items: start;
 }
 
 .plant-card {
@@ -59,8 +60,10 @@
   transition: transform 0.3s;
   display: flex;
   flex-direction: column;
+  max-width: 320px;
   width: 100%;
-  max-width: 320px; /* controla o limite lateral */
+}
+
     }
     .sci-name {
       font-style: italic;
