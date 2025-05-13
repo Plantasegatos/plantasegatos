@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Plantas</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
   <style>
-   body {
+    body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #E8DCC3;
@@ -41,25 +41,22 @@
     }
     .plant-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2em;
       padding: 2em;
       max-width: 1600px;
       margin: 0 auto;
-      flex-grow: 1;
+      width: 100%;
     }
     .plant-card {
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 100%;
       overflow: hidden;
       cursor: pointer;
       transition: transform 0.3s;
       display: flex;
       flex-direction: column;
-      max-width: 280px;
-      margin: 0 auto;
     }
     .plant-card:hover {
       transform: scale(1.03);
@@ -101,8 +98,8 @@
     }
     .voltar {
       text-align: center;
-      margin-top: auto;
       padding: 2rem;
+      margin-top: auto;
     }
     .voltar a {
       background: #285F6B;
@@ -130,6 +127,7 @@
   </div>
 
   <div class="plant-grid">
+    
     <div class="plant-card luz-baixa naotoxica" onclick="location.href='pilea.html'">
       <img src="img/pilea.jpg" alt="Pilea Peperomioides">
       <div class="content">
@@ -433,11 +431,10 @@
   
     
     
-<div class="voltar" style="text-align: center; margin-bottom: 2rem;">
-    <a href="index.html" style="background: #285F6B; color: white; padding: 0.75em 1.5em; border-radius: 8px; text-decoration: none; font-weight: bold;">
-      ← Voltar ao Início
-    </a>
+<div class="voltar">
+    <a href="index.html">← Voltar ao Início</a>
   </div>
+
 
   <script>
     function filtrar(classe) {
