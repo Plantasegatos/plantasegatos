@@ -11,6 +11,9 @@
       font-family: Arial, sans-serif;
       background-color: #E8DCC3;
       color: #1A3A36;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       background-color: #1A3A36;
@@ -37,17 +40,21 @@
       background: #133336;
     }
     .plant-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
       gap: 2em;
       padding: 2em;
+      max-width: 1600px;
+      margin: 0 auto;
+      flex-grow: 1;
     }
     .plant-card {
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 300px;
+      width: 100%;
+      max-width: 300px;
+      margin: auto;
       overflow: hidden;
       cursor: pointer;
       transition: transform 0.3s;
@@ -88,6 +95,18 @@
     }
     .hidden {
       display: none !important;
+    }
+    .voltar {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .voltar a {
+      background: #285F6B;
+      color: white;
+      padding: 0.75em 1.5em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
