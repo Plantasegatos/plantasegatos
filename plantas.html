@@ -451,17 +451,12 @@
     <a href="index.html">← Voltar ao Início</a>
   </div>
   <script>
-    function filtrar(classe) {
-      const cards = document.querySelectorAll('.plant-card');
-      cards.forEach(card => {
-        if (classe === 'todos') {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.toggle('hidden', !card.classList.contains(classe));
-        }
-      });
-    }
-  </script>
+  document.querySelectorAll('.plant-card').forEach(card => {
+    card.classList.remove('hidden');
+    card.style.display = 'block';
+  });
+</script>
+
 </body>
 </html>
 
