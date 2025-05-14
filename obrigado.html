@@ -21,6 +21,8 @@
       padding: 2em;
       border-radius: 16px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
     }
 
     .agradecimento h1 {
@@ -37,13 +39,45 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    .agradecimento img {
+      max-width: 180px;
+      margin-bottom: 1em;
+      z-index: 1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url('IMG/heart.svg') no-repeat center/contain;
+      animation: floatUp 4s ease-in-out infinite;
+      opacity: 0.8;
+    }
+
+    .heart:nth-child(2) { top: 40%; left: 20%; animation-delay: 0s; }
+    .heart:nth-child(3) { top: 45%; left: 80%; animation-delay: 1s; }
+    .heart:nth-child(4) { top: 55%; left: 35%; animation-delay: 2s; }
+    .heart:nth-child(5) { top: 60%; left: 65%; animation-delay: 3s; }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      50% { transform: translateY(-40px) scale(1.2); opacity: 1; }
+      100% { transform: translateY(-80px) scale(0.9); opacity: 0; }
+    }
   </style>
 </head>
 <body>
   <div class="agradecimento">
+    <img src="IMG/safira-obrigado.png" alt="Safira agradecendo">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
     <h1>🌱 Obrigado pelo seu contato!</h1>
     <p>Recebemos sua mensagem com carinho. Em breve, nossa equipe (ou a Safira 😺) irá responder.</p>
     <a href="index.html">← Voltar para o início</a>
   </div>
 </body>
 </html>
+
