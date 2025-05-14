@@ -136,12 +136,15 @@
       <h2>Fale com a gente</h2>
       <p>Quer sugerir conteúdo, tirar dúvidas ou apenas mandar um miado? Envie sua mensagem abaixo.</p>
 
-   <form action="https://formspree.io/f/mpwdplva" method="POST" onsubmit="window.location.href='obrigado.html'; return false;">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <input type="email" name="email" placeholder="Seu e-mail" required />
-        <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+  <form action="https://formspree.io/f/mpwdplva" method="POST">
+  <input type="hidden" name="_redirect" value="https://plantasegatos.com.br/obrigado.html">
+  
+  <input type="text" name="nome" placeholder="Seu nome" required />
+  <input type="email" name="email" placeholder="Seu e-mail" required />
+  <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
     </section>
   </main>
 
