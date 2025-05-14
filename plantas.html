@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plantas</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #E8DCC3;
+      color: #1A3A36;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #1A3A36;
+      color: white;
+      text-align: center;
+      padding: 2em 1em 1em;
+    }
+    .filtros {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1em;
+    }
+    .filtros button {
+      background: #285F6B;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .filtros button:hover {
+      background: #133336;
+    }
+    .plant-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      padding: 2em;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .plant-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      min-height: 500px;
+      padding: 1.5em;
+    }
+    .plant-card:hover {
+      transform: scale(1.03);
+    }
+    .plant-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .plant-card .content {
+      padding-top: 1em;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .plant-card h2 {
+      margin: 0;
+      font-size: 1.3em;
+    }
+    .sci-name {
+      font-style: italic;
+      color: #666;
+      margin: 0.5em 0 1em;
+    }
+    .icons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4em;
+    }
+    .icons p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+    .description {
+      margin-top: 1em;
+      font-size: 0.85em;
+      color: #333;
+    }
+    .hidden {
+      display: none !important;
+    }
+    .voltar {
+      text-align: center;
+      padding: 2rem;
+      margin-top: auto;
+    }
+    .voltar a {
+      background: #285F6B;
+      color: white;
+      padding: 0.75em 1.5em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<header>
+<h1>Plantas &amp; Gatos</h1>
+<p>Estética, verdura e segurança para amigos felinos</p>
+</header>
+<div class="filtros">
+<button onclick="filtrar('naotoxica')">Não Tóxicas</button>
+<button onclick="filtrar('toxica')">Tóxicas</button>
+<button onclick="filtrar('luz-baixa')">Luz Baixa</button>
+<button onclick="filtrar('rega-frequente')">Rega Frequente</button>
+<button onclick="filtrar('resistente')">Resistente</button>
+<button onclick="filtrar('todos')">Mostrar Todas</button>
+</div>
+<div class="plant-grid">
+<div class="luz-indireta naotoxica toxica plant-card luz-baixa" onclick="location.href='pilea.html'">
+<img alt="Pilea Peperomioides" src="img/pilea.jpg"/>
+<div class="content">
+<h2>Pilea Peperomioides</h2>
+<div class="sci-name">Pilea peperomioides</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>☀️ Luz indireta</p>
+<p>💧 1x por semana</p>
+<p>🌡️ Temperatura amena</p>
+</div>
+<div class="description">
+          Folhas arredondadas e visual moderno. Ótima para ambientes internos.
+        </div>
+</div>
+</div>
+<div class="luz-indireta rega-frequente naotoxica toxica plant-card luz-baixa" onclick="location.href='calathea.html'">
+<img alt="Calathea Orbifolia" src="img/calathea.jpg"/>
+<div class="content">
+<h2>Calathea Orbifolia</h2>
+<div class="sci-name">Calathea orbifolia</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>☀️ Luz indireta</p>
+<p>💧 Rega frequente</p>
+<p>🌿 Ambientes úmidos</p>
+</div>
+<div class="description">
+          Folhagem decorativa, ótima para espaços sombreados e úmidos.
+        </div>
+</div>
+</div>
+<div class="resistente meia-sombra toxica naotoxica plant-card" onclick="location.href='spiderplant.html'">
+<img alt="Planta-Aranha" src="img/spiderplant.jpg"/>
+<div class="content">
+<h2>Planta-Aranha</h2>
+<div class="sci-name">Chlorophytum comosum</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>🌤 Meia-sombra</p>
+<p>💧 1x por semana</p>
+<p>💪 Resistente</p>
+</div>
+<div class="description">
+          Planta fácil de cuidar e ótima para purificação do ar.
+        </div>
+</div>
+</div>
+<div class="luz-indireta rega-frequente naotoxica toxica plant-card" onclick="location.href='samambaia.html'">
+<img alt="Samambaia-americana" src="img/samambaia.jpg"/>
+<div class="content">
+<h2>Samambaia-americana</h2>
+<div class="sci-name">Nephrolepis exaltata</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>☀️ Luz indireta</p>
+<p>💧 Rega frequente</p>
+<p>🌿 Ambientes úmidos</p>
+</div>
+<div class="description">
+          Segura para gatos e ótima para vasos suspensos em locais úmidos e sombreados.
+        </div>
+</div>
+</div>
+<div class="rega-moderada luz-indireta toxica plant-card" onclick="location.href='anturio.html'">
+<img alt="Antúrio" src="img/anturio.jpg"/>
+<div class="content">
+<h2>Antúrio</h2>
+<div class="sci-name">Anthurium andraeanum</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz indireta</p>
+<p>💧 Rega moderada</p>
+<p>🌿 Ambientes internos</p>
+</div>
+<div class="description">
+          Muito ornamental, ideal fora do alcance de gatos.
+        </div>
+</div>
+</div>
+<div class="resistente toxica plant-card rega-baixa luz-media" onclick="location.href='jiboia.html'">
+<img alt="Jiboia" src="img/jiboia.jpg"/>
+<div class="content">
+<h2>Jiboia</h2>
+<div class="sci-name">Epipremnum aureum</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz média</p>
+<p>💧 Rega baixa</p>
+<p>🌿 Planta resistente</p>
+</div>
+<div class="description">
+          Fácil de cuidar e ótima para vasos suspensos. Evite acesso direto de gatos.
+        </div>
+</div>
+</div>
+<div class="luz-indireta rega-moderada naotoxica toxica plant-card" onclick="location.href='peperomia.html'">
+<img alt="Peperômia-melancia" src="img/peperomia.jpg"/>
+<div class="content">
+<h2>Peperômia-melancia</h2>
+<div class="sci-name">Peperomia argyreia</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>☀️ Luz indireta</p>
+<p>💧 Rega moderada</p>
+<p>🌿 Folhas decorativas</p>
+</div>
+<div class="description">
+          Compacta e charmosa. Segura para gatos.
+        </div>
+</div>
+</div>
+<div class="luz-indireta rega-moderada toxica plant-card luz-media" onclick="location.href='lirio.html'">
+<img alt="Lírio-da-paz" src="img/lirio.jpg"/>
+<div class="content">
+<h2>Lírio-da-paz</h2>
+<div class="sci-name">Spathiphyllum wallisii</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz média</p>
+<p>💧 Rega moderada</p>
+<p>🌿 Floresce com luz indireta</p>
+</div>
+<div class="description">
+          Elegante, purificadora, mas exige cuidado com acesso de gatos.
+        </div>
+</div>
+</div>
+
+    &lt;  <div class="plant-grid">
+<div class="luz-indireta rega-frequente naotoxica toxica plant-card luz-media" onclick="location.href='maranta.html'">
+<img alt="Maranta leuconeura" src="img/maranta.jpg"/>
+<div class="content">
+<h2>Maranta (Rezadeira)</h2>
+<div class="sci-name">Maranta leuconeura</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>☀️ Luz média</p>
+<p>💧 Rega frequente</p>
+<p>🌿 Ambientes úmidos</p>
+</div>
+<div class="description">
+          Planta tropical segura para gatos. Suas folhas se erguem à noite e baixam ao amanhecer, parecendo "rezar". Gosta de ambientes úmidos e luz indireta.
+        </div>
+</div>
+</div>
+<div class="plant-grid">
+<!-- Novos 9 cards inseridos abaixo -->
+<div class="luz-indireta rega-moderada naotoxica toxica plant-card" onclick="location.href='peperomia-raindrop.html'">
+<img alt="Peperômia Raindrop" src="img/peperomia-raindrop.jpg"/>
+<div class="content">
+<h2>Peperômia Raindrop</h2>
+<div class="sci-name">Peperomia polybotrya</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>☀️ Luz indireta</p>
+<p>💧 Rega moderada</p>
+<p>🏡 Ambientes internos</p>
+</div>
+<div class="description">
+          Folhas em forma de gota. Ideal para espaços pequenos.
+        </div>
+</div>
+</div>
+<div class="luz-indireta toxica plant-card" onclick="location.href='hera.html'">
+<img alt="Hera Inglesa" src="img/hera.jpg"/>
+<div class="content">
+<h2>Hera Inglesa</h2>
+<div class="sci-name">Hedera helix</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz indireta forte</p>
+<p>💧 Solo úmido</p>
+<p>🪴 Trepadeira decorativa</p>
+</div>
+<div class="description">
+          Trepadeira ideal para estantes e suportes verticais.
+        </div>
+</div>
+</div>
+<div class="resistente toxica plant-card rega-baixa luz-baixa" onclick="location.href='zamioculca.html'">
+<img alt="Zamioculca" src="img/zamioculca.jpg"/>
+<div class="content">
+<h2>Zamioculca</h2>
+<div class="sci-name">Zamioculcas zamiifolia</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz baixa a média</p>
+<p>💧 Pouca rega</p>
+<p>💪 Resistente</p>
+</div>
+<div class="description">
+          Visual moderno e fácil de cuidar.
+        </div>
+</div>
+</div>
+<div class="rega-moderada naotoxica toxica plant-card luz-filtrada" onclick="location.href='rhipsalis.html'">
+<img alt="Ripsális" src="img/rhipsalis.jpg"/>
+<div class="content">
+<h2>Ripsális</h2>
+<div class="sci-name">Rhipsalis baccifera</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>☀️ Luz filtrada</p>
+<p>💧 Rega moderada</p>
+<p>🪟 Luz difusa</p>
+</div>
+<div class="description">
+          Cacto pendente ideal para vasos suspensos.
+        </div>
+</div>
+</div>
+<div class="rega-moderada luz-indireta toxica plant-card" onclick="location.href='anturio-roxo.html'">
+<img alt="Antúrio Roxo" src="img/anturio-roxo.jpg"/>
+<div class="content">
+<h2>Antúrio Roxo</h2>
+<div class="sci-name">Anthurium andraeanum</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz indireta forte</p>
+<p>💧 Rega moderada</p>
+<p>🌿 Planta ornamental</p>
+</div>
+<div class="description">
+          Folhas e flores brilhantes, muito ornamental.
+        </div>
+</div>
+</div>
+<div class="rega-moderada meia-sombra toxica naotoxica plant-card" onclick="location.href='rafis.html'">
+<img alt="Palmeira Ráfis" src="img/rafis.jpg"/>
+<div class="content">
+<h2>Palmeira Ráfis</h2>
+<div class="sci-name">Rhapis excelsa</div>
+<div class="icons">
+<p>🐾 Atóxica</p>
+<p>☀️ Meia sombra</p>
+<p>💧 Rega moderada</p>
+<p>🏠 Ideal para interiores</p>
+</div>
+<div class="description">
+          Palmeira compacta, perfeita para ambientes internos.
+        </div>
+</div>
+</div>
+<div class="rega-moderada toxica plant-card luz-intensa" onclick="location.href='croton.html'">
+<img alt="Croton" src="img/croton.jpg"/>
+<div class="content">
+<h2>Croton</h2>
+<div class="sci-name">Codiaeum variegatum</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz intensa indireta</p>
+<p>💧 Rega moderada</p>
+<p>☀️ Gosta de sol direto</p>
+</div>
+<div class="description">
+          Folhagem vibrante com múltiplas cores.
+        </div>
+</div>
+</div>
+<div class="plant-grid">
+<div class="rega-moderada luz-indireta toxica plant-card" onclick="location.href='ficus.html'">
+<img alt="Ficus Benjamina" src="img/ficus.jpg"/>
+<div class="content">
+<h2>Ficus-Benjamina</h2>
+<div class="sci-name">Ficus benjamina</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz indireta brilhante</p>
+<p>💧 Rega moderada</p>
+<p>🏠 Ambientes bem iluminados</p>
+</div>
+<div class="description">
+          Árvore ornamental leve e elegante. Deve ser mantida longe dos gatos.
+        </div>
+</div>
+</div>
+<div class="luz-indireta rega-moderada toxica plant-card luz-intensa" onclick="location.href='ficus-lyrata.html'">
+<img alt="Ficus Lyrata" src="img/ficus-lyrata.jpg"/>
+<div class="content">
+<h2>Ficus-Lira</h2>
+<div class="sci-name">Ficus lyrata</div>
+<div class="icons">
+<p>☠️ Tóxica</p>
+<p>☀️ Luz intensa indireta</p>
+<p>💧 Rega moderada</p>
+<p>🪴 Ideal como destaque</p>
+</div>
+<div class="description">
+          Folhas grandes em formato de lira. Planta imponente e muito usada em decoração moderna.
+        </div>
+</div>
+</div>
+</div>
+<div class="voltar">
+<a href="index.html">← Voltar ao Início</a>
+</div>
+<script>
+    function filtrar(classe) {
+      const cards = document.querySelectorAll('.plant-card');
+      cards.forEach(card => {
+        if (classe === 'todos') {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.toggle('hidden', !card.classList.contains(classe));
+        }
+      });
+    }
+  </script>
+</div></div></div></body>
+</html>
