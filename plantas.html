@@ -118,6 +118,11 @@
       font-weight: bold;
     }
   </style>
+.gota-pequena { font-size: 0.8em; }
+.gota-media   { font-size: 1.2em; }
+.gota-grande  { font-size: 1.5em; }
+.gota-enorme  { font-size: 1.8em; }
+
 </head>
 <body>
 <header>
@@ -129,6 +134,9 @@
 <button onclick="filtrar('toxica')">Tóxicas</button>
 <button onclick="filtrar('luz-baixa')">Luz Baixa</button>
 <button onclick="filtrar('rega-frequente')">Rega Frequente</button>
+<button onclick="filtrar('rega-baixa')">Rega Baixa</button>
+<button onclick="filtrar('rega-moderada')">Rega Moderada</button>
+<button onclick="filtrar('solo-umido')">Solo Ummido</button>
 <button onclick="filtrar('resistente')">Resistente</button>
 <button onclick="filtrar('todos')">Mostrar Todas</button>
 </div>
@@ -141,7 +149,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>☀️ Luz indireta</p>
-<p>💧 Rega baixa</p>
+<span class="gota-pequena">💧</span> Rega baixa
 <p>🌡️ Temperatura amena</p>
 </div>
 <div class="description">
@@ -157,7 +165,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>☀️ Luz indireta</p>
-<p>💧💧 Rega frequente</p>
+<<span class="gota-grande">💧</span> Rega frequente
 <p>🌿 Ambientes úmidos</p>
 </div>
 <div class="description">
@@ -173,7 +181,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>🌤 Meia-sombra</p>
-<p>💧 Rega baixa</p>
+<span class="gota-pequena">💧</span> Rega baixa
 <p>💪 Resistente</p>
 </div>
 <div class="description">
@@ -189,7 +197,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>☀️ Luz indireta</p>
-<p>💧💧 Rega frequente</p>
+<span class="gota-grande">💧</span> Rega frequente
 <p>🌿 Ambientes úmidos</p>
 </div>
 <div class="description">
@@ -205,7 +213,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz indireta</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🌿 Ambientes internos</p>
 </div>
 <div class="description">
@@ -221,7 +229,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz média</p>
-<p>💧 Rega baixa</p>
+<span class="gota-pequena">💧</span> Rega baixa
 <p>💪 Resistente</p>
 </div>
 <div class="description">
@@ -237,7 +245,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>☀️ Luz indireta</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🌿 Folhas decorativas</p>
 </div>
 <div class="description">
@@ -253,7 +261,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz média</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🌿 Floresce com luz indireta</p>
 </div>
 <div class="description">
@@ -271,7 +279,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>☀️ Luz média</p>
-<p>💧💧💧 Rega frequente</p>
+<span class="gota-grande">💧</span> Rega frequente
 <p>🌿 Ambientes úmidos</p>
 </div>
 <div class="description">
@@ -289,7 +297,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>☀️ Luz indireta</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🏡 Ambientes internos</p>
 </div>
 <div class="description">
@@ -305,7 +313,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz indireta forte</p>
-<p>💧💧💧💧 Solo úmido</p>
+<span class="gota-enorme">💧</span> Solo umido
 <p>🪴 Trepadeira decorativa</p>
 </div>
 <div class="description">
@@ -321,7 +329,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz baixa a média</p>
-<p>💧 Pouca rega</p>
+<span class="gota-pequena">💧</span> Rega baixa
 <p>💪 Resistente</p>
 </div>
 <div class="description">
@@ -337,7 +345,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>☀️ Luz filtrada</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🪟 Luz difusa</p>
 </div>
 <div class="description">
@@ -353,7 +361,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz indireta forte</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🌿 Planta ornamental</p>
 </div>
 <div class="description">
@@ -369,7 +377,7 @@
 <div class="icons">
 <p>🐾 Atóxica</p>
 <p>☀️ Meia sombra</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🌿 Planta ornamental</p>
 </div>
 <div class="description">
@@ -385,7 +393,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz intensa indireta</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🌿 Planta ornamental</p>
 </div>
 <div class="description">
@@ -402,7 +410,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz indireta brilhante</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🏠 Ambientes bem iluminados</p>
 </div>
 <div class="description">
@@ -418,7 +426,7 @@
 <div class="icons">
 <p>☠️ Tóxica</p>
 <p>☀️ Luz intensa indireta</p>
-<p>💧💧 Rega moderada</p>
+<span class="gota-media">💧</span> Rega moderada
 <p>🌿 Planta ornamental</p>
 </div>
 <div class="description">
