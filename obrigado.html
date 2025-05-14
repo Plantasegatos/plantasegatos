@@ -41,16 +41,21 @@
     }
 
     .agradecimento img {
-      max-width: 180px;
-      margin-bottom: 1em;
-      z-index: 1;
-    }
+  max-width: 180px;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+  position: relative;
+  pointer-events: none;
+}
 
     .heart {
       position: absolute;
       width: 24px;
       height: 24px;
-      background: url('IMG/heart.svg') no-repeat center/contain;
+      background: url('img/heart.svg') no-repeat center/contain;
       animation: floatUp 4s ease-in-out infinite;
       opacity: 0.8;
     }
@@ -69,7 +74,7 @@
 </head>
 <body>
   <div class="agradecimento">
-    <img src="IMG/safira-obrigado.png" alt="Safira agradecendo" style="position: relative; z-index: 2;">
+    <img src="img/safira-obrigado.png" alt="Safira agradecendo" style="position: relative; z-index: 10; pointer-events: none; display: block; margin: 0 auto 1em;">
     <div class="heart"></div>
     <div class="heart"></div>
     <div class="heart"></div>
@@ -80,4 +85,5 @@
   </div>
 </body>
 </html>
+
 
