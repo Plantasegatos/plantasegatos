@@ -72,7 +72,7 @@ footer {
   margin-top: 3rem;
 }
 
-/* Menu lateral responsivo */
+/* Menu lateral fixo em telas grandes */
 aside {
   position: fixed;
   top: 350px;
@@ -126,11 +126,12 @@ aside nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Responsivo: tablets e celulares */
+/* Responsivo: tablets e notebooks pequenos */
 @media screen and (max-width: 1024px) {
   main {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
+    padding: 0 1rem;
   }
 
   aside {
@@ -162,6 +163,7 @@ aside nav ul li a:hover {
   }
 }
 
+/* Telas pequenas (mobile) */
 @media screen and (max-width: 768px) {
   aside nav ul li a {
     font-size: 1em;
@@ -174,4 +176,5 @@ aside nav ul li a:hover {
     margin: 1em auto;
   }
 }
+
 
