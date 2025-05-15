@@ -102,7 +102,7 @@
   </style>
 </head>
 <body>
-  <button id="menu-toggle">&#9776;</button>
+<button id="menu-toggle">☰ Menu</button>
 
   <header>
     <h1>Plantas & Gatos</h1>
@@ -211,16 +211,11 @@
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.getElementById('menu-toggle');
-      const asideMenu = document.querySelector('aside');
-      if (toggleBtn && asideMenu) {
-        toggleBtn.addEventListener('click', () => {
-          asideMenu.classList.toggle('active');
-        });
-      }
-    });
-  </script>
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.querySelector("aside").classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>
 
