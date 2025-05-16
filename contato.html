@@ -129,6 +129,17 @@
       pointer-events: none;
       filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));">
     <p>Estética, verdura e segurança para amigos felinos</p>
+      <nav>
+    <ul class="top-menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="plantas.html">Plantas</a></li>
+      <li><a href="decoracao.html">Decoração</a></li>
+      <li><a href="ebooks.html">E-books</a></li>
+      <li><a href="produtos.html" class="active">Produtos</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
   </header>
 
   <main>
@@ -148,36 +159,11 @@
     </section>
   </main>
 
-  <aside>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="plantas.html">Plantas</a></li>
-        <li><a href="decoracao.html">Decoração</a></li>
-        <li><a href="ebooks.html">E-books/Livros</a></li>
-        <li><a href="produtos.html">Produtos Recomendados</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </aside>
-
   <footer>
     <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
     <p>Contato: <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a></p>
   </footer>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById('menu-toggle');
-    const asideMenu = document.querySelector('aside');
-    if (toggleBtn && asideMenu) {
-      toggleBtn.addEventListener('click', () => {
-        asideMenu.classList.toggle('active');
-      });
-    }
-  });
-</script>
 </body>
 </html>
 
