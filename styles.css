@@ -177,4 +177,25 @@ aside nav ul li a:hover {
   }
 }
 
+.safira-plantas {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 160px;
+  max-width: 20vw;
+  z-index: 999;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Ajuste para mobile */
+@media screen and (max-width: 768px) {
+  .safira-plantas {
+    position: static !important;
+    max-width: 80vw;
+    display: block;
+    margin: 1em auto;
+  }
+}
+
+
 
