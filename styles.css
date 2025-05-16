@@ -181,8 +181,8 @@ aside nav ul li a:hover {
   position: fixed;
   top: 30px;
   right: 30px;
-  width: 160px;
-  max-width: 20vw;
+  width: 220px;
+  max-width: 30vw;
   z-index: 999;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
