@@ -169,7 +169,6 @@ footer {
 
 /* Telas pequenas (mobile) */
 @media screen and (max-width: 768px) {
-  /* Substitui Safira flutuante por central */
   .safira-plantas {
     display: none !important;
   }
@@ -197,19 +196,19 @@ footer {
   }
 
   .top-menu {
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-  padding: 0;
-}
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0;
+  }
 
-.top-menu li a {
-  font-size: 1rem;
-  padding: 0.3em 0.8em;
-  color: #E8DCC3;
-  background: transparent;
-  text-align: center;
-  border: none;
+  .top-menu li a {
+    font-size: 1rem;
+    padding: 0.3em 0.8em;
+    color: #E8DCC3;
+    background: transparent;
+    text-align: center;
+    border: none;
+  }
 }
-
