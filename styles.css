@@ -157,6 +157,7 @@ footer {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
+/* Versão mobile */
 @media screen and (max-width: 768px) {
   .safira-plantas {
     position: relative;
@@ -177,6 +178,7 @@ footer {
 
   header p {
     font-size: 0.95rem;
+    margin: 0;
   }
 }
 
