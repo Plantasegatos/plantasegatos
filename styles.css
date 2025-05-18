@@ -6,6 +6,14 @@
    #B66527 – Marrom telha (botões/destaques)
 */
 
+/* Paleta base:
+   #1A3A36 – Verde escuro (fundo/header)
+   #287D72 – Verde médio (detalhes/hover)
+   #E8DCC3 – Bege claro (fundo suave/texto)
+   #D9A744 – Amarelo queimado (chamada/links)
+   #B66527 – Marrom telha (botões/destaques)
+*/
+
 body {
   margin: 0;
   font-family: Garamond, 'Times New Roman', serif;
@@ -14,11 +22,14 @@ body {
   line-height: 1.6;
 }
 
+/* Cabeçalho */
 header {
   background-color: #1A3A36;
   color: #fff;
   padding: 2rem 1rem;
   text-align: center;
+  position: relative;
+  z-index: 100;
 }
 
 header h1 {
@@ -32,12 +43,40 @@ header p {
   color: #E8DCC3;
 }
 
+/* Menu no cabeçalho */
+.top-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  z-index: 1000;
+  position: relative;
+}
+
+.top-menu li a {
+  color: #E8DCC3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: Garamond, serif;
+  transition: color 0.3s;
+}
+
+.top-menu li a:hover {
+  color: #D9A744;
+}
+
+/* Conteúdo principal */
 main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+/* Cards de post */
 .post-preview {
   background-color: #fff;
   border-left: 5px solid #B66527;
@@ -64,6 +103,7 @@ main {
   text-decoration: underline;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -72,31 +112,7 @@ footer {
   margin-top: 3rem;
 }
 
-/* Menu no cabeçalho */
-.top-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 1rem 0 0;
-  padding: 0;
-}
-
-.top-menu li a {
-  color: #E8DCC3;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  font-family: Garamond, serif;
-  transition: color 0.3s;
-}
-
-.top-menu li a:hover {
-  color: #D9A744;
-}
-
-/* Mascote flutuante no desktop */
+/* Safira flutuante no desktop */
 .safira-plantas {
   position: fixed;
   top: 60px;
@@ -107,7 +123,7 @@ footer {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
-/* Mascote centralizada no mobile */
+/* Safira central no mobile */
 .safira-central {
   display: none;
 }
@@ -151,13 +167,14 @@ footer {
 
 /* Telas pequenas (mobile) */
 @media screen and (max-width: 768px) {
+  /* Substitui Safira flutuante por central */
   .safira-plantas {
     display: none !important;
   }
 
   .safira-central {
     display: block;
-    margin: 1em auto;
+    margin: 1.2em auto;
     max-width: 90px;
     height: auto;
   }
@@ -175,6 +192,16 @@ footer {
   header p {
     font-size: 0.95rem;
     margin: 0;
+  }
+
+  .top-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .top-menu li a {
+    font-size: 1rem;
   }
 }
 
