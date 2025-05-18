@@ -1,17 +1,9 @@
 /* Paleta base:
-   #1A3A36 – Verde escuro (fundo/header)
-   #287D72 – Verde médio (detalhes/hover)
-   #E8DCC3 – Bege claro (fundo suave/texto)
-   #D9A744 – Amarelo queimado (chamada/links)
-   #B66527 – Marrom telha (botões/destaques)
-*/
-
-/* Paleta base:
-   #1A3A36 – Verde escuro (fundo/header)
-   #287D72 – Verde médio (detalhes/hover)
-   #E8DCC3 – Bege claro (fundo suave/texto)
-   #D9A744 – Amarelo queimado (chamada/links)
-   #B66527 – Marrom telha (botões/destaques)
+   #1A3A36 â€“ Verde escuro (fundo/header)
+   #287D72 â€“ Verde mÃ©dio (detalhes/hover)
+   #E8DCC3 â€“ Bege claro (fundo suave/texto)
+   #D9A744 â€“ Amarelo queimado (chamada/links)
+   #B66527 â€“ Marrom telha (botÃµes/destaques)
 */
 
 body {
@@ -22,7 +14,7 @@ body {
   line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* CabeÃ§alho */
 header {
   background-color: #1A3A36;
   color: #fff;
@@ -43,7 +35,11 @@ header p {
   color: #E8DCC3;
 }
 
-/* Menu no cabeçalho */
+nav.menu-principal {
+  margin-top: 1em;
+}
+
+/* Menu no cabeÃ§alho */
 .top-menu {
   list-style: none;
   display: flex;
@@ -54,6 +50,9 @@ header p {
   padding: 0;
   z-index: 1000;
   position: relative;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .top-menu li a {
@@ -63,13 +62,16 @@ header p {
   font-size: 1.1rem;
   font-family: Garamond, serif;
   transition: color 0.3s;
+  padding: 0.4em 0.8em;
+  display: inline-block;
 }
 
-.top-menu li a:hover {
+.top-menu li a:hover,
+.top-menu li a.active {
   color: #D9A744;
 }
 
-/* Conteúdo principal */
+/* ConteÃºdo principal */
 main {
   max-width: 800px;
   margin: 2rem auto;
@@ -103,7 +105,7 @@ main {
   text-decoration: underline;
 }
 
-/* Rodapé */
+/* RodapÃ© */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -197,12 +199,22 @@ footer {
   .top-menu {
     flex-direction: column;
     align-items: center;
+    gap: 0.6rem;
     margin-top: 1em;
   }
 
   .top-menu li a {
     font-size: 1rem;
+    padding: 0.8em 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .top-menu li a:hover,
+  .top-menu li a.active {
+    background-color: #133336;
+    color: #D9A744;
   }
 }
-
 
