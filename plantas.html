@@ -13,6 +13,65 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plantas</title>
+  <style>
+  .top-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 0;
+    margin: 1.2rem auto 0;
+    max-width: 960px;
+  }
+
+  .top-menu li a {
+    background-color: transparent;
+    color: #E8DCC3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: Garamond, serif;
+    transition: color 0.3s;
+    padding: 0.4em 0.8em;
+    display: inline-block;
+  }
+
+  .top-menu li a:hover,
+  .top-menu li a.active {
+    color: #D9A744;
+  }
+
+  @media screen and (max-width: 768px) {
+    .top-menu {
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .top-menu li a {
+      width: auto !important;
+      text-align: center;
+      background: transparent !important;
+      border: none;
+      padding: 0.4em 0.7em;
+      font-size: 1rem;
+    }
+
+    .safira-plantas {
+      display: none !important;
+    }
+
+    .safira-central {
+      display: block !important;
+      margin: 1.2em auto;
+      max-width: 90px;
+      height: auto;
+    }
+  }
+</style>
+
   <link href="styles.css" rel="stylesheet" />
   <style>
     .nav {
