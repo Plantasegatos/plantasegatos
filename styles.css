@@ -157,28 +157,17 @@ footer {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
-/* Versão mobile */
+.safira-central {
+  display: block;
+  margin: 1em auto;
+  max-width: 90px;
+  height: auto;
+}
+
+/* Esconde a versão flutuante no mobile */
 @media screen and (max-width: 768px) {
   .safira-plantas {
-    position: relative;
-    display: block;
-    max-width: 70px;
-    margin: 0 auto 0.5em auto;
-  }
-
-  header {
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-
-  header h1 {
-    margin: 0.5em 0 0.2em;
-    font-size: 1.8rem;
-  }
-
-  header p {
-    font-size: 0.95rem;
-    margin: 0;
+    display: none !important;
   }
 }
 
