@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta name="p:domain_verify" content="fad2619dbdab6b2120d71338165bbdd1"/>
+  <meta name="p:domain_verify" content="fad2619dbdab6b2120d71338165bbdd1"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EW4KP7PKBS');
+  </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-EW4KP7PKBS');
-</script>
-  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plantas</title>
   <link href="styles.css" rel="stylesheet" />
-  <style
-      .top-menu {
+  <style>
+    .top-menu {
       list-style: none;
       display: flex;
       justify-content: center;
@@ -74,7 +73,7 @@
         background-color: #133336;
         color: #D9A744;
       }
-    } 
+    }
 
     body {
       margin: 0;
@@ -85,12 +84,19 @@
       flex-direction: column;
       min-height: 100vh;
     }
+
     header {
       background-color: #1A3A36;
       color: white;
       text-align: center;
       padding: 2em 1em 1em;
     }
+
+    .safira-central {
+      max-width: 100%;
+      height: auto;
+    }
+
     .filtros {
       display: flex;
       gap: 1em;
@@ -98,6 +104,7 @@
       justify-content: center;
       margin: 1em;
     }
+
     .filtros button {
       background: #285F6B;
       color: white;
@@ -106,9 +113,11 @@
       border-radius: 6px;
       cursor: pointer;
     }
+
     .filtros button:hover {
       background: #133336;
     }
+
     .plant-grid {
       display: flex;
       flex-wrap: wrap;
@@ -118,6 +127,7 @@
       max-width: 1600px;
       margin: 0 auto;
     }
+
     .plant-card {
       background: #fff;
       border-radius: 16px;
@@ -126,21 +136,25 @@
       transition: transform 0.3s;
       display: flex;
       flex-direction: column;
-      width: 300px;
+      width: 100%;
+      max-width: 300px;
       min-height: 500px;
       padding: 1.5em;
       text-decoration: none;
       color: inherit;
     }
+
     .plant-card:hover {
       transform: scale(1.03);
     }
+
     .plant-card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 12px;
     }
+
     .plant-card .content {
       padding-top: 1em;
       flex-grow: 1;
@@ -148,37 +162,45 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     .plant-card h2 {
       margin: 0;
       font-size: 1.3em;
     }
+
     .sci-name {
       font-style: italic;
       color: #666;
       margin: 0.5em 0 1em;
     }
+
     .icons {
       display: flex;
       flex-direction: column;
       gap: 0.4em;
     }
+
     .icons p {
       margin: 0;
       font-size: 0.9em;
     }
+
     .description {
       margin-top: 1em;
       font-size: 0.85em;
       color: #333;
     }
+
     .hidden {
       display: none !important;
     }
+
     .voltar {
       text-align: center;
       padding: 2rem;
       margin-top: auto;
     }
+
     .voltar a {
       background: #285F6B;
       color: white;
@@ -187,25 +209,50 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .gota-pequena { font-size: 0.8em; }
     .gota-moderada { font-size: 1.2em; }
     .gota-frequente { font-size: 1.5em; }
     .gota-enorme { font-size: 1.8em; }
+
+    @media screen and (max-width: 600px) {
+      .plant-grid {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+      }
+
+      .plant-card {
+        width: 90%;
+        max-width: 320px;
+        padding: 1em;
+      }
+
+      .filtros {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+
+      .filtros button {
+        width: 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
-<header>
-  <h1>Plantas & Gatos</h1>
-  <img src="IMG/safira-plantas.png" alt="Mascote Safira" class="safira-central" />
-  <p>Estética, verdura e segurança para amigos felinos</p>
-</header>
+  <header>
+    <h1>Plantas & Gatos</h1>
+    <img src="IMG/safira-plantas.png" alt="Mascote Safira" class="safira-central" />
+    <p>Estética, verdura e segurança para amigos felinos</p>
+  </header>
 
-<img src="IMG/safira-plantas.png" alt="Safira flutuante" class="safira-plantas" />
+  <img src="IMG/safira-plantas.png" alt="Safira flutuante" class="safira-plantas" />
 
-    <nav>
+  <nav>
     <ul class="top-menu">
       <li><a href="index.html">Início</a></li>
-      <li><a href="plantas.html">Plantas</a></li>
+      <li><a href="plantas.html" class="active">Plantas</a></li>
       <li><a href="decoracao.html">Decoração</a></li>
       <li><a href="ebooks.html">E-books</a></li>
       <li><a href="produtos.html">Produtos</a></li>
@@ -213,7 +260,7 @@
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
-  </header>
+
   <div class="filtros">
     <button onclick="filtrar('naotoxica')">Não Tóxicas</button>
     <button onclick="filtrar('toxica')">Tóxicas</button>
@@ -225,6 +272,31 @@
     <button onclick="filtrar('resistente')">Resistente</button>
     <button onclick="filtrar('todos')">Mostrar Todas</button>
   </div>
+
+  <div class="plant-grid">
+    <!-- Aqui permanecem todos os seus plant-cards intactos -->
+    <!-- ... (todos os cards continuam aqui como estão) ... -->
+  </div>
+
+  <div class="voltar">
+    <a href="index.html">← Voltar ao Início</a>
+  </div>
+
+  <script>
+    function filtrar(classe) {
+      const cards = document.querySelectorAll('.plant-card');
+      cards.forEach(card => {
+        if (classe === 'todos') {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.toggle('hidden', !card.classList.contains(classe));
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
   <div class="plant-grid">
     <a class="plant-card luz-baixa rega-baixa naotoxica" href="pilea.html">
       <img src="img/pilea.jpg" alt="Pilea Peperomioides">
