@@ -14,7 +14,6 @@ body {
   line-height: 1.6;
 }
 
-/* CabeÃ§alho */
 header {
   background-color: #1A3A36;
   color: #fff;
@@ -39,20 +38,16 @@ nav.menu-principal {
   margin-top: 1em;
 }
 
-/* Menu no cabeÃ§alho */
 .top-menu {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin: 1.5rem 0 0;
+  margin: 1.5rem auto 0;
   padding: 0;
   z-index: 1000;
-  position: relative;
   max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .top-menu li a {
@@ -71,41 +66,12 @@ nav.menu-principal {
   color: #D9A744;
 }
 
-/* ConteÃºdo principal */
 main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-/* Cards de post */
-.post-preview {
-  background-color: #fff;
-  border-left: 5px solid #B66527;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.post-preview h2 {
-  margin-top: 0;
-  color: #1A3A36;
-}
-
-.post-preview a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #D9A744;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.post-preview a:hover {
-  text-decoration: underline;
-}
-
-/* RodapÃ© */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -114,7 +80,6 @@ footer {
   margin-top: 3rem;
 }
 
-/* Safira flutuante no desktop */
 .safira-plantas {
   position: fixed;
   top: 60px;
@@ -125,49 +90,10 @@ footer {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
-/* Safira central no mobile */
 .safira-central {
   display: none;
 }
 
-/* Responsivo: tablets e notebooks pequenos */
-@media screen and (max-width: 1024px) {
-  main {
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  aside {
-    transform: translateX(100%);
-    width: 260px;
-    top: 0;
-    right: 0;
-    height: 100%;
-    padding-top: 4em;
-    background-color: #1A3A36;
-    position: fixed;
-  }
-
-  aside.active {
-    transform: translateX(0);
-  }
-
-  #menu-toggle {
-    display: block;
-  }
-
-  aside nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  aside nav ul li {
-    margin: 1em;
-  }
-}
-
-/* Telas pequenas (mobile) */
 @media screen and (max-width: 768px) {
   .safira-plantas {
     display: none !important;
@@ -210,5 +136,10 @@ footer {
     background: transparent;
     text-align: center;
     border: none;
+    width: auto;
+  }
+
+  nav.menu-principal {
+    width: 100%;
   }
 }
