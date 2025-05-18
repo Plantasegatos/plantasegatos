@@ -96,6 +96,22 @@ footer {
   color: #D9A744;
 }
 
+/* Mascote flutuante no desktop */
+.safira-plantas {
+  position: fixed;
+  top: 60px;
+  right: 30px;
+  width: 300px;
+  max-width: 50vw;
+  z-index: 999;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Mascote centralizada no mobile */
+.safira-central {
+  display: none;
+}
+
 /* Responsivo: tablets e notebooks pequenos */
 @media screen and (max-width: 1024px) {
   main {
@@ -135,6 +151,10 @@ footer {
 
 /* Telas pequenas (mobile) */
 @media screen and (max-width: 768px) {
+  .safira-plantas {
+    display: none !important;
+  }
+
   .safira-central {
     display: block;
     margin: 1em auto;
@@ -142,34 +162,20 @@ footer {
     height: auto;
   }
 
-  .safira-plantas {
-    display: none !important;
+  header {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  header h1 {
+    margin: 0.5em 0 0.2em;
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+    margin: 0;
   }
 }
-
-.safira-plantas {
-  position: fixed;
-  top: 60px;
-  right: 30px;
-  width: 300px;
-  max-width: 50vw;
-  z-index: 999;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-}
-
-.safira-central {
-  display: block;
-  margin: 1em auto;
-  max-width: 90px;
-  height: auto;
-}
-
-/* Esconde a versão flutuante no mobile */
-@media screen and (max-width: 768px) {
-  .safira-plantas {
-    display: none !important;
-  }
-}
-
 
 
