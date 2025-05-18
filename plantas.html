@@ -15,32 +15,62 @@
   <title>Plantas</title>
   <link href="styles.css" rel="stylesheet" />
   <style>
-    .top-menu {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin: 1.5rem 0 0;
-      padding: 0;
-    }
+    .nav {
+  margin-top: 1rem;
+}
 
-    .top-menu li a {
-      background-color: transparent;
-      color: #1A3A36;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      font-family: Garamond, serif;
-      transition: color 0.3s, background-color 0.3s;
-      padding: 0.5em 1em;
-      display: inline-block;
-    }
+.top-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 1rem auto 0;
+  max-width: 900px;
+}
 
-    .top-menu li a:hover,
-    .top-menu li a.active {
-      color: #D9A744;
-    }
+.top-menu li a {
+  background-color: transparent;
+  color: #E8DCC3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: Garamond, serif;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 0.3em 0.7em;
+  display: inline-block;
+}
+
+.top-menu li a:hover,
+.top-menu li a.active {
+  color: #D9A744;
+}
+
+@media screen and (max-width: 768px) {
+  .top-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-left: 0;
+    gap: 0.5rem;
+  }
+
+  .top-menu li a {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.75em 0;
+    background-color: transparent;
+  }
+
+  .top-menu li a:hover,
+  .top-menu li a.active {
+    background-color: #133336;
+    color: #D9A744;
+  }
+}
+
 
     @media screen and (max-width: 768px) {
       nav {
