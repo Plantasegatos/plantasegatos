@@ -132,15 +132,18 @@ nav.menu-principal {
 
 /* MENU DE FILTROS COM ROLAGEM HORIZONTAL */
 .filtros {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  white-space: nowrap !important;
   gap: 0.5rem;
   padding: 0.5em 1em;
-  justify-content: start;
+  justify-content: flex-start;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .filtros button {
