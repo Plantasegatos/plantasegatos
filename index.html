@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
   <meta name="p:domain_verify" content="fad2619dbdab6b2120d71338165bbdd1"/>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-EW4KP7PKBS');
-</script>
-  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW4KP7PKBS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EW4KP7PKBS');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plantas & Gatos</title>
@@ -24,7 +21,6 @@
       width: calc(100% - 500px);
       max-width: none;
     }
-
     aside {
       position: fixed;
       top: 350px;
@@ -39,7 +35,6 @@
       z-index: 998;
       transition: transform 0.3s ease;
     }
-
     aside nav ul {
       list-style: none;
       padding: 0 1em;
@@ -48,18 +43,15 @@
       flex-direction: column;
       align-items: flex-start;
     }
-
     aside nav ul li {
       margin: 1em 0;
     }
-
     aside nav ul li a {
       color: #E8DCC3;
       text-decoration: none;
       font-size: 1.2em;
       font-weight: bold;
     }
-
     #menu-toggle {
       display: none;
       position: fixed;
@@ -72,7 +64,6 @@
       z-index: 1001;
       cursor: pointer;
     }
-
     @media screen and (max-width: 1024px) {
       aside {
         transform: translateX(100%);
@@ -83,26 +74,21 @@
         position: fixed;
         padding-top: 4em;
       }
-
       aside.active {
         transform: translateX(0);
       }
-
       #menu-toggle {
         display: block;
       }
-
       main {
         margin: 0;
         width: 100%;
       }
     }
-
     @media screen and (max-width: 768px) {
       aside nav ul li a {
         font-size: 1em;
       }
-
       img[alt="Safira no cabeçalho"] {
         position: static !important;
         max-width: 80vw;
@@ -110,120 +96,94 @@
         margin: 1em auto;
       }
     }
+    .post-preview {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #ccc;
+    }
+    .preview-text {
+      flex: 1;
+      margin-right: 1em;
+    }
+    .preview-text h3 {
+      margin-top: 0;
+      color: #1A3A36;
+      font-size: 1.2em;
+    }
+    .preview-text p {
+      margin: 0.5em 0 0;
+      color: #285F6B;
+    }
+    .preview-img img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
-<button id="menu-toggle">☰ Menu</button>
-
+  <button id="menu-toggle">☰ Menu</button>
   <header>
     <h1>Plantas & Gatos</h1>
-    <img src="IMG/Safira-esguia.png" alt="Safira no cabeçalho" style="
-      position: fixed;
-      top: 80px;
-      right: -40px;
-      max-width: 490px;
-      width: 40vw;
-      z-index: 999;
-      pointer-events: none;
-      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));">
+    <img src="IMG/Safira-esguia.png" alt="Safira no cabeçalho" style="position: fixed; top: 80px; right: -40px; max-width: 490px; width: 40vw; z-index: 999; pointer-events: none; filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));">
     <p>Estética, verdura e segurança para amigos felinos</p>
-      <nav>
-    <ul class="top-menu">
-      <li><a href="blog/blog.html">Blog</a></li>
-      <li><a href="plantas.html">Plantas</a></li>
-      <li><a href="decoracao.html">Decoração</a></li>
-      <li><a href="ebooks.html">E-books</a></li>
-      <li><a href="produtos.html" class="active">Produtos</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul class="top-menu">
+        <li><a href="index.html" class="active">Blog</a></li>
+        <li><a href="plantas.html">Plantas</a></li>
+        <li><a href="decoracao.html">Decoração</a></li>
+        <li><a href="ebooks.html">E-books</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-
-  <section class="blog-posts">
-    
-   <section class="blog-posts">
-
-  <!-- Post 4: Purificadoras -->
-  <article class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-    <h2>Top 5 plantas que purificam o ar e protegem seu lar (mas nem sempre seu gato)</h2>
-    <p>Nem todas as plantas purificadoras são amigas dos felinos. Descubra quais equilibram estética, ar limpo e segurança para o seu gato.</p>
-    <a href="purificadoras-post.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-  </article>
-
-  <!-- Post 3: Samambaia -->
-  <article class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-    <h2>Samambaias: seguras, lindas e negligenciadas</h2>
-    <p>Clássicas da decoração e livres de toxicidade, as samambaias merecem voltar ao protagonismo nos lares com gatos.</p>
-    <a href="samambaia-post.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-  </article>
-
-  <!-- Post 2: Rosa do Deserto -->
-  <article class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-    <h2>Rosa do Deserto: a beleza perigosa que exige distância felina</h2>
-    <p>Linda, exótica e letal para gatos. Saiba por que a Rosa do Deserto precisa ser mantida longe dos bichanos — mesmo sendo irresistível.</p>
-    <a href="rosa-do-deserto-post.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-  </article>
-
-  <!-- Post 1: Fitônia -->
-  <article class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-    <h2>Fitônias. Seus lares mais verdes e bichanos seguros</h2>
-    <p>Descubra por que essa planta vibrante e segura é a favorita entre quem ama gatos e ambientes vivos.</p>
-    <a href="fitonia.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-  </article>
-
-</section>
-
-
-    <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-      <h2>Quer fazer uma surpresa a alguém?</h2>
-      <p>Antes de entregar flores, descubra quais encantam sem colocar os gatos em risco.</p>
-      <a href="surpresa.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-    </section>
-
-    <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-      <h2>Óleos essenciais, gatos e plantas: cuidado redobrado</h2>
-      <p>O aroma que relaxa você pode intoxicar seu gato — e até suas plantas. Descubra como proteger todos os sentidos do seu lar.</p>
-      <a href="oleos.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-    </section>
-
-    <section class="post-preview" style="background-color: #E8DCC3; padding: 1.5em; border-radius: 12px; margin-bottom: 2em;">
-      <img src="IMG/decor-prateleira.png" alt="Decoração segura com prateleiras e plantas" style="width: 100%; border-radius: 12px; margin-bottom: 1em;">
-      <h2>3 ideias para decorar com charme e segurança</h2>
-      <p>Ambientes lindos, vivos e seguros para todos — inclusive seus felinos.</p>
-      <a href="decor-dicas.html" style="color: #287D72; font-weight: bold;">Ler mais →</a>
-    </section>
+    <h2>Últimos Posts do Blog</h2>
+    <div id="posts-container"></div>
   </main>
 
-  <section class="comentarios" style="background-color: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); margin: 2em 40px;">
-    <h3 style="margin-top: 0; color: #1A3A36; font-family: Garamond, serif;">Deixe um comentário</h3>
-    <form action="https://formspree.io/f/mdkgerwr" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
-      <input type="hidden" name="_captcha" value="false">
-      <textarea name="comentario" rows="6" placeholder="Escreva seu comentário aqui..." required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;"></textarea>
-      <input type="text" name="nome" placeholder="Seu nome *" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;">
-      <input type="email" name="email" placeholder="Seu e-mail *" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;">
-      <button type="submit" style="align-self: flex-start; background-color: #1A3A36; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease;">Publicar comentário</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
-    <p>Contato: <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a></p>
-    <p>
-      <a href="https://br.pinterest.com/plantasngatos/" target="_blank" title="Siga no Pinterest">
-        <img src="IMG/pinterest-icon.png" alt="Pinterest Plantas & Gatos" style="width:50px; height:auto; vertical-align: middle; margin-top: 0.5em;">
-      </a>
-    </p>
+  <footer style="text-align:center; margin-top: 3em; color: #1A3A36;">
+    © 2025 Plantas & Gatos<br>
+    <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a>
   </footer>
 
   <script>
-  document.getElementById("menu-toggle").addEventListener("click", function () {
-    document.querySelector("aside").classList.toggle("active");
-  });
-</script>
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.querySelector("aside")?.classList.toggle("active");
+    });
 
+    fetch('blog/posts.json')
+      .then(response => response.json())
+      .then(posts => {
+        const container = document.getElementById('posts-container');
+        posts.sort((a, b) => new Date(b.data) - new Date(a.data));
+        posts.forEach(post => {
+          const div = document.createElement('div');
+          div.className = 'post-preview';
+          div.innerHTML = `
+            <div class="preview-text">
+              <h3><a href="blog/${post.link}">${post.titulo}</a></h3>
+              <p>${post.trecho}</p>
+            </div>
+            <div class="preview-img">
+              <a href="blog/${post.link}">
+                <img src="${post.imagem}" alt="Miniatura do post ${post.titulo}">
+              </a>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
 </body>
 </html>
+
 
