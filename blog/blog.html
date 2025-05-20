@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Plantas & Gatos</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em 1em;
+      font-family: Garamond, serif;
+    }
+
+    .post-preview {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .preview-text {
+      flex: 1;
+      margin-right: 1em;
+    }
+
+    .preview-text h3 {
+      margin-top: 0;
+      color: #1A3A36;
+      font-size: 1.2em;
+    }
+
+    .preview-text p {
+      margin: 0.5em 0 0;
+      color: #285F6B;
+    }
+
+    .preview-img img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>Últimos Posts do Blog</h2>
+    <div id="posts-container"></div>
+  </main>
+
+  <footer style="text-align:center; margin-top: 3em; color: #1A3A36;">
+    © 2025 Plantas & Gatos
+  </footer>
+
+  <script>
+    fetch('posts.json')
+      .then(response => response.json())
+      .then(posts => {
+        const container = document.getElementById('posts-container');
+        posts.sort((a, b) => new Date(b.data) - new Date(a.data));
+        posts.forEach(post => {
+          const div = document.createElement('div');
+          div.className = 'post-preview';
+          div.innerHTML = `
+            <div class="preview-text">
+              <h3><a href="${post.link}">${post.titulo}</a></h3>
+              <p>${post.trecho}</p>
+            </div>
+            <div class="preview-img">
+              <a href="${post.link}">
+                <img src="${post.imagem}" alt="Miniatura do post ${post.titulo}">
+              </a>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
