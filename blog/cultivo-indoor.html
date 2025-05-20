@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cultivo Indoor | Plantas & Gatos</title>
+  <title>Plantas & Gatos – Blog</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       background-color: #E8DCC3;
       font-family: Garamond, serif;
-      margin: 0;
-      padding: 0;
       color: #1A3A36;
+      margin: 0;
     }
     header {
-      text-align: center;
-      position: relative;
       background-color: #1A3A36;
+      text-align: center;
       padding: 2rem 1rem 1rem;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
       color: #E8DCC3;
+      font-size: 2.5rem;
+      margin: 0;
     }
     header p {
-      margin: 0.2rem 0 0;
-      font-style: italic;
       color: #E8DCC3;
+      font-style: italic;
+      margin-top: 0.2rem;
     }
     header img {
       position: fixed;
@@ -39,33 +38,46 @@
       filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
     }
     main {
-      max-width: 800px;
+      max-width: 960px;
       margin: auto;
-      padding: 2rem 1.5rem;
+      padding: 2rem;
     }
-    h2 {
-  font-size: 2rem;
-  color: #133336;
-}
-
-    img.post-img {
-      display: block;
-      max-width: 100%;
-      margin: 2rem auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    .post-preview {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
-    p {
-      font-size: 1.4rem;
-      line-height: 1.8;
-      margin-bottom: 1.6rem;
+    .preview-text {
+      flex: 1;
+      margin-right: 1.5rem;
     }
-    a.back-link {
-      display: inline-block;
-      margin-top: 2rem;
+    .preview-text h3 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    .preview-text h3 a {
       color: #287D72;
-      font-weight: bold;
       text-decoration: none;
+      font-weight: bold;
+    }
+    .preview-text .post-date {
+      font-size: 0.95rem;
+      color: #285F6B;
+      margin: 0.4rem 0;
+    }
+    .preview-text p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0 0;
+    }
+    .preview-img img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     }
     footer {
       text-align: center;
@@ -78,40 +90,50 @@
   <header>
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
-    <img src="../IMG/Safira-esguia.png" alt="Safira no cabeçalho">
+    <img src="IMG/Safira-esguia.png" alt="Safira no cabeçalho">
   </header>
   <main>
-    <h2>🌿 Cultivo Indoor: Como Criar um Jardim Dentro de Casa</h2>
-    <img class="post-img" src="../IMG/cultivo-indoor-post.png" alt="Cultivo Indoor">
-
-    <p>Nem todo mundo tem uma varanda ensolarada ou quintal à disposição. Mas a boa notícia é que o cultivo indoor permite criar um jardim vibrante dentro de casa — mesmo em apartamentos compactos ou ambientes com pouca luz natural.</p>
-
-    <p>Cultivar plantas dentro de casa é mais do que uma solução estética: é também uma forma de trazer bem-estar, melhorar a qualidade do ar e criar um cantinho verde e relaxante, sem comprometer a segurança dos nossos gatos.</p>
-
-    <p><strong>1. Escolha as espécies certas</strong><br>
-    Algumas plantas se adaptam melhor à vida indoor. Prefira aquelas que toleram sombra ou luz indireta, como <strong>Calatheas, Marantas, Zamioculcas, Peperômias e Pileas</strong>. Ah, e claro, sempre verifique se são <em>seguras para gatos</em>!</p>
-
-    <p><strong>2. Iluminação é tudo</strong><br>
-    Se o ambiente for muito escuro, invista em luzes artificiais específicas para plantas, como lâmpadas LED de espectro completo. Elas imitam a luz solar e ajudam as plantas a se desenvolverem com saúde mesmo em locais sem janelas.</p>
-
-    <p><strong>3. Cuidado com o excesso de água</strong><br>
-    Plantas em ambientes internos costumam demorar mais para secar. Evite regar por rotina — sinta o solo antes. O uso de substratos bem drenados e vasos com furos é essencial para evitar o apodrecimento das raízes.</p>
-
-    <p><strong>4. Ambientes seguros para gatos</strong><br>
-    Posicione as plantas fora do alcance se forem tóxicas, ou priorize espécies atóxicas. Usar suportes suspensos, prateleiras altas ou proteger vasos com pedras decorativas pode evitar curiosidades perigosas.</p>
-
-    <p><strong>5. Monitoramento e adaptação</strong><br>
-    Observe como suas plantas reagem ao ambiente. Folhas amarelas, crescimento estagnado ou murchas são sinais de que algo precisa ser ajustado — seja a luz, o local ou a frequência de rega.</p>
-
-    <p>O cultivo indoor é uma jornada. Aos poucos, você aprende a linguagem das plantas e adapta o espaço para que elas e seus gatos convivam em perfeita harmonia.</p>
-
-    <a class="back-link" href="../index.html">← Voltar para o blog</a>
+    <div id="posts-container"></div>
   </main>
   <footer>
     © 2025 Plantas & Gatos · <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a>
   </footer>
+  <script>
+    fetch('blog/posts.json')
+      .then(response => response.json())
+      .then(posts => {
+        const container = document.getElementById('posts-container');
+        posts.sort((a, b) => new Date(b.data) - new Date(a.data));
+        posts.forEach(post => {
+          const dateObj = new Date(post.data);
+          const dataFormatada = dateObj.toLocaleDateString('pt-BR', {
+            day: '2-digit', month: '2-digit', year: 'numeric'
+          });
+          const hora = dateObj.toLocaleTimeString('pt-BR', {
+            hour: '2-digit', minute: '2-digit'
+          });
+
+          const div = document.createElement('div');
+          div.className = 'post-preview';
+          div.innerHTML = `
+            <div class="preview-text">
+              <h3><a href="blog/${post.link}">🌿 ${post.titulo}</a></h3>
+              <div class="post-date">🕒 ${dataFormatada} às ${hora}</div>
+              <p>${post.trecho}</p>
+            </div>
+            <div class="preview-img">
+              <a href="blog/${post.link}">
+                <img src="${post.imagem}" alt="Miniatura do post ${post.titulo}">
+              </a>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
 </body>
 </html>
+
 
 
 
