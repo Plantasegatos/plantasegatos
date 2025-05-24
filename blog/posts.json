@@ -1,12 +1,5 @@
 [
   {
-    "titulo": "🌿 Cultivo Indoor: Como Criar um Jardim Dentro de Casa",
-    "trecho": "Sem quintal? Sem problema. Descubra como cultivar plantas lindas e seguras para gatos dentro de casa — mesmo com pouca luz natural.",
-    "link": "blog/cultivo-indoor.html",
-    "imagem": "../IMG/cultivo-indoor-post.png",
-    "data": "2025-05-19"
-  }
-  {
     "titulo": "Fitônias. Seus lares mais verdes e bichanos seguros",
     "trecho": "Descubra por que essa planta vibrante e segura é a favorita entre quem ama gatos e ambientes vivos.",
     "link": "blog/fitonia.html",
@@ -33,6 +26,13 @@
     "link": "blog/purificadoras-post.html",
     "imagem": "IMG/purificadoras-post.png",
     "data": "2025-05-13"
+  },
+   {
+    "titulo": "🌿 Cultivo Indoor: Como Criar um Jardim Dentro de Casa",
+    "trecho": "Sem quintal? Sem problema. Descubra como cultivar plantas lindas e seguras para gatos dentro de casa — mesmo com pouca luz natural.",
+    "link": "blog/cultivo-indoor.html",
+    "imagem": "../IMG/cultivo-indoor-post.png",
+    "data": "2025-05-19"
   },
   {
     "titulo": "Quer fazer uma surpresa a alguém?",
