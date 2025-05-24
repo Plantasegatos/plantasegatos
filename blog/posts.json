@@ -6,4 +6,46 @@
     "imagem": "../IMG/cultivo-indoor-post.png",
     "data": "2025-05-19"
   }
+  {
+    "titulo": "Fitônias. Seus lares mais verdes e bichanos seguros",
+    "trecho": "Descubra por que essa planta vibrante e segura é a favorita entre quem ama gatos e ambientes vivos.",
+    "link": "blog/fitonia.html",
+    "imagem": "IMG/fitonia-post.png",
+    "data": "2025-04-21"
+  },
+  {
+    "titulo": "Rosa do Deserto: a beleza perigosa que exige distância felina",
+    "trecho": "Linda, exótica e letal para gatos. Saiba por que a Rosa do Deserto precisa ser mantida longe dos bichanos — mesmo sendo irresistível.",
+    "link": "blog/rosa-do-deserto-post.html",
+    "imagem": "IMG/rosa-do-deserto-post.png",
+    "data": "2025-04-29"
+  },
+  {
+    "titulo": "Samambaias: seguras, lindas e negligenciadas",
+    "trecho": "Clássicas da decoração e livres de toxicidade, as samambaias merecem voltar ao protagonismo nos lares com gatos.",
+    "link": "blog/samambaia-post.html",
+    "imagem": "IMG/samambaia-post.png",
+    "data": "2025-05-06"
+  },
+  {
+    "titulo": "Top 5 plantas que purificam o ar e protegem seu lar (mas nem sempre seu gato)",
+    "trecho": "Nem todas as plantas purificadoras são amigas dos felinos. Descubra quais equilibram estética, ar limpo e segurança para o seu gato.",
+    "link": "blog/purificadoras-post.html",
+    "imagem": "IMG/purificadoras-post.png",
+    "data": "2025-05-13"
+  },
+  {
+    "titulo": "Quer fazer uma surpresa a alguém?",
+    "trecho": "Antes de entregar flores, descubra quais encantam sem colocar os gatos em risco.",
+    "link": "blog/surpresa.html",
+    "imagem": "IMG/buque-seguro.png",
+    "data": "2025-05-20"
+  },
+  {
+    "titulo": "Óleos essenciais, gatos e plantas: cuidado redobrado",
+    "trecho": "O aroma que relaxa você pode intoxicar seu gato — e até suas plantas. Descubra como proteger todos os sentidos do seu lar.",
+    "link": "blog/oleos.html",
+    "imagem": "IMG/oleos-aromaticos.png",
+    "data": "2025-05-24"
+  }
 ]
