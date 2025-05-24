@@ -90,7 +90,7 @@
   <header>
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
-    <img src="IMG/Safira-esguia.png" alt="Safira no cabeçalho">
+    <img src="../IMG/Safira-esguia.png" alt="Safira no cabeçalho">
   </header>
   <main>
     <div class="post-date" style="text-align: center; font-size: 1rem; margin-bottom: 1.5rem; color: #285F6B;">
@@ -107,7 +107,7 @@
     © 2025 Plantas & Gatos · <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a>
   </footer>
   <script>
-    fetch('blog/posts.json')
+    fetch('posts.json')
       .then(response => response.json())
       .then(posts => {
         const container = document.getElementById('posts-container');
