@@ -3,25 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quer fazer uma surpresa? Veja o que pode estar no buquê</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Quer fazer uma surpresa a alguém? | Plantas & Gatos</title>
+  <link rel="stylesheet" href="../styles.css" />
   <style>
-    main {
-      padding: 2em 1em;
-      margin: 0 auto;
-      max-width: 800px;
+    body {
+      margin: 0;
+      background-color: #E8DCC3;
+      font-family: Garamond, serif;
+      color: #1A3A36;
     }
 
-    .post-surpresa img {
+    header {
+      background-color: #1A3A36;
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header h1 {
+      color: #E8DCC3;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      color: #E8DCC3;
+      font-style: italic;
+      margin-top: 0.4rem;
+    }
+
+    header img {
+      position: fixed;
+      top: 80px;
+      right: -40px;
+      width: 25vw;
+      max-width: 300px;
+      pointer-events: none;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
+      z-index: 999;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1.5rem;
+    }
+
+    main h2 {
+      font-size: 1.8rem;
+      color: #1A3A36;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.2em;
+      color: #285F6B;
+    }
+
+    img.post-img {
+      display: block;
+      margin: 2rem auto;
       max-width: 100%;
-      height: auto;
       border-radius: 12px;
-      margin: 1.5em 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     }
 
     .back-link {
-      margin-top: 3em;
-      display: inline-block;
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
       color: #287D72;
       font-weight: bold;
       text-decoration: none;
@@ -33,8 +84,8 @@
 
     footer {
       text-align: center;
-      padding: 2em 0;
-      color: #666;
+      margin: 3rem 0 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -42,54 +93,35 @@
   <header>
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
+    <img src="../IMG/Safira-esguia.png" alt="Safira mascote" />
   </header>
 
   <main>
-    <article class="post-surpresa">
-      <h2>Quer fazer uma surpresa a alguém? Veja o que pode estar no buquê</h2>
-      <img src="IMG/buque-seguro.png" alt="Buquê de flores seguras para gatos" />
+    <h2>💐 Quer fazer uma surpresa a alguém?</h2>
+    <img class="post-img" src="../IMG/buque-seguro.png" alt="Buquê seguro para ambientes com gatos" />
 
-      <p>Flores encantam. Elas dizem “pensei em você”, “sinto muito”, “parabéns” ou apenas “estou aqui”. Mas quando quem vai receber um buquê divide o lar com um gato, o gesto exige um pouco mais de carinho — e informação.</p>
+    <p>Presentear com flores é um gesto de carinho e beleza. Mas se a casa da pessoa presenteada tem um gato, a escolha do arranjo exige atenção especial. Muitos dos buquês tradicionais podem ser tóxicos para felinos e causar reações graves — mesmo se apenas mastigarem uma folha ou pétala.</p>
 
-      <p>Isso porque <strong>muitas flores comuns em arranjos são tóxicas para felinos</strong>. Lírios, tulipas e narcisos estão entre os mais perigosos, podendo causar desde vômitos até problemas renais graves mesmo com o simples contato com o pólen. Por isso, antes de escolher o mais bonito, vale perguntar: esse buquê também é seguro?</p>
+    <p><strong>Lírios</strong>, <strong>tulipas</strong> e <strong>cravos</strong> são lindos, mas altamente perigosos. A ingestão de pequenas quantidades pode afetar rins, fígado ou sistema nervoso dos gatos.</p>
 
-      <h3>🌷 O que pode entrar no buquê</h3>
-      <p>Felizmente, há uma bela variedade de flores seguras para gatos e que encantam qualquer olhar:</p>
-      <ul>
-        <li><strong>Gérberas</strong> – Coloridas, vibrantes e duráveis</li>
-        <li><strong>Astromélias</strong> – Leves, delicadas e não tóxicas</li>
-        <li><strong>Girassóis</strong> – Alegria imediata, sem riscos</li>
-        <li><strong>Rosas (sem espinhos e sem pesticidas)</strong> – Clássicas e seguras</li>
-        <li><strong>Orquídeas Phalaenopsis</strong> – Elegância tropical em total segurança</li>
-        <li><strong>Violetas</strong> – Compactas, meigas e inofensivas</li>
-      </ul>
+    <p>Mas nem tudo está perdido! Algumas flores são <strong>seguras</strong> e encantam com igual intensidade. Aposte em:</p>
 
-      <h3>🚫 O que evitar (mesmo que seja lindo)</h3>
-      <p>Essas são algumas das flores mais perigosas para gatos e, infelizmente, também as mais presentes em floriculturas:</p>
-      <ul>
-        <li><strong>Lírios</strong> – Extremamente tóxicos, até mesmo o pólen</li>
-        <li><strong>Tulipas</strong> – Bonitas, mas podem causar vômitos e salivação</li>
-        <li><strong>Narcisos</strong> – Riscos ao sistema digestivo e nervoso</li>
-        <li><strong>Ciclames</strong> – Muito usadas em vasos, mas perigosas</li>
-        <li><strong>Hortênsias</strong> – Tóxicas mesmo quando secas</li>
-      </ul>
+    <ul>
+      <li>🌸 <strong>Orquídeas (Phalaenopsis)</strong></li>
+      <li>🌻 <strong>Girassóis</strong></li>
+      <li>🌺 <strong>Violetas-africanas</strong></li>
+      <li>🌼 <strong>Astromélias</strong> (de floricultura controlada)</li>
+    </ul>
 
-      <h3>💐 Como montar um buquê gentil (e encantador)</h3>
-      <p>Um bom buquê pet-friendly pode ser ainda mais especial quando feito com consciência. Combine texturas, cores e flores seguras com elementos de apoio como folhagens (como a ruscus ou samambaias não tóxicas), fitas naturais e um cartão feito à mão. Pequenos gestos fazem toda a diferença.</p>
+    <p>Combine-as com folhagens não tóxicas e envolva o arranjo em papéis recicláveis. Além de mais seguros, esses buquês mostram cuidado, informação e empatia com quem tem um pet em casa.</p>
 
-      <p>Quer deixar ainda mais personalizado? Inclua uma fitônia mini ou uma violeta em vaso — elas duram mais que flores de corte e ainda transmitem cuidado de longo prazo.</p>
+    <p>🌿 A melhor surpresa é aquela que alegra sem ameaçar. Com escolha consciente, flores e gatos convivem muito bem.</p>
 
-      <h3>🐾 Um presente que respeita todos os moradores</h3>
-      <p>Flores são sempre um presente bonito. Mas flores pensadas com afeto por todos os que vivem na casa — inclusive os de quatro patas — têm um valor ainda maior. Com poucas escolhas conscientes, você transforma beleza em segurança e transforma um mimo em gesto de afeto completo.</p>
-
-      <p>🌿 Seu buquê pode ser o começo de um novo jardim — um onde humanos e felinos florescem juntos.</p>
-
-      <a href="index.html" class="back-link">← Voltar para o blog</a>
-    </article>
+    <a class="back-link" href="../index.html">← Voltar para o blog</a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
+    © 2025 Plantas & Gatos · <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a>
   </footer>
 </body>
 </html>
