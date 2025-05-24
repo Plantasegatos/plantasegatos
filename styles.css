@@ -6,8 +6,11 @@
    #B66527 – Marrom telha (botões/destaques)
 */
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
   font-family: Garamond, 'Times New Roman', serif;
   background-color: #E8DCC3;
   color: #1A3A36;
@@ -86,23 +89,13 @@ nav.menu-principal {
 
 /* Mobile adjustments */
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   header {
     padding: 1.2em 1em 1em;
   }
-   
-.top-menu {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
-  justify-content: flex-start;
-  gap: 1.2rem;
-  padding: 0.5rem 1rem;
-  margin: 0 auto;
-  max-width: 100vw;
-  box-sizing: border-box;
-}
-
 
   header h1 {
     font-size: 1.8rem;
@@ -115,12 +108,15 @@ nav.menu-principal {
   }
 
   .top-menu {
+    display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
     white-space: nowrap;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     margin: 0 auto;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
 
   .top-menu li a {
@@ -180,3 +176,4 @@ nav.menu-principal {
   background-color: #D9A744;
   color: #1A3A36;
 }
+
