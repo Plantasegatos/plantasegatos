@@ -1,54 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dracena</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       background-color: #E8DCC3;
-      font-family: Garamond, serif;
-      color: #1A3A36;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      color: #1A3A36;
+    }
+    header {
+      background-color: #1A3A36;
+      color: white;
+      text-align: center;
+      padding: 2em 1em 1em;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
       text-align: center;
     }
-    .plant-img {
-      margin: 30px auto;
-      max-width: 90%;
+    img {
+      max-width: 100%;
+      display: block;
+      margin: auto;
       border-radius: 12px;
     }
-    main {
-      padding: 1em;
-      max-width: 700px;
-      margin: auto;
+    .infos {
+      margin-top: 1.5em;
     }
-    .back-link {
-      display: inline-block;
-      margin-top: 30px;
-      color: #1A3A36;
+    .infos p {
+      margin: 0.5em 0;
+    }
+    .voltar {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .voltar a {
+      background: #285F6B;
+      color: white;
+      padding: 0.75em 1.5em;
+      border-radius: 8px;
       text-decoration: none;
-    }
-    footer {
-      margin-top: 3em;
-      font-size: 0.9em;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <main>
+  <header>
+    <h1>Plantas & Gatos</h1>
+    <p>Estética, verdura e segurança para amigos felinos</p>
+  </header>
+
+  <div class="container">
     <h1>Dracena</h1>
-    <h2><em>Dracaena marginata</em></h2>
-    <img src="IMG/dracena.jpg" alt="Dracena" class="plant-img">
-    <p><strong>Toxicidade:</strong> ☠️ Tóxica para gatos</p>
-    <p><strong>Luz:</strong> 🌤️ Luz indireta</p>
-    <p><strong>Rega:</strong> 💧 Baixa</p>
-    <p>De fácil cuidado, a Dracena é comum em escritórios e residências por sua elegância tropical. Suas folhas arqueadas criam um visual leve e moderno.</p>
-    <p><strong>Curiosidade:</strong> Quando cultivada ao ar livre, pode atingir até 3 metros de altura.</p>
-    <a class="back-link" href="plantas.html">← Voltar para Plantas</a>
-  </main>
-  <footer>
-    <p>© 2025 Plantas & Gatos — plantasngatos@gmail.com</p>
-  </footer>
+    <img src="IMG/dracena.jpg" alt="Dracena">
+    <div class="infos">
+      <p><strong>Nome científico:</strong> <em>Dracaena marginata</em></p>
+      <p><strong>Tóxica para gatos:</strong> Sim</p>
+      <p><strong>Luz ideal:</strong> Luz indireta</p>
+      <p><strong>Rega:</strong> Baixa</p>
+      <p><strong>Descrição:</strong> Folhagem fina e ereta com visual elegante. Muito usada em ambientes internos, mas tóxica para gatos.</p>
+    </div>
+    
+    <div class="curiosidade">
+      <h3>💡 Curiosidade</h3>
+      <p>É uma das plantas mais recomendadas para purificação do ar, segundo a NASA.</p>
+    </div>
+
+    <div class="voltar">
+      <a href="plantas.html">← Voltar para Plantas</a>
+    </div>
+  </div>
 </body>
 </html>
+
