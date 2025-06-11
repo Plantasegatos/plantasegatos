@@ -134,18 +134,29 @@ footer img {
     <div id="posts-container"></div>
   </main>
 
-  <footer>
+ <footer>
   <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
   <p>Contato: <a href="mailto:plantasngatos@gmail.com">plantasngatos@gmail.com</a></p>
-  <a href="https://br.pinterest.com/plantasngatos/" target="_blank" rel="noopener noreferrer">
-    <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" alt="Pinterest" style="width: 48px; height: 48px;">
-  </a>
-    <a href="https://www.instagram.com/plantasngatos" target="_blank" class="social-link instagram-link" style="display:inline-flex;align-items:center;text-decoration:none;">
-  <img src="IMG/instagram-icon.svg" alt="Instagram" style="width:48px; height:48px; margin-right:8px;">
-  <span style="font-family:Garamond,serif;font-size:18px;color:#367D8A;">Siga no Instagram</span>
-</a>
+  <div class="footer-socials">
+    <a href="https://br.pinterest.com/plantasngatos/" target="_blank" class="icon-social">
+      <img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" alt="Pinterest" width="40" height="40">
+    </a>
+    <a href="https://www.instagram.com/plantasngatos" target="_blank" class="icon-social">
+      <!-- SVG Instagram gradiente -->
+      <svg width="40" height="40" viewBox="0 0 448 512">
+        <defs>
+          <linearGradient id="IG-gradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f58529"/>
+            <stop offset="30%" stop-color="#dd2a7b"/>
+            <stop offset="60%" stop-color="#8134af"/>
+            <stop offset="100%" stop-color="#515bd4"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#IG-gradient)" d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.18-30.18C304.91,121.42,277.23,120,224,120s-80.91,1.42-94.53,11.47a54,54,0,0,0-30.18,30.18C97.42,175.09,96,202.77,96,256s1.42,80.91,11.47,94.53a54,54,0,0,0,30.18,30.18C143.09,390.58,170.77,392,224,392s80.91-1.42,94.53-11.47a54,54,0,0,0,30.18-30.18C350.58,336.91,352,309.23,352,256S350.58,175.09,348.71,161.66ZM224,338a82,82,0,1,1,82-82A82,82,0,0,1,224,338Zm85.4-148.9a19.21,19.21,0,1,1-19.21-19.21A19.22,19.22,0,0,1,309.4,189.1Z"/>
+      </svg>
+    </a>
+  </div>
 </footer>
-
 
   <script>
     fetch('blog/posts.json')
