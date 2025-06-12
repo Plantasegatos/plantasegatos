@@ -5,6 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hortelã-pimenta | Plantas & Gatos</title>
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      background: #E8DCC3;
+      margin: 0;
+      font-family: Garamond, serif;
+      color: #1A3A36;
+    }
+    .plant-card-container {
+      background: #fff;
+      max-width: 600px;
+      margin: 40px auto 32px auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(40,125,114,0.10);
+      padding: 2.2rem 2.1rem 2.8rem 2.1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .plant-title {
+      text-align: center;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #285F6B;
+      margin-bottom: 0.3em;
+    }
+    .sci-name {
+      text-align: center;
+      font-style: italic;
+      color: #52706e;
+      font-size: 1.1rem;
+      margin-bottom: 1.2em;
+    }
+    .plant-img {
+      display: block;
+      margin: 0 auto 1.7em auto;
+      max-width: 340px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(40,125,114,0.11);
+      background: #E8DCC3;
+    }
+    .infos-list {
+      width: 100%;
+      margin-bottom: 1.4em;
+    }
+    .infos-list p {
+      margin: 0.32em 0;
+      font-size: 1.09rem;
+    }
+    .plant-desc {
+      width: 100%;
+      font-size: 1.09rem;
+      margin-bottom: 1.4em;
+      color: #1A3A36;
+    }
+    .curiosity-box {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      background: #FFF8E1;
+      border-left: 5px solid #D9A744;
+      border-radius: 10px;
+      margin: 1.7em 0 1.5em 0;
+      padding: 1.1em 1em;
+      font-size: 1.04rem;
+      color: #66592D;
+      box-shadow: 0 2px 8px rgba(217,167,68,0.04);
+    }
+    .curiosity-box .curiosity-icon {
+      font-size: 1.4em;
+      margin-right: 0.5em;
+      margin-top: 2px;
+    }
+    .btn-voltar {
+      display: block;
+      margin: 1.8em auto 0 auto;
+      padding: 0.9em 2.7em;
+      background: #287D72;
+      color: #fff;
+      border: none;
+      border-radius: 22px;
+      font-size: 1.11rem;
+      font-family: inherit;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 500;
+      box-shadow: 0 3px 8px rgba(40,125,114,0.09);
+      transition: background .2s;
+      cursor: pointer;
+      max-width: 300px;
+    }
+    .btn-voltar:hover {
+      background: #1A3A36;
+    }
+    @media (max-width: 720px) {
+      .plant-card-container { padding: 1.1rem 0.4rem 1.7rem 0.4rem; }
+      .plant-img { max-width: 94vw; }
+    }
+    footer {
+      text-align: center;
+      padding: 2em 1em 0.5em 1em;
+      background-color: #E8DCC3;
+    }
+    footer p {
+      margin: 0.4em 0;
+    }
+    footer img {
+      display: block;
+      margin: 10px auto 0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -13,24 +124,23 @@
     <img src="../IMG/Safira-esguia.png" alt="Mascote Safira no topo">
   </header>
   <main>
-    <div class="plant-page-container">
-      <h2>Hortelã-pimenta</h2>
-      <div class="sci-name"><em>Mentha piperita</em></div>
+    <div class="plant-card-container">
+      <div class="plant-title">Hortelã-pimenta</div>
+      <div class="sci-name">Mentha piperita</div>
       <img class="plant-img" src="../IMG/hortela-pimenta.jpg" alt="Hortelã-pimenta em vaso">
-      <div class="plant-info">
+      <div class="infos-list">
         <p><strong>Nome científico:</strong> <em>Mentha piperita</em></p>
-        <p><strong>Tóxica para gatos:</strong> Sim</p>
+        <p><strong>Tóxica para gatos:</strong> Sim (óleos essenciais - mentol)</p>
         <p><strong>Luz ideal:</strong> Luz intensa indireta</p>
         <p><strong>Rega:</strong> Frequente, sem encharcar</p>
       </div>
       <div class="plant-desc">
-        <p>A <strong>hortelã-pimenta</strong> é uma planta aromática muito usada em chás e receitas. Suas folhas perfumadas são apreciadas na culinária e medicina natural, mas seus óleos essenciais (mentol) são tóxicos para gatos e cães.</p>
-        <p>O contato ou ingestão pode provocar irritação gástrica, vômitos, diarreia e letargia. O ideal é evitar a hortelã-pimenta em ambientes frequentados por gatos curiosos.</p>
+        <p>A <strong>hortelã-pimenta</strong> é uma planta aromática muito usada em chás e receitas. Suas folhas perfumadas são apreciadas na culinária e medicina natural, mas seus óleos essenciais (mentol) são tóxicos para gatos e cães. O contato ou ingestão pode provocar irritação gástrica, vômitos, diarreia e letargia. Evite cultivar hortelã-pimenta em ambientes frequentados por gatos curiosos.</p>
       </div>
       <div class="curiosity-box">
         <span class="curiosity-icon">💡</span>
         <span>
-          Apesar de muito popular em hortas domésticas, a hortelã-pimenta pode ser perigosa para pets sensíveis aos compostos da planta. Dê preferência a plantas não tóxicas se tiver gatos curiosos!
+          Apesar de muito popular em hortas domésticas, a hortelã-pimenta pode ser perigosa para pets sensíveis aos compostos da planta. Prefira plantas não tóxicas se convive com gatos!
         </span>
       </div>
       <a class="btn-voltar" href="../plantas.html">← Voltar para Plantas</a>
