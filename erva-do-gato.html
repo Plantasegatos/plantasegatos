@@ -1,109 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Erva-do-gato | Plantas & Gatos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacová</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      background: #E8DCC3;
+      background-color: #E8DCC3;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: Garamond, serif;
       color: #1A3A36;
+    }
+    header {
+      background-color: #1A3A36;
+      color: white;
+      text-align: center;
+      padding: 2em 1em 1em;
     }
     .container {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 2em;
       background: #fff;
-      border-radius: 28px;
-      max-width: 470px;
-      margin: 36px auto 32px auto;
-      padding: 28px 22px 18px 22px;
-      box-shadow: 0 4px 24px rgba(26,58,54,0.11);
-      text-align: center;
-    }
-    .plant-img {
-      display: block;
-      margin: 0 auto 18px auto;
-      max-width: 300px;
-      width: 83%;
-      border-radius: 22px;
-      background: #E8DCC3;
-      box-shadow: 0 2px 8px rgba(52,72,56,0.09);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     h1 {
-      font-size: 2.1rem;
-      margin: 0 0 6px 0;
-      font-weight: bold;
-      color: #1A3A36;
+      text-align: center;
     }
-    .sci-name {
-      font-size: 1.05rem;
-      font-style: italic;
-      color: #287D72;
-      margin-bottom: 17px;
+    img {
+      max-width: 100%;
+      display: block;
+      margin: auto;
+      border-radius: 12px;
     }
     .infos {
-      text-align: left;
-      margin: 0 0 12px 0;
-      padding: 0 8px;
-      font-size: 1.08rem;
-      line-height: 1.53;
+      margin-top: 1.5em;
     }
-    .infos strong {
-      color: #133336;
+    .infos p {
+      margin: 0.5em 0;
     }
-    .curiosidade {
-      font-size: 1.03rem;
-      color: #287D72;
-      text-align: left;
-      padding-left: 8px;
-      font-style: italic;
-      margin-bottom: 20px;
-      margin-top: 0;
-      background: none;
-      border: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .voltar {
+      text-align: center;
+      margin-top: 2em;
     }
-    .curiosidade strong {
-      font-style: normal;
-      font-weight: 600;
-      margin-right: 4px;
-      color: #B66527;
-    }
-    .lamp {
-      font-size: 1.15em;
-      margin-right: 4px;
-      color: #D9A744;
-      flex-shrink: 0;
-    }
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 9px 28px 9px 18px;
-      border: none;
-      border-radius: 17px;
-      background: #133336;
-      color: #fff;
-      font-size: 1rem;
-      font-family: Garamond, serif;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 8px;
-      box-shadow: 0 2px 8px rgba(19,51,54,0.07);
-      transition: background 0.18s;
-    }
-    .back-btn:hover {
+    .voltar a {
       background: #285F6B;
-    }
-    .arrow {
-      font-size: 1.1em;
-      margin-right: 10px;
+      color: white;
+      padding: 0.75em 1.5em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Plantas & Gatos</h1>
+    <p>Estética, verdura e segurança para amigos felinos</p>
+  </header>
+
   <div class="container">
-    <h1>Erva-do-gato</h1>
+     <h1>Erva-do-gato</h1>
     <div class="sci-name">Nepeta cataria</div>
     <img src="IMG/erva-do-gato.jpg" alt="Erva-do-gato" class="plant-img">
     <div class="infos">
@@ -113,11 +72,12 @@
       <div><strong>Descrição:</strong> Planta aromática conhecida por estimular e divertir os gatos. Fácil de cultivar, ótima para enriquecimento ambiental dos felinos.</div>
     </div>
     <div class="curiosidade">
-      <span class="lamp">💡</span>
-      <strong>Curiosidade:</strong>
-      Cerca de 7 em cada 10 gatos reagem ao aroma da erva-do-gato, ficando mais brincalhões e ativos.
+      <span class="lamp">💡</span><strong>Curiosidade:</strong> Cerca de 7 em cada 10 gatos reagem ao aroma da erva-do-gato, ficando mais brincalhões e ativos.
     </div>
-    <a href="plantas.html" class="back-btn"><span class="arrow">&#8592;</span>Voltar para as plantas</a>
+
+    <div class="voltar">
+      <a href="plantas.html">← Voltar para Plantas</a>
+    </div>
   </div>
 </body>
 </html>
