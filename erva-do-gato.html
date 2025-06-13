@@ -11,73 +11,93 @@
       color: #1A3A36;
     }
     .container {
-      max-width: 500px;
       background: #fff;
-      margin: 40px auto;
       border-radius: 28px;
-      box-shadow: 0 4px 24px rgba(26,58,54,0.12);
-      padding: 32px 28px 24px 28px;
+      max-width: 470px;
+      margin: 36px auto 32px auto;
+      padding: 28px 22px 18px 22px;
+      box-shadow: 0 4px 24px rgba(26,58,54,0.11);
       text-align: center;
     }
+    .plant-img {
+      display: block;
+      margin: 0 auto 18px auto;
+      max-width: 300px;
+      width: 83%;
+      border-radius: 22px;
+      background: #E8DCC3;
+      box-shadow: 0 2px 8px rgba(52,72,56,0.09);
+    }
     h1 {
-      font-size: 2.3rem;
-      margin: 0 0 8px 0;
+      font-size: 2.1rem;
+      margin: 0 0 6px 0;
       font-weight: bold;
+      color: #1A3A36;
     }
     .sci-name {
+      font-size: 1.05rem;
       font-style: italic;
-      color: #367D8A;
-      font-size: 1.12rem;
-      margin-bottom: 18px;
-    }
-    .plant-img {
-      width: 80%;
-      max-width: 320px;
-      border-radius: 22px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(52,72,56,0.12);
-      background: #E8DCC3;
+      color: #287D72;
+      margin-bottom: 17px;
     }
     .infos {
       text-align: left;
-      font-size: 1.1rem;
-      margin: 0 auto 20px auto;
+      margin: 0 0 12px 0;
       padding: 0 8px;
+      font-size: 1.08rem;
+      line-height: 1.53;
     }
     .infos strong {
       color: #133336;
-      font-weight: 600;
     }
     .curiosidade {
-      background: #E8DCC3;
-      border-radius: 12px;
-      padding: 10px 18px;
-      margin-bottom: 16px;
-      font-size: 1.07rem;
+      font-size: 1.03rem;
       color: #287D72;
+      text-align: left;
+      padding-left: 8px;
+      font-style: italic;
+      margin-bottom: 20px;
+      margin-top: 0;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .curiosidade strong {
+      font-style: normal;
+      font-weight: 600;
+      margin-right: 4px;
+      color: #B66527;
+    }
+    .lamp {
+      font-size: 1.15em;
+      margin-right: 4px;
+      color: #D9A744;
+      flex-shrink: 0;
     }
     .back-btn {
-      background: #133336;
-      color: #fff;
-      border: none;
-      border-radius: 18px;
-      font-size: 1rem;
-      padding: 10px 32px 10px 20px;
-      margin-top: 10px;
-      cursor: pointer;
       display: inline-flex;
       align-items: center;
-      transition: background 0.2s;
-      box-shadow: 0 2px 8px rgba(19,51,54,0.07);
+      padding: 9px 28px 9px 18px;
+      border: none;
+      border-radius: 17px;
+      background: #133336;
+      color: #fff;
+      font-size: 1rem;
+      font-family: Garamond, serif;
+      cursor: pointer;
       text-decoration: none;
+      margin-top: 8px;
+      box-shadow: 0 2px 8px rgba(19,51,54,0.07);
+      transition: background 0.18s;
     }
     .back-btn:hover {
       background: #285F6B;
     }
-    .back-btn .arrow {
-      display: inline-block;
+    .arrow {
+      font-size: 1.1em;
       margin-right: 10px;
-      font-size: 1.2em;
     }
   </style>
 </head>
@@ -87,15 +107,18 @@
     <div class="sci-name">Nepeta cataria</div>
     <img src="IMG/erva-do-gato.jpg" alt="Erva-do-gato" class="plant-img">
     <div class="infos">
-      <p><strong>Toxicidade:</strong> Não tóxica para gatos</p>
-      <p><strong>Luz:</strong> Luz intensa indireta ou sol pleno</p>
-      <p><strong>Rega:</strong> Moderada (manter o solo levemente úmido)</p>
-      <p><strong>Descrição:</strong> Planta aromática que estimula e diverte os gatos. Fácil de cultivar em vaso ou jardim, pode ser oferecida fresca ou seca para os felinos.</p>
+      <div><strong>Toxicidade:</strong> Não tóxica para gatos</div>
+      <div><strong>Luz:</strong> Luz intensa indireta ou sol pleno</div>
+      <div><strong>Rega:</strong> Moderada (solo levemente úmido)</div>
+      <div><strong>Descrição:</strong> Planta aromática conhecida por estimular e divertir os gatos. Fácil de cultivar, ótima para enriquecimento ambiental dos felinos.</div>
     </div>
     <div class="curiosidade">
-      Curiosidade: Cerca de 70% dos gatos respondem ao aroma da erva-do-gato, demonstrando euforia, brincadeiras e até rolando sobre a planta!
+      <span class="lamp">💡</span>
+      <strong>Curiosidade:</strong>
+      Cerca de 7 em cada 10 gatos reagem ao aroma da erva-do-gato, ficando mais brincalhões e ativos.
     </div>
     <a href="plantas.html" class="back-btn"><span class="arrow">&#8592;</span>Voltar para as plantas</a>
   </div>
 </body>
 </html>
+
