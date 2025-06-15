@@ -176,4 +176,36 @@ nav.menu-principal {
   background-color: #D9A744;
   color: #1A3A36;
 }
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: #E8DCC3;
+  color: #1A3A36;
+  font-family: Garamond, serif;
+}
+
+footer p {
+  margin: 0.5em 0;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.icon-social img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.icon-social:hover img {
+  transform: scale(1.14);
+}
+
 
