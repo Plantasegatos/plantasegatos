@@ -77,6 +77,27 @@ nav.menu-principal {
   max-width: 2000px;
   margin: 0 auto;
 }
+.pagina-ebooks section {
+  padding: 4em 4em;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+.pagina-decoracao section {
+  padding: 4em 4em;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+.pagina-sobre section {
+  padding: 4em 4em;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+.pagina-contato section {
+  padding: 4em 4em;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+
 
 .safira-plantas {
   position: fixed;
