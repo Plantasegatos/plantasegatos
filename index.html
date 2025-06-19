@@ -1,140 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Plantas & Gatos</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantas & Gatos</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       margin: 0;
-      background-color: #E8DCC3;
       font-family: Garamond, serif;
+      background-color: #E8DCC3;
       color: #1A3A36;
     }
 
     header {
       background-color: #1A3A36;
+      color: #E8DCC3;
       text-align: center;
-      padding: 2rem 1rem 1rem;
+      padding: 2em 1em 1em;
     }
 
-    header h1 {
-      color: #E8DCC3;
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      color: #E8DCC3;
-      font-style: italic;
-      margin-top: 0.4rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #E8DCC3;
-    }
-
-    header img {
-      position: fixed;
-      top: 80px;
-      right: -40px;
-      width: 40vw;
-      max-width: 490px;
-      pointer-events: none;
-      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
-      z-index: 999;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    .post-preview {
+    .top-menu {
+      list-style: none;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #ccc;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 1rem auto 0;
+      max-width: 900px;
     }
 
-    .preview-text {
-      flex: 1;
-      margin-right: 1.5rem;
-    }
-
-    .preview-text h3 a {
-      margin: 0;
-      font-size: 1.4rem;
-      color: #287D72;
+    .top-menu li a {
+      background-color: transparent;
+      color: #E8DCC3;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      font-family: Garamond, serif;
+      transition: color 0.3s, background-color 0.3s;
+      padding: 0.3em 0.7em;
+      display: inline-block;
     }
 
-    .preview-text p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #285F6B;
+    .top-menu li a:hover,
+    .top-menu li a.active {
+      color: #D9A744;
     }
 
-    .preview-img img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    .subtitulo {
+      font-family: Garamond, serif;
+      font-size: 1.2rem;
+      margin-top: 0.5em;
     }
 
     footer {
       text-align: center;
-      font-size: 0.9rem;
-      margin: 4rem 0 2rem;
+      padding: 2em 1em;
+      background-color: #E8DCC3;
+      font-family: Garamond, serif;
+      color: #1A3A36;
+      font-size: 0.95rem;
     }
-    footer {
-  text-align: center;
-  padding: 2em 1em;
-  background-color: #E8DCC3;
-}
 
-footer p {
-  margin: 0.5em 0;
-}
-
-footer img {
-  display: block;
-  margin: 10px auto 0;
-}
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  margin-top: 18px;
-  margin-bottom: 12px;
-}
-.icon-social svg {
-  width: 40px;
-  height: 40px;
-  display: block;
-  transition: transform 0.2s;
-  cursor: pointer;
-}
-.icon-social:hover svg {
-  transform: scale(1.14);
-}
-
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 18px;
+      margin-bottom: 12px;
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Plantas & Gatos</h1>
-    <p>Estética, verdura e segurança para amigos felinos</p>
+    <p class="subtitulo">Estética, verdura e segurança para amigos felinos</p>
     <nav class="menu-principal">
-     <ul class="top-menu">
-        <li><a href="index.html">Blog</a></li>
+      <ul class="top-menu">
+        <li><a href="index.html" class="active">Início</a></li>
         <li><a href="plantas.html">Plantas</a></li>
         <li><a href="decoracao.html">Decoração</a></li>
         <li><a href="ebooks.html">E-books</a></li>
@@ -143,7 +87,6 @@ footer img {
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
-    <img src="IMG/Safira-esguia.png" alt="Mascote Safira no topo">
   </header>
 
   <main>
@@ -163,7 +106,6 @@ footer img {
       </a>
     </div>
   </footer>
-
 
   <script>
     fetch('blog/posts.json')
