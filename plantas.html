@@ -11,6 +11,7 @@
       font-family: Garamond, serif;
       background-color: #E8DCC3;
       color: #1A3A36;
+      overflow-x: hidden;
     }
 
     header {
@@ -27,7 +28,7 @@
       right: 20px;
       width: 26vw;
       max-width: 300px;
-      z-index: 9999;
+      z-index: 10;
       pointer-events: none;
     }
 
@@ -63,6 +64,25 @@
       font-family: Garamond, serif;
       font-size: 1.2rem;
       margin-top: 0.5em;
+    }
+
+    .filtros {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .plant-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     footer {
@@ -103,8 +123,6 @@
   <img src="IMG/safira-plantas.png" alt="Mascote Safira Plantas" class="safira-plantas">
 
   <main>
-
-  <main class="container-content">
     <div class="filtros">
       <button>Não Tóxicas</button>
       <button>Tóxicas</button>
@@ -116,7 +134,6 @@
       <button>Resistente</button>
       <button>Mostrar Todas</button>
     </div>
-
     <div class="plant-grid">
   </div>
 
@@ -1178,12 +1195,7 @@
 
     
   </div>
-  
-  <div class="voltar">
-  <a href="index.html">← Voltar ao Início</a>
-</div>
-
-</main>
+  </main>
 
   <footer>
     <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
@@ -1199,7 +1211,6 @@
   </footer>
 </body>
 </html>
-
 
 
 
