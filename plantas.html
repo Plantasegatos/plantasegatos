@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta name="p:domain_verify" content="fad2619dbdab6b2120d71338165bbdd1"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-EW4KP7PKBS');
-  </script>
-
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plantas</title>
-  <link href="styles.css" rel="stylesheet" />
+  <title>Plantas & Gatos</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       margin: 0;
       font-family: Garamond, serif;
       background-color: #E8DCC3;
       color: #1A3A36;
-      overflow-x: hidden;
     }
 
     header {
@@ -28,6 +18,17 @@
       color: #E8DCC3;
       text-align: center;
       padding: 2em 1em 1em;
+      position: relative;
+    }
+
+    .safira-plantas {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 26vw;
+      max-width: 300px;
+      z-index: 9999;
+      pointer-events: none;
     }
 
     .top-menu {
@@ -58,92 +59,37 @@
       color: #D9A744;
     }
 
-    .container-content {
-      max-width: 1600px;
-      margin: 0 auto;
-      padding: 2em;
-    }
-
-    .filtros {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      justify-content: center;
-      margin-bottom: 2em;
-    }
-
-    .filtros button {
-      background-color: #133336;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 0.5em 1em;
-      cursor: pointer;
+    .subtitulo {
       font-family: Garamond, serif;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      margin-top: 0.5em;
     }
 
-    .filtros button:hover {
-      background-color: #285F6B;
-    }
-
-    .plant-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
-    }
-
-    .plant-card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 300px;
-      min-height: 500px;
-      padding: 1.5em;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .plant-card:hover {
-      transform: scale(1.03);
-    }
-
-    .plant-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .voltar {
+    footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2em 1em;
+      background-color: #E8DCC3;
+      font-family: Garamond, serif;
+      color: #1A3A36;
+      font-size: 0.95rem;
     }
 
-    .voltar a {
-      background-color: #133336;
-      color: white;
-      padding: 0.75em 1.5em;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 18px;
+      margin-bottom: 12px;
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Plantas & Gatos</h1>
-    <p>Estética, verdura e segurança para amigos felinos</p>
+    <p class="subtitulo">Estética, verdura e segurança para amigos felinos</p>
     <nav class="menu-principal">
       <ul class="top-menu">
-        <li><a href="index.html">Blog</a></li>
+        <li><a href="index.html">Início</a></li>
         <li><a href="plantas.html" class="active">Plantas</a></li>
         <li><a href="decoracao.html">Decoração</a></li>
         <li><a href="ebooks.html">E-books</a></li>
@@ -153,6 +99,10 @@
       </ul>
     </nav>
   </header>
+
+  <img src="IMG/safira-plantas.png" alt="Mascote Safira Plantas" class="safira-plantas">
+
+  <main>
 
   <main class="container-content">
     <div class="filtros">
@@ -1233,7 +1183,9 @@
   <a href="index.html">← Voltar ao Início</a>
 </div>
 
- <footer>
+</main>
+
+  <footer>
     <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
     <p>Contato: <a href="mailto:contato@plantasegatos.com.br">contato@plantasegatos.com.br</a></p>
     <div class="footer-socials">
@@ -1245,22 +1197,6 @@
       </a>
     </div>
   </footer>
-
-  <script>
-    function filtrar(classe) {
-      const cards = document.querySelectorAll('.plant-card');
-      cards.forEach(card => {
-        if (classe === 'todos') {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.toggle('hidden', !card.classList.contains(classe));
-        }
-      });
-    }
-  </script>
-</div>
-  </main>
-
 </body>
 </html>
 
