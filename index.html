@@ -18,6 +18,16 @@
       color: #E8DCC3;
       text-align: center;
       padding: 2em 1em 1em;
+      position: relative;
+    }
+
+    .safira-flutuante {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 25vw;
+      max-width: 300px;
+      z-index: 10;
     }
 
     .top-menu {
@@ -50,7 +60,7 @@
 
     .subtitulo {
       font-family: Garamond, serif;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-top: 0.5em;
     }
 
@@ -70,12 +80,41 @@
       margin-top: 18px;
       margin-bottom: 12px;
     }
+
+    .post-preview {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      margin: 1.5em auto;
+      padding: 1.2em;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .preview-text {
+      max-width: 65%;
+    }
+
+    .preview-img img {
+      border-radius: 12px;
+      max-width: 200px;
+      height: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.8rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Plantas & Gatos</h1>
     <p class="subtitulo">Estética, verdura e segurança para amigos felinos</p>
+    <img src="IMG/safira-esguia.png" alt="Mascote Safira" class="safira-flutuante">
     <nav class="menu-principal">
       <ul class="top-menu">
         <li><a href="index.html" class="active">Início</a></li>
@@ -130,7 +169,6 @@
         });
       });
   </script>
-
 </body>
 </html>
 
