@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plantas & Gatos</title>
+  <title>Plantas | Plantas & Gatos</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
@@ -11,7 +11,6 @@
       font-family: Garamond, serif;
       background-color: #E8DCC3;
       color: #1A3A36;
-      overflow-x: hidden;
     }
 
     header {
@@ -44,15 +43,12 @@
     }
 
     .top-menu li a {
-      background-color: transparent;
       color: #E8DCC3;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
-      font-family: Garamond, serif;
-      transition: color 0.3s, background-color 0.3s;
+      transition: color 0.3s;
       padding: 0.3em 0.7em;
-      display: inline-block;
     }
 
     .top-menu li a:hover,
@@ -61,7 +57,6 @@
     }
 
     .subtitulo {
-      font-family: Garamond, serif;
       font-size: 1.2rem;
       margin-top: 0.5em;
     }
@@ -89,8 +84,6 @@
       text-align: center;
       padding: 2em 1em;
       background-color: #E8DCC3;
-      font-family: Garamond, serif;
-      color: #1A3A36;
       font-size: 0.95rem;
     }
 
@@ -104,6 +97,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Plantas & Gatos</h1>
     <p class="subtitulo">Estética, verdura e segurança para amigos felinos</p>
@@ -120,9 +114,9 @@
     </nav>
   </header>
 
-  <img src="IMG/safira-plantas.png" alt="Mascote Safira Plantas" class="safira-plantas">
+  <img src="IMG/safira-plantas.png" alt="Mascote Safira" class="safira-plantas" />
 
-  <main>
+   <main>
     <div class="filtros">
       <button>Não Tóxicas</button>
       <button>Tóxicas</button>
@@ -135,28 +129,7 @@
       <button>Mostrar Todas</button>
     </div>
     <div class="plant-grid">
-  </div>
-
-  <div class="voltar">
-    <a href="index.html">← Voltar ao Início</a>
-  </div>
-
-  <script>
-    function filtrar(classe) {
-      const cards = document.querySelectorAll('.plant-card');
-      cards.forEach(card => {
-        if (classe === 'todos') {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.toggle('hidden', !card.classList.contains(classe));
-        }
-      });
-    }
-  </script>
-</body>
-</html>
-
-  <div class="plant-grid"
+ 
     <!-- Ciclame -->
 <a class="plant-card luz-intensa-indireta rega-moderada toxica" href="ciclame.html">
   <img src="IMG/ciclame.jpg" alt="Ciclame">
@@ -1201,14 +1174,15 @@
     <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
     <p>Contato: <a href="mailto:contato@plantasegatos.com.br">contato@plantasegatos.com.br</a></p>
     <div class="footer-socials">
-      <a href="https://br.pinterest.com/plantasngatos/" target="_blank" class="icon-social">
+      <a href="https://br.pinterest.com/plantasngatos/" target="_blank">
         <img src="IMG/pinterest-icon.png" alt="Pinterest" width="70" height="70">
       </a>
-      <a href="https://www.instagram.com/plantasngatos" target="_blank" rel="noopener noreferrer" class="icon-social">
+      <a href="https://www.instagram.com/plantasngatos" target="_blank">
         <img src="IMG/instagram-icon.png" alt="Instagram" width="70" height="70">
       </a>
     </div>
   </footer>
+
 </body>
 </html>
 
