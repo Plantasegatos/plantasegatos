@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomilho | Plantas & Gatos</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      background: #E8DCC3;
+      margin: 0;
+      font-family: Garamond, serif;
+      color: #1A3A36;
+    }
+    .plant-card-container {
+      background: #fff;
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 800px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .plant-card-container h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    .plant-card-container .sci-name {
+      font-style: italic;
+      margin-bottom: 1rem;
+      display: block;
+      text-align: left;
+      font-size: 1rem;
+    }
+    .plant-card-container img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 1rem;
+      border-radius: 15px;
+    }
+    .plant-card-container .description,
+    .plant-card-container .curiosity {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
+    .plant-card-container .curiosity::before {
+      content: "\1F4A1  ";
+      font-size: 1.2rem;
+    }
+    .btn-voltar {
+      display: block;
+      text-align: center;
+      margin: 2rem auto 0;
+      background-color: #133336;
+      color: #E8DCC3;
+      padding: 0.8rem 1.2rem;
+      text-decoration: none;
+      font-family: Garamond, serif;
+      font-size: 1rem;
+      border-radius: 8px;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+  <div class="plant-card-container">
+    <h1>Tomilho</h1>
+    <span class="sci-name">Thymus vulgaris</span>
+    <img src="../IMG/tomilho.jpg" alt="Tomilho">
+    <div class="description">
+      Pequena planta aromática com folhas miúdas e verdes acinzentadas, amplamente usada em culinária mediterrânea. Tem um aroma forte e agradável.
+    </div>
+    <div class="curiosity">
+      Além do uso culinário, o tomilho possui propriedades antimicrobianas e era usado historicamente para purificação do ar.
+    </div>
+    <a href="../plantas.html" class="btn-voltar">← Voltar para plantas</a>
+  </div>
+</body>
+</html>
