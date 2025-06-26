@@ -12,72 +12,64 @@
       color: #1A3A36;
       margin: 0;
     }
-
     header {
       background-color: #133336;
       text-align: center;
       padding: 24px 0;
     }
-
     header h1 {
       font-size: 2.2rem;
       color: #E8DCC3;
       margin: 0;
     }
-
     header p {
       font-size: 1rem;
       margin: 4px 0 0;
       color: #E8DCC3;
     }
-
     main {
       max-width: 720px;
       margin: 40px auto;
       padding: 0 20px;
     }
-
-    .container {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-      padding: 40px 20px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .sci-name {
-      font-style: italic;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
     .post-img {
       width: 100%;
       border-radius: 12px;
       margin: 24px 0;
     }
-
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      color: #133336;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .info {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 12px;
+    }
     .info p {
-      margin: 0.4rem 0;
+      margin: 0.5rem 0;
     }
-
-    .description {
-      margin-top: 1.5rem;
+    .info p span {
+      font-weight: bold;
     }
-
-    .curiosity {
-      margin-top: 1.5rem;
+    .curiosidade {
+      margin-top: 2rem;
+      padding-left: 1.5rem;
     }
-
-    .curiosity::before {
-      content: '💡 ';
+    .curiosidade::before {
+      content: "💡";
+      margin-right: 0.5rem;
     }
-
     .back-link {
       display: block;
       margin-top: 40px;
@@ -85,8 +77,14 @@
       text-decoration: none;
       color: #133336;
       font-weight: bold;
+      background-color: #133336;
+      color: #E8DCC3;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
-
     footer {
       text-align: center;
       margin-top: 3rem;
@@ -94,7 +92,6 @@
       font-size: 0.9rem;
       color: #133336;
     }
-
     footer img {
       width: 80px;
       margin: 0 0.5rem;
@@ -102,35 +99,25 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
   </header>
 
-  <main>
-    <div class="container">
-      <h2>Caládio</h2>
-      <div class="sci-name">Caladium bicolor</div>
-      <img class="post-img" src="../IMG/caladio.jpg" alt="Caládio">
-
-      <div class="info">
-        <p>☠️ Tóxica</p>
-        <p>☀️ Luz difusa ou sombra parcial</p>
-        <p>💧 Rega moderada</p>
-        <p>🌴 Tropical</p>
-      </div>
-
-      <div class="description">
-        Folhas coloridas em tons vibrantes de verde, branco e rosa. Excelente para dar um toque exótico em interiores bem iluminados.
-      </div>
-
-      <div class="curiosity">
-        Popularmente chamada de Tinhorão em algumas regiões do Brasil.
-      </div>
-
-      <a class="back-link" href="../plantas.html">← Voltar para plantas</a>
+  <main class="post-terrario">
+    <h2>Caládio</h2>
+    <img class="post-img" src="../IMG/caladio.jpg" alt="Caládio">
+    
+    <div class="info">
+      <p><span>🌿 Nome científico:</span> <em>Caladium bicolor</em></p>
+      <p><span>☠️ Toxicidade:</span> Tóxica para gatos</p>
+      <p><span>☀️ Luz ideal:</span> Luz difusa ou sombra parcial</p>
+      <p><span>💧 Rega:</span> Moderada, mantendo o solo úmido</p>
     </div>
+
+    <p class="curiosidade">Apesar de sua beleza tropical exuberante, o Caládio contém cristais de oxalato de cálcio, que podem causar irritações orais se mastigados pelos gatos.</p>
+
+    <a class="back-link" href="../plantas.html">← Voltar para plantas</a>
   </main>
 
   <footer>
@@ -140,9 +127,9 @@
     </p>
     <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
   </footer>
-
 </body>
 </html>
+
 
 
 
