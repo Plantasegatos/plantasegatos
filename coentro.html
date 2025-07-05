@@ -1,78 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coentro | Plantas & Gatos</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coentro - Plantas & Gatos</title>
   <style>
     body {
-      background: #E8DCC3;
       margin: 0;
       font-family: Garamond, serif;
-      color: #1A3A36;
+      background-color: #E8DCC3;
     }
-    .container {
-      max-width: 800px;
-      margin: 2em auto;
-      background: #fff;
-      border-radius: 12px;
-      padding: 2em;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
+    header {
+      background-color: #133336;
+      color: #E8DCC3;
+      padding: 2rem;
       text-align: center;
     }
-    .sci-name {
-      font-style: italic;
-      margin-bottom: 1em;
-      text-align: left;
-      font-size: 1.1em;
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+    }
+    main {
+      max-width: 800px;
+      background-color: white;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+    }
+    .plant-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #133336;
+      margin-bottom: 1rem;
     }
     .plant-img {
       display: block;
-      margin: 0 auto 2em;
+      margin: auto;
       border-radius: 12px;
       max-width: 100%;
     }
+    .plant-subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #133336;
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
+    }
     .info {
-      margin-bottom: 1.5em;
+      margin-top: 2rem;
+      line-height: 1.6;
     }
-    .curiosidade {
-      background: #fdf7e3;
-      border-left: 6px solid #D9A744;
-      padding: 1em;
-      margin-bottom: 2em;
+    .info p {
+      margin: 0.5rem 0;
+      font-size: 1.05rem;
     }
-    .curiosidade::before {
-      content: "\1F4A1  ";
-      font-size: 1.2em;
+    .info strong {
+      color: #133336;
     }
-    .btn-voltar {
+    .curiosity {
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #133336;
+    }
+    .curiosity-text {
+      font-weight: normal;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    .back-button {
       display: block;
       width: fit-content;
-      margin: 0 auto;
-      padding: 0.6em 1.2em;
+      margin: 2rem auto 0;
+      padding: 0.75rem 1.5rem;
       background-color: #133336;
-      color: #E8DCC3;
+      color: white;
       text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 2rem 0;
+      color: #555;
+    }
+    footer .icons {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer .icons img {
+      width: 80px;
+      height: 80px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Coentro</h1>
-    <div class="sci-name">Coriandrum sativum</div>
-    <img src="../IMG/coentro.jpg" alt="Coentro" class="plant-img">
+  <header>
+    <h1>Plantas & Gatos</h1>
+    <p>Estética, verdura e segurança para amigos felinos</p>
+  </header>
+
+  <main>
+    <h2 class="plant-title">Coentro</h2>
+    <img src="IMG/coentro.jpg" alt="Coentro" class="plant-img">
+    <div class="plant-subtitle"><em>Coriandrum sativum</em></div>
+
     <div class="info">
-      <p>O coentro é uma erva aromática muito utilizada na culinária de diversas culturas, conhecida pelo sabor marcante de suas folhas e sementes. Além de ser uma planta segura para gatos, pode ser cultivada facilmente em vasos ou hortas domésticas.</p>
+      <p><strong>Nome científico:</strong> <em>Coriandrum sativum</em></p>
+      <p><strong>✅ Tóxica para gatos:</strong> Não</p>
+      <p><strong>☀️ Luz ideal:</strong> Sol pleno ou meia-sombra</p>
+      <p><strong>💧 Rega:</strong> Frequente, mantendo o solo úmido</p>
     </div>
-    <div class="curiosidade">
-      Estudos indicam que o coentro possui propriedades antioxidantes e pode ajudar na digestão dos humanos — e seus óleos naturais não representam risco para felinos.
+
+    <p style="margin-top: 1.5rem;">O coentro é uma erva aromática muito utilizada na culinária de diversas culturas, conhecida pelo sabor marcante de suas folhas e sementes. Além de ser uma planta segura para gatos, pode ser cultivada facilmente em vasos ou hortas domésticas.</p>
+
+    <p class="curiosity">💡 <strong>Curiosidade</strong></p>
+    <p class="curiosity-text">Estudos indicam que o coentro possui propriedades antioxidantes e pode ajudar na digestão dos humanos — e seus óleos naturais não representam risco para felinos.</p>
+
+    <a class="back-button" href="plantas.html">← Voltar para Plantas</a>
+  </main>
+
+  <footer>
+    <div class="icons">
+      <a href="https://www.pinterest.com/plantasegatos" target="_blank">
+        <img src="IMG/pinterest-icon.png" alt="Pinterest">
+      </a>
+      <a href="https://www.instagram.com/plantasegatos" target="_blank">
+        <img src="IMG/instagram-icon.png" alt="Instagram">
+      </a>
     </div>
-    <a href="../plantas.html" class="btn-voltar">← Voltar para plantas</a>
-  </div>
+    <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
+
