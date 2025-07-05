@@ -1,93 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grama-dos-gatos | Plantas & Gatos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grama-dos-gatos - Plantas & Gatos</title>
   <style>
     body {
-      background: #E8DCC3;
       margin: 0;
       font-family: Garamond, serif;
-      color: #1A3A36;
+      background-color: #E8DCC3;
     }
     header {
       background-color: #133336;
-      color: white;
-      padding: 24px 0;
+      color: #E8DCC3;
+      padding: 2rem;
       text-align: center;
     }
     header h1 {
+      font-size: 2.8rem;
       margin: 0;
-      font-size: 2rem;
     }
     header p {
-      margin: 4px 0 0;
-      font-size: 0.95rem;
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
     }
-    .container {
-      max-width: 720px;
-      margin: 40px auto;
-      background: #fff;
+    main {
+      max-width: 800px;
+      background-color: white;
+      margin: 2rem auto;
+      padding: 2rem;
       border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
     }
-    img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-    h1 {
+    .plant-title {
+      text-align: center;
       font-size: 2rem;
-      margin-bottom: 0.4rem;
-      }
-    h2 {
-  font-size: 2rem;
-  margin-bottom: 0.4rem;
-  text-align: center;
-}
-    .sci-name {
+      color: #133336;
+      margin-bottom: 1rem;
+    }
+    .plant-img {
+      display: block;
+      margin: auto;
+      border-radius: 12px;
+      max-width: 100%;
+    }
+    .plant-subtitle {
+      text-align: center;
       font-style: italic;
-      margin-bottom: 1.2rem;
-      color: #4a6d68;
+      color: #133336;
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
+    }
+    .info {
+      margin-top: 2rem;
+      line-height: 1.6;
     }
     .info p {
-      margin: 0.6rem 0;
+      margin: 0.5rem 0;
+      font-size: 1.05rem;
     }
-    .curiosidade::before {
-      content: "💡 ";
+    .info strong {
+      color: #133336;
     }
-    .voltar-btn {
+    .curiosity {
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #133336;
+    }
+    .curiosity-text {
+      font-weight: normal;
       display: block;
-      margin: 30px auto 0;
-      text-align: center;
-      background: #133336;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
+      margin-top: 0.5rem;
+    }
+    .back-button {
+      display: block;
       width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.75rem 1.5rem;
+      background-color: #133336;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 2rem 0;
+      color: #555;
+    }
+    footer .icons {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer .icons img {
+      width: 80px;
+      height: 80px;
     }
   </style>
 </head>
 <body>
-   <header>
+  <header>
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
   </header>
-  <div class="container">
-    <h2>Grama-dos-gatos</h2>
-    <div class="sci-name">Dactylis glomerata</div>
-    <img src="IMG/grama-dos-gatos.jpg" alt="Grama-dos-gatos">
+
+  <main>
+    <h2 class="plant-title">Grama-dos-gatos</h2>
+    <img src="IMG/grama-dos-gatos.jpg" alt="Grama-dos-gatos" class="plant-img">
+    <div class="plant-subtitle"><em>Dactylis glomerata</em></div>
+
     <div class="info">
-      <p>✅ <strong>Toxicidade:</strong> Segura para gatos</p>
-      <p>☀️ <strong>Luz:</strong> Luz intensa indireta</p>
-      <p>💧 <strong>Rega:</strong> Frequente</p>
-      <p><strong>Descrição:</strong> Planta gramínea cultivada especialmente para felinos. Suas folhas finas e macias auxiliam na digestão e podem ser oferecidas ocasionalmente aos gatos.</p>
-      <p class="curiosidade"><strong>Curiosidade:</strong> Muitos gatos procuram gramíneas instintivamente para ajudar na eliminação de bolas de pelo. Ter a grama-dos-gatos em casa reduz o risco de eles mastigarem plantas tóxicas.</p>
+      <p><strong>Nome científico:</strong> <em>Dactylis glomerata</em></p>
+      <p><strong>✅ Tóxica para gatos:</strong> Não</p>
+      <p><strong>☀️ Luz ideal:</strong> Luz intensa indireta</p>
+      <p><strong>💧 Rega:</strong> Frequente</p>
     </div>
-    <a class="voltar-btn" href="plantas.html">← Voltar para plantas</a>
-  </div>
+
+    <p style="margin-top: 1.5rem;">Planta gramínea cultivada especialmente para felinos. Suas folhas finas e macias auxiliam na digestão e podem ser oferecidas ocasionalmente aos gatos.</p>
+
+    <p class="curiosity">💡 <strong>Curiosidade</strong></p>
+    <p class="curiosity-text">Muitos gatos procuram gramíneas instintivamente para ajudar na eliminação de bolas de pelo. Ter a grama-dos-gatos em casa reduz o risco de eles mastigarem plantas tóxicas.</p>
+
+    <a class="back-button" href="plantas.html">← Voltar para Plantas</a>
+  </main>
+
+  <footer>
+    <div class="icons">
+      <a href="https://www.pinterest.com/plantasegatos" target="_blank">
+        <img src="IMG/pinterest-icon.png" alt="Pinterest">
+      </a>
+      <a href="https://www.instagram.com/plantasegatos" target="_blank">
+        <img src="IMG/instagram-icon.png" alt="Instagram">
+      </a>
+    </div>
+    <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
+
