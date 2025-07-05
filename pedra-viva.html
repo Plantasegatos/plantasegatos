@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pedra-viva - Plantas & Gatos</title>
   <style>
     body {
-      background: #E8DCC3;
-      font-family: Garamond, serif;
-      color: #1A3A36;
       margin: 0;
+      font-family: Garamond, serif;
+      background-color: #E8DCC3;
     }
-
     header {
       background-color: #133336;
-      padding: 2rem;
       color: #E8DCC3;
+      padding: 2rem;
       text-align: center;
     }
-
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin: 0;
     }
-
     header p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin: 0.5rem 0 0;
     }
-
     main {
       max-width: 800px;
       background-color: white;
@@ -36,51 +31,46 @@
       padding: 2rem;
       border-radius: 16px;
     }
-
-    h2 {
+    .plant-title {
       text-align: center;
       font-size: 2rem;
       color: #133336;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
-
+    .plant-img {
+      display: block;
+      margin: auto;
+      border-radius: 12px;
+      max-width: 100%;
+    }
     .plant-subtitle {
       text-align: center;
       font-style: italic;
       color: #133336;
-      margin-bottom: 1.5rem;
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
     }
-
-    .plant-img {
-      display: block;
-      margin: 0 auto 1.5rem;
-      border-radius: 12px;
-      max-width: 100%;
-    }
-
     .info {
+      margin-top: 2rem;
       line-height: 1.6;
     }
-
     .info p {
       margin: 0.5rem 0;
+      font-size: 1.05rem;
     }
-
-    .description {
-      margin-top: 1.5rem;
+    .info strong {
+      color: #133336;
     }
-
     .curiosity {
       margin-top: 2rem;
       font-weight: bold;
+      color: #133336;
     }
-
     .curiosity-text {
+      font-weight: normal;
       display: block;
       margin-top: 0.5rem;
-      font-weight: normal;
     }
-
     .back-button {
       display: block;
       width: fit-content;
@@ -92,21 +82,18 @@
       border-radius: 8px;
       font-weight: bold;
     }
-
     footer {
       text-align: center;
       font-size: 0.9rem;
       margin: 2rem 0;
       color: #555;
     }
-
     footer .icons {
       margin: 1rem 0;
       display: flex;
       justify-content: center;
       gap: 20px;
     }
-
     footer .icons img {
       width: 80px;
       height: 80px;
@@ -118,19 +105,19 @@
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
   </header>
-
   <main>
-    <h2>Pedra-viva</h2>
-    <div class="plant-subtitle"><em>Lithops spp.</em></div>
+    <h2 class="plant-title">Pedra-viva</h2>
     <img src="IMG/pedra-viva.jpg" alt="Pedra-viva" class="plant-img">
+   
+    <div class="plant-subtitle"><em>Lithops spp.</em></div>
 
     <div class="info">
-      <p><strong>✅ Segura para gatos</strong></p>
+      <p><strong>✅ Tóxica para gatos:</strong> Não</p>
       <p><strong>☀️ Luz ideal:</strong> Luz plena ou muito intensa</p>
       <p><strong>💧 Rega:</strong> Muito moderada (deixar o solo secar completamente)</p>
     </div>
 
-    <p class="description">As "pedras-vivas" são suculentas fascinantes que se disfarçam como seixos naturais. Com formatos únicos e crescimento extremamente lento, são ideais para pequenos vasos decorativos e terrários iluminados.</p>
+    <p style="margin-top: 1.5rem;">As "pedras-vivas" são suculentas fascinantes que se disfarçam como seixos naturais. Com formatos únicos e crescimento extremamente lento, são ideais para pequenos vasos decorativos e terrários iluminados.</p>
 
     <p class="curiosity">💡 <strong>Curiosidade</strong></p>
     <p class="curiosity-text">Durante o crescimento, as folhas antigas se dividem para dar lugar a novas, num ciclo visualmente surpreendente.</p>
@@ -138,7 +125,7 @@
     <a class="back-button" href="plantas.html">← Voltar para Plantas</a>
   </main>
 
-  <footer>
+   <footer>
     <div class="icons">
       <a href="https://www.pinterest.com/plantasegatos" target="_blank">
         <img src="IMG/pinterest-icon.png" alt="Pinterest">
@@ -149,6 +136,8 @@
     </div>
     <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
+
 
