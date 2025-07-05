@@ -1,65 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alocasia Polly</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alocasia Polly - Plantas & Gatos</title>
   <style>
     body {
-      background-color: #E8DCC3;
-      font-family: Arial, sans-serif;
       margin: 0;
-      color: #1A3A36;
+      font-family: Garamond, serif;
+      background-color: #E8DCC3;
     }
     header {
-      background-color: #1A3A36;
-      color: white;
+      background-color: #133336;
+      color: #E8DCC3;
+      padding: 2rem;
       text-align: center;
-      padding: 2em 1em 1em;
     }
-    .container {
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+    }
+    main {
       max-width: 800px;
-      margin: 2em auto;
-      padding: 2em;
-      background: #fff;
+      background-color: white;
+      margin: 2rem auto;
+      padding: 2rem;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h2 {
+    .plant-title {
       text-align: center;
-      font-size: 1.8em;
-      margin-bottom: 0.3em;
+      font-size: 2rem;
+      color: #133336;
+      margin-bottom: 1rem;
     }
-    .sci-name {
-      text-align: center;
-      font-style: italic;
-      color: #666;
-      margin-bottom: 1.5em;
-    }
-    img {
-      max-width: 100%;
+    .plant-img {
       display: block;
       margin: auto;
       border-radius: 12px;
+      max-width: 100%;
     }
-    .descricao {
-      font-size: 1em;
-      line-height: 1.6em;
-      margin-top: 2em;
-      text-align: justify;
-    }
-    .voltar {
+    .plant-subtitle {
       text-align: center;
-      margin-top: 2em;
+      font-style: italic;
+      color: #133336;
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
     }
-    .voltar a {
-      background: #285F6B;
-      color: white;
-      padding: 0.75em 1.5em;
-      border-radius: 8px;
-      text-decoration: none;
+    .info {
+      margin-top: 2rem;
+      line-height: 1.6;
+    }
+    .info p {
+      margin: 0.5rem 0;
+      font-size: 1.05rem;
+    }
+    .info strong {
+      color: #133336;
+    }
+    .curiosity {
+      margin-top: 2rem;
       font-weight: bold;
+      color: #133336;
+    }
+    .curiosity-text {
+      font-weight: normal;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.75rem 1.5rem;
+      background-color: #133336;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 2rem 0;
+      color: #555;
+    }
+    footer .icons {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer .icons img {
+      width: 80px;
+      height: 80px;
     }
   </style>
 </head>
@@ -69,32 +106,38 @@
     <p>Estética, verdura e segurança para amigos felinos</p>
   </header>
 
-  <div class="container">
-    <h2>Alocasia Polly</h2>
-    <div class="sci-name">Alocasia amazonica</div>
-    <img src="img/alocasia-polly.jpg" alt="Alocasia Polly">
+  <main>
+    <h2 class="plant-title">Alocasia Polly</h2>
+    <img src="IMG/alocasia-polly.jpg" alt="Alocasia Polly" class="plant-img">
+    <div class="plant-subtitle"><em>Alocasia amazonica</em></div>
 
-    <div class="descricao">
+    <div class="info">
       <p><strong>Nome científico:</strong> <em>Alocasia amazonica</em></p>
-      <p><strong>Tóxica para gatos:</strong> Sim</p>
-      <p><strong>Luz ideal:</strong> Luz indireta brilhante</p>
-      <p><strong>Rega:</strong> Moderada, com solo levemente úmido</p>
+      <p><strong>☠️ Tóxica para gatos:</strong> Sim</p>
+      <p><strong>☀️ Luz ideal:</strong> Luz indireta brilhante</p>
+      <p><strong>💧 Rega:</strong> Moderada, com solo levemente úmido</p>
     </div>
 
-    <div class="descricao">
-      A <strong>Alocasia Polly</strong> é uma planta exótica, de folhas escuras com veios brancos bem definidos, que lembram uma armadura tropical. Seu visual impactante a torna ideal como peça de destaque em ambientes internos bem iluminados.
-      <br><br>
-      Por conter oxalato de cálcio, é tóxica para gatos e cães. Mesmo pequenas mordidas podem causar irritações intensas na boca e garganta dos animais. Deve ser cultivada com responsabilidade e atenção.
-    </div>
+    <p style="margin-top: 1.5rem;">A <strong>Alocasia Polly</strong> é uma planta exótica de aparência marcante. Suas folhas escuras com veios brancos destacados lembram uma armadura tropical, tornando-a perfeita como ponto focal em ambientes internos iluminados. Seu cultivo exige atenção com a umidade e boa drenagem.</p>
 
-    <div class="curiosidade">
-      <h3>💡 Curiosidade</h3>
-      <p>Apesar do nome “amazonica”, ela não vem da Amazônia. É uma planta híbrida criada a partir de espécies tropicais asiáticas.</p>
-    </div>
+    <p>Por conter oxalato de cálcio, é considerada tóxica para gatos e cães. Pequenas mordidas podem causar irritações dolorosas na boca e garganta dos pets. Cultive com responsabilidade em lares com animais curiosos.</p>
 
-    <div class="voltar">
-      <a href="plantas.html">← Voltar para Plantas</a>
+    <p class="curiosity">💡 <strong>Curiosidade</strong></p>
+    <p class="curiosity-text">Apesar do nome “amazonica”, essa planta não vem da Amazônia — ela é um híbrido ornamental derivado de espécies tropicais asiáticas.</p>
+
+    <a class="back-button" href="plantas.html">← Voltar para Plantas</a>
+  </main>
+
+  <footer>
+    <div class="icons">
+      <a href="https://www.pinterest.com/plantasegatos" target="_blank">
+        <img src="IMG/pinterest-icon.png" alt="Pinterest">
+      </a>
+      <a href="https://www.instagram.com/plantasegatos" target="_blank">
+        <img src="IMG/instagram-icon.png" alt="Instagram">
+      </a>
     </div>
-  </div>
+    <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
