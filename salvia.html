@@ -1,76 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sálvia | Plantas & Gatos</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sálvia - Plantas & Gatos</title>
   <style>
     body {
-      background: #E8DCC3;
       margin: 0;
       font-family: Garamond, serif;
-      color: #1A3A36;
+      background-color: #E8DCC3;
     }
-    .plant-card-container {
-      background: #fff;
-      max-width: 760px;
-      margin: 2em auto;
-      padding: 2em;
-      border-radius: 12px;
-      box-shadow: 0 0 18px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
+    header {
+      background-color: #133336;
+      color: #E8DCC3;
+      padding: 2rem;
       text-align: center;
     }
-    .sci-name {
-      text-align: left;
-      margin: 0.5em 0 1em;
-      font-style: italic;
-      font-size: 1.1em;
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+    }
+    main {
+      max-width: 800px;
+      background-color: white;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+    }
+    .plant-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #133336;
+      margin-bottom: 1rem;
     }
     .plant-img {
       display: block;
-      margin: 0 auto 1.5em;
-      border-radius: 10px;
+      margin: auto;
+      border-radius: 12px;
       max-width: 100%;
-      height: auto;
     }
-    .description, .curiosidade {
-      margin-bottom: 1.5em;
-      font-size: 1.05em;
-      line-height: 1.6em;
+    .plant-subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #133336;
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
     }
-    .curiosidade::before {
-      content: "\1F4A1 ";
-      font-size: 1.2em;
+    .info {
+      margin-top: 2rem;
+      line-height: 1.6;
     }
-    .btn-voltar {
+    .info p {
+      margin: 0.5rem 0;
+      font-size: 1.05rem;
+    }
+    .info strong {
+      color: #133336;
+    }
+    .curiosity {
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #133336;
+    }
+    .curiosity-text {
+      font-weight: normal;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    .back-button {
       display: block;
       width: fit-content;
-      margin: 2em auto 0;
-      padding: 0.6em 1.4em;
+      margin: 2rem auto 0;
+      padding: 0.75rem 1.5rem;
       background-color: #133336;
-      color: #E8DCC3;
+      color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: bold;
-      font-family: Garamond, serif;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 2rem 0;
+      color: #555;
+    }
+    footer .icons {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer .icons img {
+      width: 80px;
+      height: 80px;
     }
   </style>
 </head>
 <body>
-  <div class="plant-card-container">
-    <h1>Sálvia</h1>
-    <div class="sci-name">Salvia officinalis</div>
-    <img src="../IMG/salvia.jpg" alt="Sálvia" class="plant-img">
-    <div class="description">
-      A sálvia é uma erva aromática amplamente utilizada na culinária e também reconhecida por suas propriedades medicinais. Suas folhas verde-acinzentadas e textura aveludada a tornam uma adição charmosa a qualquer jardim de ervas.
+  <header>
+    <h1>Plantas & Gatos</h1>
+    <p>Estética, verdura e segurança para amigos felinos</p>
+  </header>
+
+  <main>
+    <h2 class="plant-title">Sálvia</h2>
+    <img src="IMG/salvia.jpg" alt="Sálvia" class="plant-img">
+    <div class="plant-subtitle"><em>Salvia officinalis</em></div>
+
+    <div class="info">
+      <p><strong>Nome científico:</strong> <em>Salvia officinalis</em></p>
+      <p><strong>✅ Tóxica para gatos:</strong> Não</p>
+      <p><strong>☀️ Luz ideal:</strong> Sol pleno</p>
+      <p><strong>💧 Rega:</strong> Moderada</p>
     </div>
-    <div class="curiosidade">
-      Acredita-se que a sálvia tenha sido usada desde a antiguidade como planta sagrada para proteção e longevidade.
+
+    <p style="margin-top: 1.5rem;">A sálvia é uma erva aromática amplamente utilizada na culinária e também reconhecida por suas propriedades medicinais. Suas folhas verde-acinzentadas e textura aveludada a tornam uma adição charmosa a qualquer jardim de ervas.</p>
+
+    <p class="curiosity">💡 <strong>Curiosidade</strong></p>
+    <p class="curiosity-text">Acredita-se que a sálvia tenha sido usada desde a antiguidade como planta sagrada para proteção e longevidade.</p>
+
+    <a class="back-button" href="plantas.html">← Voltar para Plantas</a>
+  </main>
+
+  <footer>
+    <div class="icons">
+      <a href="https://www.pinterest.com/plantasegatos" target="_blank">
+        <img src="IMG/pinterest-icon.png" alt="Pinterest">
+      </a>
+      <a href="https://www.instagram.com/plantasegatos" target="_blank">
+        <img src="IMG/instagram-icon.png" alt="Instagram">
+      </a>
     </div>
-    <a href="../plantas.html" class="btn-voltar">← Voltar para plantas</a>
-  </div>
+    <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
+
