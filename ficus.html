@@ -1,65 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ficus Benjamina</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficus Benjamina - Plantas & Gatos</title>
   <style>
     body {
-      background-color: #E8DCC3;
-      font-family: Arial, sans-serif;
       margin: 0;
-      color: #1A3A36;
+      font-family: Garamond, serif;
+      background-color: #E8DCC3;
     }
     header {
-      background-color: #1A3A36;
-      color: white;
+      background-color: #133336;
+      color: #E8DCC3;
+      padding: 2rem;
       text-align: center;
-      padding: 2em 1em 1em;
     }
-    .container {
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+    }
+    main {
       max-width: 800px;
-      margin: 2em auto;
-      padding: 2em;
-      background: #fff;
+      background-color: white;
+      margin: 2rem auto;
+      padding: 2rem;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h2 {
+    .plant-title {
       text-align: center;
-      font-size: 1.8em;
-      margin-bottom: 0.3em;
+      font-size: 2rem;
+      color: #133336;
+      margin-bottom: 1rem;
     }
-    .sci-name {
-      text-align: center;
-      font-style: italic;
-      color: #666;
-      margin-bottom: 1.5em;
-    }
-    img {
-      max-width: 100%;
+    .plant-img {
       display: block;
       margin: auto;
       border-radius: 12px;
+      max-width: 100%;
     }
-    .descricao {
-      font-size: 1em;
-      line-height: 1.6em;
-      margin-top: 2em;
-      text-align: justify;
-    }
-    .voltar {
+    .plant-subtitle {
       text-align: center;
-      margin-top: 2em;
+      font-style: italic;
+      color: #133336;
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
     }
-    .voltar a {
-      background: #285F6B;
-      color: white;
-      padding: 0.75em 1.5em;
-      border-radius: 8px;
-      text-decoration: none;
+    .info {
+      margin-top: 2rem;
+      line-height: 1.6;
+    }
+    .info p {
+      margin: 0.5rem 0;
+      font-size: 1.05rem;
+    }
+    .info strong {
+      color: #133336;
+    }
+    .curiosity {
+      margin-top: 2rem;
       font-weight: bold;
+      color: #133336;
+    }
+    .curiosity-text {
+      font-weight: normal;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.75rem 1.5rem;
+      background-color: #133336;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 2rem 0;
+      color: #555;
+    }
+    footer .icons {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer .icons img {
+      width: 80px;
+      height: 80px;
     }
   </style>
 </head>
@@ -68,33 +105,40 @@
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
   </header>
+  <main>
+    <h2 class="plant-title">Ficus Benjamina</h2>
+    <img src="IMG/ficus.jpg" alt="Ficus Benjamina" class="plant-img">
+    <div class="plant-subtitle"><em>Ficus benjamina</em></div>
 
-  <div class="container">
-    <h2>Ficus Benjamina</h2>
-    <div class="sci-name">Ficus benjamina</div>
-    <img src="img/ficus.jpg" alt="Ficus Benjamina">
-
-    <div class="descricao">
+    <div class="info">
       <p><strong>Nome científico:</strong> <em>Ficus benjamina</em></p>
-      <p><strong>Tóxica para gatos:</strong> Sim</p>
-      <p><strong>Luz ideal:</strong> Luz indireta brilhante</p>
-      <p><strong>Rega:</strong> Moderada</p>
-
-    <div class="descricao">
-      Planta arbustiva de origem tropical, o <strong>Ficus Benjamina</strong> apresenta folhas pequenas e brilhantes, ideal para interiores bem iluminados. É frequentemente utilizada como planta ornamental em escritórios e residências devido ao seu porte elegante e fácil adaptação a ambientes internos.
-      <br><br>
-      Apesar de seu aspecto delicado, trata-se de uma planta relativamente resistente, que exige apenas regas moderadas e tolera ambientes com ar-condicionado ou ventilação artificial. No entanto, por conter seiva tóxica, deve ser mantida fora do alcance de pets, especialmente gatos, que podem sofrer irritações ao contato ou ingestão.
+      <p><strong>☠️ Tóxica para gatos:</strong> Sim</p>
+      <p><strong>☀️ Luz ideal:</strong> Luz indireta brilhante</p>
+      <p><strong>💧 Rega:</strong> Moderada</p>
     </div>
 
-    <div class="curiosidade">
-  <h3>💡 Curiosidade</h3>
-  <p>Essa planta pode reagir com queda de folhas ao ser movida de lugar. Também é reconhecida por seu potencial de purificação do ar, segundo estudos da NASA.</p>
-</div>
+    <p style="margin-top: 1.5rem;">Planta arbustiva de origem tropical, o <strong>Ficus Benjamina</strong> apresenta folhas pequenas e brilhantes, ideal para interiores bem iluminados. É frequentemente utilizada como planta ornamental em escritórios e residências devido ao seu porte elegante e fácil adaptação a ambientes internos.</p>
 
-    <div class="voltar">
-      <a href="plantas.html">← Voltar para Plantas</a>
+    <p>Apesar de seu aspecto delicado, trata-se de uma planta relativamente resistente, que exige apenas regas moderadas e tolera ambientes com ar-condicionado ou ventilação artificial. No entanto, por conter seiva tóxica, deve ser mantida fora do alcance de pets, especialmente gatos, que podem sofrer irritações ao contato ou ingestão.</p>
+
+    <p class="curiosity">💡 <strong>Curiosidade</strong></p>
+    <p class="curiosity-text">Essa planta pode reagir com queda de folhas ao ser movida de lugar. Também é reconhecida por seu potencial de purificação do ar, segundo estudos da NASA.</p>
+
+    <a class="back-button" href="plantas.html">← Voltar para Plantas</a>
+  </main>
+
+  <footer>
+    <div class="icons">
+      <a href="https://www.pinterest.com/plantasegatos" target="_blank">
+        <img src="IMG/pinterest-icon.png" alt="Pinterest">
+      </a>
+      <a href="https://www.instagram.com/plantasegatos" target="_blank">
+        <img src="IMG/instagram-icon.png" alt="Instagram">
+      </a>
     </div>
-  </div>
+    <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
+
 
