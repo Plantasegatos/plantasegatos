@@ -37,6 +37,27 @@
       padding: 0 20px;
     }
 
+    .post-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .post-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .post-img-small {
+      width: 45%;
+      border-radius: 12px;
+    }
+
+    .post-text {
+      width: 55%;
+    }
+
     .post-img {
       width: 100%;
       border-radius: 12px;
@@ -106,24 +127,32 @@
 
     <p>O que talvez você ainda não saiba é que é totalmente possível cultivar plantas <strong>mesmo com gatos</strong> em casa. Basta fazer escolhas seguras e posicioná-las estrategicamente.</p>
 
-    <img src="../IMG/plantas-apartamento-seguro-post.jpg" alt="Sala iluminada com plantas seguras e gato" class="post-img"/>
+    <div class="post-section">
+      <img src="../IMG/plantas-apartamento-seguro-post.jpg" alt="Sala com pacová e luz natural" class="post-img-small"/>
+      <div class="post-text">
+        <h3>🏠 Sala iluminada: charme natural e protagonismo</h3>
+        <p>Salas com janelas amplas são perfeitas para plantas que gostam de luz difusa. Elas ajudam a compor um visual leve, aconchegante e cheio de vida.</p>
+        <p><strong>Planta indicada:</strong> Pacová. Tropical, resistente e segura para gatos. Fica ótima próxima à janela ou ao lado do sofá.</p>
+      </div>
+    </div>
 
-    <p>De salas ensolaradas a banheiros úmidos, passando por escritórios com ar-condicionado, existe uma planta ideal para cada ambiente. A seguir, mostramos como integrar plantas seguras em três tipos de espaços reais — com fotos para inspirar.</p>
+    <div class="post-section">
+      <img src="../IMG/escritorio-plantas-seguras-post.jpg" alt="Escritório aconchegante com gato e plantas" class="post-img-small"/>
+      <div class="post-text">
+        <h3>💼 Escritório com pouca luz: conforto e produtividade</h3>
+        <p>Home offices costumam ter luz artificial e ar-condicionado. Mas isso não é impeditivo para quem quer um cantinho verde e seguro para o pet.</p>
+        <p><strong>Planta indicada:</strong> Peperômia. Tolera ar seco, baixa luminosidade e ainda é decorativa. Ideal para mesas, nichos e estantes.</p>
+      </div>
+    </div>
 
-    <h3>🏠 Sala iluminada: charme natural e protagonismo</h3>
-    <p>Salas com janelas amplas são perfeitas para plantas que gostam de luz difusa. Elas ajudam a compor um visual leve, aconchegante e cheio de vida.</p>
-    <p><strong>Planta indicada:</strong> Pacová. Tropical, resistente e segura para gatos. Fica ótima próxima à janela ou ao lado do sofá.</p>
-    <img src="../IMG/plantas-apartamento-seguro-post.jpg" alt="Sala com pacová e luz natural" class="post-img"/>
-
-    <h3>💼 Escritório com pouca luz: conforto e produtividade</h3>
-    <p>Home offices costumam ter luz artificial e ar-condicionado. Mas isso não é impeditivo para quem quer um cantinho verde e seguro para o pet.</p>
-    <p><strong>Planta indicada:</strong> Peperômia. Tolera ar seco, baixa luminosidade e ainda é decorativa. Ideal para mesas, nichos e estantes.</p>
-    <img src="../IMG/escritorio-plantas-seguras-post.jpg" alt="Escritório aconchegante com gato e plantas" class="post-img"/>
-
-    <h3>🛁 Banheiro úmido: frescor tropical</h3>
-    <p>A umidade constante do banheiro pode beneficiar plantas tropicais que amam vapor e clima estável.</p>
-    <p><strong>Planta indicada:</strong> Samambaia. Segura para gatos e ideal para prateleiras ou cantos bem ventilados.</p>
-    <img src="../IMG/banheiro-plantas-seguras-post.jpg" alt="Banheiro claro com plantas tropicais" class="post-img"/>
+    <div class="post-section">
+      <img src="../IMG/banheiro-plantas-seguras-post.jpg" alt="Banheiro claro com plantas tropicais" class="post-img-small"/>
+      <div class="post-text">
+        <h3>🛁 Banheiro úmido: frescor tropical</h3>
+        <p>A umidade constante do banheiro pode beneficiar plantas tropicais que amam vapor e clima estável.</p>
+        <p><strong>Planta indicada:</strong> Samambaia. Segura para gatos e ideal para prateleiras ou cantos bem ventilados.</p>
+      </div>
+    </div>
 
     <h3>🌱 Bônus: a graminha que diverte</h3>
     <p>Graminha de milho ou trigo é uma opção funcional, barata e que seu gato vai adorar. Ajuda na digestão, reduz o estresse e ainda decora.</p>
