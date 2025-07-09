@@ -37,6 +37,13 @@
       padding: 0 20px;
     }
 
+    .container {
+      background: #ffffff;
+      padding: 40px 24px;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
     .post-img {
       width: 100%;
       border-radius: 12px;
@@ -58,18 +65,23 @@
       margin-bottom: 24px;
     }
 
-    .info p {
+    p {
       line-height: 1.6;
+    }
+
+    .info {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .info strong {
       display: block;
-      margin-top: 1em;
+      margin-bottom: 0.4rem;
       color: #133336;
     }
 
     .curiosidade {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
 
     .curiosidade::before {
@@ -108,23 +120,25 @@
   </header>
 
   <main class="post-dente-de-leao">
-    <h2>Dente-de-leão</h2>
-    <div class="sci-name">Taraxacum officinale</div>
-    <img src="../IMG/dente-de-leao.jpg" alt="Dente-de-leão" class="post-img"/>
+    <div class="container">
+      <h2>Dente-de-leão</h2>
+      <div class="sci-name">Taraxacum officinale</div>
+      <img src="../IMG/dente-de-leao.jpg" alt="Dente-de-leão" class="post-img"/>
 
-    <div class="info">
       <p>O dente-de-leão é uma planta silvestre de flores amarelas, muito comum em gramados, calçadas e jardins. Além de resistente e fácil de cultivar, é considerada segura para gatos.</p>
 
-      <strong>☠️ Toxicidade:</strong> Não tóxica para gatos  
-      <strong>☀️ Luz ideal:</strong> Sol pleno a meia-sombra  
-      <strong>💧 Rega:</strong> Moderada, mantendo o solo levemente úmido
-    </div>
+      <div class="info">
+        <strong>☠️ Toxicidade:</strong> Não tóxica para gatos  
+        <strong>☀️ Luz ideal:</strong> Sol pleno a meia-sombra  
+        <strong>💧 Rega:</strong> Moderada, mantendo o solo levemente úmido
+      </div>
 
-    <div class="curiosidade">
-      Suas sementes se espalham facilmente com o vento, inspirando brinquedos e simbolismos sobre liberdade e esperança.
-    </div>
+      <div class="curiosidade">
+        Suas sementes se espalham facilmente com o vento, inspirando brinquedos e simbolismos sobre liberdade e esperança.
+      </div>
 
-    <a class="back-link" href="../plantas.html">← Voltar para plantas</a>
+      <a class="back-link" href="../plantas.html">← Voltar para plantas</a>
+    </div>
   </main>
 
   <footer>
@@ -141,6 +155,7 @@
 
 </body>
 </html>
+
 
 
 
