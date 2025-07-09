@@ -4,76 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dente-de-leão - Plantas & Gatos</title>
+  <link rel="stylesheet" href="../styles.css" />
   <style>
     body {
-      margin: 0;
+      background: #E8DCC3;
       font-family: Garamond, serif;
-      background-color: #E8DCC3;
       color: #1A3A36;
+      margin: 0;
     }
+
     header {
       background-color: #133336;
-      color: #E8DCC3;
-      padding: 2rem;
       text-align: center;
+      padding: 24px 0;
     }
+
     header h1 {
+      font-size: 2.2rem;
+      color: #E8DCC3;
       margin: 0;
-      font-size: 2.4rem;
     }
-    .container {
-      background: #ffffff;
+
+    header p {
+      font-size: 1rem;
+      margin: 4px 0 0;
+      color: #E8DCC3;
+    }
+
+    main {
       max-width: 720px;
       margin: 40px auto;
-      padding: 40px 24px;
-      border-radius: 16px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 0 20px;
     }
+
+    .post-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+      display: block;
+    }
+
     h2 {
-      text-align: center;
-      margin-top: 0;
       font-size: 2rem;
+      margin-bottom: 0.5rem;
       color: #133336;
+      text-align: center;
     }
+
     .sci-name {
       text-align: center;
       font-style: italic;
-      margin-top: -12px;
-      margin-bottom: 24px;
       font-size: 1.1rem;
+      margin-bottom: 24px;
     }
-    .post-img {
-      display: block;
-      margin: 0 auto 24px;
-      border-radius: 12px;
-      max-width: 100%;
+
+    .info p {
+      line-height: 1.6;
     }
-    .info {
-      margin-bottom: 1.5em;
-    }
+
     .info strong {
       display: block;
-      margin-top: 0.8em;
+      margin-top: 1em;
       color: #133336;
     }
+
     .curiosidade {
-      margin-top: 1.5em;
+      margin-top: 2rem;
     }
+
     .curiosidade::before {
       content: "💡 ";
       font-weight: bold;
     }
-    .back-button {
+
+    .back-link {
       display: block;
-      width: fit-content;
-      margin: 40px auto 0;
-      padding: 0.6em 1.2em;
-      background-color: #133336;
-      color: #E8DCC3;
+      margin-top: 40px;
+      text-align: center;
       text-decoration: none;
+      color: #133336;
       font-weight: bold;
-      border-radius: 6px;
     }
+
     footer {
       text-align: center;
       margin-top: 3rem;
@@ -81,6 +93,7 @@
       font-size: 0.9rem;
       color: #133336;
     }
+
     footer img {
       width: 80px;
       margin: 0 0.5rem;
@@ -88,46 +101,47 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Plantas & Gatos</h1>
     <p>Estética, verdura e segurança para amigos felinos</p>
   </header>
 
-  <main>
-    <div class="container">
-      <h2>Dente-de-leão</h2>
-      <div class="sci-name">Taraxacum officinale</div>
-      <img src="../IMG/dente-de-leao.jpg" alt="Dente-de-leão" class="post-img"/>
+  <main class="post-dente-de-leao">
+    <h2>Dente-de-leão</h2>
+    <div class="sci-name">Taraxacum officinale</div>
+    <img src="../IMG/dente-de-leao.jpg" alt="Dente-de-leão" class="post-img"/>
 
-      <div class="info">
-        <p>O dente-de-leão é uma planta silvestre de flores amarelas, muito comum em gramados, calçadas e jardins. Além de resistente e fácil de cultivar, é considerada segura para gatos.</p>
+    <div class="info">
+      <p>O dente-de-leão é uma planta silvestre de flores amarelas, muito comum em gramados, calçadas e jardins. Além de resistente e fácil de cultivar, é considerada segura para gatos.</p>
 
-        <strong>☠️ Toxicidade:</strong> Não tóxica para gatos  
-        <strong>☀️ Luz ideal:</strong> Sol pleno a meia-sombra  
-        <strong>💧 Rega:</strong> Moderada, mantendo o solo levemente úmido
-      </div>
-
-      <div class="curiosidade">
-        Suas sementes se espalham facilmente com o vento, inspirando brinquedos e simbolismos sobre liberdade e esperança.
-      </div>
-
-      <a class="back-button" href="../plantas.html">← Voltar para plantas</a>
+      <strong>☠️ Toxicidade:</strong> Não tóxica para gatos  
+      <strong>☀️ Luz ideal:</strong> Sol pleno a meia-sombra  
+      <strong>💧 Rega:</strong> Moderada, mantendo o solo levemente úmido
     </div>
+
+    <div class="curiosidade">
+      Suas sementes se espalham facilmente com o vento, inspirando brinquedos e simbolismos sobre liberdade e esperança.
+    </div>
+
+    <a class="back-link" href="../plantas.html">← Voltar para plantas</a>
   </main>
 
   <footer>
     <p>
       <a href="https://www.pinterest.com/plantasngatos" target="_blank">
-        <img src="../IMG/pinterest-icon.png" alt="Pinterest" />
+        <img src="../IMG/pinterest-icon.png" alt="Pinterest">
       </a>
       <a href="https://www.instagram.com/plantasngatos" target="_blank">
-        <img src="../IMG/instagram-icon.png" alt="Instagram" />
+        <img src="../IMG/instagram-icon.png" alt="Instagram">
       </a>
     </p>
     <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
+
 
 
 
