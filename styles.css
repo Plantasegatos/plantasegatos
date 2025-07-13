@@ -234,6 +234,22 @@ footer p {
 .icon-social:hover img {
   transform: scale(1.14);
 }
+.plant-card {
+  background: #E8DCC3;
+  border-radius: 12px;
+  box-shadow: 6px 6px 16px #d2c8b2,
+              -6px -6px 16px #fff3da;
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.plant-card:hover {
+  box-shadow: inset 4px 4px 10px #d2c8b2,
+              inset -4px -4px 10px #fff3da;
+}
+
 
 /* === ESTILO NEOMÓRFICO === */
 .neumorphic {
