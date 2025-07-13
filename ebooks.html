@@ -23,23 +23,28 @@
     }
 
     .ebook-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+      background: #E8DCC3;
+      border-radius: 20px;
+      box-shadow: 8px 8px 16px #c8bfae, -8px -8px 16px #fff6e4;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .ebook-card:hover {
+      transform: translateY(-4px);
     }
 
     .ebook-card img {
       width: 100%;
-      max-width: 200px;
+      max-width: 180px;
       height: auto;
       margin-bottom: 16px;
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .ebook-info h3 {
@@ -51,20 +56,24 @@
     .ebook-info p {
       font-size: 0.95rem;
       color: #333;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .ebook-btn {
-      background-color: #133336;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 6px;
+      background: #E8DCC3;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 20px;
+      color: #133336;
+      font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s ease;
+      box-shadow: inset 4px 4px 8px #c8bfae, inset -4px -4px 8px #fff6e4;
+      transition: all 0.2s ease;
     }
 
     .ebook-btn:hover {
-      background-color: #1A3A36;
+      box-shadow: inset 2px 2px 4px #c8bfae, inset -2px -2px 4px #fff6e4;
+      transform: scale(1.03);
     }
   </style>
 </head>
@@ -107,7 +116,7 @@
           <div class="ebook-info">
             <h3>A Vida das Plantas</h3>
             <p>Uma reflexão poética e científica sobre o universo vegetal, ideal para quem deseja ir além do cuidado básico com plantas.</p>
-            <a class="ebook-btn" href="https://www.amazon.com.br/dp/650097896X?tag=plantasegatos-20" target="_blank" rel="noopener">Ver na Amazon</a>
+            <a class="ebook-btn" href="https://www.amazon.com.br/dp/650097896X?tag=plantasegatos-20" target="_blank" rel="noopener">Comprar</a>
           </div>
         </div>
 
@@ -117,7 +126,7 @@
           <div class="ebook-info">
             <h3>Cat Sense</h3>
             <p>Compreenda como os gatos pensam, sentem e se comportam. Leitura essencial para criar um ambiente seguro e feliz.</p>
-            <a class="ebook-btn" href="https://www.amazon.com.br/dp/0465031013?tag=plantasegatos-20" target="_blank" rel="noopener">Ver na Amazon</a>
+            <a class="ebook-btn" href="https://www.amazon.com.br/dp/0465031013?tag=plantasegatos-20" target="_blank" rel="noopener">Comprar</a>
           </div>
         </div>
 
@@ -127,7 +136,7 @@
           <div class="ebook-info">
             <h3>Braiding Sweetgrass</h3>
             <p>Uma obra que entrelaça sabedoria indígena, ciência botânica e amor pela natureza. Profundo e transformador.</p>
-            <a class="ebook-btn" href="https://www.amazon.com.br/dp/1571313567?tag=plantasegatos-20" target="_blank" rel="noopener">Ver na Amazon</a>
+            <a class="ebook-btn" href="https://www.amazon.com.br/dp/1571313567?tag=plantasegatos-20" target="_blank" rel="noopener">Comprar</a>
           </div>
         </div>
       </div>
