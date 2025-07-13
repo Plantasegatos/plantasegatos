@@ -77,7 +77,8 @@ nav.menu-principal {
   max-width: 2000px;
   margin: 0 auto;
 }
-.pagina-ebooks section {
+.pagina-ebooks section,
+.pagina-livros section {
   padding: 4em 4em;
   margin: 0 auto;
   max-width: 2000px;
