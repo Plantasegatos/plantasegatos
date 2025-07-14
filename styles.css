@@ -301,89 +301,51 @@ footer p {
               inset -8px -8px 20px #fff3da;
   padding: 2rem;
 }
-.produtos-section {
-  padding: 40px 20px;
-  background-color: #E8DCC3;
-}
-
-.produtos-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #133336;
-  margin-bottom: 40px;
-}
-
-/* GRID DE PRODUTOS */
 .produtos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
-/* CARD INDIVIDUAL COM NEOMORFISMO */
 .ebook-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 720px;
   background: #E8DCC3;
-  border-radius: 24px;
-  box-shadow: 9px 9px 16px #c4bca8, -9px -9px 16px #fff2d8;
-  padding: 20px;
-  transition: transform 0.3s;
+  border-radius: 20px;
+  box-shadow: 6px 6px 16px #c9bfae, -6px -6px 16px #fff5dc;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.ebook-card:hover {
-  transform: scale(1.01);
-}
-
-/* IMAGEM DO PRODUTO */
 .ebook-card img {
-  width: 180px;
+  width: 100%;
   height: auto;
   border-radius: 12px;
-  margin-right: 20px;
 }
 
-/* ÁREA DE TEXTO */
-.ebook-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* TÍTULO */
 .ebook-info h3 {
-  margin: 0 0 10px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
   color: #133336;
 }
 
-/* DESCRIÇÃO */
 .ebook-info p {
   font-size: 1rem;
-  margin: 0 0 16px;
   color: #1A3A36;
+  margin-bottom: 1rem;
 }
 
-/* BOTÃO COMPRAR */
 .ebook-btn {
-  align-self: center;
+  display: inline-block;
   background: #133336;
-  color: #fff;
-  padding: 10px 24px;
-  border-radius: 999px;
+  color: #E8DCC3;
   text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
   font-weight: bold;
-  transition: background 0.3s;
+  box-shadow: inset 2px 2px 6px #0f2b2d, inset -2px -2px 6px #1a454a;
 }
 
-.ebook-btn:hover {
-  background: #285F6B;
-}
 
 
 
