@@ -378,6 +378,28 @@ footer p {
   line-height: 1.6;
   margin-bottom: 16px;
 }
+.sobre-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Garamond, serif;
+  color: #1A3A36;
+  line-height: 1.6;
+}
+
+.sobre-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #133336;
+}
+
+.safira-float {
+  float: left;
+  max-width: 300px;
+  margin: 0 24px 20px 0;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
 
 
 
