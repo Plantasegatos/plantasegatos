@@ -345,6 +345,39 @@ footer p {
   font-weight: bold;
   box-shadow: inset 2px 2px 6px #0f2b2d, inset -2px -2px 6px #1a454a;
 }
+.sobre-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 40px;
+}
+
+.sobre-img img {
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.sobre-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sobre-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #1A3A36;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
 
 
 
