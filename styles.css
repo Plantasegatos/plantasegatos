@@ -301,6 +301,70 @@ footer p {
               inset -8px -8px 20px #fff3da;
   padding: 2rem;
 }
+.produtos-section {
+  padding: 40px 20px;
+  background-color: #E8DCC3;
+}
+
+.produtos-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #133336;
+  margin-bottom: 40px;
+}
+
+.produtos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.ebook-card {
+  background: #E8DCC3;
+  box-shadow: 10px 10px 20px #c8bda9, -10px -10px 20px #fff4db;
+  border-radius: 20px;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.ebook-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.ebook-info h3 {
+  font-size: 1.2rem;
+  color: #133336;
+  margin: 12px 0;
+}
+
+.ebook-info p {
+  font-size: 0.95rem;
+  color: #285F6B;
+  margin-bottom: 16px;
+}
+
+.ebook-btn {
+  background: #E8DCC3;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px #c8bda9, -6px -6px 12px #fff4db;
+  padding: 10px 24px;
+  text-decoration: none;
+  color: #133336;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.ebook-btn:hover {
+  box-shadow: inset 4px 4px 8px #c8bda9, inset -4px -4px 8px #fff4db;
+}
+
 
 
 
