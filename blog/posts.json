@@ -223,15 +223,12 @@
   "imagem": "IMG/como-identificar-pragas-post.jpg",
   "data": "2025-07-16"
 },
-  {
-  "id": "plantas-pouca-luz-gatos",
-  "title": "Guia das Plantas que Vivem com Pouca Luz e Convivem com Gatos",
-  "excerpt": "Descubra plantas que se adaptam bem à sombra e ainda são seguras para o seu gato. Um guia prático para ambientes com pouca luz.",
-  "img": "IMG/plantas-pouca-luz-gatos-post.jpg",
-  "alt": "Plantas seguras para gatos em ambiente com pouca luz",
-  "post": "blog/plantas-pouca-luz-gatos-post.html",
-  "date": "2025-07-18",
-  "tags": ["plantas seguras", "pouca luz", "ambientes internos", "plantas de sombra", "convivência com gatos"]
+ {
+  "titulo": "Guia das Plantas que Vivem com Pouca Luz e Convivem com Gatos",
+  "trecho": "Descubra plantas que se adaptam bem à sombra e ainda são seguras para o seu gato. Um guia prático para ambientes com pouca luz.",
+  "link": "blog/plantas-pouca-luz-gatos-post.html",
+  "imagem": "IMG/plantas-pouca-luz-gatos-post.jpg",
+  "data": "2025-07-18"
 }
 
 
