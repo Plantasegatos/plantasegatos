@@ -411,14 +411,10 @@ footer p {
 /* === GRID E CARDS PADRONIZADOS PARA LIVROS E PRODUTOS === */
 .card {
   display: flex;
-  align-items: stretch; /* mesma altura entre cards */
+  align-items: stretch; /* iguala a altura de todos os cards */
   gap: 16px;
   padding: 12px;
   border-radius: 16px;
-  background: #E8DCC3;
-  box-shadow: 6px 6px 16px #d2c8b2,
-              -6px -6px 16px #fff3da;
-  transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
@@ -436,7 +432,7 @@ footer p {
 .card div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* botão fica sempre no final */
+  justify-content: space-between; /* empurra botão para base */
   text-align: left;
   flex: 1;
 }
@@ -448,23 +444,13 @@ footer p {
 }
 
 .card p {
+  margin: 0 0 16px;
   font-size: 0.95rem;
   color: #1A3A36;
-  margin-bottom: 16px;
 }
 
 .card a {
-  align-self: flex-start; /* botão alinha à esquerda */
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 12px;
-  background: #133336;
-  color: #E8DCC3;
-  font-weight: bold;
-  box-shadow: 5px 5px 10px #0e2426,
-              -5px -5px 10px #1b4a4f;
-  transition: box-shadow 0.2s ease-in-out;
+  align-self: flex-start; /* fixa à esquerda */
 }
 
 .card a:hover {
