@@ -7,24 +7,22 @@
   <link rel="stylesheet" href="../styles.css" />
   <style>
     body {
-      background: #E8DCC3;
+      background: #133336; /* Fundo verde escuro */
       font-family: Garamond, serif;
-      color: #1A3A36;
+      color: #E8DCC3; /* Texto bege */
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #133336;
       text-align: center;
       padding: 24px 0;
-      box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+      box-shadow: inset 3px 3px 6px rgba(0,0,0,0.4),
                   inset -3px -3px 6px rgba(255,255,255,0.1);
     }
 
     header h1 {
       font-size: 2.2rem;
-      color: #E8DCC3;
       margin: 0;
     }
 
@@ -35,7 +33,7 @@
       text-align: center;
     }
 
-    /* Botões estilo neomorfismo */
+    /* Botões de abas */
     .tab-buttons {
       display: flex;
       justify-content: center;
@@ -49,17 +47,17 @@
       font-size: 1rem;
       border: none;
       border-radius: 16px;
-      background: #E8DCC3;
-      color: #133336;
+      background: #133336;
+      color: #E8DCC3;
       cursor: pointer;
-      box-shadow: 8px 8px 16px #c1b8a2,
-                  -8px -8px 16px #ffffff;
+      box-shadow: 8px 8px 16px #0e2426,
+                  -8px -8px 16px #1b4a4f;
       transition: all 0.2s ease-in-out;
     }
 
     .tab-btn.active {
-      box-shadow: inset 8px 8px 16px #c1b8a2,
-                  inset -8px -8px 16px #ffffff;
+      box-shadow: inset 8px 8px 16px #0e2426,
+                  inset -8px -8px 16px #1b4a4f;
     }
 
     /* Conteúdo das abas */
@@ -87,12 +85,12 @@
 
     /* Card estilo neomorfismo */
     .card {
-      background: #E8DCC3;
+      background: #133336;
       border-radius: 20px;
       padding: 20px;
       text-align: center;
-      box-shadow: 8px 8px 16px #c1b8a2,
-                  -8px -8px 16px #ffffff;
+      box-shadow: 8px 8px 16px #0e2426,
+                  -8px -8px 16px #1b4a4f;
       transition: transform 0.2s ease-in-out;
     }
 
@@ -109,7 +107,6 @@
     .card h3 {
       margin: 8px 0;
       font-size: 1.2rem;
-      color: #133336;
     }
 
     .card p {
@@ -122,26 +119,24 @@
       display: inline-block;
       padding: 10px 20px;
       border-radius: 12px;
-      background: #E8DCC3;
-      color: #133336;
+      background: #133336;
+      color: #E8DCC3;
       font-weight: bold;
-      box-shadow: 5px 5px 10px #c1b8a2,
-                  -5px -5px 10px #ffffff;
+      box-shadow: 5px 5px 10px #0e2426,
+                  -5px -5px 10px #1b4a4f;
       transition: box-shadow 0.2s ease-in-out;
     }
 
     .card a:hover {
-      box-shadow: inset 5px 5px 10px #c1b8a2,
-                  inset -5px -5px 10px #ffffff;
+      box-shadow: inset 5px 5px 10px #0e2426,
+                  inset -5px -5px 10px #1b4a4f;
     }
 
-    /* Rodapé */
     footer {
       margin-top: 60px;
       text-align: center;
       font-size: 0.9rem;
       padding: 16px;
-      color: #1A3A36;
     }
   </style>
 </head>
@@ -153,7 +148,7 @@
   <main>
     <p>Selecione abaixo se deseja ver nossas <strong>dicas de livros</strong> ou <strong>produtos essenciais</strong>:</p>
 
-    <!-- Botões para alternar conteúdo -->
+    <!-- Botões para alternar abas -->
     <div class="tab-buttons">
       <button class="tab-btn active" onclick="openTab('livros')">Livros</button>
       <button class="tab-btn" onclick="openTab('produtos')">Produtos</button>
@@ -168,7 +163,7 @@
           <p>Guia prático para iniciantes e amantes de plantas aprenderem a cuidar sem medo.</p>
           <a href="https://www.amazon.com.br/dp/8594111118?tag=plantasegatos-20" target="_blank" rel="noopener">Comprar</a>
         </div>
-        <!-- Outros livros aqui -->
+        <!-- Adicione outros livros aqui -->
       </div>
     </div>
 
@@ -187,7 +182,6 @@
           <p>Ideal para aplicar água ou defensivos naturais com eficiência e precisão.</p>
           <a href="https://www.amazon.com.br/dp/B0FB45V6SQ?tag=plantasegatos-20" target="_blank" rel="noopener">Comprar</a>
         </div>
-        <!-- Outros produtos aqui -->
       </div>
     </div>
   </main>
@@ -210,3 +204,4 @@
   </script>
 </body>
 </html>
+
