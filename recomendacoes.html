@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recomendações | Plantas & Gatos</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      background: #E8DCC3;
+      font-family: Garamond, serif;
+      color: #1A3A36;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #133336;
+      text-align: center;
+      padding: 24px 0;
+      box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+                  inset -3px -3px 6px rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #E8DCC3;
+      margin: 0;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px;
+      text-align: center;
+    }
+
+    /* Botões estilo neomorfismo */
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 14px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 16px;
+      background: #E8DCC3;
+      color: #133336;
+      cursor: pointer;
+      box-shadow: 8px 8px 16px #c1b8a2,
+                  -8px -8px 16px #ffffff;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .tab-btn.active {
+      box-shadow: inset 8px 8px 16px #c1b8a2,
+                  inset -8px -8px 16px #ffffff;
+    }
+
+    /* Conteúdo das abas */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Grid de cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    /* Card estilo neomorfismo */
+    .card {
+      background: #E8DCC3;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 8px 8px 16px #c1b8a2,
+                  -8px -8px 16px #ffffff;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 8px 0;
+      font-size: 1.2rem;
+      color: #133336;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .card a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 12px;
+      background: #E8DCC3;
+      color: #133336;
+      font-weight: bold;
+      box-shadow: 5px 5px 10px #c1b8a2,
+                  -5px -5px 10px #ffffff;
+      transition: box-shadow 0.2s ease-in-out;
+    }
+
+    .card a:hover {
+      box-shadow: inset 5px 5px 10px #c1b8a2,
+                  inset -5px -5px 10px #ffffff;
+    }
+
+    /* Rodapé */
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 16px;
+      color: #1A3A36;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Recomendações</h1>
+  </header>
+
+  <main>
+    <p>Selecione abaixo se deseja ver nossas <strong>dicas de livros</strong> ou <strong>produtos essenciais</strong>:</p>
+
+    <!-- Botões para alternar conteúdo -->
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="openTab('livros')">Livros</button>
+      <button class="tab-btn" onclick="openTab('produtos')">Produtos</button>
+    </div>
+
+    <!-- Conteúdo da aba Livros -->
+    <div id="livros" class="tab-content active">
+      <div class="card-grid">
+        <div class="card">
+          <img src="../IMG/livro-como-nao-matar.jpg" alt="Como Não Matar Suas Plantas">
+          <h3>Como Não Matar Suas Plantas</h3>
+          <p>Guia prático para iniciantes e amantes de plantas aprenderem a cuidar sem medo.</p>
+          <a href="https://www.amazon.com.br/dp/8594111118?tag=plantasegatos-20" target="_blank" rel="noopener">Comprar</a>
+        </div>
+        <!-- Outros livros aqui -->
+      </div>
+    </div>
+
+    <!-- Conteúdo da aba Produtos -->
+    <div id="produtos" class="tab-content">
+      <div class="card-grid">
+        <div class="card">
+          <img src="../IMG/defende-cochonilha-lagarta.jpg" alt="Defende Cochonilha e Lagarta">
+          <h3>Defende – Cochonilha, Lagarta e Repelente Natural</h3>
+          <p>Proteja suas plantas com um repelente natural eficaz contra pragas comuns.</p>
+          <a href="https://www.amazon.com.br/dp/B0FB45V6SQ?tag=plantasegatos-20" target="_blank" rel="noopener">Comprar</a>
+        </div>
+        <div class="card">
+          <img src="../IMG/pulverizador-pali-2l.jpg" alt="Pulverizador Pali 2L">
+          <h3>Pulverizador Pali 2L</h3>
+          <p>Ideal para aplicar água ou defensivos naturais com eficiência e precisão.</p>
+          <a href="https://www.amazon.com.br/dp/B0FB45V6SQ?tag=plantasegatos-20" target="_blank" rel="noopener">Comprar</a>
+        </div>
+        <!-- Outros produtos aqui -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Plantas & Gatos. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function openTab(tabName) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      contents.forEach(content => content.classList.remove('active'));
+      buttons.forEach(button => button.classList.remove('active'));
+
+      document.getElementById(tabName).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
