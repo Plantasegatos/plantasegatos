@@ -429,11 +429,13 @@ footer p {
 }
 
 .card img {
-  flex: 0 0 30%; /* antes 40% */
+  flex: 0 0 30%;
   max-width: 30%;
+  height: auto;          /* altura automática */
+  aspect-ratio: 3/4;     /* mantém proporção padrão vertical */
+  object-fit: cover;     /* preenche sem distorcer */
   border-radius: 8px;
 }
-
 
 .card h3 {
   margin: 8px 0;
@@ -539,10 +541,12 @@ footer p {
   }
 
   .card img {
-    max-width: 70%;                /* imagem ocupa 70% da largura */
+    max-width: 70%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
     margin-bottom: 8px;
   }
-
+   
   .card h3 {
     font-size: 1rem;               /* título um pouco menor */
     margin: 6px 0;
