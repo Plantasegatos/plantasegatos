@@ -409,19 +409,16 @@ footer p {
 
 
 /* === GRID E CARDS PADRONIZADOS PARA LIVROS E PRODUTOS === */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-  margin-top: 20px;
-}
-
 .card {
   display: flex;
-  align-items: center;
+  align-items: stretch; /* mesma altura entre cards */
   gap: 16px;
-  padding: 12px; /* reduzido */
+  padding: 12px;
   border-radius: 16px;
+  background: #E8DCC3;
+  box-shadow: 6px 6px 16px #d2c8b2,
+              -6px -6px 16px #fff3da;
+  transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
@@ -431,14 +428,21 @@ footer p {
 .card img {
   flex: 0 0 30%;
   max-width: 30%;
-  height: auto;          /* altura automática */
-  aspect-ratio: 3/4;     /* mantém proporção padrão vertical */
-  object-fit: cover;     /* preenche sem distorcer */
+  aspect-ratio: 3/4;
+  object-fit: cover;
   border-radius: 8px;
 }
 
+.card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* botão fica sempre no final */
+  text-align: left;
+  flex: 1;
+}
+
 .card h3 {
-  margin: 8px 0;
+  margin: 0 0 8px;
   font-size: 1.2rem;
   color: #133336;
 }
@@ -450,6 +454,7 @@ footer p {
 }
 
 .card a {
+  align-self: flex-start; /* botão alinha à esquerda */
   text-decoration: none;
   display: inline-block;
   padding: 10px 20px;
@@ -534,27 +539,24 @@ footer p {
 /* === Ajustes para cards no mobile (menos alongados) === */
 @media (max-width: 768px) {
   .card {
-    flex-direction: column;        /* imagem em cima, texto embaixo */
+    flex-direction: column;
     align-items: center;
-    gap: 8px;                      /* menos espaço entre imagem e texto */
-    padding: 8px;                  /* menos padding interno */
+    gap: 8px;
+    padding: 8px;
   }
 
   .card img {
     max-width: 70%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
     margin-bottom: 8px;
-  }
-   
-  .card h3 {
-    font-size: 1rem;               /* título um pouco menor */
-    margin: 6px 0;
   }
 
-  .card p {
-    font-size: 0.9rem;             /* texto menor */
-    margin-bottom: 8px;
+  .card div {
+    text-align: center;
+    justify-content: flex-start; /* texto e botão em fluxo normal */
+  }
+
+  .card a {
+    align-self: center; /* botão centralizado no mobile */
   }
 }
 
