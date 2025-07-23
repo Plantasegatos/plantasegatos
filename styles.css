@@ -1,0 +1,494 @@
+/* Paleta base:
+   #1A3A36 – Verde escuro (fundo/header)
+   #287D72 – Verde médio (detalhes/hover)
+   #E8DCC3 – Bege claro (fundo suave/texto)
+   #D9A744 – Amarelo queimado (chamada/links)
+   #B66527 – Marrom telha (botões/destaques)
+*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Garamond, 'Times New Roman', serif;
+  background-color: #E8DCC3;
+  color: #1A3A36;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1A3A36;
+  color: #E8DCC3;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #E8DCC3;
+}
+
+nav.menu-principal {
+  margin-top: 1em;
+}
+
+.top-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 0;
+  margin: 1.2rem auto 0;
+  max-width: 960px;
+}
+
+.top-menu li {
+  display: inline-block;
+}
+
+.top-menu li a {
+  background-color: transparent;
+  color: #E8DCC3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: Garamond, serif;
+  transition: color 0.3s;
+  padding: 0.4em 0.8em;
+  display: inline-block;
+}
+
+.top-menu li a:hover,
+.top-menu li a.active {
+  color: #D9A744;
+}
+.pagina-produtos section {
+  padding: 4em 4em;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.pagina-ebooks section,
+.pagina-livros section {
+  padding: 4em 4em;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+.pagina-decoracao section {
+  padding: 4em 4em;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+.pagina-sobre section {
+  padding: 4em 4em;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+.pagina-contato section {
+  padding: 4em 4em;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+
+
+.safira-plantas {
+  position: fixed;
+  top: 60px;
+  right: 30px;
+  width: 300px;
+  max-width: 50vw;
+  z-index: 999;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.safira-central {
+  display: none;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 1.2em 1em 1em;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin: 0.5em 0 0.3em;
+  }
+
+  header p {
+    font-size: 0.95rem;
+    margin: 0 0 1em;
+  }
+
+  .top-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .top-menu li a {
+    font-size: 1rem;
+    padding: 0.4em 0.7em;
+    text-align: center;
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .safira-plantas {
+    display: none !important;
+  }
+
+  .safira-central {
+    display: block !important;
+    margin: 0.6em auto 0.8em;
+    max-width: 60px;
+    height: auto;
+    max-height: 60px;
+  }
+}
+
+/* MENU DE FILTROS COM ROLAGEM HORIZONTAL */
+.filtros {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  white-space: nowrap !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+  gap: 0.5rem;
+  padding: 0.5em 1em;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+}
+
+.filtros button {
+  flex: 0 0 auto;
+  padding: 0.4em 0.8em;
+  font-size: 0.9rem;
+  background-color: #285F6B;
+  color: #E8DCC3;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.filtros button:hover,
+.filtros button.active {
+  background-color: #D9A744;
+  color: #1A3A36;
+}
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: #E8DCC3;
+  color: #1A3A36;
+  font-family: Garamond, serif;
+}
+
+footer p {
+  margin: 0.5em 0;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.icon-social img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.icon-social:hover img {
+  transform: scale(1.14);
+}
+.plant-card {
+  background: #E8DCC3;
+  border-radius: 12px;
+  box-shadow: 6px 6px 16px #d2c8b2,
+              -6px -6px 16px #fff3da;
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.plant-card:hover {
+  box-shadow: inset 4px 4px 10px #d2c8b2,
+              inset -4px -4px 10px #fff3da;
+}
+
+
+/* === ESTILO NEOMÓRFICO === */
+.neumorphic {
+  background: #E8DCC3;
+  border-radius: 12px;
+  box-shadow: 6px 6px 16px #d2c8b2,
+              -6px -6px 16px #fff3da;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.neumorphic:hover {
+  box-shadow: inset 4px 4px 10px #d2c8b2,
+              inset -4px -4px 10px #fff3da;
+}
+
+.button-neu {
+  background: #E8DCC3;
+  border: none;
+  border-radius: 12px;
+  padding: 0.6em 1.2em;
+  box-shadow: 6px 6px 12px #d2c8b2,
+              -6px -6px 12px #fff3da;
+  font-family: Garamond, serif;
+  color: #1A3A36;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-neu:hover {
+  box-shadow: inset 4px 4px 10px #d2c8b2,
+              inset -4px -4px 10px #fff3da;
+  color: #287D72;
+}
+
+.box-neu {
+  background: #E8DCC3;
+  border-radius: 18px;
+  box-shadow: 10px 10px 20px #d2c8b2,
+              -10px -10px 20px #fff3da;
+  padding: 2rem;
+}
+
+.container-neu {
+  background: #E8DCC3;
+  border-radius: 18px;
+  box-shadow: inset 8px 8px 20px #d2c8b2,
+              inset -8px -8px 20px #fff3da;
+  padding: 2rem;
+}
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/*.ebook-card {
+  background: #E8DCC3;
+  border-radius: 20px;
+  box-shadow: 6px 6px 16px #c9bfae, -6px -6px 16px #fff5dc;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+*//*.ebook-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+*/.ebook-info h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+  color: #133336;
+}
+
+.ebook-info p {
+  font-size: 1rem;
+  color: #1A3A36;
+  margin-bottom: 1rem;
+}
+
+.ebook-btn {
+  display: inline-block;
+  background: #133336;
+  color: #E8DCC3;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: inset 2px 2px 6px #0f2b2d, inset -2px -2px 6px #1a454a;
+}
+.sobre-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 40px;
+}
+
+.sobre-img img {
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.sobre-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sobre-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #1A3A36;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.sobre-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Garamond, serif;
+  color: #1A3A36;
+  line-height: 1.6;
+}
+
+.sobre-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #133336;
+}
+
+.safira-float {
+  float: left;
+  max-width: 300px;
+  margin: 0 24px 20px 0;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+/* === GRID E CARDS PADRONIZADOS PARA LIVROS E PRODUTOS === */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #E8DCC3;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 6px 6px 16px #d2c8b2,
+              -6px -6px 16px #fff3da;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  color: #133336;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #1A3A36;
+  margin-bottom: 16px;
+}
+
+.card a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: #133336;
+  color: #E8DCC3;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px #0e2426,
+              -5px -5px 10px #1b4a4f;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card a:hover {
+  box-shadow: inset 5px 5px 10px #0e2426,
+              inset -5px -5px 10px #1b4a4f;
+}
+
+/* === BOTÕES DE ABAS (LIVROS / PRODUTOS) === */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 16px;
+  background: #133336;
+  color: #E8DCC3;
+  cursor: pointer;
+  box-shadow: 8px 8px 16px #0e2426,
+              -8px -8px 16px #1b4a4f;
+  transition: all 0.2s ease-in-out;
+}
+
+.tab-btn.active {
+  box-shadow: inset 8px 8px 16px #0e2426,
+              inset -8px -8px 16px #1b4a4f;
+}
