@@ -552,8 +552,8 @@ footer p {
 
   .card div {
     text-align: center;
-    justify-content: flex-start; /* texto e botão em fluxo normal */
-  }
+    justify-content: space-between; /* mantém botão fixo no mobile também */
+}
 
   .card a {
     align-self: center; /* botão centralizado no mobile */
