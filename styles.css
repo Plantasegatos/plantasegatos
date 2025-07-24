@@ -415,9 +415,13 @@ footer p {
   gap: 16px;
   padding: 12px;
   border-radius: 16px;
-  height: 100%;         /* garante que todos tenham mesma altura */
 }
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px; /* aumenta o espaço entre linhas e colunas */
+}
 
 .card:hover {
   transform: translateY(-4px);
