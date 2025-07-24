@@ -578,3 +578,19 @@ footer p {
 .site-footer a img:hover {
   transform: scale(1.1);
 }
+
+.site-header nav ul li a {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #287D72;           /* tom verde médio */
+  color: #E8DCC3;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.site-header nav ul li a:hover {
+  background: #1A3A36;           /* tom mais escuro no hover */
+  transform: translateY(-2px);   /* leve efeito de "subir" ao passar o mouse */
+}
