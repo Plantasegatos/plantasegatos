@@ -203,7 +203,7 @@
         <li><a href="../index.html">Blog</a></li>
         <li><a href="../plantas.html">Plantas</a></li>
         <li><a href="../decoracao.html">Decoração</a></li>
-        <li><a href="../recomendacoes.html">Recomendações</a></li>
+        <li><a href="../recomendacoes.html" class="active">Recomendações</a></li>
         <li><a href="../sobre.html">Sobre</a></li>
         <li><a href="../contato.html">Contato</a></li>
       </ul>
@@ -556,17 +556,5 @@ function openTab(tabName, event) {
 }
 </script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const currentPath = window.location.pathname.split('/').pop();
-  const menuLinks = document.querySelectorAll('.site-header nav ul li a');
-
-  menuLinks.forEach(link => {
-    if (link.getAttribute('href').includes(currentPath)) {
-      link.classList.add('active');
-    }
-  });
-});
-</script>
 </body>
 </html>
