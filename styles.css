@@ -489,8 +489,11 @@ footer p {
 }
 
 .tab-btn.active {
+  background: #133336; /* verde padrão do fundo */
+  color: #E8DCC3;      /* bege claro para o texto */
   box-shadow: inset 8px 8px 16px #0e2426,
-              inset -8px -8px 16px #1b4a4f;
+              inset -8px -8px 16px #1b4a4f; /* sombra interna para efeito afundado */
+  transition: all 0.2s ease-in-out;
 }
 .site-header {
   background-color: #133336;
