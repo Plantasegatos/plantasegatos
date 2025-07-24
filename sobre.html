@@ -1,173 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta name="p:domain_verify" content="fad2619dbdab6b2120d71338165bbdd1"/>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre o Projeto Plantas & Gatos</title>
+  <title>Sobre | Plantas & Gatos</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    main {
-      margin-left: 40px;
-      margin-right: 340px;
-      padding: 2em 1em 2em 1.5em;
-      width: calc(100% - 500px);
-      max-width: none;
-    }
-    .conteudo-sobre {
-  background-color: #E8DCC3;
-  color: #1A3A36;
-}
-    body {
-  background-color: #E8DCC3;
-  font-family: Garamond, serif;
-  color: #1A3A36;
-  margin: 0;
-  padding: 0;
-}
-
-    aside {
-      position: fixed;
-      top: 350px;
-      right: 0;
-      height: calc(100% - 100px);
-      width: 340px;
-      background-color: #1A3A36;
-      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      padding-top: 1em;
-      z-index: 998;
-    }
-
-    aside nav ul {
-      list-style: none;
-      padding: 0 1em;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    aside nav ul li {
-      margin: 1em 0;
-    }
-
-    aside nav ul li a {
-      color: #E8DCC3;
-      text-decoration: none;
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-
-    @media screen and (max-width: 1024px) {
-      aside {
-        position: static;
-        width: 100%;
-        height: auto;
-        box-shadow: none;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 1em;
-      }
-
-      aside nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-      }
-
-      aside nav ul li {
-        margin: 0.5em 1em;
-      }
-
-      main {
-        margin: 0;
-        width: 100%;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      aside nav ul li a {
-        font-size: 1em;
-      }
-
-      img[alt="Safira e nossa história"] {
-        position: static !important;
-        max-width: 80vw;
-        display: block;
-        margin: 1em auto;
-      }
-    }
-    footer {
-  text-align: center;
-  padding: 2em 1em;
-  background-color: #E8DCC3;
-}
-
-footer p {
-  margin: 0.5em 0;
-}
-
-footer img {
-  display: block;
-  margin: 10px auto 0;
-}
-    .footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  margin-top: 18px;
-  margin-bottom: 12px;
-}
-.icon-social svg {
-  width: 40px;
-  height: 40px;
-  display: block;
-  transition: transform 0.2s;
-  cursor: pointer;
-}
-.icon-social:hover svg {
-  transform: scale(1.14);
-}
-
-  </style>
 </head>
 <body>
 
-  <header>
-    <h1>Plantas & Gatos</h1>
-    <img src="IMG/safira-sobre.png" alt="Safira e nossa história" style="
-      position: fixed;
-      top: 80px;
-      right: 40px;
-      max-width: 300px;
-      width: 25vw;
-      z-index: 999;
-      pointer-events: none;
-      filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));">
-    <p>Estética, verdura e segurança para amigos felinos</p>
-    <nav class="menu-principal">
-      <ul class="top-menu">
-        <li><a href="index.html">Blog</a></li>
-        <li><a href="plantas.html">Plantas</a></li>
-        <li><a href="decoracao.html">Decoração</a></li>
-       <li><a href="recomendacoes.html">Recomendações</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header">
+  <h1>Plantas & Gatos</h1>
+  <p>Estética, verdura e segurança para amigos felinos</p>
+  <nav>
+    <ul>
+      <li><a href="index.html">Blog</a></li>
+      <li><a href="plantas.html">Plantas</a></li>
+      <li><a href="decoracao.html">Decoração</a></li>
+      <li><a href="recomendacoes.html">Recomendações</a></li>
+      <li><a href="sobre.html" class="active">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
 
- <main>
-  <section class="conteudo-sobre" style="padding: 2em 1em; background-color: #E8DCC3; color: #1A3A36; font-family: Garamond, serif; max-width: 880px; margin: auto; line-height: 1.7;">
-    
-    <img src="IMG/Safira.jpg" alt="Safira, mascote do projeto Plantas & Gatos" style="float: left; max-width: 300px; margin: 0 20px 20px 0; border-radius: 12px;" loading="lazy">
+<main>
+  <section class="conteudo-sobre">
+    <img src="IMG/Safira.jpg" alt="Safira, mascote do projeto Plantas & Gatos" class="img-sobre" loading="lazy">
 
     <h2>Sobre o projeto</h2>
-    <p>O projeto <strong>Plantas & Gatos</strong> nasceu de uma vivência intensa, amorosa e transformadora com nossa gata <strong>Safira</strong>, uma siamesa extremamente inteligente que conquistou até quem dizia não gostar de gatos. Ela se tornou nossa companheira inseparável e gerou ess vínculo inesperado e especial.</p>
+    <p>O projeto <strong>Plantas & Gatos</strong> nasceu de uma vivência intensa, amorosa e transformadora com nossa gata <strong>Safira</strong>, uma siamesa extremamente inteligente que conquistou até quem dizia não gostar de gatos. Ela se tornou nossa companheira inseparável e gerou esse vínculo inesperado e especial.</p>
 
     <p>Em 2024, Safira começou a apresentar problemas renais e precisou passar por diversos tratamentos, incluindo internações, hidroterapia e alimentação por sonda esofágica, que ela usava com elegância sob uma bandana rosa. Sua rotina exigia atenção constante: alimentações a cada três horas, acompanhamento frequente e, acima de tudo, muito amor. Ela nos acompanhava ao trabalho, em viagens e se tornou parte ativa da nossa rotina.</p>
 
@@ -177,21 +38,21 @@ footer img {
   </section>
 </main>
 
-
- <footer>
-  <p>&copy; 2025 Plantas & Gatos. Todos os direitos reservados.</p>
-  <p>Contato: <a href="mailto:contato@plantasegatos.com.br">contato@plantasegatos.com.br</a></p>
-  <div class="footer-socials">
-    <a href="https://br.pinterest.com/plantasngatos/" target="_blank" class="icon-social">
-      <img src="IMG/pinterest-icon.png" alt="Pinterest" width="70" height="70">
+<footer class="site-footer">
+  <p>
+    <a href="https://www.pinterest.com/plantasngatos" target="_blank" class="social-btn">
+      <img src="../IMG/pinterest-icon.png" alt="Pinterest">
     </a>
-    <a href="https://www.instagram.com/plantasngatos" target="_blank" rel="noopener noreferrer" class="icon-social">
-      <img src="IMG/instagram-icon.png" alt="Instagram" width="70" height="70">
+    <a href="https://www.instagram.com/plantasngatos" target="_blank" class="social-btn">
+      <img src="../IMG/instagram-icon.png" alt="Instagram">
     </a>
-  </div>
+  </p>
+  <p><a href="mailto:contato@plantasegatos.com.br" class="email-link">contato@plantasegatos.com.br</a></p>
+  <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
 </footer>
-  
+
 </body>
 </html>
+
 
 
