@@ -1015,4 +1015,25 @@ body.decoracao footer {
   background-color: #133336 !important;
   color: #E8DCC3 !important;
 }
+/* Fundo bege para a página de contato */
+body.contato {
+  background-color: #E8DCC3 !important;
+  color: #133336;
+}
+
+/* Faz main e seções também ficarem bege e preencherem toda a tela */
+body.contato main,
+body.contato section {
+  background-color: #E8DCC3 !important;
+  max-width: 100%;
+  margin: 0;
+  padding: 2em;
+}
+
+/* Mantém header e footer verdes */
+body.contato header,
+body.contato footer {
+  background-color: #133336 !important;
+  color: #E8DCC3 !important;
+}
 
