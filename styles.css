@@ -792,7 +792,27 @@ footer p {
               inset -6px -6px 12px #f0e6cf; /* afundado */
   transform: translateY(-1px);
 }
-<div class="voltar">
-  <a href="index.html" class="voltar-inicio">← Voltar ao Início</a>
-</div>
+.voltar a.voltar-inicio {
+  display: inline-block;
+  margin: 30px auto;
+  background: #D9C8A8 !important;   /* Bege mais escuro */
+  color: #133336 !important;        /* Texto verde escuro */
+  font-family: Garamond, serif;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow: 6px 6px 12px #c4b08e,
+              -6px -6px 12px #f0e6cf;
+  transition: all 0.2s ease-in-out;
+}
+
+.voltar a.voltar-inicio:hover {
+  box-shadow: inset 6px 6px 12px #c4b08e,
+              inset -6px -6px 12px #f0e6cf;
+  transform: translateY(-1px);
+}
 
