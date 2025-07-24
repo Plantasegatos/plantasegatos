@@ -411,11 +411,13 @@ footer p {
 /* === GRID E CARDS PADRONIZADOS PARA LIVROS E PRODUTOS === */
 .card {
   display: flex;
-  align-items: stretch; /* iguala a altura de todos os cards */
+  align-items: stretch; /* mantém mesma altura do container */
   gap: 16px;
   padding: 12px;
   border-radius: 16px;
+  height: 100%;         /* garante que todos tenham mesma altura */
 }
+
 
 .card:hover {
   transform: translateY(-4px);
@@ -432,10 +434,12 @@ footer p {
 .card div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* empurra botão para base */
+  justify-content: space-between;  /* empurra botão para base */
   text-align: left;
   flex: 1;
+  min-height: 100%;                /* força ocupar altura total do card */
 }
+
 
 .card h3 {
   margin: 0 0 8px;
@@ -537,8 +541,9 @@ footer p {
   }
 
   .card div {
-    text-align: center;
-    justify-content: space-between; /* mantém botão fixo no mobile também */
+  text-align: center;
+  justify-content: space-between;  /* mantém botão fixo também no mobile */
+  min-height: 100%;
 }
 
   .card a {
