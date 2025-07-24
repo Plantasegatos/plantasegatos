@@ -843,4 +843,23 @@ body.recomendacoes footer {
   background-color: #133336; /* Verde escuro do padrão */
   color: #E8DCC3; /* Texto claro no header e footer */
 }
+/* Cards da página Recomendações */
+body.recomendacoes .card {
+  background: #E8DCC3; /* Bege mais escuro */
+  color: #133336;      /* Texto verde escuro */
+  box-shadow: 8px 8px 16px #d2c8b2,
+              -8px -8px 16px #fff3da;
+  transition: all 0.3s ease-in-out;
+}
+
+body.recomendacoes .card h3,
+body.recomendacoes .card p {
+  color: #133336; /* Garante que título e texto fiquem verdes */
+}
+
+body.recomendacoes .card:hover {
+  box-shadow: inset 8px 8px 16px #d2c8b2,
+              inset -8px -8px 16px #fff3da;
+  transform: translateY(-2px);
+}
 
