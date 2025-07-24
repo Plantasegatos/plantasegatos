@@ -555,3 +555,26 @@ footer p {
   }
 }
 
+.site-footer {
+  text-align: center;
+  padding: 24px 0;
+  background: #133336;
+  color: #E8DCC3;
+  margin-top: 40px;
+}
+
+.site-footer p {
+  margin: 8px 0;
+}
+
+.site-footer a img {
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+  vertical-align: middle;
+  transition: transform 0.2s ease-in-out;
+}
+
+.site-footer a img:hover {
+  transform: scale(1.1);
+}
