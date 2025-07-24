@@ -425,16 +425,16 @@ footer p {
   color: #133336; /* Texto verde escuro padrão */
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 32px; /* espaço entre cards */
-}
-
 .card:hover {
   box-shadow: inset 8px 8px 16px #d2c8b2,
               inset -8px -8px 16px #fff3da;
   transform: translateY(-2px);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px; /* espaço entre cards */
 }
 
 .card img {
@@ -448,7 +448,7 @@ footer p {
 .card div {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* empurra botão para base */
+  justify-content: space-between; /* empurra botão para a base */
   text-align: left;
   flex: 1;
   min-height: 100%; /* força ocupar altura total do card */
@@ -456,13 +456,13 @@ footer p {
 
 .card h3,
 .card p {
-  color: #133336; /* garante texto verde escuro em todos */
+  color: #133336; /* texto verde escuro padrão */
   margin: 0 0 16px;
   font-size: 0.95rem;
 }
 
 .card a {
-  align-self: flex-start; /* fixa botão à esquerda */
+  align-self: flex-start; /* botão alinhado à esquerda */
 }
 
 .card a:hover {
