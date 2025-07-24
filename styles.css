@@ -613,3 +613,9 @@ footer p {
               inset -8px -8px 16px #1b4a4f; /* sombra interna para efeito afundado */
   transition: all 0.2s ease-in-out;
 }
+.site-header p {
+  font-size: 1.4rem; /* Aumenta o tamanho do subtítulo */
+  color: #E8DCC3;
+  margin: 4px 0 20px;
+}
+
