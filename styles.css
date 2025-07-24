@@ -481,9 +481,9 @@ footer p {
 .tab-btn.active {
   background: #133336;
   color: #E8DCC3;
-  box-shadow: inset 8px 8px 16px #0e2426,
-              inset -8px -8px 16px #1b4a4f;
-  transform: translateY(2px); /* faz afundar */
+  box-shadow: inset 6px 6px 12px #b5aa92,
+              inset -6px -6px 12px #fff3da !important; /* força sombra interna */
+  transform: translateY(2px);
 }
 
 .site-header {
