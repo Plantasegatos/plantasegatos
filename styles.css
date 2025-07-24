@@ -816,37 +816,23 @@ footer p {
   justify-content: center;
 }
 /* Fundo global bege claro */
-body {
-  background: #F2EADC; /* Bege mais claro */
+body.recomendacoes {
+  background: #F2EADC;
   color: #1A3A36;
   font-family: Garamond, serif;
   margin: 0;
 }
+
 main {
-  max-width: 1100px;   /* limite ideal para leitura */
-  margin: 0 auto;      /* centraliza horizontalmente */
-  padding: 2em;        /* espaço interno */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2em;
 }
 
-/* Fundo bege apenas para a página Recomendações */
-body.recomendacoes {
-  background: #F2EADC; /* Bege claro */
-}
-
-/* Garante que cards, cabeçalho e rodapé mantenham o padrão atual */
+/* Cards em bege escuro com texto verde */
 body.recomendacoes .card {
-  background: #E8DCC3; /* Bege escuro para cards */
-}
-
-body.recomendacoes header,
-body.recomendacoes footer {
-  background-color: #133336; /* Verde escuro do padrão */
-  color: #E8DCC3; /* Texto claro no header e footer */
-}
-/* Cards da página Recomendações */
-body.recomendacoes .card {
-  background: #E8DCC3; /* Bege mais escuro */
-  color: #133336;      /* Texto verde escuro */
+  background: #E8DCC3;
+  color: #133336;
   box-shadow: 8px 8px 16px #d2c8b2,
               -8px -8px 16px #fff3da;
   transition: all 0.3s ease-in-out;
@@ -854,7 +840,19 @@ body.recomendacoes .card {
 
 body.recomendacoes .card h3,
 body.recomendacoes .card p {
-  color: #133336; /* Garante que título e texto fiquem verdes */
+  color: #133336;
+}
+
+body.recomendacoes .card img {
+  flex: 0 0 30%;
+  max-width: 30%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+body.recomendacoes .card a {
+  align-self: flex-start;
 }
 
 body.recomendacoes .card:hover {
@@ -862,4 +860,3 @@ body.recomendacoes .card:hover {
               inset -8px -8px 16px #fff3da;
   transform: translateY(-2px);
 }
-
