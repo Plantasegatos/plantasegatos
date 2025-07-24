@@ -50,7 +50,7 @@
       text-align: center;
     }
 
-    h3 {
+  h3 {
       margin-top: 2rem;
       margin-bottom: 0.3rem;
       color: #133336;
@@ -90,7 +90,60 @@
       width: 80px;
       margin: 0 0.5rem;
     }
-  </style>
+  
+.produtos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.ebook-card {
+  background: #F5EFE2;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 20px);
+  max-width: 320px;
+  padding: 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.ebook-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.ebook-info h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.ebook-info p {
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.ebook-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #133336;
+  color: #E8DCC3;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .ebook-card {
+    width: 100%;
+  }
+}
+
+</style>
 </head>
 <body>
 
