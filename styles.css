@@ -829,5 +829,10 @@ body {
   font-family: Garamond, serif;
   margin: 0;
 }
+main {
+  max-width: 1100px;   /* limite ideal para leitura */
+  margin: 0 auto;      /* centraliza horizontalmente */
+  padding: 2em;        /* espaço interno */
+}
 
 
