@@ -934,4 +934,23 @@ body.recomendacoes section,
 body.recomendacoes .tab-content {
   background-color: #E8DCC3 !important;
 }
+/* Corpo inteiro bege */
+body.recomendacoes {
+  background-color: #E8DCC3 !important;
+}
+
+/* Conteúdo principal também bege (remove bordas verdes ao redor) */
+body.recomendacoes main {
+  background-color: #E8DCC3 !important;
+  max-width: none;          /* Faz o fundo preencher a tela toda */
+  margin: 0;                /* Remove margens centrais */
+  padding: 2em;             /* Mantém respiro interno */
+}
+
+/* Header e Footer continuam verdes */
+body.recomendacoes header,
+body.recomendacoes footer {
+  background-color: #133336 !important;
+  color: #E8DCC3 !important;
+}
 
