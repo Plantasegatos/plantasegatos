@@ -478,13 +478,12 @@ footer p {
   transition: all 0.2s ease-in-out;
 }
 
-
 .tab-btn.active {
   background: #133336;
   color: #E8DCC3;
   box-shadow: inset 8px 8px 16px #0e2426,
               inset -8px -8px 16px #1b4a4f;
-  transform: translateY(1px); /* dá a sensação de afundar */
+  transform: translateY(2px); /* faz afundar */
 }
 
 .site-header {
