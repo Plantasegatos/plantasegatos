@@ -469,26 +469,25 @@ footer p {
 }
 
 .tab-btn {
-  padding: 14px 28px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 16px;
-  background: #133336;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: #133336;        /* mesma cor dos botões de card */
   color: #E8DCC3;
+  font-weight: bold;
+  border: none;
   cursor: pointer;
-  box-shadow: 8px 8px 16px #d2c8b2,
-              -8px -8px 16px #fff3da;
-  transition: all 0.2s ease-in-out;
+  box-shadow: 5px 5px 10px #0e2426,
+              -5px -5px 10px #1b4a4f;   /* mesma sombra externa */
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 
 .tab-btn.active {
-  background: #133336;
-  color: #E8DCC3;
   box-shadow: inset 8px 8px 16px #d2c8b2,
-              inset -8px -8px 16px #fff3da;
-  transform: translateY(2px);
+              inset -8px -8px 16px #fff3da; /* sombra interna igual ao card hover */
+  transform: translateY(2px); /* leve afundamento */
 }
+
 
 
 .site-header {
