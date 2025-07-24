@@ -953,4 +953,23 @@ body.recomendacoes footer {
   background-color: #133336 !important;
   color: #E8DCC3 !important;
 }
+/* Botões dos cards - fundo bege, texto verde */
+body.recomendacoes .card a {
+  background: #E8DCC3 !important;   /* Bege claro */
+  color: #133336 !important;        /* Verde escuro para o texto */
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 6px 6px 12px #d2c8b2,
+              -6px -6px 12px #fff3da;  /* Sombra neomórfica clara */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito no hover - afundado */
+body.recomendacoes .card a:hover {
+  box-shadow: inset 6px 6px 12px #d2c8b2,
+              inset -6px -6px 12px #fff3da;
+  color: #287D72 !important;  /* Verde médio no hover */
+}
 
