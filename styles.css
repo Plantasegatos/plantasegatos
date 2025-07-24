@@ -725,4 +725,41 @@ footer p {
   pointer-events: none;
   filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));
 }
+/* ===== Plant Cards Neomórficos ===== */
+.plant-card {
+  background: #E8DCC3; /* Bege padrão */
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 8px 8px 16px #d2c8b2,
+              -8px -8px 16px #fff3da; /* relevo externo */
+  transition: all 0.2s ease-in-out;
+}
+
+.plant-card:hover {
+  box-shadow: inset 8px 8px 16px #d2c8b2,
+              inset -8px -8px 16px #fff3da; /* afundado no hover */
+  transform: translateY(-2px); /* sutil movimento */
+}
+
+/* Imagem do card */
+.plant-card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Título do card */
+.plant-card h3 {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  color: #133336;
+}
+
+/* Texto do card */
+.plant-card p {
+  font-size: 0.95rem;
+  color: #1A3A36;
+  line-height: 1.4;
+}
 
