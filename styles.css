@@ -762,4 +762,34 @@ footer p {
   color: #1A3A36;
   line-height: 1.4;
 }
+/* ===== Submenu Neomórfico ===== */
+.submenu {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.submenu button {
+  background: #D9C8A8; /* Bege mais escuro que o fundo principal */
+  color: #133336;      /* Texto verde */
+  font-family: Garamond, serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+
+  box-shadow: 6px 6px 12px #c4b08e,
+              -6px -6px 12px #f0e6cf; /* relevo externo */
+  transition: all 0.2s ease-in-out;
+}
+
+.submenu button:hover,
+.submenu button.active {
+  box-shadow: inset 6px 6px 12px #c4b08e,
+              inset -6px -6px 12px #f0e6cf; /* afundado */
+  transform: translateY(-1px);
+}
 
