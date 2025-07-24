@@ -828,4 +828,19 @@ main {
   padding: 2em;        /* espaço interno */
 }
 
+/* Fundo bege apenas para a página Recomendações */
+body.recomendacoes {
+  background: #F2EADC; /* Bege claro */
+}
+
+/* Garante que cards, cabeçalho e rodapé mantenham o padrão atual */
+body.recomendacoes .card {
+  background: #E8DCC3; /* Bege escuro para cards */
+}
+
+body.recomendacoes header,
+body.recomendacoes footer {
+  background-color: #133336; /* Verde escuro do padrão */
+  color: #E8DCC3; /* Texto claro no header e footer */
+}
 
