@@ -822,5 +822,12 @@ footer p {
   display: flex;
   justify-content: center;
 }
+/* Fundo global bege claro */
+body {
+  background: #F2EADC; /* Bege mais claro */
+  color: #1A3A36;
+  font-family: Garamond, serif;
+  margin: 0;
+}
 
 
