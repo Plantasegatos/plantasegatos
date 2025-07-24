@@ -411,10 +411,16 @@ footer p {
 /* === GRID E CARDS PADRONIZADOS PARA LIVROS E PRODUTOS === */
 .card {
   display: flex;
-  align-items: stretch; /* mantém mesma altura do container */
+  align-items: stretch;
   gap: 16px;
-  padding: 12px;
-  border-radius: 16px;
+  padding: 16px;
+  border-radius: 20px;
+
+  background: #E8DCC3; /* Bege mais escuro */
+  box-shadow: 8px 8px 16px #d2c8b2,
+              -8px -8px 16px #fff3da;
+  transition: all 0.3s ease-in-out;
+  color: #133336; /* Texto verde escuro */
 }
 
 .card-grid {
@@ -424,9 +430,10 @@ footer p {
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  box-shadow: inset 8px 8px 16px #d2c8b2,
+              inset -8px -8px 16px #fff3da;
+  transform: translateY(-2px);
 }
-
 .card img {
   flex: 0 0 30%;
   max-width: 30%;
@@ -445,11 +452,11 @@ footer p {
 }
 
 
-.card h3 {
-  margin: 0 0 8px;
-  font-size: 1.2rem;
+.card h3,
+.card p {
   color: #133336;
 }
+
 
 .card p {
   margin: 0 0 16px;
