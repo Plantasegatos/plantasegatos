@@ -83,16 +83,23 @@
     }
 
     .post-preview {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #F6EFE2;
-      margin: 1.5em auto;
-      padding: 1.2em;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #E8DCC3; /* bege mais escuro que o fundo */
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px #d2c8b2,
+              -8px -8px 16px #fff3da;
+  margin: 1.5em auto;
+  padding: 1.2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.post-preview:hover {
+  box-shadow: inset 8px 8px 16px #d2c8b2,
+              inset -8px -8px 16px #fff3da;
+  transform: translateY(-2px);
+}
 
     .preview-text {
       max-width: 65%;
