@@ -469,14 +469,18 @@ footer p {
 }
 
 .tab-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 16px;
   background: #133336;
   color: #E8DCC3;
-  border-radius: 20px;
-  padding: 10px 20px;
-  box-shadow: 8px 8px 16px #0e2426,
-              -8px -8px 16px #1b4a4f; /* sombra externa = elevado */
+  cursor: pointer;
+  box-shadow: 6px 6px 12px #d2c8b2,
+              -6px -6px 12px #fff3da; /* sombra elevada */
   transition: all 0.2s ease-in-out;
 }
+
 
 .tab-btn.active {
   background: #133336;
