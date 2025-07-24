@@ -251,25 +251,31 @@ footer img {
       margin: 0 auto;
     }
 
-    .plant-card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 300px;
-      min-height: 500px;
-      padding: 1.5em;
-      text-decoration: none;
-      color: inherit;
-    }
+  .plant-card {
+  background: #E8DCC3; /* Bege do site */
+  border-radius: 20px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  min-height: 500px;
+  text-decoration: none;
+  color: inherit;
 
-    .plant-card:hover {
-      transform: scale(1.03);
-    }
+  /* Sombra neomórfica externa */
+  box-shadow: 8px 8px 16px #d2c8b2,
+              -8px -8px 16px #fff3da;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.plant-card:hover {
+  /* Afundado no hover */
+  box-shadow: inset 8px 8px 16px #d2c8b2,
+              inset -8px -8px 16px #fff3da;
+  transform: translateY(-2px);
+}
 
     .plant-card img {
       width: 100%;
@@ -287,15 +293,16 @@ footer img {
     }
 
     .plant-card h2 {
-      margin: 0;
-      font-size: 1.3em;
-    }
+  margin: 0;
+  font-size: 1.3em;
+  color: #133336; /* Verde escuro padrão */
+}
 
-    .sci-name {
-      font-style: italic;
-      color: #666;
-      margin: 0.5em 0 1em;
-    }
+.sci-name {
+  font-style: italic;
+  color: #1A3A36; /* Verde mais suave */
+  margin: 0.5em 0 1em;
+}
 
     .icons {
       display: flex;
