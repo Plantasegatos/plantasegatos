@@ -1,18 +1,44 @@
-/* Paleta base:
-   #1A3A36 – Verde escuro (fundo/header)
-   #287D72 – Verde médio (detalhes/hover)
-   #E8DCC3 – Bege claro (fundo suave/texto)
-   #D9A744 – Amarelo queimado (chamada/links)
-   #B66527 – Marrom telha (botões/destaques)
-*/
+/* =====================================================
+   styles.css - versão neomórfica
+   Plantas & Gatos - Julho/2025
+   Base para todas as páginas do site
+===================================================== */
 
+/* ====================================
+   VARIÁVEIS (cores e sombras)
+   ==================================== */
+:root {
+  --verde-escuro: #133336;
+  --verde-medio: #287D72;
+  --bege: #E8DCC3;
+  --sombra-externa: 8px 8px 16px #d2c8b2, -8px -8px 16px #fff3da;
+  --sombra-interna: inset 8px 8px 16px #d2c8b2, inset -8px -8px 16px #fff3da;
+}
+
+/* ====================================
+   BASE GLOBAL
+   ==================================== */
+body {
+  margin: 0;
+  font-family: Garamond, serif;
+  color: var(--verde-escuro);
+  background-color: var(--bege);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* ====================================
+   HEADER
+   ==================================== */
 header {
-  background-color: #1A3A36;
-  color: #E8DCC3;
+  background-color: var(--verde-escuro);
+  color: var(--bege);
   padding: 2rem 1rem;
   text-align: center;
-  position: relative;
-  z-index: 100;
 }
 
 header h1 {
@@ -21,15 +47,11 @@ header h1 {
 }
 
 header p {
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0;
   font-size: 1rem;
-  color: #E8DCC3;
 }
 
-nav.menu-principal {
-  margin-top: 1em;
-}
-
+/* MENU */
 .top-menu {
   list-style: none;
   display: flex;
@@ -41,299 +63,146 @@ nav.menu-principal {
   max-width: 960px;
 }
 
-.top-menu li {
-  display: inline-block;
-}
-
 .top-menu li a {
-  background-color: transparent;
-  color: #E8DCC3;
+  color: var(--bege);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
-  font-family: Garamond, serif;
-  transition: color 0.3s;
   padding: 0.4em 0.8em;
-  display: inline-block;
+  transition: color 0.3s;
 }
 
 .top-menu li a:hover,
 .top-menu li a.active {
   color: #D9A744;
 }
-.pagina-produtos section {
-  padding: 4em 4em;
-  max-width: 2000px;
-  margin: 0 auto;
-}
-.pagina-ebooks section,
-.pagina-livros section {
-  padding: 4em 4em;
-  margin: 0 auto;
-  max-width: 2000px;
-}
-.pagina-decoracao section {
-  padding: 4em 4em;
-  margin: 0 auto;
-  max-width: 2000px;
-}
-.pagina-sobre section {
-  padding: 4em 4em;
-  margin: 0 auto;
-  max-width: 2000px;
-}
-.pagina-contato section {
-  padding: 4em 4em;
-  margin: 0 auto;
-  max-width: 2000px;
-}
 
-
-.safira-plantas {
-  position: fixed;
-  top: 60px;
-  right: 30px;
-  width: 300px;
-  max-width: 50vw;
-  z-index: 999;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-}
-
-.safira-central {
-  display: none;
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  header {
-    padding: 1.2em 1em 1em;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-    margin: 0.5em 0 0.3em;
-  }
-
-  header p {
-    font-size: 0.95rem;
-    margin: 0 0 1em;
-  }
-
-  .top-menu {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    white-space: nowrap;
-    padding: 0.5rem 1rem;
-    margin: 0 auto;
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-
-  .top-menu li a {
-    font-size: 1rem;
-    padding: 0.4em 0.7em;
-    text-align: center;
-    width: auto;
-    white-space: nowrap;
-  }
-
-  .safira-plantas {
-    display: none !important;
-  }
-
-  .safira-central {
-    display: block !important;
-    margin: 0.6em auto 0.8em;
-    max-width: 60px;
-    height: auto;
-    max-height: 60px;
-  }
-}
-
-/* MENU DE FILTROS COM ROLAGEM HORIZONTAL */
-.filtros {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  overflow-x: auto !important;
-  white-space: nowrap !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-  box-sizing: border-box !important;
-  gap: 0.5rem;
-  padding: 0.5em 1em;
-  justify-content: flex-start;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  background-color: transparent;
-}
-
-.filtros button {
-  flex: 0 0 auto;
-  padding: 0.4em 0.8em;
-  font-size: 0.9rem;
-  background-color: #285F6B;
-  color: #E8DCC3;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.3s;
-}
-
-.filtros button:hover,
-.filtros button.active {
-  background-color: #D9A744;
-  color: #1A3A36;
-}
+/* ====================================
+   FOOTER
+   ==================================== */
 footer {
   text-align: center;
   padding: 2em 1em;
-  background-color: #E8DCC3;
-  color: #1A3A36;
-  font-family: Garamond, serif;
-}
-
-footer p {
-  margin: 0.5em 0;
+  background-color: var(--bege);
+  color: var(--verde-escuro);
 }
 
 .footer-socials {
   display: flex;
   justify-content: center;
   gap: 28px;
-  margin-top: 18px;
-  margin-bottom: 12px;
+  margin: 18px 0 12px;
 }
 
 .icon-social img {
   width: 80px;
   height: 80px;
-  display: block;
   transition: transform 0.2s;
-  cursor: pointer;
 }
 
 .icon-social:hover img {
   transform: scale(1.14);
 }
-.plant-card {
-  background: #E8DCC3;
-  border-radius: 12px;
-  box-shadow: 6px 6px 16px #d2c8b2,
-              -6px -6px 16px #fff3da;
-  padding: 1rem;
-  display: block;
+
+/* ====================================
+   CARDS NEOMÓRFICOS (Plantas, Recomendações, Blog)
+   ==================================== */
+.card,
+.plant-card,
+.blog-post {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--bege);
+  box-shadow: var(--sombra-externa);
+  transition: all 0.3s ease-in-out;
+  color: var(--verde-escuro);
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
 }
 
-.plant-card:hover {
-  box-shadow: inset 4px 4px 10px #d2c8b2,
-              inset -4px -4px 10px #fff3da;
+.card:hover,
+.plant-card:hover,
+.blog-post:hover {
+  box-shadow: var(--sombra-interna);
+  transform: translateY(-2px);
 }
 
-
-/* === ESTILO NEOMÓRFICO === */
-.neumorphic {
-  background: #E8DCC3;
-  border-radius: 12px;
-  box-shadow: 6px 6px 16px #d2c8b2,
-              -6px -6px 16px #fff3da;
-  padding: 1.5rem;
-  transition: all 0.3s ease-in-out;
+.card img,
+.blog-post img {
+  flex: 0 0 30%;
+  max-width: 30%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.neumorphic:hover {
-  box-shadow: inset 4px 4px 10px #d2c8b2,
-              inset -4px -4px 10px #fff3da;
+.card div,
+.blog-post div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  flex: 1;
 }
 
-.button-neu {
-  background: #E8DCC3;
+/* ====================================
+   BOTÕES NEOMÓRFICOS
+   ==================================== */
+.button-neu,
+.ebook-btn,
+.tab-btn,
+.voltar a.voltar-inicio {
+  background: var(--bege);
+  color: var(--verde-escuro);
   border: none;
   border-radius: 12px;
-  padding: 0.6em 1.2em;
-  box-shadow: 6px 6px 12px #d2c8b2,
-              -6px -6px 12px #fff3da;
-  font-family: Garamond, serif;
-  color: #1A3A36;
+  padding: 10px 20px;
   font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.button-neu:hover {
-  box-shadow: inset 4px 4px 10px #d2c8b2,
-              inset -4px -4px 10px #fff3da;
-  color: #287D72;
-}
-
-.box-neu {
-  background: #E8DCC3;
-  border-radius: 18px;
-  box-shadow: 10px 10px 20px #d2c8b2,
-              -10px -10px 20px #fff3da;
-  padding: 2rem;
-}
-
-.container-neu {
-  background: #E8DCC3;
-  border-radius: 18px;
-  box-shadow: inset 8px 8px 20px #d2c8b2,
-              inset -8px -8px 20px #fff3da;
-  padding: 2rem;
-}
-.produtos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-/*.ebook-card {
-  background: #E8DCC3;
-  border-radius: 20px;
-  box-shadow: 6px 6px 16px #c9bfae, -6px -6px 16px #fff5dc;
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-*//*.ebook-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-*/.ebook-info h3 {
-  font-size: 1.2rem;
-  margin: 1rem 0 0.5rem;
-  color: #133336;
-}
-
-.ebook-info p {
-  font-size: 1rem;
-  color: #1A3A36;
-  margin-bottom: 1rem;
-}
-
-.ebook-btn {
-  display: inline-block;
-  background: #133336;
-  color: #E8DCC3;
   text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  font-weight: bold;
-  box-shadow: inset 2px 2px 6px #0f2b2d, inset -2px -2px 6px #1a454a;
+  box-shadow: var(--sombra-externa);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
+
+.button-neu:hover,
+.ebook-btn:hover,
+.tab-btn:hover,
+.voltar a.voltar-inicio:hover {
+  box-shadow: var(--sombra-interna);
+  color: var(--verde-medio);
+}
+
+/* ====================================
+   PÁGINAS INTERNAS (Fundo bege)
+   ==================================== */
+body.recomendacoes,
+body.decoracao,
+body.contato,
+body.pagina-interna,
+body.sobre {
+  background-color: var(--bege);
+  color: var(--verde-escuro);
+}
+
+body.recomendacoes header,
+body.decoracao header,
+body.contato header,
+body.pagina-interna header,
+body.sobre header,
+body.recomendacoes footer,
+body.decoracao footer,
+body.contato footer,
+body.pagina-interna footer,
+body.sobre footer {
+  background-color: var(--verde-escuro);
+  color: var(--bege);
+}
+
+/* ====================================
+   PÁGINA SOBRE
+   ==================================== */
 .sobre-container {
   display: flex;
   flex-wrap: wrap;
@@ -343,722 +212,157 @@ footer p {
   margin: 40px auto;
   padding: 20px;
   gap: 40px;
+  background: var(--bege);
+  border-radius: 20px;
+  box-shadow: var(--sombra-externa);
 }
 
 .sobre-img img {
   max-width: 320px;
   border-radius: 12px;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 6px 6px 16px #d2c8b2, -6px -6px 16px #fff3da;
 }
 
 .sobre-texto {
   flex: 1;
   min-width: 300px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--verde-escuro);
 }
 
 .sobre-texto h2 {
   font-size: 2rem;
   margin-bottom: 16px;
-  color: #1A3A36;
+  color: var(--verde-escuro);
 }
 
-.sobre-texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-.sobre-container {
-  max-width: 900px;
+/* ====================================
+   INDEX / BLOG (Grid para posts e Preview)
+   ==================================== */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
-  font-family: Garamond, serif;
-  color: #1A3A36;
-  line-height: 1.6;
 }
 
-.sobre-container h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #133336;
-}
-
-.safira-float {
-  float: left;
-  max-width: 300px;
-  margin: 0 24px 20px 0;
-  border-radius: 12px;
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
-}
-
-
-
-
-
-
-
-
-/* === GRID E CARDS PADRONIZADOS PARA LIVROS E PRODUTOS === */
-.card {
-  display: flex;
-  align-items: stretch;
-  gap: 16px;
-  padding: 16px;
-  border-radius: 20px;
-
-  /* Fundo e relevo neomórfico */
-  background: #E8DCC3; /* Bege mais escuro */
-  box-shadow: 8px 8px 16px #d2c8b2,
-              -8px -8px 16px #fff3da;
-  transition: all 0.3s ease-in-out;
-
-  color: #133336; /* Texto verde escuro padrão */
-}
-
-.card:hover {
-  box-shadow: inset 8px 8px 16px #d2c8b2,
-              inset -8px -8px 16px #fff3da;
-  transform: translateY(-2px);
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 32px; /* espaço entre cards */
-}
-
-.card img {
-  flex: 0 0 30%;
-  max-width: 30%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.card div {
-  display: flex;
+.blog-post {
   flex-direction: column;
-  justify-content: space-between; /* empurra botão para a base */
-  text-align: left;
-  flex: 1;
-  min-height: 100%; /* força ocupar altura total do card */
 }
 
-.card h3,
-.card p {
-  color: #133336; /* texto verde escuro padrão */
-  margin: 0 0 16px;
-  font-size: 0.95rem;
-}
-
-.card a {
-  align-self: flex-start; /* botão alinhado à esquerda */
-}
-
-.card a:hover {
-  box-shadow: inset 5px 5px 10px #0e2426,
-              inset -5px -5px 10px #1b4a4f;
-}
-
-/* === BOTÕES DE ABAS (LIVROS / PRODUTOS) === */
-.tab-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.tab-btn {
-  padding: 10px 20px;
-  border-radius: 12px;
-  background: #133336;        /* mesma cor dos botões de card */
-  color: #E8DCC3;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px #0e2426,
-              -5px -5px 10px #1b4a4f;   /* mesma sombra externa */
-  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-
-.tab-btn.active {
-  box-shadow: inset 8px 8px 16px #d2c8b2,
-              inset -8px -8px 16px #fff3da; /* sombra interna igual ao card hover */
-  transform: translateY(2px); /* leve afundamento */
-}
-
-
-
-.site-header {
-  background-color: #133336;
-  text-align: center;
-  padding: 24px 0 12px;
-}
-
-.site-header h1 {
-  font-family: Garamond, serif;
-  font-size: 4rem;
-  color: #E8DCC3;
-  margin: 0;
-}
-
-.site-header p {
-  font-size: 1rem;
-  color: #E8DCC3;
-  margin: 4px 0 20px;
-}
-
-.site-header nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 40px;
-  padding: 0;
-  margin: 0;
-}
-
-.site-header nav ul li a {
-  color: #E8DCC3;
-  text-decoration: none;
-  font-weight: bold;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.site-header nav ul li a.active {
-  background: #D9C8A8; /* bege mais escuro */
-  color: #133336;
-  box-shadow: inset 8px 8px 16px #c4b08e,
-              inset -8px -8px 16px #f0e6cf;
-  transition: all 0.2s ease-in-out;
-}
-
-
-.site-header nav ul li a:hover {
-  opacity: 0.7;
-}
-/* === Ajustes para cards no mobile (menos alongados) === */
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding: 8px;
-  }
-
-  .card img {
-    max-width: 70%;
-    margin-bottom: 8px;
-  }
-
-  .card div {
-  text-align: center;
-  justify-content: space-between;  /* mantém botão fixo também no mobile */
-  min-height: 100%;
-}
-
-  .card a {
-    align-self: center; /* botão centralizado no mobile */
-  }
-}
-
-/* Botões de redes sociais com estilo neomórfico */
-.site-footer .social-btn {
-  display: inline-block;
-  background: #133336; /* fundo igual ao do rodapé */
-  padding: 10px;
-  margin: 0 8px;
-  border-radius: 50%; /* formato circular */
-  box-shadow: 6px 6px 12px #0e2426,
-              -6px -6px 12px #1b4a4f; /* relevo externo */
-  transition: all 0.2s ease-in-out;
-}
-
-.site-footer .social-btn:hover {
-  box-shadow: inset 6px 6px 12px #0e2426,
-              inset -6px -6px 12px #1b4a4f; /* efeito afundado no hover */
-}
-
-.site-footer .social-btn img {
-  width: 32px;  /* tamanho do ícone */
-  height: 32px;
-  display: block;
-}
-
-.site-header nav ul li a {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #133336; /* fundo do site */
-  color: #E8DCC3;
-  border-radius: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 8px 8px 16px #0e2426,
-              -8px -8px 16px #1b4a4f;
-  transition: all 0.2s ease-in-out;
-}
-
-.site-header nav ul li a:hover {
-  box-shadow: inset 8px 8px 16px #0e2426,
-              inset -8px -8px 16px #1b4a4f;
-}
-.site-header nav ul li a.active {
-  background: #133336; /* verde padrão */
-  color: #E8DCC3;      /* texto bege claro */
-  box-shadow: inset 8px 8px 16px #0e2426,
-              inset -8px -8px 16px #1b4a4f; /* sombra interna para efeito afundado */
-  transition: all 0.2s ease-in-out;
-}
-.site-header p {
-  font-size: 1.4rem; /* Aumenta o tamanho do subtítulo */
-  color: #E8DCC3;
-  margin: 4px 0 20px;
-}
-/* =========================
-   Rodapé neomórfico
-========================= */
-.site-footer {
-  text-align: center;
-  background: #133336;
-  color: #E8DCC3;
-  padding: 24px 0;
-  margin-top: 40px;
-}
-
-/* Container de linhas do rodapé */
-.site-footer p {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin: 8px 0;
-}
-
-/* Botões sociais com efeito neomórfico */
-.site-footer .social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #133336;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 6px 6px 12px #0e2426,
-              -6px -6px 12px #1b4a4f;
-  transition: all 0.2s ease-in-out;
-}
-
-.site-footer .social-btn:hover {
-  box-shadow: inset 6px 6px 12px #0e2426,
-              inset -6px -6px 12px #1b4a4f;
-}
-
-.site-footer .social-btn img {
-  width: 95px;
-  height: 95px;
-}
-
-/* Link de e-mail */
-.site-footer .email-link {
-  color: #E8DCC3;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.site-footer .email-link:hover {
-  opacity: 0.8;
-}
-.conteudo-sobre {
-  background: #E8DCC3;
-  color: #1A3A36;
-  font-family: Garamond, serif;
-  max-width: 880px;
-  margin: auto;
-  padding: 2em 1em;
-  line-height: 1.7;
-}
-
-.img-sobre {
-  float: left;
-  max-width: 300px;
-  margin: 0 20px 20px 0;
-  border-radius: 12px;
-}
-.conteudo-contato {
-  background: #E8DCC3;
-  color: #1A3A36;
-  font-family: Garamond, serif;
-  max-width: 720px;
-  margin: 40px auto;
-  padding: 2em;
-  text-align: center;
-  line-height: 1.6;
-}
-
-.conteudo-contato a {
-  color: #133336;
-  text-decoration: underline;
-}
-/* Conteúdo página Decoração */
-.conteudo-decoracao {
-  background: #E8DCC3;
-  color: #1A3A36;
-  font-family: Garamond, serif;
-  max-width: 880px;
-  margin: 40px auto;
-  padding: 2em 1em;
-  line-height: 1.7;
-  text-align: center;
-}
-
-/* Mascote fixa na página decoração */
-.mascote-fixa {
-  position: fixed;
-  top: 80px;
-  right: 40px;
-  max-width: 320px;
-  width: 25vw;
-  z-index: 999;
-  pointer-events: none;
-  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));
-}
-/* ===== Plant Cards Neomórficos ===== */
-.plant-card {
-  background: #E8DCC3; /* Bege padrão */
-  border-radius: 20px;
-  padding: 16px;
-  text-align: center;
-  box-shadow: 8px 8px 16px #d2c8b2,
-              -8px -8px 16px #fff3da; /* relevo externo */
-  transition: all 0.2s ease-in-out;
-}
-
-.plant-card:hover {
-  box-shadow: inset 8px 8px 16px #d2c8b2,
-              inset -8px -8px 16px #fff3da; /* afundado no hover */
-  transform: translateY(-2px); /* sutil movimento */
-}
-
-/* Imagem do card */
-.plant-card img {
-  max-width: 100%;
+.blog-post img {
+  width: 100%;
   border-radius: 12px;
   margin-bottom: 12px;
 }
 
-/* Título do card */
-.plant-card h3 {
-  margin: 8px 0;
-  font-size: 1.2rem;
-  color: #133336;
+.blog-post h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
 }
 
-/* Texto do card */
-.plant-card p {
-  font-size: 0.95rem;
-  color: #1A3A36;
-  line-height: 1.4;
+.blog-post p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
-/* ===== Submenu Neomórfico ===== */
-.submenu {
+
+/* POST PREVIEW - compatibilidade com layout atual */
+.post-preview {
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-
-.submenu button {
-  background: #D9C8A8; /* Bege mais escuro que o fundo principal */
-  color: #133336;      /* Texto verde */
-  font-family: Garamond, serif;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-
-  box-shadow: 6px 6px 12px #c4b08e,
-              -6px -6px 12px #f0e6cf; /* relevo externo */
-  transition: all 0.2s ease-in-out;
-}
-
-.submenu button:hover,
-.submenu button.active {
-  box-shadow: inset 6px 6px 12px #c4b08e,
-              inset -6px -6px 12px #f0e6cf; /* afundado */
-  transform: translateY(-1px);
-}
-.voltar a.voltar-inicio {
-  display: inline-block;
-  margin: 30px auto;
-  background: #D9C8A8 !important;   /* Bege mais escuro */
-  color: #133336 !important;        /* Texto verde escuro */
-  font-family: Garamond, serif;
-  font-size: 1rem;
-  padding: 12px 24px;
-  border: none;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bege);
   border-radius: 20px;
-  text-decoration: none;
-  cursor: pointer;
-
-  box-shadow: 6px 6px 12px #c4b08e,
-              -6px -6px 12px #f0e6cf;
-  transition: all 0.2s ease-in-out;
-}
-
-.voltar a.voltar-inicio:hover {
-  box-shadow: inset 6px 6px 12px #c4b08e,
-              inset -6px -6px 12px #f0e6cf;
-  transform: translateY(-1px);
-}
-.voltar {
-  text-align: center;
-  padding: 2rem;
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-}
-/* Fundo global bege claro */
-body.recomendacoes {
-  background: #E8DCC3;
-  color: #E8DCC3;
-  font-family: Garamond, serif;
-  margin: 0;
-}
-
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2em;
-}
-
-/* Cards em bege escuro com texto verde */
-body.recomendacoes .card {
-  background: #E8DCC3;
-  color: #133336;
-  box-shadow: 8px 8px 16px #d2c8b2,
-              -8px -8px 16px #fff3da;
+  box-shadow: var(--sombra-externa);
+  margin: 1.5em auto;
+  padding: 1.2em;
   transition: all 0.3s ease-in-out;
 }
 
-body.recomendacoes .card h3,
-body.recomendacoes .card p {
-  color: #133336;
-}
-
-body.recomendacoes .card img {
-  flex: 0 0 30%;
-  max-width: 30%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-body.recomendacoes .card a {
-  align-self: flex-start;
-}
-
-body.recomendacoes .card:hover {
-  box-shadow: inset 8px 8px 16px #d2c8b2,
-              inset -8px -8px 16px #fff3da;
+.post-preview:hover {
+  box-shadow: var(--sombra-interna);
   transform: translateY(-2px);
 }
-body.recomendacoes {
-  background: #E8DCC3 !important; /* Bege no corpo */
-  color: #133336;
+
+.preview-text {
+  max-width: 65%;
 }
 
-/* Cards e botões ficam bege */
-body.recomendacoes .card,
-body.recomendacoes .tab-btn {
-  background: #E8DCC3 !important;
-  box-shadow: 8px 8px 16px #d2c8b2,
-              -8px -8px 16px #fff3da;
-  color: #133336 !important;
-}
-
-body.recomendacoes .card:hover,
-body.recomendacoes .tab-btn.active {
-  box-shadow: inset 8px 8px 16px #d2c8b2,
-              inset -8px -8px 16px #fff3da;
-}
-/* Fundo bege em todo o corpo, menos header e footer */
-body.recomendacoes {
-  background: #E8DCC3 !important;
-  color: #133336;
-}
-
-/* Força os cards e botões a ficarem bege */
-body.recomendacoes .card,
-body.recomendacoes .tab-btn {
-  background: #E8DCC3 !important;
-  box-shadow: 8px 8px 16px #d2c8b2,
-              -8px -8px 16px #fff3da !important;
-  color: #133336 !important;
-}
-
-/* Mantém header e footer verdes */
-body.recomendacoes header,
-body.recomendacoes .site-header,
-body.recomendacoes .site-footer {
-  background: #133336 !important;
-  color: #E8DCC3 !important;
-}
-/* Garante que só header e footer fiquem verdes */
-body.recomendacoes {
-  background-color: #E8DCC3 !important; /* Corpo bege */
-}
-
-body.recomendacoes main,
-body.recomendacoes section,
-body.recomendacoes .tab-content {
-  background-color: #E8DCC3 !important; /* Todo o conteúdo bege */
-}
-
-body.recomendacoes header,
-body.recomendacoes footer {
-  background-color: #133336 !important; /* Header e footer verdes */
-  color: #E8DCC3 !important;
-}
-/* Força fundo bege em tudo, exceto header e footer */
-body.recomendacoes {
-  background-color: #E8DCC3 !important;  /* Bege em todo o fundo */
-}
-
-body.recomendacoes header,
-body.recomendacoes footer {
-  background-color: #133336 !important;  /* Verde só no header e footer */
-  color: #E8DCC3 !important;
-}
-
-/* Remove fundo verde das laterais */
-body.recomendacoes main,
-body.recomendacoes section,
-body.recomendacoes .tab-content {
-  background-color: #E8DCC3 !important;
-}
-/* Corpo inteiro bege */
-body.recomendacoes {
-  background-color: #E8DCC3 !important;
-}
-
-/* Conteúdo principal também bege (remove bordas verdes ao redor) */
-body.recomendacoes main {
-  background-color: #E8DCC3 !important;
-  max-width: none;          /* Faz o fundo preencher a tela toda */
-  margin: 0;                /* Remove margens centrais */
-  padding: 2em;             /* Mantém respiro interno */
-}
-
-/* Header e Footer continuam verdes */
-body.recomendacoes header,
-body.recomendacoes footer {
-  background-color: #133336 !important;
-  color: #E8DCC3 !important;
-}
-/* Botões dos cards - fundo bege, texto verde */
-body.recomendacoes .card a {
-  background: #E8DCC3 !important;   /* Bege claro */
-  color: #133336 !important;        /* Verde escuro para o texto */
-  border-radius: 12px;
-  padding: 10px 20px;
-  font-weight: bold;
+.preview-text h3 a {
+  color: var(--verde-escuro);
   text-decoration: none;
-  box-shadow: 6px 6px 12px #d2c8b2,
-              -6px -6px 12px #fff3da;  /* Sombra neomórfica clara */
-  transition: all 0.2s ease-in-out;
 }
 
-/* Efeito no hover - afundado */
-body.recomendacoes .card a:hover {
-  box-shadow: inset 6px 6px 12px #d2c8b2,
-              inset -6px -6px 12px #fff3da;
-  color: #287D72 !important;  /* Verde médio no hover */
-}
-/* Aplica bege em todo o fundo da página, menos header e footer */
-body.decoracao {
-  background-color: #E8DCC3 !important;
-  color: #133336;
+.preview-text h3 a:hover {
+  text-decoration: underline;
 }
 
-/* Garante que main e seções também sejam bege */
-body.decoracao main,
-body.decoracao section {
-  background-color: #E8DCC3 !important;
-  margin: 0;
-  padding: 2em;
-  max-width: none; /* remove limite que deixava bordas laterais */
+.preview-img img {
+  border-radius: 12px;
+  max-width: 200px;
+  height: auto;
 }
 
-/* Header e Footer continuam verdes */
-body.decoracao header,
-body.decoracao footer {
-  background-color: #133336 !important;
-  color: #E8DCC3 !important;
-}
-/* Força fundo bege na página Decoração */
-html.decoracao,
-body.decoracao {
-  background-color: #E8DCC3 !important;
-}
-
-/* Remove fundo verde/branco das áreas internas */
-body.decoracao main,
-body.decoracao section,
-body.decoracao .conteudo-decoracao {
-  background-color: #E8DCC3 !important;
-  margin: 0;
-  max-width: 100%;
-  padding: 2em;
+/* Mascote flutuante do Index */
+.safira-flutuante {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30vw;
+  max-width: 360px;
+  z-index: 9999;
+  pointer-events: none;
 }
 
-/* Mantém header e footer verdes */
-body.decoracao header,
-body.decoracao footer {
-  background-color: #133336 !important;
-  color: #E8DCC3 !important;
-}
-/* Fundo bege para a página de contato */
-body.contato {
-  background-color: #E8DCC3 !important;
-  color: #133336;
+/* ====================================
+   MOBILE
+   ==================================== */
+@media (max-width: 768px) {
+  .top-menu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    max-width: 100vw;
+  }
+
+  .card,
+  .blog-post,
+  .post-preview {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card img,
+  .blog-post img,
+  .post-preview img {
+    max-width: 70%;
+    margin-bottom: 8px;
+  }
+
+  .card div,
+  .blog-post div,
+  .post-preview div {
+    text-align: center;
+  }
+
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .sobre-img img {
+    max-width: 240px;
+    margin-bottom: 20px;
+  }
 }
 
-/* Faz main e seções também ficarem bege e preencherem toda a tela */
-body.contato main,
-body.contato section {
-  background-color: #E8DCC3 !important;
-  max-width: 100%;
-  margin: 0;
-  padding: 2em;
-}
-
-/* Mantém header e footer verdes */
-body.contato header,
-body.contato footer {
-  background-color: #133336 !important;
-  color: #E8DCC3 !important;
-}
-/* Aplica fundo bege a todas as páginas internas */
-body.pagina-interna {
-  background-color: #E8DCC3 !important;
-  color: #133336;
-}
-
-/* Garante que main e seções internas também sejam bege */
-body.pagina-interna main,
-body.pagina-interna section {
-  background-color: #E8DCC3 !important;
-  margin: 0;
-  max-width: 100%;
-  padding: 2em;
-}
-
-/* Header e Footer continuam verdes */
-body.pagina-interna header,
-body.pagina-interna footer {
-  background-color: #133336 !important;
-  color: #E8DCC3 !important;
-}
 
