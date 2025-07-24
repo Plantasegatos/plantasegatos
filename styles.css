@@ -702,4 +702,27 @@ footer p {
   color: #133336;
   text-decoration: underline;
 }
+/* Conteúdo página Decoração */
+.conteudo-decoracao {
+  background: #E8DCC3;
+  color: #1A3A36;
+  font-family: Garamond, serif;
+  max-width: 880px;
+  margin: 40px auto;
+  padding: 2em 1em;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Mascote fixa na página decoração */
+.mascote-fixa {
+  position: fixed;
+  top: 80px;
+  right: 40px;
+  max-width: 320px;
+  width: 25vw;
+  z-index: 999;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));
+}
 
