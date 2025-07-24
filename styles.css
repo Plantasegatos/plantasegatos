@@ -1036,4 +1036,25 @@ body.contato footer {
   background-color: #133336 !important;
   color: #E8DCC3 !important;
 }
+/* Aplica fundo bege a todas as páginas internas */
+body.pagina-interna {
+  background-color: #E8DCC3 !important;
+  color: #133336;
+}
+
+/* Garante que main e seções internas também sejam bege */
+body.pagina-interna main,
+body.pagina-interna section {
+  background-color: #E8DCC3 !important;
+  margin: 0;
+  max-width: 100%;
+  padding: 2em;
+}
+
+/* Header e Footer continuam verdes */
+body.pagina-interna header,
+body.pagina-interna footer {
+  background-color: #133336 !important;
+  color: #E8DCC3 !important;
+}
 
