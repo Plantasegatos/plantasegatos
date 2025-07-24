@@ -901,3 +901,19 @@ body.recomendacoes .site-footer {
   background: #133336 !important;
   color: #E8DCC3 !important;
 }
+/* Garante que só header e footer fiquem verdes */
+body.recomendacoes {
+  background-color: #E8DCC3 !important; /* Corpo bege */
+}
+
+body.recomendacoes main,
+body.recomendacoes section,
+body.recomendacoes .tab-content {
+  background-color: #E8DCC3 !important; /* Todo o conteúdo bege */
+}
+
+body.recomendacoes header,
+body.recomendacoes footer {
+  background-color: #133336 !important; /* Header e footer verdes */
+  color: #E8DCC3 !important;
+}
