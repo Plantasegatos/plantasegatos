@@ -55,11 +55,14 @@
       transition: all 0.2s ease-in-out;
     }
 
-  .tab-btn.active {
-  box-shadow: inset 8px 8px 16px #d2c8b2,
-              inset -8px -8px 16px #fff3da;
-  transform: translateY(2px); /* faz afundar visualmente */
+ .tab-btn.active {
+  background: #133336; /* mantém a cor verde escuro */
+  color: #E8DCC3;      /* mantém o texto claro */
+  box-shadow: inset 6px 6px 12px #b5aa92,
+              inset -6px -6px 12px #fff3da; /* sombra interna mais suave */
+  transform: translateY(2px); /* leve afundamento */
 }
+
 
     .tab-content {
       display: none;
