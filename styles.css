@@ -617,15 +617,26 @@ footer p {
   color: #E8DCC3;
   margin: 4px 0 20px;
 }
-/* Container do rodapé */
+/* =========================
+   Rodapé neomórfico
+========================= */
+.site-footer {
+  text-align: center;
+  background: #133336;
+  color: #E8DCC3;
+  padding: 24px 0;
+  margin-top: 40px;
+}
+
+/* Container de linhas do rodapé */
 .site-footer p {
-  display: flex;             /* coloca os botões lado a lado */
-  justify-content: center;   /* centraliza no rodapé */
-  gap: 16px;                 /* espaço entre eles */
+  display: flex;
+  justify-content: center;
+  gap: 16px;
   margin: 8px 0;
 }
 
-/* Botão neomórfico para redes sociais */
+/* Botões sociais com efeito neomórfico */
 .site-footer .social-btn {
   display: flex;
   align-items: center;
@@ -633,19 +644,30 @@ footer p {
   background: #133336;
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* botão redondo */
+  border-radius: 50%;
   box-shadow: 6px 6px 12px #0e2426,
-              -6px -6px 12px #1b4a4f; /* relevo */
+              -6px -6px 12px #1b4a4f;
   transition: all 0.2s ease-in-out;
 }
 
 .site-footer .social-btn:hover {
   box-shadow: inset 6px 6px 12px #0e2426,
-              inset -6px -6px 12px #1b4a4f; /* efeito afundado no hover */
+              inset -6px -6px 12px #1b4a4f;
 }
 
 .site-footer .social-btn img {
-  width: 100px;   /* tamanho menor para caber no botão */
-  height: 100px;
+  width: 24px;
+  height: 24px;
 }
 
+/* Link de e-mail */
+.site-footer .email-link {
+  color: #E8DCC3;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.site-footer .email-link:hover {
+  opacity: 0.8;
+}
