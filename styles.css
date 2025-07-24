@@ -860,3 +860,22 @@ body.recomendacoes .card:hover {
               inset -8px -8px 16px #fff3da;
   transform: translateY(-2px);
 }
+body.recomendacoes {
+  background: #E8DCC3 !important; /* Bege no corpo */
+  color: #133336;
+}
+
+/* Cards e botões ficam bege */
+body.recomendacoes .card,
+body.recomendacoes .tab-btn {
+  background: #E8DCC3 !important;
+  box-shadow: 8px 8px 16px #d2c8b2,
+              -8px -8px 16px #fff3da;
+  color: #133336 !important;
+}
+
+body.recomendacoes .card:hover,
+body.recomendacoes .tab-btn.active {
+  box-shadow: inset 8px 8px 16px #d2c8b2,
+              inset -8px -8px 16px #fff3da;
+}
