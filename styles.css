@@ -993,4 +993,26 @@ body.decoracao footer {
   background-color: #133336 !important;
   color: #E8DCC3 !important;
 }
+/* Força fundo bege na página Decoração */
+html.decoracao,
+body.decoracao {
+  background-color: #E8DCC3 !important;
+}
+
+/* Remove fundo verde/branco das áreas internas */
+body.decoracao main,
+body.decoracao section,
+body.decoracao .conteudo-decoracao {
+  background-color: #E8DCC3 !important;
+  margin: 0;
+  max-width: 100%;
+  padding: 2em;
+}
+
+/* Mantém header e footer verdes */
+body.decoracao header,
+body.decoracao footer {
+  background-color: #133336 !important;
+  color: #E8DCC3 !important;
+}
 
