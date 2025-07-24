@@ -596,3 +596,9 @@ footer p {
   box-shadow: inset 8px 8px 16px #0e2426,
               inset -8px -8px 16px #1b4a4f;
 }
+.site-header nav ul li a.active {
+  background: #D9C8A8; /* bege mais escuro */
+  color: #133336;
+  box-shadow: inset 8px 8px 16px #c4b08e,
+              inset -8px -8px 16px #f0e6cf;
+}
