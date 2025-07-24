@@ -565,28 +565,27 @@ footer p {
   }
 }
 
-.site-footer {
-  text-align: center;
-  padding: 24px 0;
-  background: #133336;
-  color: #E8DCC3;
-  margin-top: 40px;
-}
-
-.site-footer p {
-  margin: 8px 0;
-}
-
-.site-footer a img {
-  width: 80px;
-  height: 80px;
+/* Botões de redes sociais com estilo neomórfico */
+.site-footer .social-btn {
+  display: inline-block;
+  background: #133336; /* fundo igual ao do rodapé */
+  padding: 10px;
   margin: 0 8px;
-  vertical-align: middle;
-  transition: transform 0.2s ease-in-out;
+  border-radius: 50%; /* formato circular */
+  box-shadow: 6px 6px 12px #0e2426,
+              -6px -6px 12px #1b4a4f; /* relevo externo */
+  transition: all 0.2s ease-in-out;
 }
 
-.site-footer a img:hover {
-  transform: scale(1.1);
+.site-footer .social-btn:hover {
+  box-shadow: inset 6px 6px 12px #0e2426,
+              inset -6px -6px 12px #1b4a4f; /* efeito afundado no hover */
+}
+
+.site-footer .social-btn img {
+  width: 32px;  /* tamanho do ícone */
+  height: 32px;
+  display: block;
 }
 
 .site-header nav ul li a {
