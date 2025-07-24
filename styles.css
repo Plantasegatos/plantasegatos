@@ -477,7 +477,7 @@ footer p {
   color: #E8DCC3;
   cursor: pointer;
   box-shadow: 6px 6px 12px #d2c8b2,
-              -6px -6px 12px #fff3da; /* sombra elevada */
+              -6px -6px 12px #fff3da;
   transition: all 0.2s ease-in-out;
 }
 
@@ -485,8 +485,9 @@ footer p {
 .tab-btn.active {
   background: #133336;
   color: #E8DCC3;
+  box-shadow: none; /* remove sombra externa */
   box-shadow: inset 6px 6px 12px #b5aa92,
-              inset -6px -6px 12px #fff3da !important; /* força sombra interna */
+              inset -6px -6px 12px #fff3da !important; /* aplica sombra interna */
   transform: translateY(2px);
 }
 
