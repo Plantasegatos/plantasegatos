@@ -543,18 +543,30 @@
   <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
 </footer>
 
+<script>
+function openTab(tabName, event) {
+  const contents = document.querySelectorAll('.tab-content');
+  const buttons = document.querySelectorAll('.tab-btn');
 
- document.addEventListener('DOMContentLoaded', function() {
-      const currentPath = window.location.pathname.split('/').pop(); // pega nome do arquivo atual
-      const menuLinks = document.querySelectorAll('.site-header nav ul li a');
+  contents.forEach(content => content.classList.remove('active'));
+  buttons.forEach(button => button.classList.remove('active'));
 
-      menuLinks.forEach(link => {
-        if (link.getAttribute('href').includes(currentPath)) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
+  document.getElementById(tabName).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPath = window.location.pathname.split('/').pop();
+  const menuLinks = document.querySelectorAll('.site-header nav ul li a');
+
+  menuLinks.forEach(link => {
+    if (link.getAttribute('href').includes(currentPath)) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
 </body>
 </html>
-
