@@ -879,3 +879,25 @@ body.recomendacoes .tab-btn.active {
   box-shadow: inset 8px 8px 16px #d2c8b2,
               inset -8px -8px 16px #fff3da;
 }
+/* Fundo bege em todo o corpo, menos header e footer */
+body.recomendacoes {
+  background: #E8DCC3 !important;
+  color: #133336;
+}
+
+/* Força os cards e botões a ficarem bege */
+body.recomendacoes .card,
+body.recomendacoes .tab-btn {
+  background: #E8DCC3 !important;
+  box-shadow: 8px 8px 16px #d2c8b2,
+              -8px -8px 16px #fff3da !important;
+  color: #133336 !important;
+}
+
+/* Mantém header e footer verdes */
+body.recomendacoes header,
+body.recomendacoes .site-header,
+body.recomendacoes .site-footer {
+  background: #133336 !important;
+  color: #E8DCC3 !important;
+}
