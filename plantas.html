@@ -325,20 +325,24 @@ footer img {
       display: none !important;
     }
 
-    .voltar {
-      text-align: center;
-      padding: 2rem;
-      margin-top: auto;
-    }
-
     .voltar a {
-      background: #1A3A36;
-      color: white;
-      padding: 0.75em 1.5em;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  background: #D9C8A8;
+  color: #133336;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+
+  box-shadow: 6px 6px 12px #c4b08e,
+              -6px -6px 12px #f0e6cf;
+  transition: all 0.2s ease-in-out;
+}
+
+.voltar a:hover {
+  box-shadow: inset 6px 6px 12px #c4b08e,
+              inset -6px -6px 12px #f0e6cf;
+  transform: translateY(-1px);
+}
 
     .gota-pequena { font-size: 0.8em; }
     .gota-moderada { font-size: 1.2em; }
