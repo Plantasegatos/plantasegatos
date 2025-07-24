@@ -480,12 +480,13 @@ footer p {
 
 
 .tab-btn.active {
-  background: #133336; /* verde padrão do fundo */
-  color: #E8DCC3;      /* bege claro para o texto */
+  background: #133336;
+  color: #E8DCC3;
   box-shadow: inset 8px 8px 16px #0e2426,
-              inset -8px -8px 16px #1b4a4f; /* sombra interna para efeito afundado */
-  transition: all 0.2s ease-in-out;
+              inset -8px -8px 16px #1b4a4f;
+  transform: translateY(1px); /* dá a sensação de afundar */
 }
+
 .site-header {
   background-color: #133336;
   text-align: center;
