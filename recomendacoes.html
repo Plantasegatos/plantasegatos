@@ -215,8 +215,9 @@
     <p>Selecione abaixo se deseja ver nossas <strong>dicas de livros</strong> ou <strong>produtos essenciais</strong>:</p>
 
     <div class="tab-buttons">
-      <button class="tab-btn active" onclick="openTab('livros')">Livros</button>
-      <button class="tab-btn" onclick="openTab('produtos')">Produtos</button>
+     <button class="tab-btn active" onclick="openTab('livros', event)">Livros</button>
+<button class="tab-btn" onclick="openTab('produtos', event)">Produtos</button>
+
     </div>
 
     <!-- Conteúdo da aba Livros -->
@@ -544,16 +545,17 @@
 
 
   <script>
-    function openTab(tabName) {
-      const contents = document.querySelectorAll('.tab-content');
-      const buttons = document.querySelectorAll('.tab-btn');
+   function openTab(tabName, event) {
+  const contents = document.querySelectorAll('.tab-content');
+  const buttons = document.querySelectorAll('.tab-btn');
 
-      contents.forEach(content => content.classList.remove('active'));
-      buttons.forEach(button => button.classList.remove('active'));
+  contents.forEach(content => content.classList.remove('active'));
+  buttons.forEach(button => button.classList.remove('active'));
 
-      document.getElementById(tabName).classList.add('active');
-      event.target.classList.add('active');
-    }
+  document.getElementById(tabName).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
   </script>
 </body>
 </html>
