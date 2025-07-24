@@ -607,7 +607,8 @@ footer p {
 }
 .site-header nav ul li a.active {
   background: #D9C8A8; /* bege mais escuro */
-  color: #133336;
+  color: #133336; /* texto escuro para contraste */
   box-shadow: inset 8px 8px 16px #c4b08e,
-              inset -8px -8px 16px #f0e6cf;
+              inset -8px -8px 16px #f0e6cf; /* sombra interna = afundado */
+  transition: all 0.2s ease-in-out;
 }
