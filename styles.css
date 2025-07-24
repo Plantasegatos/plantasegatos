@@ -815,4 +815,12 @@ footer p {
               inset -6px -6px 12px #f0e6cf;
   transform: translateY(-1px);
 }
+.voltar {
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
 
