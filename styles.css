@@ -671,3 +671,20 @@ footer p {
 .site-footer .email-link:hover {
   opacity: 0.8;
 }
+.conteudo-sobre {
+  background: #E8DCC3;
+  color: #1A3A36;
+  font-family: Garamond, serif;
+  max-width: 880px;
+  margin: auto;
+  padding: 2em 1em;
+  line-height: 1.7;
+}
+
+.img-sobre {
+  float: left;
+  max-width: 300px;
+  margin: 0 20px 20px 0;
+  border-radius: 12px;
+}
+
