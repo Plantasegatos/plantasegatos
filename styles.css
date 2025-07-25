@@ -915,7 +915,13 @@ header .neo-menu a:active {
               inset -6px -6px 12px #163d42;
   transform: translateY(1px);
 }
-/* Botões com efeito vidro (blur apenas neles) */
+/* Garante que o nav NÃO tenha blur nem fundo */
+header .neo-menu {
+  background: none;
+  box-shadow: none;
+}
+
+/* Botões individuais com efeito vidro */
 header .neo-menu a {
   font-family: Garamond, serif;
   font-size: 1rem;
@@ -926,13 +932,13 @@ header .neo-menu a {
   text-decoration: none;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2),
               -4px -4px 12px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px); /* BLUR SÓ NO BOTÃO */
-  -webkit-backdrop-filter: blur(8px); /* suporte Safari */
+  backdrop-filter: blur(8px); /* BLUR só no botão */
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease-in-out;
 }
 
-/* Hover/ativo: leve afundamento */
+/* Efeito ao passar o mouse ou pressionar */
 header .neo-menu a:hover,
 header .neo-menu a:active {
   transform: translateY(1px);
