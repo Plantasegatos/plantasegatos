@@ -656,10 +656,7 @@ main > p {
 }
 
 /* =========================
-   CABEÃ‡ALHO NEOMÃ“RFICO VERDE COM BOTÃ•ES 3D
-========================= */
-/* =========================
-   CABEÇALHO NEOMÓRFICO VERDE COM BOTÕES 3D
+   CABEÇALHO VERDE SIMPLES COM BOTÕES 3D
 ========================= */
 header {
   background-color: var(--verde-escuro);
@@ -667,21 +664,23 @@ header {
   padding: 40px 0 30px;
 }
 
+/* Título */
 header h1 {
   font-family: Garamond, serif;
-  font-size: 3.2rem;
-  color: var(--bege) !important;  /* força bege */
+  font-size: 3rem;         /* Altere aqui o tamanho do título */
+  color: var(--bege) !important;
+  margin: 0;
 }
 
+/* Subtítulo */
 header p {
   font-family: Garamond, serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;       /* Altere aqui o tamanho do subtítulo */
   margin: 6px 0 20px;
-  color: var(--bege) !important;  /* força bege */
+  color: var(--bege) !important;
 }
 
-
-/* Menu com botÃµes 3D */
+/* Menu com botões individuais 3D */
 header .neo-menu {
   display: flex;
   justify-content: center;
@@ -701,7 +700,7 @@ header .neo-menu a {
   transition: all 0.2s ease-in-out;
 }
 
-/* Efeito hover/ativo: afundar */
+/* Hover/Ativo: botão afunda */
 header .neo-menu a:hover,
 header .neo-menu a:active {
   box-shadow: inset 6px 6px 12px #0f292d,
@@ -709,18 +708,18 @@ header .neo-menu a:active {
   transform: translateY(1px);
 }
 
-/* Item ativo (pÃ¡gina atual) */
+/* Item ativo */
 header .neo-menu a.active {
-  color: #D9A744; /* dourado */
+  color: #D9A744;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   header p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   header .neo-menu {
     flex-wrap: wrap;
@@ -730,43 +729,6 @@ header .neo-menu a.active {
     padding: 8px 16px;
     font-size: 0.9rem;
   }
-}
-/* faixa verde */
-  text-align: center;
-  padding: 40px 0;
-}
-
-/* Bloco central do tÃƒÂ­tulo */
-header .neo-title {
-  background: var(--bege); /* bege claro */
-  padding: 20px 40px;
-  border-radius: 24px;
-  box-shadow: 8px 8px 16px #c4b08e,
-              -8px -8px 16px #f0e6cf;
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
-header .neo-title h1 {
-  font-family: Garamond, serif;
-  font-size: 2.4rem;
-  margin: 0;
-  color: var(--verde-escuro);
-}
-
-header .neo-title p {
-  font-family: Garamond, serif;
-  font-size: 1.1rem;
-  margin: 6px 0 0;
-  color: var(--verde-escuro);
-}
-
-/* Efeito ao passar o mouse */
-header .neo-title:hover {
-  box-shadow: inset 8px 8px 16px #c4b08e,
-              inset -8px -8px 16px #f0e6cf;
-  transform: translateY(-1px);
-  transition: all 0.2s ease-in-out;
 }
 
 /* =========================
