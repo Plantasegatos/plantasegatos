@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Marca o link ativo no menu
 function marcarLinkAtivo() {
-  const links = document.querySelectorAll('.neo-menu a'); // Seleciona os links do novo menu
-  const current = window.location.pathname.split('/').pop(); // Pega o nome do arquivo atual (ex: plantas.html)
+  const links = document.querySelectorAll('.neo-menu a');
+  const current = window.location.pathname.split('/').pop();
 
   links.forEach(link => {
     if (link.getAttribute('href') === current) {
-      // Adiciona estilo ativo diretamente
-      link.style.color = '#D9A744';
-      link.style.boxShadow = 'inset 6px 6px 12px #0f292d, inset -6px -6px 12px #163d42';
+      link.style.color = '#D9A744'; // cor dourada
+      link.style.boxShadow = 'inset 6px 6px 12px #0f292d, inset -6px -6px 12px #163d42'; // afundado
       link.style.transform = 'translateY(1px)';
     }
   });
 }
+
 
