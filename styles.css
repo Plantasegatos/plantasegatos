@@ -668,6 +668,14 @@ main > p {
 .email-link:hover {
   text-decoration: underline;
 }
+.site-footer {
+  background-color: #1A3A36; /* Verde escuro */
+  color: #E8DCC3;           /* Texto bege */
+  text-align: center;
+  padding: 2em 1em;
+  font-family: Garamond, serif;
+  font-size: 0.95rem;
+}
 
 
 
