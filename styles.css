@@ -658,6 +658,9 @@ main > p {
 /* =========================
    CABEÃ‡ALHO NEOMÃ“RFICO VERDE COM BOTÃ•ES 3D
 ========================= */
+/* =========================
+   CABEÇALHO NEOMÓRFICO VERDE COM BOTÕES 3D
+========================= */
 header {
   background-color: var(--verde-escuro);
   text-align: center;
@@ -666,8 +669,8 @@ header {
 
 header h1 {
   font-family: Garamond, serif;
-  font-size: 2.4rem;
-  color: var(--bege);
+  font-size: 2.6rem;
+  color: var(--bege);   /* Corrigido para bege */
   margin: 0;
 }
 
@@ -675,8 +678,9 @@ header p {
   font-family: Garamond, serif;
   font-size: 1.1rem;
   margin: 6px 0 20px;
-  color: var(--bege);
+  color: var(--bege);   /* Corrigido para bege */
 }
+
 
 /* Menu com botÃµes 3D */
 header .neo-menu {
