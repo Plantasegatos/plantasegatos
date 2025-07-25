@@ -6,9 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById('header').innerHTML = data;
       marcarLinkAtivo();
     });
+
+  // Carrega o rodapé
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
 });
 
-// Marca o link ativo com base na página atual
+// Marca o link ativo no menu
 function marcarLinkAtivo() {
   const links = document.querySelectorAll('.top-menu li a');
   const current = window.location.pathname.split('/').pop();
@@ -18,3 +25,4 @@ function marcarLinkAtivo() {
     }
   });
 }
+
