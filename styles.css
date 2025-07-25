@@ -651,6 +651,10 @@ main > p {
 .tab-content.active {
   display: block;
 }
+.tab-btn,
+.card-grid .card a {
+  font-family: Garamond, serif !important;
+}
 
 
 
