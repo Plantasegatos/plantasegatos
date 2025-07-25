@@ -489,6 +489,85 @@ main > p {
   max-width: 800px;
   margin: 0 auto 20px;
 }
+/* Grid e cards para página de Recomendações */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--bege);
+  border-radius: 20px;
+  box-shadow: var(--sombra-externa);
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  color: var(--verde-escuro);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--sombra-interna);
+  transform: translateY(-2px);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 8px 0;
+  text-align: center;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 4px 0 12px;
+  text-align: center;
+}
+
+.card a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: var(--verde-escuro);
+  color: var(--bege);
+  font-weight: bold;
+  box-shadow: var(--sombra-externa);
+  transition: all 0.2s ease-in-out;
+}
+
+.card a:hover {
+  box-shadow: var(--sombra-interna);
+  color: var(--verde-medio);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
 
 
 
