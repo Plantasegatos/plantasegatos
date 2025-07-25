@@ -568,6 +568,15 @@ main > p {
     gap: 16px;
   }
 }
+.plant-card img,
+.ebook-card img,
+.blog-post img,
+.card img {
+  object-fit: cover;
+  object-position: center; /* centraliza o recorte da imagem */
+  display: block;
+  margin: 0 auto;
+}
 
 
 
