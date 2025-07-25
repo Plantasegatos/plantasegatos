@@ -764,6 +764,30 @@ header .neo-menu a.active {
   color: #D9A744;
   font-weight: bold;
 }
+/* Destaque do menu conforme página ativa */
+body.index header .neo-menu a[href="index.html"] {
+  color: #D9A744;
+}
+
+body.plantas header .neo-menu a[href="plantas.html"] {
+  color: #D9A744;
+}
+
+body.decoracao header .neo-menu a[href="decoracao.html"] {
+  color: #D9A744;
+}
+
+body.recomendacoes header .neo-menu a[href="recomendacoes.html"] {
+  color: #D9A744;
+}
+
+body.sobre header .neo-menu a[href="sobre.html"] {
+  color: #D9A744;
+}
+
+body.contato header .neo-menu a[href="contato.html"] {
+  color: #D9A744;
+}
 
 
 
