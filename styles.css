@@ -676,6 +676,30 @@ main > p {
   font-family: Garamond, serif;
   font-size: 0.95rem;
 }
+.site-footer {
+  background-color: #1A3A36;   /* Faixa verde escuro */
+  color: #E8DCC3;              /* Texto bege */
+  text-align: center;
+  padding: 2em 1em;
+  font-family: Garamond, serif;
+  font-size: 0.95rem;
+}
+
+/* Ícones das redes sociais */
+.footer-socials img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Link do e-mail em bege */
+.email-link {
+  color: #E8DCC3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.email-link:hover {
+  text-decoration: underline;
+}
 
 
 
