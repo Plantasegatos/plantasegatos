@@ -677,7 +677,7 @@ header p {
   font-family: Garamond, serif;
   font-size: 1.1rem;
   margin: 6px 0 20px;
-  color: var(--bege);   /* Corrigido para bege */
+  color: var(--bege) !important;  /* força bege */
 }
 
 
