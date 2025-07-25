@@ -893,6 +893,27 @@ body.sobre header .neo-menu a[href="sobre.html"],
 body.contato header .neo-menu a[href="contato.html"] {
   color: #D9A744 !important;
 }
+/* Menu principal com estilo igual aos botões Livros/Produtos */
+header .neo-menu a {
+  font-family: Garamond, serif;
+  font-size: 1rem;
+  color: var(--bege);
+  background: var(--verde-escuro);
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 6px 6px 12px #0f292d,
+              -6px -6px 12px #163d42;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o mouse ou pressionar */
+header .neo-menu a:hover,
+header .neo-menu a:active {
+  box-shadow: inset 6px 6px 12px #0f292d,
+              inset -6px -6px 12px #163d42;
+  transform: translateY(1px);
+}
 
 
 
