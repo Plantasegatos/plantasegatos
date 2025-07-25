@@ -1013,24 +1013,23 @@ footer .social-icons img:hover {
 
 .back-link {
   display: block;
-  margin: 20px auto;
   text-align: center;
-  background: #E8DCC3;       /* Fundo igual à página */
-  color: #133336;            /* Verde escuro */
-  font-family: Garamond, serif;
-  font-size: 0.9rem;         /* Texto menor */
-  padding: 6px 14px;         /* Botão mais compacto */
-  border-radius: 15px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--bege);
+  color: var(--verde-escuro);
+  font-weight: bold;       /* Texto em negrito */
   text-decoration: none;
-  cursor: pointer;
-  box-shadow: 2px 2px 4px #c4b08e, -2px -2px 4px #f0e6cf;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px #c4b08e,
+              -6px -6px 12px #f0e6cf;
+  max-width: 200px;        /* Botão menor */
   transition: all 0.2s ease-in-out;
 }
 
 .back-link:hover {
-  background: #D9A744;       /* Dourado no hover */
-  color: #133336;
-  box-shadow: inset 2px 2px 4px #c4b08e, inset -2px -2px 4px #f0e6cf;
+  box-shadow: inset 6px 6px 12px #c4b08e,
+              inset -6px -6px 12px #f0e6cf;
   transform: translateY(-1px);
 }
 
