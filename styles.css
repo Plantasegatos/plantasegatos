@@ -978,3 +978,29 @@ header .neo-menu a:active {
   box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2),
               inset -4px -4px 8px rgba(255, 255, 255, 0.1);
 }
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background: var(--verde-escuro) url('IMG/background-verde-plantas.png') repeat;
+  background-blend-mode: multiply;
+  background-size: auto;
+  color: var(--bege);
+}
+
+footer .social-icons {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.1);
+}
+
