@@ -655,6 +655,19 @@ main > p {
 .card-grid .card a {
   font-family: Garamond, serif !important;
 }
+.footer-socials img {
+  width: 80px;
+  height: 80px;
+}
+.email-link {
+  color: #E8DCC3; /* Bege claro */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
 
 
 
