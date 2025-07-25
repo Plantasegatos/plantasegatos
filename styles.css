@@ -623,13 +623,13 @@ main > p {
   box-shadow: var(--sombra-interna);
   color: var(--verde-medio);
 }
-/* Botões Comprar padronizados (sobrescrevendo tudo) */
+/* Botões Comprar - fundo bege e texto verde */
 .card-grid .card a {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 12px;
-  background: var(--verde-escuro) !important; /* força cor */
-  color: var(--bege) !important;
+  background: var(--bege) !important;   /* fundo bege */
+  color: var(--verde-escuro) !important; /* texto verde */
   font-weight: bold;
   display: inline-block;
   margin-top: 12px;
@@ -639,8 +639,9 @@ main > p {
 
 .card-grid .card a:hover {
   box-shadow: var(--sombra-interna);
-  color: var(--verde-medio) !important;
+  color: var(--verde-medio) !important; /* tom mais claro no hover */
 }
+
 /* Esconde abas inativas */
 .tab-content {
   display: none;
