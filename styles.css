@@ -41,6 +41,36 @@ header {
   padding: 40px 0 30px;
   text-align: center;
 }
+/* Menu sem fundo extra (só os botões terão blur) */
+header .neo-menu {
+  background: none;
+  box-shadow: none;
+}
+
+/* Botões com efeito vidro (blur individual) */
+header .neo-menu a {
+  font-family: Garamond, serif;
+  font-size: 1rem;
+  color: var(--bege);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2),
+              -4px -4px 12px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover/ativo: leve afundamento */
+header .neo-menu a:hover,
+header .neo-menu a:active {
+  transform: translateY(1px);
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+              inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+}
 
 
 
