@@ -449,6 +449,39 @@ body.sobre footer {
   border-radius: 12px;
   margin-bottom: 12px;
 }
+/* Padronização de altura e alinhamento de títulos e textos */
+.plant-card,
+.ebook-card,
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.plant-card img,
+.ebook-card img,
+.blog-post img {
+  margin-bottom: 12px;
+}
+
+.plant-card h2,
+.ebook-card h3,
+.blog-post h3 {
+  min-height: 48px;        /* garante mesma altura do título */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.plant-card p,
+.ebook-card p,
+.blog-post p {
+  text-align: center;
+  margin: 4px 0;
+}
 
 
 
