@@ -365,4 +365,71 @@ body.sobre footer {
   }
 }
 
+/* ====================================
+   GRID UNIFICADO PARA CARDS (Plantas, Recomendações, Blog)
+   ==================================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plant-card,
+.ebook-card,
+.blog-post {
+  background: var(--bege);
+  border-radius: 20px;
+  box-shadow: var(--sombra-externa);
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  color: var(--verde-escuro);
+  text-decoration: none;
+}
+
+.plant-card:hover,
+.ebook-card:hover,
+.blog-post:hover {
+  box-shadow: var(--sombra-interna);
+  transform: translateY(-2px);
+}
+
+.plant-card img,
+.ebook-card img,
+.blog-post img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+.plant-card h2,
+.ebook-card h3,
+.blog-post h3 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: var(--verde-escuro);
+}
+
+.plant-card p,
+.ebook-card p,
+.blog-post p {
+  font-size: 0.95rem;
+  color: var(--verde-escuro);
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 12px;
+  }
+}
+
+
 
