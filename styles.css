@@ -366,7 +366,7 @@ body.sobre footer {
 }
 
 /* ====================================
-   GRID UNIFICADO PARA CARDS (Plantas, Recomendações, Blog)
+   GRID UNIFICADO PARA CARDS + AJUSTES DE PROPORÇÃO
    ==================================== */
 .grid-container {
   display: grid;
@@ -375,6 +375,7 @@ body.sobre footer {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 .plant-card,
@@ -388,6 +389,11 @@ body.sobre footer {
   transition: all 0.3s ease-in-out;
   color: var(--verde-escuro);
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px;
+  overflow: hidden;
 }
 
 .plant-card:hover,
@@ -400,8 +406,8 @@ body.sobre footer {
 .plant-card img,
 .ebook-card img,
 .blog-post img {
+  flex-shrink: 0;
   width: 100%;
-  height: auto;
   border-radius: 12px;
   margin-bottom: 12px;
   object-fit: cover;
@@ -413,14 +419,17 @@ body.sobre footer {
   font-size: 1.2rem;
   margin: 8px 0;
   color: var(--verde-escuro);
+  text-align: center;
 }
 
 .plant-card p,
 .ebook-card p,
 .blog-post p {
   font-size: 0.95rem;
-  color: var(--verde-escuro);
+  line-height: 1.4;
   margin: 4px 0;
+  color: var(--verde-escuro);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
