@@ -884,6 +884,15 @@ body.contato header .neo-menu a[href="contato.html"] {
     font-size: 0.9rem;
   }
 }
+/* Fallback: destaca o link ativo apenas com cor dourada se JS não rodar */
+body.index header .neo-menu a[href="index.html"],
+body.plantas header .neo-menu a[href="plantas.html"],
+body.decoracao header .neo-menu a[href="decoracao.html"],
+body.recomendacoes header .neo-menu a[href="recomendacoes.html"],
+body.sobre header .neo-menu a[href="sobre.html"],
+body.contato header .neo-menu a[href="contato.html"] {
+  color: #D9A744 !important;
+}
 
 
 
