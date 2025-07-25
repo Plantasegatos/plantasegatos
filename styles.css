@@ -482,6 +482,13 @@ body.sobre footer {
   text-align: center;
   margin: 4px 0;
 }
+/* Centralizar título e subtítulo da seção de plantas */
+main > h2,
+main > p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
 
 
 
