@@ -1003,4 +1003,32 @@ footer .social-icons img {
 footer .social-icons img:hover {
   transform: scale(1.1);
 }
+.post-img {
+  display: block;
+  max-width: 500px;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+.back-link {
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  background: #D9A744;
+  color: #133336;
+  font-family: Garamond, serif;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px #c4b08e, -6px -6px 12px #f0e6cf;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-link:hover {
+  box-shadow: inset 6px 6px 12px #c4b08e, inset -6px -6px 12px #f0e6cf;
+  transform: translateY(-1px);
+}
 
