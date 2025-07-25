@@ -641,6 +641,14 @@ main > p {
   box-shadow: var(--sombra-interna);
   color: var(--verde-medio) !important;
 }
+/* Esconde abas inativas */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
 
 
 
