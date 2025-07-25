@@ -17,11 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Marca o link ativo no menu
 function marcarLinkAtivo() {
-  const links = document.querySelectorAll('.top-menu li a');
-  const current = window.location.pathname.split('/').pop();
+  const links = document.querySelectorAll('.neo-menu a'); // Seleciona os links do novo menu
+  const current = window.location.pathname.split('/').pop(); // Pega o nome do arquivo atual (ex: plantas.html)
+
   links.forEach(link => {
     if (link.getAttribute('href') === current) {
-      link.classList.add('active');
+      // Adiciona estilo ativo diretamente
+      link.style.color = '#D9A744';
+      link.style.boxShadow = 'inset 6px 6px 12px #0f292d, inset -6px -6px 12px #163d42';
+      link.style.transform = 'translateY(1px)';
     }
   });
 }
