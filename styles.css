@@ -656,72 +656,77 @@ main > p {
 }
 
 /* =========================
-   CABEÃ‡ALHO NEOMÃ“RFICO (verde + quadro bege)
+   CABEÃ‡ALHO NEOMÃ“RFICO VERDE COM BOTÃ•ES 3D
 ========================= */
 header {
-  background-color: var(--verde-escuro); /* fundo do header e menu */
+  background-color: var(--verde-escuro);
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 0 30px;
 }
 
-/* Quadro bege com tÃ­tulo */
-header .neo-title {
-  background: var(--bege);
-  padding: 20px 40px;
-  border-radius: 24px;
-  box-shadow: 8px 8px 16px #c4b08e,
-              -8px -8px 16px #f0e6cf;
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
-header .neo-title h1 {
+header h1 {
   font-family: Garamond, serif;
   font-size: 2.4rem;
+  color: var(--bege);
   margin: 0;
-  color: var(--verde-escuro);
 }
 
-header .neo-title p {
+header p {
   font-family: Garamond, serif;
   font-size: 1.1rem;
-  margin: 6px 0 0;
-  color: var(--verde-escuro);
+  margin: 6px 0 20px;
+  color: var(--bege);
 }
 
-/* Efeito ao passar o mouse */
-header .neo-title:hover {
-  box-shadow: inset 8px 8px 16px #c4b08e,
-              inset -8px -8px 16px #f0e6cf;
-  transform: translateY(-1px);
-  transition: all 0.2s ease-in-out;
-}
-
-/* Menu integrado ao verde */
+/* Menu com botÃµes 3D */
 header .neo-menu {
   display: flex;
   justify-content: center;
-  gap: 32px;
-  background: var(--verde-escuro);
-  padding: 12px 0;
-  border-radius: 20px;
-  width: fit-content;
-  margin: 0 auto;
-  box-shadow: inset 6px 6px 12px #0f292d,
-              inset -6px -6px 12px #163d42;
+  gap: 20px;
 }
 
 header .neo-menu a {
   font-family: Garamond, serif;
-  color: var(--bege);
-  text-decoration: none;
   font-size: 1rem;
-  transition: color 0.2s ease-in-out;
+  color: var(--bege);
+  background: var(--verde-escuro);
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 6px 6px 12px #0f292d,
+              -6px -6px 12px #163d42;
+  transition: all 0.2s ease-in-out;
 }
 
+/* Efeito hover/ativo: afundar */
 header .neo-menu a:hover,
+header .neo-menu a:active {
+  box-shadow: inset 6px 6px 12px #0f292d,
+              inset -6px -6px 12px #163d42;
+  transform: translateY(1px);
+}
+
+/* Item ativo (pÃ¡gina atual) */
 header .neo-menu a.active {
-  color: #D9A744;
+  color: #D9A744; /* dourado */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  header .neo-menu {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  header .neo-menu a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
 }
 /* faixa verde */
   text-align: center;
@@ -794,6 +799,10 @@ header .neo-menu a.active {
   color: #D9A744;
   font-weight: bold;
 }
+
+
+
+
 
 
 
