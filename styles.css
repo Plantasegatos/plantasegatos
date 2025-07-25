@@ -1012,23 +1012,26 @@ footer .social-icons img:hover {
 }
 
 .back-link {
-  display: block;
+  display: inline-block;
   margin: 30px auto;
   text-align: center;
-  background: #D9A744;
-  color: #133336;
+  background: #E8DCC3;          /* Bege do fundo da página */
+  color: #133336;               /* Verde escuro do site */
   font-family: Garamond, serif;
   font-size: 1rem;
-  padding: 12px 24px;
+  padding: 10px 20px;           /* Reduzido para não ocupar a largura toda */
   border-radius: 20px;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 6px 6px 12px #c4b08e, -6px -6px 12px #f0e6cf;
+  border: 2px solid #133336;    /* Borda verde para destacar */
+  box-shadow: 3px 3px 6px #c4b08e, -3px -3px 6px #f0e6cf;
   transition: all 0.2s ease-in-out;
 }
 
 .back-link:hover {
-  box-shadow: inset 6px 6px 12px #c4b08e, inset -6px -6px 12px #f0e6cf;
+  background: #D9A744;          /* Dourado ao passar o mouse */
+  color: #133336;
+  box-shadow: inset 3px 3px 6px #c4b08e, inset -3px -3px 6px #f0e6cf;
   transform: translateY(-1px);
 }
 
