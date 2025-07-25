@@ -7,12 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
       marcarLinkAtivo();
     });
 
-  // Carrega o rodapé
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
+  // Carrega o rodapé (ajusta caminho se estiver na pasta /plantas/)
+const footerPath = window.location.pathname.includes('/plantas/')
+  ? '../footer.html'
+  : 'footer.html';
+
+fetch(footerPath)
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+
 });
 
 // Marca o link ativo no menu
