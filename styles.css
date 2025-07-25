@@ -623,6 +623,24 @@ main > p {
   box-shadow: var(--sombra-interna);
   color: var(--verde-medio);
 }
+/* Botões Comprar padronizados (sobrescrevendo tudo) */
+.card-grid .card a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: var(--verde-escuro) !important; /* força cor */
+  color: var(--bege) !important;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 12px;
+  box-shadow: var(--sombra-externa);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-grid .card a:hover {
+  box-shadow: var(--sombra-interna);
+  color: var(--verde-medio) !important;
+}
 
 
 
