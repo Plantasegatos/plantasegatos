@@ -22,12 +22,10 @@ function marcarLinkAtivo() {
 
   links.forEach(link => {
     if (link.getAttribute('href') === current) {
-      // Estilo idêntico ao efeito "pressionado"
+      // Efeito ativo igual Livros/Produtos
       link.style.color = '#D9A744';
       link.style.boxShadow = 'inset 6px 6px 12px #0f292d, inset -6px -6px 12px #163d42';
       link.style.transform = 'translateY(1px)';
     }
   });
 }
-
-
