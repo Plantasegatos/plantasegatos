@@ -700,6 +700,81 @@ main > p {
 .email-link:hover {
   text-decoration: underline;
 }
+/* =========================
+   CABEÇALHO NEOMÓRFICO
+========================= */
+header {
+  background-color: #133336;  /* faixa verde */
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Bloco central do título */
+header .neo-title {
+  background: #E8DCC3; /* bege claro */
+  padding: 20px 40px;
+  border-radius: 24px;
+  box-shadow: 8px 8px 16px #c4b08e,
+              -8px -8px 16px #f0e6cf;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+header .neo-title h1 {
+  font-family: Garamond, serif;
+  font-size: 2.4rem;
+  margin: 0;
+  color: #133336;
+}
+
+header .neo-title p {
+  font-family: Garamond, serif;
+  font-size: 1.1rem;
+  margin: 6px 0 0;
+  color: #133336;
+}
+
+/* Efeito ao passar o mouse */
+header .neo-title:hover {
+  box-shadow: inset 8px 8px 16px #c4b08e,
+              inset -8px -8px 16px #f0e6cf;
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* =========================
+   MENU DE NAVEGAÇÃO
+========================= */
+header .neo-menu {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  background: #133336;
+  padding: 12px 0;
+  border-radius: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  box-shadow: inset 6px 6px 12px #0f292d,
+              inset -6px -6px 12px #163d42;
+}
+
+header .neo-menu a {
+  font-family: Garamond, serif;
+  color: #E8DCC3;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+header .neo-menu a:hover {
+  color: #D9A744; /* dourado do site */
+}
+
+/* Link ativo */
+header .neo-menu a.active {
+  color: #D9A744;
+  font-weight: bold;
+}
 
 
 
