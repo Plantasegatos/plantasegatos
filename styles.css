@@ -1,16 +1,16 @@
 /* =====================================================
-   styles.css - versÃ£o neomÃ³rfica
+   styles.css - versÃƒÂ£o neomÃƒÂ³rfica
    Plantas & Gatos - Julho/2025
-   Base para todas as pÃ¡ginas do site
+   Base para todas as pÃƒÂ¡ginas do site
 ===================================================== */
 
 /* ====================================
-   VARIÃVEIS (cores e sombras)
+   VARIÃƒÂVEIS (cores e sombras)
    ==================================== */
 :root {
-  --verde-escuro: var(--verde-escuro);
+  --verde-escuro: #133336;
   --verde-medio: #287D72;
-  --bege: var(--bege);
+  --bege: #E8DCC3;
   --sombra-externa: 8px 8px 16px #d2c8b2, -8px -8px 16px #fff3da;
   --sombra-interna: inset 8px 8px 16px #d2c8b2, inset -8px -8px 16px #fff3da;
 }
@@ -71,7 +71,7 @@ footer {
 }
 
 /* ====================================
-   CARDS NEOMÃ“RFICOS (Plantas, RecomendaÃ§Ãµes, Blog)
+   CARDS NEOMÃƒâ€œRFICOS (Plantas, RecomendaÃƒÂ§ÃƒÂµes, Blog)
    ==================================== */
 .card,
 .plant-card,
@@ -114,7 +114,7 @@ footer {
 }
 
 /* ====================================
-   BOTÃ•ES NEOMÃ“RFICOS
+   BOTÃƒâ€¢ES NEOMÃƒâ€œRFICOS
    ==================================== */
 .button-neu,
 .ebook-btn,
@@ -141,7 +141,7 @@ footer {
 }
 
 /* ====================================
-   PÃGINAS INTERNAS (Fundo bege)
+   PÃƒÂGINAS INTERNAS (Fundo bege)
    ==================================== */
 body.recomendacoes,
 body.decoracao,
@@ -167,7 +167,7 @@ body.sobre footer {
 }
 
 /* ====================================
-   PÃGINA SOBRE
+   PÃƒÂGINA SOBRE
    ==================================== */
 .sobre-container {
   display: flex;
@@ -338,7 +338,7 @@ header .neo-title p {
 }
 
 /* ====================================
-   GRID UNIFICADO PARA CARDS + AJUSTES DE PROPORÃ‡ÃƒO
+   GRID UNIFICADO PARA CARDS + AJUSTES DE PROPORÃƒâ€¡ÃƒÆ’O
    ==================================== */
 .grid-container {
   display: grid;
@@ -411,17 +411,17 @@ header .neo-title p {
     padding: 12px;
   }
 }
-/* PadronizaÃ§Ã£o de altura para imagens dos cards */
+/* PadronizaÃƒÂ§ÃƒÂ£o de altura para imagens dos cards */
 .plant-card img,
 .ebook-card img,
 .blog-post img {
   width: 100%;
   height: 260px;        /* altura fixa para uniformizar */
-  object-fit: cover;    /* preenche mantendo proporÃ§Ã£o */
+  object-fit: cover;    /* preenche mantendo proporÃƒÂ§ÃƒÂ£o */
   border-radius: 12px;
   margin-bottom: 12px;
 }
-/* PadronizaÃ§Ã£o de altura e alinhamento de tÃ­tulos e textos */
+/* PadronizaÃƒÂ§ÃƒÂ£o de altura e alinhamento de tÃƒÂ­tulos e textos */
 .plant-card,
 .ebook-card,
 .blog-post {
@@ -439,7 +439,7 @@ header .neo-title p {
 .plant-card h2,
 .ebook-card h3,
 .blog-post h3 {
-  min-height: 48px;        /* garante mesma altura do tÃ­tulo */
+  min-height: 48px;        /* garante mesma altura do tÃƒÂ­tulo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -454,14 +454,14 @@ header .neo-title p {
   text-align: center;
   margin: 4px 0;
 }
-/* Centralizar tÃ­tulo e subtÃ­tulo da seÃ§Ã£o de plantas */
+/* Centralizar tÃƒÂ­tulo e subtÃƒÂ­tulo da seÃƒÂ§ÃƒÂ£o de plantas */
 main > h2,
 main > p {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 20px;
 }
-/* Grid e cards para pÃ¡gina de RecomendaÃ§Ãµes */
+/* Grid e cards para pÃƒÂ¡gina de RecomendaÃƒÂ§ÃƒÂµes */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -549,7 +549,7 @@ main > p {
   display: block;
   margin: 0 auto;
 }
-/* Centralizar botÃµes de abas Livros e Produtos */
+/* Centralizar botÃƒÂµes de abas Livros e Produtos */
 .tab-buttons {
   display: flex;
   justify-content: center;
@@ -578,7 +578,7 @@ main > p {
 .tab-btn:hover {
   box-shadow: var(--sombra-interna);
 }
-/* BotÃµes Comprar padronizados para Livros e Produtos */
+/* BotÃƒÂµes Comprar padronizados para Livros e Produtos */
 .card a {
   text-decoration: none;
   padding: 10px 20px;
@@ -596,7 +596,7 @@ main > p {
   box-shadow: var(--sombra-interna);
   color: var(--verde-medio);
 }
-/* BotÃµes Comprar - fundo bege e texto verde */
+/* BotÃƒÂµes Comprar - fundo bege e texto verde */
 .card-grid .card a {
   text-decoration: none;
   padding: 10px 20px;
@@ -642,7 +642,7 @@ main > p {
 }
 .site-footer { background-color: #1A3A36; color: var(--bege); text-align: center; padding: 2em 1em; font-family: Garamond, serif; font-size: 0.95rem; }
 
-/* Ãcones das redes sociais */
+/* ÃƒÂcones das redes sociais */
 .footer-socials img { width: 80px; height: 80px; }
 
 /* Link do e-mail em bege */
@@ -654,16 +654,81 @@ main > p {
 .email-link:hover {
   text-decoration: underline;
 }
+
 /* =========================
-   CABEÃ‡ALHO NEOMÃ“RFICO
+   CABEÃ‡ALHO NEOMÃ“RFICO (verde + quadro bege)
 ========================= */
 header {
-  background-color: var(--verde-escuro);  /* faixa verde */
+  background-color: var(--verde-escuro); /* fundo do header e menu */
   text-align: center;
   padding: 40px 0;
 }
 
-/* Bloco central do tÃ­tulo */
+/* Quadro bege com tÃ­tulo */
+header .neo-title {
+  background: var(--bege);
+  padding: 20px 40px;
+  border-radius: 24px;
+  box-shadow: 8px 8px 16px #c4b08e,
+              -8px -8px 16px #f0e6cf;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+header .neo-title h1 {
+  font-family: Garamond, serif;
+  font-size: 2.4rem;
+  margin: 0;
+  color: var(--verde-escuro);
+}
+
+header .neo-title p {
+  font-family: Garamond, serif;
+  font-size: 1.1rem;
+  margin: 6px 0 0;
+  color: var(--verde-escuro);
+}
+
+/* Efeito ao passar o mouse */
+header .neo-title:hover {
+  box-shadow: inset 8px 8px 16px #c4b08e,
+              inset -8px -8px 16px #f0e6cf;
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Menu integrado ao verde */
+header .neo-menu {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  background: var(--verde-escuro);
+  padding: 12px 0;
+  border-radius: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  box-shadow: inset 6px 6px 12px #0f292d,
+              inset -6px -6px 12px #163d42;
+}
+
+header .neo-menu a {
+  font-family: Garamond, serif;
+  color: var(--bege);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+header .neo-menu a:hover,
+header .neo-menu a.active {
+  color: #D9A744;
+}
+/* faixa verde */
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Bloco central do tÃƒÂ­tulo */
 header .neo-title {
   background: var(--bege); /* bege claro */
   padding: 20px 40px;
@@ -697,7 +762,7 @@ header .neo-title:hover {
 }
 
 /* =========================
-   MENU DE NAVEGAÃ‡ÃƒO
+   MENU DE NAVEGAÃƒâ€¡ÃƒÆ’O
 ========================= */
 header .neo-menu {
   display: flex;
@@ -729,6 +794,10 @@ header .neo-menu a.active {
   color: #D9A744;
   font-weight: bold;
 }
+
+
+
+
 
 
 
