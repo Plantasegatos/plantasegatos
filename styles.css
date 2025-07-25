@@ -853,15 +853,19 @@ header .neo-menu a:active {
   transform: translateY(1px);
 }
 
-/* Item ativo por classe do body */
+/* Item ativo com efeito afundado */
 body.index header .neo-menu a[href="index.html"],
 body.plantas header .neo-menu a[href="plantas.html"],
 body.decoracao header .neo-menu a[href="decoracao.html"],
 body.recomendacoes header .neo-menu a[href="recomendacoes.html"],
 body.sobre header .neo-menu a[href="sobre.html"],
 body.contato header .neo-menu a[href="contato.html"] {
-  color: #D9A744 !important;
+  color: #D9A744 !important; /* Dourado */
+  box-shadow: inset 6px 6px 12px #0f292d,
+              inset -6px -6px 12px #163d42; /* Afundado */
+  transform: translateY(1px); /* Leve rebaixamento */
 }
+
 
 /* Responsividade */
 @media (max-width: 768px) {
