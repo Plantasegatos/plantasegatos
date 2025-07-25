@@ -21,16 +21,6 @@
       position: relative;
     }
 
-    .safira-flutuante {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      width: 30vw;
-      max-width: 360px;
-      z-index: 9999;
-      pointer-events: none;
-    }
-
     .top-menu {
       list-style: none;
       display: flex;
@@ -83,23 +73,23 @@
     }
 
     .post-preview {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #E8DCC3; /* bege mais escuro que o fundo */
-  border-radius: 20px;
-  box-shadow: 8px 8px 16px #d2c8b2,
-              -8px -8px 16px #fff3da;
-  margin: 1.5em auto;
-  padding: 1.2em;
-  transition: all 0.3s ease-in-out;
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f3e9d4; /* leve contraste com o fundo */
+      border-radius: 20px;
+      box-shadow: 8px 8px 16px #d2c8b2,
+                  -8px -8px 16px #fff3da;
+      margin: 1.5em auto;
+      padding: 1.2em;
+      transition: all 0.3s ease-in-out;
+    }
 
-.post-preview:hover {
-  box-shadow: inset 8px 8px 16px #d2c8b2,
-              inset -8px -8px 16px #fff3da;
-  transform: translateY(-2px);
-}
+    .post-preview:hover {
+      box-shadow: inset 8px 8px 16px #d2c8b2,
+                  inset -8px -8px 16px #fff3da;
+      transform: translateY(-2px);
+    }
 
     .preview-text {
       max-width: 65%;
@@ -125,6 +115,18 @@
       margin-top: 2em;
       font-size: 1.8rem;
     }
+
+    /* Responsividade para telas menores */
+    @media (max-width: 768px) {
+      .post-preview {
+        flex-direction: column;
+        text-align: center;
+      }
+      .preview-text {
+        max-width: 100%;
+        margin-bottom: 1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -132,7 +134,7 @@
   <h1>Plantas & Gatos</h1>
   <p>Estética, verdura e segurança para amigos felinos</p>
   <nav>
-    <ul>
+    <ul class="top-menu">
       <li><a href="index.html" class="active">Início</a></li>
       <li><a href="plantas.html">Plantas</a></li>
       <li><a href="decoracao.html">Decoração</a></li>
@@ -143,27 +145,23 @@
   </nav>
 </header>
 
-
-  <img src="IMG/safira-esguia.png" alt="Mascote Safira" class="safira-flutuante">
-
   <main>
     <h2>Últimos Posts do Blog</h2>
     <div id="posts-container"></div>
   </main>
 
   <footer class="site-footer">
-  <p>
-    <a href="https://www.pinterest.com/plantasngatos" target="_blank" class="social-btn">
-      <img src="IMG/pinterest-icon.png" alt="Pinterest">
-    </a>
-    <a href="https://www.instagram.com/plantasngatos" target="_blank" class="social-btn">
-      <img src="IMG/instagram-icon.png" alt="Instagram">
-    </a>
-  </p>
-  <p><a href="mailto:contato@plantasegatos.com.br" class="email-link">contato@plantasegatos.com.br</a></p>
-  <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
-</footer>
-
+    <p>
+      <a href="https://www.pinterest.com/plantasngatos" target="_blank" class="social-btn">
+        <img src="IMG/pinterest-icon.jpg" alt="Pinterest">
+      </a>
+      <a href="https://www.instagram.com/plantasngatos" target="_blank" class="social-btn">
+        <img src="IMG/instagram-icon.jpg" alt="Instagram">
+      </a>
+    </p>
+    <p><a href="mailto:contato@plantasegatos.com.br" class="email-link">contato@plantasegatos.com.br</a></p>
+    <p>© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
+  </footer>
 
   <script>
     fetch('blog/posts.json')
@@ -190,4 +188,5 @@
   </script>
 </body>
 </html>
+
 
