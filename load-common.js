@@ -22,8 +22,9 @@ function marcarLinkAtivo() {
 
   links.forEach(link => {
     if (link.getAttribute('href') === current) {
-      link.style.color = '#D9A744'; // cor dourada
-      link.style.boxShadow = 'inset 6px 6px 12px #0f292d, inset -6px -6px 12px #163d42'; // afundado
+      // Estilo idêntico ao efeito "pressionado"
+      link.style.color = '#D9A744';
+      link.style.boxShadow = 'inset 6px 6px 12px #0f292d, inset -6px -6px 12px #163d42';
       link.style.transform = 'translateY(1px)';
     }
   });
