@@ -35,9 +35,10 @@ main {
    HEADER
    ==================================== */
 header {
-  background-color: var(--verde-escuro);
-  color: var(--bege);
-  padding: 2rem 1rem;
+  background: var(--verde-escuro) url('IMG/background-verde-plantas.png') repeat;
+  background-blend-mode: multiply;
+  background-size: auto; /* ou cover para preencher */
+  padding: 40px 0 30px;
   text-align: center;
 }
 
