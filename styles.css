@@ -1082,12 +1082,12 @@ body {
   margin: 0;
   padding: 0;
 }
-/* === Correção para alinhamento de texto nos posts do blog === */
-main.post-trocar-vaso-ou-ajustar-rega p,
+/* === Padrão para parágrafos de posts do blog === */
 main[class^="post-"] p {
-  text-align: justify;  /* ou 'left' se preferir alinhado à esquerda */
+  text-align: justify;
   line-height: 1.6;
   margin-bottom: 1em;
 }
+
 
 
