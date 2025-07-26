@@ -1039,10 +1039,10 @@ footer .social-icons img:hover {
   margin: 1.5rem auto;   /* centraliza */
   border-radius: 12px;   /* bordas arredondadas */
 }
-.post-img {
+main img.post-img {
   display: block;
-  margin: 1.5rem auto;  /* Centraliza horizontalmente */
-  border-radius: 12px;  /* Mantém o padrão do post */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
