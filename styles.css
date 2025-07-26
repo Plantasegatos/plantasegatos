@@ -1070,20 +1070,17 @@ header p {
   padding: 0;
   background: none; /* garante que não herda bege */
 }
-/* === Correção do header para eliminar faixa bege === */
+/* === Correção: manter textura e remover faixa bege acima do header === */
 #header, header {
   margin: 0;
-  padding: 32px 0; /* mesmo espaçamento vertical */
-  background-color: var(--verde-escuro) !important;
-  background-image: none !important; /* remove variações de fundo */
-  background-blend-mode: normal;
+  padding: 32px 0; /* mesmo padding já usado */
+  background: var(--verde-escuro) url('IMG/background-verde-plantas.png') repeat !important;
+  background-blend-mode: multiply;
+  background-size: auto;
 }
-
-/* Garante que o header encoste no topo da tela */
 body {
   margin: 0;
   padding: 0;
 }
-
 
 
