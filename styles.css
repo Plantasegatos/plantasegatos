@@ -1041,6 +1041,8 @@ footer .social-icons img:hover {
 }
 .post-img {
   display: block;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto;  /* Centraliza horizontalmente */
+  border-radius: 12px;  /* Mantém o padrão do post */
 }
+
 
