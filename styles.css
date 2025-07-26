@@ -1032,4 +1032,11 @@ footer .social-icons img:hover {
               inset -6px -6px 12px #f0e6cf;
   transform: translateY(-1px);
 }
+.plant-img {
+  width: 100%;
+  max-width: 480px;      /* limita o tamanho */
+  display: block;
+  margin: 1.5rem auto;   /* centraliza */
+  border-radius: 12px;   /* bordas arredondadas */
+}
 
