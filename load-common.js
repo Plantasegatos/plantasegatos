@@ -1,8 +1,10 @@
-// Carrega o cabeçalho (ajusta caminho se estiver na pasta /plantas/)
-const headerPath = window.location.pathname.includes('/plantas/')
-  ? '../header.html'
-  : 'header.html';
+// Verifica se estamos em uma subpasta (plantas ou blog)
+const isInSubfolder =
+  window.location.pathname.includes('/plantas/') ||
+  window.location.pathname.includes('/blog/');
 
+// Define o caminho correto para o header
+const headerPath = isInSubfolder ? '../header.html' : 'header.html';
 fetch(headerPath)
   .then(response => response.text())
   .then(data => {
@@ -10,11 +12,8 @@ fetch(headerPath)
     marcarLinkAtivo();
   });
 
-// Carrega o rodapé (ajusta caminho se estiver na pasta /plantas/)
-const footerPath = window.location.pathname.includes('/plantas/')
-  ? '../footer.html'
-  : 'footer.html';
-
+// Define o caminho correto para o footer
+const footerPath = isInSubfolder ? '../footer.html' : 'footer.html';
 fetch(footerPath)
   .then(response => response.text())
   .then(data => {
