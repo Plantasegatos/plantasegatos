@@ -104,10 +104,6 @@ footer {
   transform: scale(1.14);
    }
 
-footer {
-  color: #E8DCC3;
-}
-
 
 /* ====================================
    CARDS NEOMÃƒÆ’Ã¢â‚¬Å“RFICOS (Plantas, RecomendaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Âµes, Blog)
@@ -1048,6 +1044,9 @@ main img.post-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+footer p {
+  color: #E8DCC3; /* Bege claro para contraste no fundo verde */
 }
 
 
