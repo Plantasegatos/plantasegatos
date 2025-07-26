@@ -1065,5 +1065,11 @@ header h1 {
 header p {
   font-size: 1.5rem !important;
 }
+#header {
+  margin: 0;
+  padding: 0;
+  background: none; /* garante que não herda bege */
+}
+
 
 
