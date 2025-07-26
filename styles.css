@@ -1055,5 +1055,8 @@ header h1 {
 header p {
   font-size: 1.3rem; /* Subtítulo também um pouco maior */
 }
+header {
+  padding: 32px 0; /* Mais espaço vertical */
+}
 
 
