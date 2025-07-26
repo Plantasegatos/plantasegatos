@@ -1039,4 +1039,8 @@ footer .social-icons img:hover {
   margin: 1.5rem auto;   /* centraliza */
   border-radius: 12px;   /* bordas arredondadas */
 }
+.post-img {
+  display: block;
+  margin: 1.5rem auto;
+}
 
