@@ -1058,5 +1058,12 @@ header p {
 header {
   padding: 32px 0; /* Mais espaço vertical */
 }
+header h1 {
+  font-size: 2.8rem !important;
+}
+
+header p {
+  font-size: 1.2rem !important;
+}
 
 
