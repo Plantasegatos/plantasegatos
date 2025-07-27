@@ -1065,30 +1065,6 @@ header h1 {
 header p {
   font-size: 1.5rem !important;
 }
-/* Unificação do estilo de imagens de plantas (antigas e novas) */
-.plant-img,
-.post-img {
-  display: block;
-  max-width: 500px;
-  width: 80%;
-  margin: 20px auto;
-  border-radius: 12px;
-}
-
-/* Unificação do container principal das plantas */
-main.post-plantas,
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  text-align: center;
-}
-
-main.post-plantas h2,
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
 
 
 
