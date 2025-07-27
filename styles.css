@@ -1108,10 +1108,13 @@ header, #header {
   background-size: cover;
   background-blend-mode: multiply;
 }
-/* Garante que o header cubra área suficiente e esconda o bege */
-header, #header {
-  min-height: 180px; /* Ajuste se quiser mais ou menos altura */
+/* Remove qualquer espaço acima do header */
+html, body, header, #header {
+  margin: 0 !important;
+  padding-top: 0 !important;
+  border: 0;
 }
+
 
 
 
