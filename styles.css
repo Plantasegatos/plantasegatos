@@ -1124,10 +1124,9 @@ header {
   background-size: cover;
   background-blend-mode: multiply;
   min-height: 180px;
+  padding: 32px 0;
   text-align: center;
   color: #E8DCC3;
-  padding: 32px 0;
-  margin: 0;
 }
 
 
