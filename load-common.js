@@ -10,7 +10,7 @@ fetch(headerPath)
   .then(data => {
     document.getElementById('header').innerHTML = data;
     ajustarLinksHeader(); // <-- chamada para corrigir os links
-    marcarLinkAtivo();
+    // marcarLinkAtivo() removida daqui
   });
 
 // Define o caminho correto para o footer
@@ -55,6 +55,12 @@ function marcarLinkAtivo() {
     img.classList.add('post-img');
   }
 }
+
+// Chama a função somente quando o DOM estiver totalmente carregado
+document.addEventListener('DOMContentLoaded', () => {
+  marcarLinkAtivo();
+});
+
 
 
 
