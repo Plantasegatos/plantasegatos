@@ -1065,29 +1065,8 @@ header h1 {
 header p {
   font-size: 1.5rem !important;
 }
-#header {
-  margin: 0;
-  padding: 0;
-  background: none; /* garante que nÃ£o herda bege */
-}
-/* === CorreÃ§Ã£o: manter textura e remover faixa bege acima do header === */
-#header, header {
-  margin: 0;
-  padding: 32px 0; /* mesmo padding jÃ¡ usado */
-  background: var(--verde-escuro) url('IMG/background-verde-plantas.png') repeat !important;
-  background-blend-mode: multiply;
-  background-size: auto;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-/* === PadrÃ£o para parÃ¡grafos de posts do blog === */
-main[class^="post-"] p {
-  text-align: justify;
-  line-height: 1.6;
-  margin-bottom: 1em;
-}
+
+
 
 
 
