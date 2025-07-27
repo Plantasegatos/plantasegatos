@@ -1088,6 +1088,15 @@ main[class^="post-"] p {
   line-height: 1.6;
   margin-bottom: 1em;
 }
+/* === Header unificado e corrigido === */
+header {
+  margin: 0;
+  padding: 32px 0;
+  text-align: center;
+  background: var(--verde-escuro) url('IMG/background-verde-plantas.png') no-repeat center center;
+  background-size: cover; /* Estica proporcionalmente sem repetir */
+  background-blend-mode: multiply;
+}
 
 
 
