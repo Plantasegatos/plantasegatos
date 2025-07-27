@@ -1097,12 +1097,18 @@ header {
   background-size: cover; /* Estica proporcionalmente sem repetir */
   background-blend-mode: multiply;
 }
+/* Reseta backgrounds duplicados no header */
 header, #header {
-  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center;
+  background: none !important;
+}
+
+/* Aplica apenas o fundo verde com imagem */
+header, #header {
+  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center !important;
   background-size: cover;
   background-blend-mode: multiply;
-  min-height: 180px; /* Evita faixa bege e mantém proporção */
 }
+
 
 
 
