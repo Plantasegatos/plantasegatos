@@ -1097,6 +1097,12 @@ header {
   background-size: cover; /* Estica proporcionalmente sem repetir */
   background-blend-mode: multiply;
 }
+header, #header {
+  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  min-height: 180px; /* Evita faixa bege e mantém proporção */
+}
 
 
 
