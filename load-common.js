@@ -10,7 +10,7 @@ fetch(headerPath)
   .then(data => {
     document.getElementById('header').innerHTML = data;
     ajustarLinksHeader(); // <-- chamada para corrigir os links
-    // marcarLinkAtivo() removida daqui
+    marcarLinkAtivo();
   });
 
 // Define o caminho correto para o footer
@@ -32,7 +32,7 @@ function ajustarLinksHeader() {
   }
 }
 
-// Função para destacar o link ativo no menu e aplicar padrão Ciclame em plantas antigas
+// Função para destacar o link ativo no menu
 function marcarLinkAtivo() {
   const links = document.querySelectorAll('.neo-menu a');
   const current = window.location.pathname.split('/').pop();
@@ -44,22 +44,8 @@ function marcarLinkAtivo() {
       link.style.transform = 'translateY(1px)';
     }
   });
-
-  // Aplicar padrão Ciclame para plantas antigas
-  const main = document.querySelector('main');
-  if (main && !main.classList.contains('post-plantas')) {
-    main.classList.add('post-plantas');
-  }
-  const img = main?.querySelector('img');
-  if (img && !img.classList.contains('post-img')) {
-    img.classList.add('post-img');
-  }
 }
 
-// Chama a função somente quando o DOM estiver totalmente carregado
-document.addEventListener('DOMContentLoaded', () => {
-  marcarLinkAtivo();
-});
 
 
 
