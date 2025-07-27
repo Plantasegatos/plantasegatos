@@ -1128,6 +1128,123 @@ header {
   text-align: center;
   color: #E8DCC3;
 }
+/* === RESTAURAÇÃO DO VISUAL ANTIGO DAS PÁGINAS DE PLANTAS === */
+
+/* Fundo e fonte padrão */
+body {
+  margin: 0;
+  font-family: Garamond, serif;
+  background-color: #E8DCC3;
+  color: #1A3A36;
+}
+
+/* Header verde com título centralizado */
+header {
+  background-color: #133336;
+  text-align: center;
+  padding: 24px 0;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #E8DCC3;
+  margin: 0;
+}
+
+header p {
+  font-size: 1rem;
+  margin: 4px 0 0;
+  color: #E8DCC3;
+}
+
+/* Menu */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 16px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #133336;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #287D72;
+}
+
+/* Título da planta */
+.plant-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  color: #1A3A36;
+}
+
+/* Imagem da planta */
+.plant-img {
+  display: block;
+  max-width: 320px;
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 12px;
+}
+
+/* Subtítulo científico */
+.plant-subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #133336;
+}
+
+/* Bloco de informações */
+.info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.info p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+/* Curiosidades */
+.curiosity {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.curiosity-text {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* Botão de voltar */
+.back-link {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  background: #133336;
+  color: #E8DCC3;
+  font-size: 1rem;
+  font-family: Garamond, serif;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.3s ease;
+}
+
+.back-link:hover {
+  background: #287D72;
+}
 
 
 
