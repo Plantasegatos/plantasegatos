@@ -1108,6 +1108,21 @@ header, #header {
   background-size: cover;
   background-blend-mode: multiply;
 }
+/* Corrige faixa bege no topo do site e cobre o header inteiro */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  margin: 0;
+  padding: 32px 0;
+  min-height: 180px; /* garante cobertura completa */
+  display: block;
+}
 
 
 
