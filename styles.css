@@ -825,18 +825,6 @@ body.index header .neo-menu a[href="index.html"] {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================
    CABEÃ‡ALHO VERDE SIMPLES COM BOTÃ•ES 3D
 ========================= */
@@ -1130,6 +1118,16 @@ header {
   background-blend-mode: multiply;
   padding: 32px 0;
   min-height: 180px;
+}
+#header {
+  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  min-height: 180px;
+  text-align: center;
+  color: #E8DCC3;
+  padding: 32px 0;
+  margin: 0;
 }
 
 
