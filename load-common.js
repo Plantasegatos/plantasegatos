@@ -32,7 +32,7 @@ function ajustarLinksHeader() {
   }
 }
 
-// Função para destacar o link ativo no menu
+// Função para destacar o link ativo no menu e aplicar padrão Ciclame em plantas antigas
 function marcarLinkAtivo() {
   const links = document.querySelectorAll('.neo-menu a');
   const current = window.location.pathname.split('/').pop();
@@ -44,6 +44,17 @@ function marcarLinkAtivo() {
       link.style.transform = 'translateY(1px)';
     }
   });
+
+  // Aplicar padrão Ciclame para plantas antigas
+  const main = document.querySelector('main');
+  if (main && !main.classList.contains('post-plantas')) {
+    main.classList.add('post-plantas');
+  }
+  const img = main?.querySelector('img');
+  if (img && !img.classList.contains('post-img')) {
+    img.classList.add('post-img');
+  }
 }
+
 
 
