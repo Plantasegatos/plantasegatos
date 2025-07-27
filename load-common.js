@@ -9,7 +9,6 @@ fetch(headerPath)
   .then(response => response.text())
   .then(data => {
     document.getElementById('header').innerHTML = data;
-    ajustarLinksHeader(); // <-- chamada para corrigir os links
     marcarLinkAtivo();
   });
 
@@ -20,17 +19,6 @@ fetch(footerPath)
   .then(data => {
     document.getElementById('footer').innerHTML = data;
   });
-
-// Função para ajustar links do header quando estiver em subpasta
-function ajustarLinksHeader() {
-  if (isInSubfolder) {
-    document.querySelectorAll('.neo-menu a').forEach(link => {
-      if (!link.getAttribute('href').startsWith('../')) {
-        link.setAttribute('href', '../' + link.getAttribute('href'));
-      }
-    });
-  }
-}
 
 // Função para destacar o link ativo no menu
 function marcarLinkAtivo() {
