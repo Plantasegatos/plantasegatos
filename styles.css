@@ -1,11 +1,11 @@
 /* =====================================================
-   styles.css - versÃƒÆ’Ã‚Â£o neomÃƒÆ’Ã‚Â³rfica
+   styles.css - versÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o neomÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³rfica
    Plantas & Gatos - Julho/2025
-   Base para todas as pÃƒÆ’Ã‚Â¡ginas do site
+   Base para todas as pÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ginas do site
 ===================================================== */
 
 /* ====================================
-   VARIÃƒÆ’Ã‚ÂVEIS (cores e sombras)
+   VARIÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂVEIS (cores e sombras)
    ==================================== */
 :root {
   --verde-escuro: #133336;
@@ -41,13 +41,13 @@ header {
   padding: 40px 0 30px;
   text-align: center;
 }
-/* Menu sem fundo extra (só os botões terão blur) */
+/* Menu sem fundo extra (sÃ³ os botÃµes terÃ£o blur) */
 header .neo-menu {
   background: none;
   box-shadow: none;
 }
 
-/* Botões com efeito vidro (blur individual) */
+/* BotÃµes com efeito vidro (blur individual) */
 header .neo-menu a {
   font-family: Garamond, serif;
   font-size: 1rem;
@@ -106,7 +106,7 @@ footer {
 
 
 /* ====================================
-   CARDS NEOMÃƒÆ’Ã¢â‚¬Å“RFICOS (Plantas, RecomendaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Âµes, Blog)
+   CARDS NEOMÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œRFICOS (Plantas, RecomendaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âµes, Blog)
    ==================================== */
 .card,
 .plant-card,
@@ -149,7 +149,7 @@ footer {
 }
 
 /* ====================================
-   BOTÃƒÆ’Ã¢â‚¬Â¢ES NEOMÃƒÆ’Ã¢â‚¬Å“RFICOS
+   BOTÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ES NEOMÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œRFICOS
    ==================================== */
 .button-neu,
 .ebook-btn,
@@ -176,7 +176,7 @@ footer {
 }
 
 /* ====================================
-   PÃƒÆ’Ã‚ÂGINAS INTERNAS (Fundo bege)
+   PÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂGINAS INTERNAS (Fundo bege)
    ==================================== */
 body.recomendacoes,
 body.decoracao,
@@ -202,7 +202,7 @@ body.sobre footer {
 }
 
 /* ====================================
-   PÃƒÆ’Ã‚ÂGINA SOBRE
+   PÃƒÆ’Ã†â€™Ãƒâ€šÃ‚ÂGINA SOBRE
    ==================================== */
 .sobre-container {
   display: flex;
@@ -373,7 +373,7 @@ header .neo-title p {
 }
 
 /* ====================================
-   GRID UNIFICADO PARA CARDS + AJUSTES DE PROPORÃƒÆ’Ã¢â‚¬Â¡ÃƒÆ’Ã†â€™O
+   GRID UNIFICADO PARA CARDS + AJUSTES DE PROPORÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢O
    ==================================== */
 .grid-container {
   display: grid;
@@ -446,17 +446,17 @@ header .neo-title p {
     padding: 12px;
   }
 }
-/* PadronizaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o de altura para imagens dos cards */
+/* PadronizaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o de altura para imagens dos cards */
 .plant-card img,
 .ebook-card img,
 .blog-post img {
   width: 100%;
   height: 260px;        /* altura fixa para uniformizar */
-  object-fit: cover;    /* preenche mantendo proporÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o */
+  object-fit: cover;    /* preenche mantendo proporÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o */
   border-radius: 12px;
   margin-bottom: 12px;
 }
-/* PadronizaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o de altura e alinhamento de tÃƒÆ’Ã‚Â­tulos e textos */
+/* PadronizaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o de altura e alinhamento de tÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­tulos e textos */
 .plant-card,
 .ebook-card,
 .blog-post {
@@ -474,7 +474,7 @@ header .neo-title p {
 .plant-card h2,
 .ebook-card h3,
 .blog-post h3 {
-  min-height: 48px;        /* garante mesma altura do tÃƒÆ’Ã‚Â­tulo */
+  min-height: 48px;        /* garante mesma altura do tÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­tulo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -489,14 +489,14 @@ header .neo-title p {
   text-align: center;
   margin: 4px 0;
 }
-/* Centralizar tÃƒÆ’Ã‚Â­tulo e subtÃƒÆ’Ã‚Â­tulo da seÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o de plantas */
+/* Centralizar tÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­tulo e subtÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­tulo da seÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o de plantas */
 main > h2,
 main > p {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 20px;
 }
-/* Grid e cards para pÃƒÆ’Ã‚Â¡gina de RecomendaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Âµes */
+/* Grid e cards para pÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡gina de RecomendaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âµes */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -584,7 +584,7 @@ main > p {
   display: block;
   margin: 0 auto;
 }
-/* Centralizar botÃƒÆ’Ã‚Âµes de abas Livros e Produtos */
+/* Centralizar botÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âµes de abas Livros e Produtos */
 .tab-buttons {
   display: flex;
   justify-content: center;
@@ -613,7 +613,7 @@ main > p {
 .tab-btn:hover {
   box-shadow: var(--sombra-interna);
 }
-/* BotÃƒÆ’Ã‚Âµes Comprar padronizados para Livros e Produtos */
+/* BotÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âµes Comprar padronizados para Livros e Produtos */
 .card a {
   text-decoration: none;
   padding: 10px 20px;
@@ -631,7 +631,7 @@ main > p {
   box-shadow: var(--sombra-interna);
   color: var(--verde-medio);
 }
-/* BotÃƒÆ’Ã‚Âµes Comprar - fundo bege e texto verde */
+/* BotÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âµes Comprar - fundo bege e texto verde */
 .card-grid .card a {
   text-decoration: none;
   padding: 10px 20px;
@@ -677,7 +677,7 @@ main > p {
 }
 .site-footer { background-color: #1A3A36; color: var(--bege); text-align: center; padding: 2em 1em; font-family: Garamond, serif; font-size: 0.95rem; }
 
-/* ÃƒÆ’Ã‚Âcones das redes sociais */
+/* ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âcones das redes sociais */
 .footer-socials img { width: 80px; height: 80px; }
 
 /* Link do e-mail em bege */
@@ -690,23 +690,23 @@ main > p {
   text-decoration: underline;
 }
 
-/* TÃ­tulo */
+/* TÃƒÂ­tulo */
 header h1 {
   font-family: Garamond, serif;
-  font-size: 3rem;         /* Altere aqui o tamanho do tÃ­tulo */
+  font-size: 3rem;         /* Altere aqui o tamanho do tÃƒÂ­tulo */
   color: var(--bege) !important;
   margin: 0;
 }
 
-/* SubtÃ­tulo */
+/* SubtÃƒÂ­tulo */
 header p {
   font-family: Garamond, serif;
-  font-size: 1.2rem;       /* Altere aqui o tamanho do subtÃ­tulo */
+  font-size: 1.2rem;       /* Altere aqui o tamanho do subtÃƒÂ­tulo */
   margin: 6px 0 20px;
   color: var(--bege) !important;
 }
 
-/* Menu com botÃµes individuais 3D */
+/* Menu com botÃƒÂµes individuais 3D */
 header .neo-menu {
   display: flex;
   justify-content: center;
@@ -726,7 +726,7 @@ header .neo-menu a {
   transition: all 0.2s ease-in-out;
 }
 
-/* Hover/Ativo: botÃ£o afunda */
+/* Hover/Ativo: botÃƒÂ£o afunda */
 header .neo-menu a:hover,
 header .neo-menu a:active {
   box-shadow: inset 6px 6px 12px #0f292d,
@@ -758,7 +758,7 @@ header .neo-menu a.active {
 }
 
 /* =========================
-   MENU DE NAVEGAÃƒÆ’Ã¢â‚¬Â¡ÃƒÆ’Ã†â€™O
+   MENU DE NAVEGAÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢O
 ========================= */
 header .neo-menu {
   display: flex;
@@ -790,7 +790,7 @@ header .neo-menu a.active {
   color: #D9A744;
   font-weight: bold;
 }
-/* Destaque do menu conforme pÃ¡gina ativa */
+/* Destaque do menu conforme pÃƒÂ¡gina ativa */
 body.decoracao header .neo-menu a[href="decoracao.html"] {
   color: #D9A744 !important;
 }
@@ -814,7 +814,7 @@ body.contato header .neo-menu a[href="contato.html"] {
 body.index header .neo-menu a[href="index.html"] {
   color: #D9A744 !important;
 }
-/* Destaque do menu conforme pÃ¡gina ativa */
+/* Destaque do menu conforme pÃƒÂ¡gina ativa */
 body.plantas header .neo-menu a[href="plantas.html"],
 body.decoracao header .neo-menu a[href="decoracao.html"],
 body.recomendacoes header .neo-menu a[href="recomendacoes.html"],
@@ -825,8 +825,20 @@ body.index header .neo-menu a[href="index.html"] {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================
-   CABEÃ‡ALHO VERDE SIMPLES COM BOTÃ•ES 3D
+   CABEÃƒâ€¡ALHO VERDE SIMPLES COM BOTÃƒâ€¢ES 3D
 ========================= */
 header {
   background-color: var(--verde-escuro);
@@ -848,7 +860,7 @@ header p {
   color: var(--bege) !important;
 }
 
-/* Menu com botÃµes individuais 3D */
+/* Menu com botÃƒÂµes individuais 3D */
 header .neo-menu {
   display: flex;
   justify-content: center;
@@ -868,7 +880,7 @@ header .neo-menu a {
   transition: all 0.2s ease-in-out;
 }
 
-/* Hover/Ativo: botÃ£o afunda */
+/* Hover/Ativo: botÃƒÂ£o afunda */
 header .neo-menu a:hover,
 header .neo-menu a:active {
   box-shadow: inset 6px 6px 12px #0f292d,
@@ -876,7 +888,7 @@ header .neo-menu a:active {
   transform: translateY(1px);
 }
 
-/* Botão ativo com efeito afundado e dourado (prioridade máxima) */
+/* BotÃ£o ativo com efeito afundado e dourado (prioridade mÃ¡xima) */
 body.index header .neo-menu a[href="index.html"],
 body.plantas header .neo-menu a[href="plantas.html"],
 body.decoracao header .neo-menu a[href="decoracao.html"],
@@ -907,7 +919,7 @@ body.contato header .neo-menu a[href="contato.html"] {
     font-size: 0.9rem;
   }
 }
-/* Fallback: destaca o link ativo apenas com cor dourada se JS não rodar */
+/* Fallback: destaca o link ativo apenas com cor dourada se JS nÃ£o rodar */
 body.index header .neo-menu a[href="index.html"],
 body.plantas header .neo-menu a[href="plantas.html"],
 body.decoracao header .neo-menu a[href="decoracao.html"],
@@ -916,7 +928,7 @@ body.sobre header .neo-menu a[href="sobre.html"],
 body.contato header .neo-menu a[href="contato.html"] {
   color: #D9A744 !important;
 }
-/* Menu principal com estilo igual aos botões Livros/Produtos */
+/* Menu principal com estilo igual aos botÃµes Livros/Produtos */
 header .neo-menu a {
   font-family: Garamond, serif;
   font-size: 1rem;
@@ -937,24 +949,24 @@ header .neo-menu a:active {
               inset -6px -6px 12px #163d42;
   transform: translateY(1px);
 }
-/* Garante que o nav NÃO tenha blur nem fundo */
+/* Garante que o nav NÃƒO tenha blur nem fundo */
 header .neo-menu {
   background: none;
   box-shadow: none;
 }
 
-/* Botões individuais com efeito vidro */
+/* BotÃµes individuais com efeito vidro */
 header .neo-menu a {
   font-family: Garamond, serif;
   font-size: 1rem;
   color: var(--bege);
-  background: rgba(255, 255, 255, 0.08); /* leve transparência */
+  background: rgba(255, 255, 255, 0.08); /* leve transparÃªncia */
   padding: 10px 20px;
   border-radius: 16px;
   text-decoration: none;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2),
               -4px -4px 12px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px); /* BLUR só no botão */
+  backdrop-filter: blur(8px); /* BLUR sÃ³ no botÃ£o */
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease-in-out;
@@ -1012,7 +1024,7 @@ footer .social-icons img:hover {
   border-radius: 12px;
   box-shadow: 6px 6px 12px #c4b08e,
               -6px -6px 12px #f0e6cf;
-  max-width: 200px;        /* Botão menor */
+  max-width: 200px;        /* BotÃ£o menor */
   transition: all 0.2s ease-in-out;
 }
 
@@ -1037,14 +1049,14 @@ footer p {
   color: #E8DCC3; /* Bege claro para contraste no fundo verde */
 }
 header h1 {
-  font-size: 4.0rem; /* Igual ao padrão do index */
+  font-size: 4.0rem; /* Igual ao padrÃ£o do index */
 }
 
 header p {
-  font-size: 1.3rem; /* Subtítulo também um pouco maior */
+  font-size: 1.3rem; /* SubtÃ­tulo tambÃ©m um pouco maior */
 }
 header {
-  padding: 32px 0; /* Mais espaço vertical */
+  padding: 32px 0; /* Mais espaÃ§o vertical */
 }
 header h1 {
   font-size: 4.0rem !important;
@@ -1056,12 +1068,12 @@ header p {
 #header {
   margin: 0;
   padding: 0;
-  background: none; /* garante que não herda bege */
+  background: none; /* garante que nÃ£o herda bege */
 }
-/* === Correção: manter textura e remover faixa bege acima do header === */
+/* === CorreÃ§Ã£o: manter textura e remover faixa bege acima do header === */
 #header, header {
   margin: 0;
-  padding: 32px 0; /* mesmo padding já usado */
+  padding: 32px 0; /* mesmo padding jÃ¡ usado */
   background: var(--verde-escuro) url('IMG/background-verde-plantas.png') repeat !important;
   background-blend-mode: multiply;
   background-size: auto;
@@ -1070,64 +1082,14 @@ body {
   margin: 0;
   padding: 0;
 }
-/* === Padrão para parágrafos de posts do blog === */
+/* === PadrÃ£o para parÃ¡grafos de posts do blog === */
 main[class^="post-"] p {
   text-align: justify;
   line-height: 1.6;
   margin-bottom: 1em;
 }
-/* === Header unificado e corrigido === */
-header {
-  margin: 0;
-  padding: 32px 0;
-  text-align: center;
-  background: var(--verde-escuro) url('IMG/background-verde-plantas.png') no-repeat center center;
-  background-size: cover; /* Estica proporcionalmente sem repetir */
-  background-blend-mode: multiply;
-}
-/* Reseta backgrounds duplicados no header */
-header, #header {
-  background: none !important;
-}
 
-/* Aplica apenas o fundo verde com imagem */
-header, #header {
-  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center !important;
-  background-size: cover;
-  background-blend-mode: multiply;
-}
-/* Corrige faixa bege no topo do site e cobre o header inteiro */
-html, body {
-  margin: 0;
-  padding: 0;
-}
 
-header {
-  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center;
-  background-size: cover;
-  background-blend-mode: multiply;
-  margin: 0;
-  padding: 32px 0;
-  min-height: 180px; /* garante cobertura completa */
-  display: block;
-}
-/* Header corrigido - imagem de fundo e cor */
-header {
-  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center !important;
-  background-size: cover !important;
-  background-blend-mode: multiply;
-  padding: 32px 0;
-  min-height: 180px;
-}
-#header {
-  background: var(--verde-escuro) url('/IMG/background-verde-plantas.png') no-repeat center center;
-  background-size: cover;
-  background-blend-mode: multiply;
-  min-height: 180px;
-  padding: 32px 0;
-  text-align: center;
-  color: #E8DCC3;
-}
 
 
 
