@@ -93,7 +93,7 @@ header .logo-sombra {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  height: 200px;       /* grande no desktop */
+  height: 240px;       /* grande no desktop */
   width: auto;
 }
 
