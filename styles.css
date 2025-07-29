@@ -1065,6 +1065,32 @@ header h1 {
 header p {
   font-size: 1.5rem !important;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-sombra {
+  height: 90px; /* ajusta para o tamanho que preferir */
+  width: auto;
+}
+
+/* Esconder a logo em telas menores */
+@media (max-width: 768px) {
+  .logo-sombra {
+    display: none;
+  }
+}
 
 
 
