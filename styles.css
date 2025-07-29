@@ -35,16 +35,22 @@ main {
    HEADER
    ==================================== */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background: var(--verde-escuro) url('IMG/background-verde-plantas.png') repeat;
   background-blend-mode: multiply;
   background-size: auto; /* ou cover para preencher */
   padding: 40px 0 30px;
-  text-align: center;
+}
 
-  /* NOVO: posicionamento flex para logo à direita */
+/* Agrupamento do conteúdo (h1, p e menu) */
+.header-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 /* Menu sem fundo extra (só os botões terão blur) */
@@ -78,7 +84,7 @@ header .neo-menu a:active {
               inset -4px -4px 8px rgba(255, 255, 255, 0.1);
 }
 
-/* NOVO: estilo da logo à direita */
+/* Logo à direita */
 header .logo-sombra {
   height: 80px;
   width: auto;
