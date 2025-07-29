@@ -91,7 +91,9 @@ header .neo-menu {
 header .logo-sombra {
   height: 80px;
   width: auto;
-  margin-left: 20px;
+  display: block;
+  margin-left: auto;  /* empurra para a direita */
+  margin-right: 0;    /* garante que não centralize */
 }
 
 /* Esconde logo em telas pequenas */
