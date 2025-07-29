@@ -35,31 +35,31 @@ main {
    HEADER
    ==================================== */
 header {
+  position: relative; /* Necessário para a logo absoluta */
   background: var(--verde-escuro) url('IMG/background-verde-plantas.png') repeat;
   background-blend-mode: multiply;
   background-size: auto; /* ou cover para preencher */
-  padding: 10px 0 0px;
+  padding: 10px 0; /* controla altura da faixa */
   text-align: center;
 
-  /* Flex para alinhar logo à direita */
+  /* Centraliza o conteúdo (título + subtítulo + menu) */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-/* Menu sem fundo extra (só os botões terão blur) */
-header .neo-menu {
-  background: none;
-  box-shadow: none;
 }
 
 /* Centraliza o conteúdo do header */
 .header-content {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centraliza horizontalmente */
-  text-align: center;    /* centraliza textos */
-  flex: 1;               /* ocupa espaço restante para afastar da logo */
+  align-items: center;
+  text-align: center;
+}
+
+/* Menu sem fundo extra (só os botões terão blur) */
+header .neo-menu {
+  background: none;
+  box-shadow: none;
 }
 
 /* Botões com efeito vidro (blur individual) */
@@ -87,17 +87,29 @@ header .neo-menu a:active {
               inset -4px -4px 8px rgba(255, 255, 255, 0.1);
 }
 
-/* Logo à direita */
+/* Logo à direita (fora do fluxo) */
 header .logo-sombra {
-  height: 200px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 300px;       /* grande no desktop */
   width: auto;
+}
+
+/* Responsividade: tablets e celulares */
+@media (max-width: 1024px) {
+  header .logo-sombra {
+    height: 200px;     /* reduz em tablets */
+  }
 }
 
 @media (max-width: 768px) {
   header .logo-sombra {
-    display: none;
+    display: none;     /* esconde em celulares */
   }
 }
+
 
 
 /* ====================================
