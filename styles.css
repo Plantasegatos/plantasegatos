@@ -53,6 +53,15 @@ header .neo-menu {
   box-shadow: none;
 }
 
+/* Centraliza o conteúdo do header */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centraliza horizontalmente */
+  text-align: center;    /* centraliza textos */
+  flex: 1;               /* ocupa espaço restante para afastar da logo */
+}
+
 /* Botões com efeito vidro (blur individual) */
 header .neo-menu a {
   font-family: Garamond, serif;
