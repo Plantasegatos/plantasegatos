@@ -71,6 +71,19 @@ header .neo-menu a:active {
   box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2),
               inset -4px -4px 8px rgba(255, 255, 255, 0.1);
 }
+header .logo-sombra {
+  height: 80px;       /* ajuste o tamanho conforme necessário */
+  width: auto;
+  margin: 10px auto;  /* centraliza no fluxo vertical */
+  display: block;
+}
+
+/* Esconde em telas pequenas */
+@media (max-width: 768px) {
+  header .logo-sombra {
+    display: none;
+  }
+}
 
 
 
