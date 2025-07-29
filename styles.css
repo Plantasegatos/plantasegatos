@@ -1065,32 +1065,20 @@ header h1 {
 header p {
   font-size: 1.5rem !important;
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-header nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
+/* --- Logo sombra --- */
 .logo-sombra {
-  height: 90px; /* ajusta para o tamanho que preferir */
+  height: 90px;       /* ajusta conforme preferir */
   width: auto;
+  margin-left: auto;  /* empurra a logo para a direita */
 }
 
-/* Esconder a logo em telas menores */
+/* Esconder em telas menores */
 @media (max-width: 768px) {
   .logo-sombra {
     display: none;
   }
 }
+
 
 
 
