@@ -71,14 +71,30 @@ header .neo-menu a:active {
   box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2),
               inset -4px -4px 8px rgba(255, 255, 255, 0.1);
 }
-header .logo-sombra {
-  height: 80px;       /* ajuste o tamanho conforme necessário */
-  width: auto;
-  margin: 10px auto;  /* centraliza no fluxo vertical */
-  display: block;
+/* Header como flex para alinhar logo à direita */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* mantém responsivo se quebrar linha */
+  text-align: left; /* texto volta para alinhamento padrão */
 }
 
-/* Esconde em telas pequenas */
+/* Agrupar título, subtítulo e menu */
+header h1,
+header p,
+header .neo-menu {
+  flex: 1 1 auto;
+}
+
+/* Logo posicionada à direita */
+header .logo-sombra {
+  height: 80px;
+  width: auto;
+  margin-left: 20px;
+}
+
+/* Esconde logo em telas pequenas */
 @media (max-width: 768px) {
   header .logo-sombra {
     display: none;
