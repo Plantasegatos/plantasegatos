@@ -91,7 +91,7 @@
 
   <div id="footer"></div>
 
-  <script>
+   <script>
     document.getElementById("quiz-form").addEventListener("submit", function(e) {
       e.preventDefault();
       const formData = new FormData(e.target);
@@ -116,5 +116,34 @@
       `;
     });
   </script>
+
+  <style>
+    /* Estilo apenas para o quiz */
+    #quiz-form {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    #quiz-form .question {
+      margin-bottom: 1.5rem;
+    }
+
+    #quiz-form .question p {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    #quiz-form label {
+      display: block;
+      margin: 0.25rem 0;
+      cursor: pointer;
+    }
+
+    #quiz-form input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+  </style>
 </body>
 </html>
