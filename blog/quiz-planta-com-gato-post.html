@@ -137,29 +137,22 @@
       const resultKey = Object.entries(counts).sort((a,b) => b[1] - a[1])[0][0];
       const resultText = {
         explorador: {
-          descricao: "<strong>Calathea lancifolia:</strong> Perfeita para um gato curioso e cheio de energia.",
-          link: "/blog/calathea-lancifolia-post.html"
-        },
-        diva: {
-          descricao: "<strong>Maranta leuconeura:</strong> Uma planta charmosa e elegante para gatos que sabem que são o centro das atenções.",
-          link: "/blog/maranta-leuconeura-post.html"
-        },
-        zen: {
-          descricao: "<strong>Espadinha segura:</strong> Ideal para gatos tranquilos e contemplativos.",
-          link: "/blog/espadinha-segura-post.html"
-        },
-        arteiro: {
-          descricao: "<strong>Samambaia-americana:</strong> Ótima para pendurar e manter fora do alcance de pequenos travessos.",
-          link: "/blog/samambaia-americana-post.html"
-        }
-      };
-
-      document.getElementById("result").innerHTML = `
-        <h3>🌱 Resultado:</h3>
-        <p>${resultText[resultKey].descricao}</p>
-        <p><a href="${resultText[resultKey].link}">→ Saiba mais sobre essa planta</a></p>
-      `;
-    });
+    descricao: "<strong>Calathea lancifolia:</strong> Perfeita para um gato curioso e cheio de energia.",
+    link: "../plantas/calathea-lancifolia.html"
+  },
+  diva: {
+    descricao: "<strong>Maranta leuconeura:</strong> Uma planta charmosa e elegante para gatos que sabem que são o centro das atenções.",
+    link: "../plantas/maranta-leuconeura.html"
+  },
+  zen: {
+    descricao: "<strong>Espadinha segura:</strong> Ideal para gatos tranquilos e contemplativos.",
+    link: "../plantas/espadinha.html"
+  },
+  arteiro: {
+    descricao: "<strong>Samambaia-americana:</strong> Ótima para pendurar e manter fora do alcance de pequenos travessos.",
+    link: "../plantas/samambaia-americana.html"
+  }
+};
   </script>
 
   <!-- CSS Neomórfico -->
