@@ -14,12 +14,12 @@
     <h2>Quiz: Qual Planta Combina com a Personalidade do Seu Gato?</h2>
     <img src="../IMG/quiz-gato-post.jpg" alt="Quiz de plantas e gatos" class="post-img">
 
-    <p>Se você já se perguntou qual planta mais combina com o jeito do seu gato, este quiz é para você! Responda às perguntas e descubra se seu bichano é um <strong>explorador curioso</strong>, uma <strong>diva elegante</strong>, um <strong>zen tranquilo</strong> ou um <strong>arteiro bagunceiro</strong> — e veja a planta perfeita para acompanhar essa personalidade.</p>
+    <p>Descubra qual planta segura combina com o jeito único do seu gato! Responda às perguntas divertidas e veja se ele é um <strong>explorador curioso</strong>, uma <strong>diva elegante</strong>, um <strong>zen tranquilo</strong> ou um <strong>arteiro bagunceiro</strong> — e conheça a planta perfeita para o seu lar.</p>
 
     <form id="quiz-form">
       <!-- PERGUNTA 1 -->
       <div class="question">
-        <img src="../IMG/quiz-gato-q1.jpg" alt="Ilustração da pergunta 1" class="quiz-image">
+        <img src="../IMG/quiz-gato-q1.jpg" alt="Pergunta 1" class="quiz-image">
         <div class="question-content">
           <p>1. Seu gato passa o dia...</p>
           <label><input type="radio" name="q1" value="explorador" required> Investigando cada canto da casa</label>
@@ -31,19 +31,19 @@
 
       <!-- PERGUNTA 2 -->
       <div class="question">
-        <img src="../IMG/quiz-gato-q2.jpg" alt="Ilustração da pergunta 2" class="quiz-image">
+        <img src="../IMG/quiz-gato-q2.jpg" alt="Pergunta 2" class="quiz-image">
         <div class="question-content">
           <p>2. Quando você traz uma planta nova...</p>
           <label><input type="radio" name="q2" value="explorador"> Cheira, toca e explora cada detalhe</label>
           <label><input type="radio" name="q2" value="diva"> Observa de longe, indiferente</label>
           <label><input type="radio" name="q2" value="zen"> Acompanha com calma e curiosidade</label>
           <label><input type="radio" name="q2" value="arteiro"> Ataca a planta como se fosse brinquedo</label>
-        </div> 
+        </div>
       </div>
 
       <!-- PERGUNTA 3 -->
       <div class="question">
-        <img src="../IMG/quiz-gato-q3.jpg" alt="Ilustração da pergunta 3" class="quiz-image">
+        <img src="../IMG/quiz-gato-q3.jpg" alt="Pergunta 3" class="quiz-image">
         <div class="question-content">
           <p>3. Seu gato tem mais cara de...</p>
           <label><input type="radio" name="q3" value="diva"> Estrela de capa de revista pet</label>
@@ -55,7 +55,7 @@
 
       <!-- PERGUNTA 4 -->
       <div class="question">
-        <img src="../IMG/quiz-gato-q4.jpg" alt="Ilustração da pergunta 4" class="quiz-image">
+        <img src="../IMG/quiz-gato-q4.jpg" alt="Pergunta 4" class="quiz-image">
         <div class="question-content">
           <p>4. Quando você está ocupado...</p>
           <label><input type="radio" name="q4" value="arteiro"> Arruma um jeito de causar bagunça</label>
@@ -67,7 +67,7 @@
 
       <!-- PERGUNTA 5 -->
       <div class="question">
-        <img src="../IMG/quiz-gato-q5.jpg" alt="Ilustração da pergunta 5" class="quiz-image">
+        <img src="../IMG/quiz-gato-q5.jpg" alt="Pergunta 5" class="quiz-image">
         <div class="question-content">
           <p>5. O que mais descreve o temperamento do seu gato?</p>
           <label><input type="radio" name="q5" value="zen"> Calmo e observador</label>
@@ -79,7 +79,7 @@
 
       <!-- PERGUNTA 6 -->
       <div class="question">
-        <img src="../IMG/quiz-gato-q6.jpg" alt="Ilustração da pergunta 6" class="quiz-image">
+        <img src="../IMG/quiz-gato-q6.jpg" alt="Pergunta 6" class="quiz-image">
         <div class="question-content">
           <p>6. Como ele reage a visitas em casa?</p>
           <label><input type="radio" name="q6" value="explorador"> Vai investigar todo mundo</label>
@@ -91,7 +91,7 @@
 
       <!-- PERGUNTA 7 -->
       <div class="question">
-        <img src="../IMG/quiz-gato-q7.jpg" alt="Ilustração da pergunta 7" class="quiz-image">
+        <img src="../IMG/quiz-gato-q7.jpg" alt="Pergunta 7" class="quiz-image">
         <div class="question-content">
           <p>7. Se seu gato fosse um lugar da casa, ele seria...</p>
           <label><input type="radio" name="q7" value="zen"> A rede da varanda, pegando sol</label>
@@ -103,7 +103,7 @@
 
       <!-- PERGUNTA 8 -->
       <div class="question">
-        <img src="../IMG/quiz-gato-q8.jpg" alt="Ilustração da pergunta 8" class="quiz-image">
+        <img src="../IMG/quiz-gato-q8.jpg" alt="Pergunta 8" class="quiz-image">
         <div class="question-content">
           <p>8. Se ele pudesse escolher um superpoder...</p>
           <label><input type="radio" name="q8" value="explorador"> Voar para explorar o mundo</label>
@@ -123,6 +123,7 @@
 
   <div id="footer"></div>
 
+  <!-- Script para lógica do quiz com links -->
   <script>
     document.getElementById("quiz-form").addEventListener("submit", function(e) {
       e.preventDefault();
@@ -135,50 +136,68 @@
 
       const resultKey = Object.entries(counts).sort((a,b) => b[1] - a[1])[0][0];
       const resultText = {
-        explorador: "<strong>Calathea lancifolia:</strong> Perfeita para um gato curioso e cheio de energia, que adora ambientes vibrantes e cheios de detalhes.",
-        diva: "<strong>Maranta leuconeura:</strong> Uma planta charmosa e elegante para gatos que sabem que são o centro das atenções.",
-        zen: "<strong>Espadinha (variedade segura):</strong> Ideal para gatos tranquilos e contemplativos, que valorizam simplicidade e harmonia.",
-        arteiro: "<strong>Samambaia-americana:</strong> Ótima para pendurar e manter fora do alcance de pequenos travessos — e ainda deixar o ambiente mais verde!"
+        explorador: {
+          descricao: "<strong>Calathea lancifolia:</strong> Perfeita para um gato curioso e cheio de energia.",
+          link: "/blog/calathea-lancifolia-post.html"
+        },
+        diva: {
+          descricao: "<strong>Maranta leuconeura:</strong> Uma planta charmosa e elegante para gatos que sabem que são o centro das atenções.",
+          link: "/blog/maranta-leuconeura-post.html"
+        },
+        zen: {
+          descricao: "<strong>Espadinha segura:</strong> Ideal para gatos tranquilos e contemplativos.",
+          link: "/blog/espadinha-segura-post.html"
+        },
+        arteiro: {
+          descricao: "<strong>Samambaia-americana:</strong> Ótima para pendurar e manter fora do alcance de pequenos travessos.",
+          link: "/blog/samambaia-americana-post.html"
+        }
       };
 
       document.getElementById("result").innerHTML = `
         <h3>🌱 Resultado:</h3>
-        <p>${resultText[resultKey]}</p>
-        <p><a href="/blog/planta-com-gato-post.html">→ Saiba mais sobre plantas seguras para gatos</a></p>
+        <p>${resultText[resultKey].descricao}</p>
+        <p><a href="${resultText[resultKey].link}">→ Saiba mais sobre essa planta</a></p>
       `;
     });
   </script>
 
+  <!-- CSS Neomórfico -->
   <style>
-    /* Aumenta fonte geral do quiz */
     .post-quiz-gatos {
       font-size: 1.15rem;
       line-height: 1.6;
+      background: #E8DCC3;
+      padding: 1rem;
+      border-radius: 16px;
     }
 
-    /* Layout pergunta: imagem esquerda, texto direita */
     .question {
       display: flex;
       align-items: flex-start;
       gap: 1.5rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: #E8DCC3;
+      box-shadow: 6px 6px 12px #c1b8a3,
+                  -6px -6px 12px #ffffff;
     }
 
-    /* Imagem da pergunta */
     .question img {
       width: 140px;
       height: auto;
-      border-radius: 8px;
+      border-radius: 12px;
       flex-shrink: 0;
+      box-shadow: 4px 4px 8px #c1b8a3,
+                  -4px -4px 8px #ffffff;
     }
 
-    /* Texto da pergunta */
     .question-content p {
       font-weight: bold;
       margin-bottom: 0.5rem;
     }
 
-    /* Alternativas */
     .question-content label {
       display: block;
       margin: 0.4rem 0;
@@ -186,96 +205,42 @@
     }
 
     .question-content input[type="radio"] {
-      margin-right: 0.4rem;
-      transform: scale(1.2);
+      margin-right: 0.5rem;
+      transform: scale(1.3);
     }
-    /* Fundo padrão */
-.post-quiz-gatos {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  background: #E8DCC3;
-  padding: 1rem;
-  border-radius: 16px;
-}
 
-/* Perguntas com efeito neomórfico */
-.question {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border-radius: 16px;
-  background: #E8DCC3;
-  box-shadow: 6px 6px 12px #c1b8a3,
-              -6px -6px 12px #ffffff;
-}
+    #quiz-form button[type="submit"] {
+      background: #E8DCC3;
+      color: #133336;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 6px 6px 12px #c1b8a3,
+                  -6px -6px 12px #ffffff;
+      cursor: pointer;
+      margin: 1.5rem 0;
+      transition: all 0.2s ease-in-out;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
 
-/* Imagem da pergunta */
-.question img {
-  width: 140px;
-  height: auto;
-  border-radius: 12px;
-  flex-shrink: 0;
-  box-shadow: 4px 4px 8px #c1b8a3,
-              -4px -4px 8px #ffffff;
-}
+    #quiz-form button[type="submit"]:hover {
+      box-shadow: inset 4px 4px 8px #c1b8a3,
+                  inset -4px -4px 8px #ffffff;
+    }
 
-/* Texto das perguntas */
-.question-content p {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-/* Alternativas */
-.question-content label {
-  display: block;
-  margin: 0.4rem 0;
-  cursor: pointer;
-}
-
-/* Radios maiores e integrados */
-.question-content input[type="radio"] {
-  margin-right: 0.5rem;
-  transform: scale(1.3);
-}
-
-/* Botão de resultado neomórfico */
-#quiz-form button[type="submit"] {
-  background: #E8DCC3;
-  color: #133336;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 6px 6px 12px #c1b8a3,
-              -6px -6px 12px #ffffff;
-  cursor: pointer;
-  margin: 1.5rem 0;
-  transition: all 0.2s ease-in-out;
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-#quiz-form button[type="submit"]:hover {
-  box-shadow: inset 4px 4px 8px #c1b8a3,
-              inset -4px -4px 8px #ffffff;
-}
-
-/* Resultado neomórfico */
-#result {
-  background: #E8DCC3;
-  border-radius: 16px;
-  padding: 1rem;
-  margin-top: 2rem;
-  box-shadow: inset 6px 6px 12px #c1b8a3,
-              inset -6px -6px 12px #ffffff;
-}
-
+    #result {
+      background: #E8DCC3;
+      border-radius: 16px;
+      padding: 1rem;
+      margin-top: 2rem;
+      box-shadow: inset 6px 6px 12px #c1b8a3,
+                  inset -6px -6px 12px #ffffff;
+    }
   </style>
 
 </body>
 </html>
-
