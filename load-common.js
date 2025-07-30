@@ -1,42 +1,44 @@
-// Verifica se estamos em uma subpasta (plantas ou blog)
-const isInSubfolder =
-  window.location.pathname.includes('/plantas/') ||
-  window.location.pathname.includes('/blog/');
+// Detecta se estamos em uma subpasta (blog, plantas ou qualquer outra)
+const isInSubfolder = window.location.pathname.split('/').length > 2;
 
-// Define o caminho correto para o header
+// Caminhos para header e footer
 const headerPath = isInSubfolder ? '../header.html' : 'header.html';
-console.log("DEBUG: Carregando header de ->", headerPath);
+const footerPath = isInSubfolder ? '../footer.html' : 'footer.html';
 
+console.log('[DEBUG] Caminho atual:', window.location.pathname);
+console.log('[DEBUG] Subpasta detectada?', isInSubfolder);
+console.log('[DEBUG] Carregando header de:', headerPath);
+console.log('[DEBUG] Carregando footer de:', footerPath);
+
+// Carregar header
 fetch(headerPath)
   .then(response => {
-    console.log("DEBUG: Resposta header ->", response.status, response.statusText);
+    if (!response.ok) throw new Error(`Erro ao carregar header: ${response.status}`);
     return response.text();
   })
   .then(data => {
     document.getElementById('header').innerHTML = data;
+    console.log('[DEBUG] Header carregado com sucesso');
     marcarLinkAtivo();
   })
-  .catch(err => console.error("DEBUG: Erro ao carregar header ->", err));
+  .catch(err => console.error('[ERRO HEADER]', err));
 
-// Define o caminho correto para o footer
-const footerPath = isInSubfolder ? '../footer.html' : 'footer.html';
-console.log("DEBUG: Carregando footer de ->", footerPath);
-
+// Carregar footer
 fetch(footerPath)
   .then(response => {
-    console.log("DEBUG: Resposta footer ->", response.status, response.statusText);
+    if (!response.ok) throw new Error(`Erro ao carregar footer: ${response.status}`);
     return response.text();
   })
   .then(data => {
     document.getElementById('footer').innerHTML = data;
+    console.log('[DEBUG] Footer carregado com sucesso');
   })
-  .catch(err => console.error("DEBUG: Erro ao carregar footer ->", err));
+  .catch(err => console.error('[ERRO FOOTER]', err));
 
-// Função para destacar o link ativo no menu
+// Destacar link ativo no menu
 function marcarLinkAtivo() {
   const links = document.querySelectorAll('.neo-menu a');
   const current = window.location.pathname.split('/').pop();
-
   links.forEach(link => {
     if (link.getAttribute('href') === current) {
       link.style.color = '#D9A744';
@@ -45,6 +47,7 @@ function marcarLinkAtivo() {
     }
   });
 }
+
 
 
 
