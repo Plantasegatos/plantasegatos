@@ -5,20 +5,32 @@ const isInSubfolder =
 
 // Define o caminho correto para o header
 const headerPath = isInSubfolder ? '../header.html' : 'header.html';
+console.log("DEBUG: Carregando header de ->", headerPath);
+
 fetch(headerPath)
-  .then(response => response.text())
+  .then(response => {
+    console.log("DEBUG: Resposta header ->", response.status, response.statusText);
+    return response.text();
+  })
   .then(data => {
     document.getElementById('header').innerHTML = data;
     marcarLinkAtivo();
-  });
+  })
+  .catch(err => console.error("DEBUG: Erro ao carregar header ->", err));
 
 // Define o caminho correto para o footer
 const footerPath = isInSubfolder ? '../footer.html' : 'footer.html';
+console.log("DEBUG: Carregando footer de ->", footerPath);
+
 fetch(footerPath)
-  .then(response => response.text())
+  .then(response => {
+    console.log("DEBUG: Resposta footer ->", response.status, response.statusText);
+    return response.text();
+  })
   .then(data => {
     document.getElementById('footer').innerHTML = data;
-  });
+  })
+  .catch(err => console.error("DEBUG: Erro ao carregar footer ->", err));
 
 // Função para destacar o link ativo no menu
 function marcarLinkAtivo() {
