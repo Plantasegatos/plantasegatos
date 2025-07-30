@@ -183,6 +183,49 @@
       height: auto;
       border-radius: 8px;
     }
-  </style>
+
+  /* Ajuste de layout para imagem + perguntas lado a lado */
+  .question {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Imagem à esquerda */
+  .question img {
+    width: 140px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0; /* garante que a imagem não encolha */
+  }
+
+  /* Conteúdo das perguntas à direita */
+  .question-content {
+    flex: 1;
+    font-size: 1.1rem; /* aumenta tamanho da fonte */
+    line-height: 1.5;
+  }
+
+  /* Texto da pergunta */
+  .question-content p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Estilo para labels das alternativas */
+  .question-content label {
+    display: block;
+    margin: 0.4rem 0;
+    cursor: pointer;
+  }
+
+  /* Espaço entre o círculo do radio e o texto */
+  .question-content input[type="radio"] {
+    margin-right: 0.4rem;
+    transform: scale(1.2); /* aumenta o tamanho do botão radio */
+  }
+</style>
+
 </body>
 </html>
