@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz: Qual Planta Combina com a Personalidade do Seu Gato? | Plantas & Gatos</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../load-common.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="post-quiz-gatos">
+    <h2>Quiz: Qual Planta Combina com a Personalidade do Seu Gato?</h2>
+    <img src="../IMG/quiz-gato-post.jpg" alt="Quiz de plantas e gatos" class="post-img">
+
+    <p>Se você já se perguntou qual planta mais combina com o jeito do seu gato, este quiz é para você! Responda às perguntas e descubra se seu bichano é um <strong>explorador curioso</strong>, uma <strong>diva elegante</strong>, um <strong>zen tranquilo</strong> ou um <strong>arteiro bagunceiro</strong> — e veja a planta perfeita para acompanhar essa personalidade.</p>
+
+    <form id="quiz-form">
+      <div class="question">
+        <p>1. Seu gato passa o dia...</p>
+        <label><input type="radio" name="q1" value="explorador" required> Investigando cada canto da casa</label>
+        <label><input type="radio" name="q1" value="diva"> Deitado como realeza no sofá</label>
+        <label><input type="radio" name="q1" value="zen"> Observando o movimento da janela</label>
+        <label><input type="radio" name="q1" value="arteiro"> Derrubando objetos para chamar atenção</label>
+      </div>
+
+      <div class="question">
+        <p>2. Quando você traz uma planta nova...</p>
+        <label><input type="radio" name="q2" value="explorador"> Cheira, toca e explora cada detalhe</label>
+        <label><input type="radio" name="q2" value="diva"> Observa de longe, indiferente</label>
+        <label><input type="radio" name="q2" value="zen"> Acompanha com calma e curiosidade</label>
+        <label><input type="radio" name="q2" value="arteiro"> Ataca a planta como se fosse brinquedo</label>
+      </div>
+
+      <div class="question">
+        <p>3. Seu gato tem mais cara de...</p>
+        <label><input type="radio" name="q3" value="diva"> Estrela de capa de revista pet</label>
+        <label><input type="radio" name="q3" value="explorador"> Aventureiro em miniatura</label>
+        <label><input type="radio" name="q3" value="arteiro"> Vilão carismático de filme</label>
+        <label><input type="radio" name="q3" value="zen"> Pequeno mestre do equilíbrio</label>
+      </div>
+
+      <div class="question">
+        <p>4. Quando você está ocupado...</p>
+        <label><input type="radio" name="q4" value="arteiro"> Arruma um jeito de causar bagunça</label>
+        <label><input type="radio" name="q4" value="diva"> Exige atenção imediata</label>
+        <label><input type="radio" name="q4" value="zen"> Se retira para um canto silencioso</label>
+        <label><input type="radio" name="q4" value="explorador"> Segue você para ver o que acontece</label>
+      </div>
+
+      <div class="question">
+        <p>5. O que mais descreve o temperamento do seu gato?</p>
+        <label><input type="radio" name="q5" value="zen"> Calmo e observador</label>
+        <label><input type="radio" name="q5" value="arteiro"> Travesso e cheio de energia</label>
+        <label><input type="radio" name="q5" value="diva"> Elegante e exigente</label>
+        <label><input type="radio" name="q5" value="explorador"> Curioso e destemido</label>
+      </div>
+
+      <div class="question">
+        <p>6. Como ele reage a visitas em casa?</p>
+        <label><input type="radio" name="q6" value="explorador"> Vai investigar todo mundo</label>
+        <label><input type="radio" name="q6" value="diva"> Se esconde ou fica no alto observando</label>
+        <label><input type="radio" name="q6" value="zen"> Mantém a calma e ignora</label>
+        <label><input type="radio" name="q6" value="arteiro"> Aproveita para se exibir e aprontar</label>
+      </div>
+
+      <div class="question">
+        <p>7. Se seu gato fosse um lugar da casa, ele seria...</p>
+        <label><input type="radio" name="q7" value="zen"> A rede da varanda, pegando sol</label>
+        <label><input type="radio" name="q7" value="arteiro"> O topo da geladeira, derrubando ímãs</label>
+        <label><input type="radio" name="q7" value="diva"> O sofá mais confortável</label>
+        <label><input type="radio" name="q7" value="explorador"> A prateleira mais alta da estante</label>
+      </div>
+
+      <div class="question">
+        <p>8. Se ele pudesse escolher um superpoder...</p>
+        <label><input type="radio" name="q8" value="explorador"> Voar para explorar o mundo</label>
+        <label><input type="radio" name="q8" value="diva"> Ter telepatia para receber carinho imediato</label>
+        <label><input type="radio" name="q8" value="zen"> Controlar o tempo para dormir sem fim</label>
+        <label><input type="radio" name="q8" value="arteiro"> Ficar invisível para aprontar escondido</label>
+      </div>
+
+      <button type="submit">Ver resultado</button>
+    </form>
+
+    <div id="result"></div>
+
+    <a class="back-link" href="../index.html">← Voltar para o blog</a>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    document.getElementById("quiz-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const counts = { explorador: 0, diva: 0, zen: 0, arteiro: 0 };
+
+      for (let pair of formData.entries()) {
+        counts[pair[1]] += 1;
+      }
+
+      const resultKey = Object.entries(counts).sort((a,b) => b[1] - a[1])[0][0];
+      const resultText = {
+        explorador: "<strong>Calathea lancifolia:</strong> Perfeita para um gato curioso e cheio de energia, que adora ambientes vibrantes e cheios de detalhes.",
+        diva: "<strong>Maranta leuconeura:</strong> Uma planta charmosa e elegante para gatos que sabem que são o centro das atenções.",
+        zen: "<strong>Espadinha (variedade segura):</strong> Ideal para gatos tranquilos e contemplativos, que valorizam simplicidade e harmonia.",
+        arteiro: "<strong>Samambaia-americana:</strong> Ótima para pendurar e manter fora do alcance de pequenos travessos — e ainda deixar o ambiente mais verde!"
+      };
+
+      document.getElementById("result").innerHTML = `
+        <h3>🌱 Resultado:</h3>
+        <p>${resultText[resultKey]}</p>
+        <p><a href="/blog/planta-com-gato-post.html">→ Saiba mais sobre plantas seguras para gatos</a></p>
+      `;
+    });
+  </script>
+</body>
+</html>
