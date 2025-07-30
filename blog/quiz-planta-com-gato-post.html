@@ -113,7 +113,8 @@
         </div>
       </div>
 
-      <button type="submit">Ver resultado</button>
+      <button type="button" id="ver-resultado">Ver resultado</button>
+
     </form>
 
     <div id="result"></div>
@@ -125,7 +126,7 @@
 
   <!-- Script para lógica do quiz com links -->
   <script>
-    document.getElementById("quiz-form").addEventListener("submit", function(e) {
+    document.getElementById("ver-resultado").addEventListener("click", function() {
       e.preventDefault();
       const formData = new FormData(e.target);
       const counts = { explorador: 0, diva: 0, zen: 0, arteiro: 0 };
