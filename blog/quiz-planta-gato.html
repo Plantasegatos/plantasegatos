@@ -4,59 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiz: Qual planta combina com seu gato? | Plantas & Gatos</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/load-common.js" defer></script>
   <style>
-    body {
-      background: #E8DCC3;
-      font-family: Garamond, serif;
-      color: #1A3A36;
-      margin: 0;
-      padding: 0 20px;
-    }
-
-    header {
-      background-color: #133336;
-      text-align: center;
-      padding: 24px 0;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      color: #E8DCC3;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1rem;
-      margin: 4px 0 0;
-      color: #E8DCC3;
-    }
-
-    main {
-      max-width: 720px;
-      margin: 40px auto;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+    main[class^="post-quiz"] h2,
+    main[class^="post-quiz"] .post-img {
       text-align: center;
     }
-
+    main[class^="post-quiz"] p,
+    main[class^="post-quiz"] h3,
+    main[class^="post-quiz"] ul,
+    main[class^="post-quiz"] li {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
     .question {
       margin-bottom: 24px;
     }
-
     .question p {
       font-weight: bold;
     }
-
     label {
       display: block;
       margin-bottom: 8px;
       cursor: pointer;
     }
-
     button {
       background-color: #133336;
       color: #E8DCC3;
@@ -65,26 +38,28 @@
       font-size: 1rem;
       cursor: pointer;
       margin-top: 20px;
+      border-radius: 8px;
     }
-
     #result {
       margin-top: 40px;
       background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
 <body>
+  <div id="header"></div>
 
-  <header>
-    <h1>Plantas & Gatos</h1>
-    <p>Quiz: Qual planta combina com seu gato?</p>
-  </header>
+  <main class="post-quiz-gatos">
+    <h2>Descubra a planta que combina com seu gato!</h2>
+    <img src="/IMG/quiz-gato-post.jpg" alt="Quiz de plantas para gatos" class="post-img">
 
-  <main>
-    <h2>Descubra a planta ideal para seu bichano!</h2>
+    <p>Gatos têm personalidades únicas — e suas plantas podem combinar com elas! Responda este quiz divertido e descubra qual planta é a alma verde do seu felino.</p>
 
     <form id="quiz-form">
       <div class="question">
@@ -131,19 +106,11 @@
     </form>
 
     <div id="result"></div>
+
+    <a class="back-link" href="/index.html">← Voltar para o blog</a>
   </main>
 
-  <footer>
-    <p style="text-align: center; margin-top: 40px;">
-      <a href="https://www.instagram.com/plantasngatos" target="_blank">
-        <img src="../IMG/instagram-icon.png" alt="Instagram">
-      </a>
-      <a href="https://www.pinterest.com/plantasngatos" target="_blank">
-        <img src="../IMG/pinterest-icon.png" alt="Pinterest">
-      </a>
-    </p>
-    <p style="text-align: center;">© 2025 Plantas & Gatos. Todos os direitos reservados.</p>
-  </footer>
+  <div id="footer"></div>
 
   <script>
     document.getElementById("quiz-form").addEventListener("submit", function(e) {
@@ -166,9 +133,10 @@
       document.getElementById("result").innerHTML = `
         <h3>🌱 Resultado:</h3>
         <p>${resultText[resultKey]}</p>
-        <p><a href="planta-com-gato-post.html">→ Veja mais sobre o perfil do seu gato aqui</a></p>
+        <p><a href="/blog/planta-com-gato-post.html">→ Veja mais sobre o perfil do seu gato</a></p>
       `;
     });
   </script>
 </body>
 </html>
+
