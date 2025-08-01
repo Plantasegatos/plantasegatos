@@ -1113,6 +1113,17 @@ main[class^="post-"] li {
   margin-right: auto;
   max-width: 800px; /* Mantém o texto em uma largura confortável */
 }
+main[class^="post-"] {
+  font-size: 18px;
+}
+
+main[class^="post-"] h2 {
+  font-size: 28px;
+}
+
+main[class^="post-"] h3 {
+  font-size: 22px;
+}
 
 
 
