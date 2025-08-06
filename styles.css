@@ -1124,15 +1124,7 @@ main[class^="post-"] h2 {
 main[class^="post-"] h3 {
   font-size: 22px;
 }
-main h4 {
-  margin-top: 1.5em;
-  margin-bottom: 0.8em;
-  font-size: 1.1em; /* ligeiramente menor que h3 */
-  font-family: 'Garamond', serif;
-  font-weight: normal;
-  text-align: left; /* garante alinhamento igual ao h3 */
-  line-height: 1.4;
-}
+
 
 
 
