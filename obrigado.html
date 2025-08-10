@@ -1,88 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mensagem Enviada | Plantas & Gatos</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obrigado! — Plantas & Gatos</title>
   <style>
-    body {
-      background-color: #E8DCC3;
-      color: #1A3A36;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 4em 2em;
-    }
-
-    .agradecimento {
-      max-width: 600px;
-      margin: 0 auto;
-      background: white;
-      padding: 2em;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .agradecimento h1 {
-      color: #287D72;
-    }
-
-    .agradecimento a {
-      display: inline-block;
-      margin-top: 2em;
-      background-color: #287D72;
-      color: white;
-      padding: 0.75em 1.5em;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .agradecimento img {
-  max-width: 180px;
-  margin-bottom: 1em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 10;
-  position: relative;
-  pointer-events: none;
-}
-
-    .heart {
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      background: url('IMG/heart.svg') no-repeat center/contain;
-      animation: floatUp 4s ease-in-out infinite;
-      opacity: 0.8;
-    }
-
-    .heart:nth-child(2) { top: 40%; left: 20%; animation-delay: 0s; }
-    .heart:nth-child(3) { top: 45%; left: 80%; animation-delay: 1s; }
-    .heart:nth-child(4) { top: 55%; left: 35%; animation-delay: 2s; }
-    .heart:nth-child(5) { top: 60%; left: 65%; animation-delay: 3s; }
-
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 0.8; }
-      50% { transform: translateY(-40px) scale(1.2); opacity: 1; }
-      100% { transform: translateY(-80px) scale(0.9); opacity: 0; }
-    }
+    :root{--bg:#fffaf2;--ink:#133336;--muted:#355954;--brand:#287D72}
+    body{margin:0;font-family:system-ui,Inter,Arial;background:var(--bg);color:var(--ink)}
+    .wrap{max-width:720px;margin:0 auto;padding:28px}
+    a.btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;
+      padding:12px 18px;border-radius:10px;font-weight:700}
+    .muted{color:var(--muted)}
   </style>
 </head>
 <body>
-  <div class="agradecimento">
-    <img src="IMG/safira-obrigado.png" alt="Safira agradecendo" style="position: relative; z-index: 10; pointer-events: none; display: block; margin: 0 auto 1em;">
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <h1>🌱 Obrigado pelo seu contato!</h1>
-    <p>Recebemos sua mensagem com carinho. Em breve, nossa equipe (ou a Safira 😺) irá responder.</p>
-    <a href="index.html">← Voltar para o início</a>
+  <div class="wrap">
+    <h1>Deu certo! 🎉</h1>
+    <p>Seu cadastro foi recebido. Baixe o guia agora:</p>
+    <p><a class="btn" href="/docs/guia-plantas-aromaticas-gatos.pdf" download>📥 Baixar o Guia (PDF)</a></p>
+    <p class="muted">Também enviamos o link por e-mail. Salve para consultar quando precisar.</p>
+    <p><a href="/guia-plantas-seguras.html">← Voltar para a página do guia</a></p>
   </div>
 </body>
 </html>
+
 
