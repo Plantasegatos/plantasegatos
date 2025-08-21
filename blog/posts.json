@@ -35,13 +35,6 @@
     "data": "2025-05-19"
   },
   {
-    "titulo": "Quer fazer uma surpresa a alguém?",
-    "trecho": "Antes de entregar flores, descubra quais encantam sem colocar os gatos em risco.",
-    "link": "blog/surpresa.html",
-    "imagem": "IMG/buque-seguro.png",
-    "data": "2025-05-20"
-  },
-  {
     "titulo": "Óleos essenciais, gatos e plantas: cuidado redobrado",
     "trecho": "O aroma que relaxa você pode intoxicar seu gato — e até suas plantas. Descubra como proteger todos os sentidos do seu lar.",
     "link": "blog/oleos.html",
@@ -362,7 +355,14 @@
   "link": "blog/gato-bebe-agua-torneira.html",
   "imagem": "IMG/gato-bebendo-torneira-post.jpg",
   "data": "2025-08-19"
-}
+},
+  {
+    "titulo": "Quer fazer uma surpresa a alguém?",
+    "trecho": "Antes de entregar flores, descubra quais encantam sem colocar os gatos em risco.",
+    "link": "blog/surpresa.html",
+    "imagem": "IMG/buque-seguro.png",
+    "data": "2025-08-20"
+  }
 
 
 
