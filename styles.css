@@ -1125,6 +1125,14 @@ main[class^="post-"] h3 {
   font-size: 22px;
 }
 
+.homenagem-safira {
+  margin-top: 20px;
+  padding: 12px;
+  border-left: 4px solid #367D8A;
+  background-color: #f9f9f9;
+  font-style: italic;
+  color: #333;
+}
 
 
 
