@@ -1134,6 +1134,19 @@ main[class^="post-"] h3 {
   color: #333;
 }
 
+.pg-toolbar{display:grid;gap:12px;margin:18px 0}
+.pg-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pg-tab{
+  padding:12px 14px;border:0;border-radius:18px;cursor:pointer;
+  background:#E8DCC3;color:#133336;font-family:Garamond,serif;font-size:1.05rem;
+  box-shadow:6px 6px 12px rgba(0,0,0,.1), -6px -6px 12px rgba(255,255,255,.6);
+}
+.pg-tab[aria-selected="true"]{outline:2px solid #133336;font-weight:bold}
+.pg-search input{
+  width:100%;padding:12px 14px;border:0;border-radius:14px;background:#E8DCC3;color:#133336;
+  box-shadow: inset 6px 6px 12px rgba(0,0,0,.08), inset -6px -6px 12px rgba(255,255,255,.55);
+}
+.pg-counter{opacity:.8;font-size:.95rem}
 
 
 
