@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links Rápidos | Plantas & Gatos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="load-common.js" defer></script>
+  <style>
+    main.bio-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 480px;
+      margin: 60px auto;
+      text-align: center;
+      font-family: Garamond, serif;
+    }
+    .bio-links h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #133336;
+    }
+    .link-btn {
+      display: block;
+      padding: 16px;
+      border-radius: 20px;
+      background: #E8DCC3;
+      color: #133336;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 6px 6px 12px rgba(0,0,0,0.1), -6px -6px 12px rgba(255,255,255,0.6);
+      transition: transform 0.1s ease, box-shadow 0.2s ease;
+    }
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 8px 8px 16px rgba(0,0,0,0.15), -6px -6px 14px rgba(255,255,255,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="bio-links">
+    <h2>Links Rápidos 🌿🐾</h2>
+
+    <a href="plantas.html" class="link-btn">🌱 Plantas seguras</a>
+    <a href="blog/plantas-toxicas-para-gatos.html" class="link-btn">🚫 Plantas tóxicas</a>
+    <a href="ebooks.html" class="link-btn">📖 E-books</a>
+    <a href="produtos.html" class="link-btn">🛒 Produtos recomendados</a>
+    <a href="livros.html" class="link-btn">📚 Livros na Amazon</a>
+    <a href="index.html" class="link-btn">✨ Últimos posts no blog</a>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
