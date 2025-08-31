@@ -1201,7 +1201,7 @@ main[class^="post-"] h3 {
 .pg-search {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   justify-content: flex-end;
 }
 .pg-search label {
