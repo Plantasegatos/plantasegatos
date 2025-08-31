@@ -1224,16 +1224,17 @@ main[class^="post-"] h3 {
 
 /* ---- Tabs de toxicidade ---- */
 .pg-tabs{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap:4px;                     /* botões bem próximos */
-  justify-content:center;
+  display:flex;                /* flex em vez de grid */
+  justify-content:center;      /* centraliza o grupo */
+  gap:12px;                    /* controla a distância entre botões */
+  margin:18px 0;
+  flex-wrap:wrap;              /* se não couber, quebra para baixo */
 }
 
 /* Botão-base */
 .pg-tab{
   border:0;
-  padding:12px;                /* cria margem entre imagem e borda */
+  padding:12px;
   border-radius:18px;
   background:#E8DCC3;
   box-shadow: 6px 6px 12px rgba(0,0,0,.10),
@@ -1241,8 +1242,9 @@ main[class^="post-"] h3 {
   cursor:pointer;
   transition: transform .1s ease, box-shadow .15s ease;
   aspect-ratio: 1 / 1;
-  width:100%; max-width:250px;
-  display:flex;                /* garante centralização */
+  width:100%;
+  max-width:250px;             /* nunca maior que 250 */
+  display:flex;
   align-items:center;
   justify-content:center;
   box-sizing:border-box;
@@ -1250,7 +1252,7 @@ main[class^="post-"] h3 {
 
 /* Imagem centralizada com respiro */
 .pg-tab > img{
-  max-width:85%;               /* não deixa encostar nas bordas */
+  max-width:85%;
   max-height:85%;
   object-fit:contain;
   display:block;
