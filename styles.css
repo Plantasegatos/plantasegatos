@@ -1208,9 +1208,10 @@ main[class^="post-"] h3 {
 .pg-tab.pg-tab-square {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;        /* mantém quadrado */
+  max-width: 90px;            /* <<< aqui você controla o tamanho máximo */
+  aspect-ratio: 1 / 1;
   border: 2px solid #e0e0e0;
-  border-radius: 14px;
+  border-radius: 12px;
   background: #fff;
   padding: 0;
   overflow: hidden;
