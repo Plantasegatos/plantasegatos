@@ -1211,6 +1211,150 @@ main[class^="post-"] h3 {
   clip:rect(0,0,0,0); clip-path: inset(50%);
 }
 
+/* Desktop / padrão */
+.pg-tab{
+  flex:0 0 250px;
+  width:250px;
+  aspect-ratio:1/1;
+  /* ... resto das regras já ajustadas ... */
+}
+
+/* Tablets médios (~até 768px) */
+@media (max-width: 768px){
+  .pg-tab{
+    flex:0 0 200px;   /* encolhe para 200px */
+    width:200px;
+  }
+}
+
+/* Celulares (~até 480px) */
+@media (max-width: 480px){
+  .pg-tab{
+    flex:0 0 160px;   /* menorzinho no celular */
+    width:160px;
+    padding:8px;      /* reduz o respiro interno também */
+  }
+}
+
+/* ====== P&G – Toolbar (Busca + Tabs) consolidado ====== */
+
+/* Toolbar: busca à direita no desktop, empilha no mobile */
+.pg-toolbar{
+  display:grid;
+  grid-template-columns: 1fr auto;   /* conteúdo à esquerda, busca à direita */
+  align-items:center;
+  gap:16px;
+  margin:18px 0;
+}
+
+.pg-search{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  justify-content:flex-end;
+}
+.pg-search label{
+  font-family:Garamond,serif; color:#133336; opacity:.9;
+}
+.pg-search input{
+  width:min(360px, 70vw);
+  padding:10px 12px;
+  border:0; border-radius:14px;
+  background:#E8DCC3; color:#133336; font-size:1rem;
+  box-shadow:
+    inset 6px 6px 12px rgba(0,0,0,.08),
+    inset -6px -6px 12px rgba(255,255,255,.55);
+}
+
+/* ====== Tabs de toxicidade ====== */
+.pg-tabs{
+  display:flex;                   /* cola os botões lado a lado */
+  justify-content:center;         /* centraliza o grupo */
+  align-items:flex-start;
+  gap:6px;                        /* distância entre botões */
+  flex-wrap:wrap;                 /* quebra no mobile quando precisar */
+  margin:16px auto 0;             /* sem width:max-content para não afetar a busca */
+}
+
+/* Botão (quadrado, com respiro, neomórfico) */
+.pg-tab{
+  margin:0;
+  flex:0 0 250px;                 /* alvo 250px no desktop */
+  width:250px;
+  max-width:100%;
+  aspect-ratio:1 / 1;
+  padding:12px;                   /* espaço entre imagem e borda */
+  box-sizing:border-box;
+
+  border:0;
+  border-radius:18px;
+  background:#E8DCC3;
+  box-shadow:
+    6px 6px 12px rgba(0,0,0,.10),
+    -6px -6px 12px rgba(255,255,255,.60);
+
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+  transition: transform .1s ease, box-shadow .15s ease;
+}
+
+/* Imagem centralizada e com folga */
+.pg-tab > img{
+  max-width:86%;
+  max-height:86%;
+  object-fit:contain;
+  display:block;
+  border-radius:12px;
+}
+
+/* Sem “linha preta” de foco e com efeito afundar */
+.pg-tab:focus, .pg-tab:focus-visible{ outline:none !important; }
+.pg-tab:hover{ transform: translateY(-1px); }
+.pg-tab[aria-selected="true"]{
+  box-shadow:
+    inset 4px 4px 10px rgba(0,0,0,.18),
+    inset -4px -4px 10px rgba(255,255,255,.75);
+  transform: translateY(1px);
+}
+.pg-tab:active{
+  box-shadow:
+    inset 6px 6px 12px rgba(0,0,0,.22),
+    inset -6px -6px 12px rgba(255,255,255,.80);
+  transform: translateY(2px);
+}
+
+/* Texto acessível (se usar .sr-only) */
+.sr-only{
+  position:absolute !important; width:1px; height:1px;
+  margin:-1px; padding:0; border:0; overflow:hidden;
+  clip:rect(0,0,0,0); clip-path: inset(50%);
+}
+
+/* ====== Responsivo ====== */
+/* Empilha a busca abaixo e deixa input ocupar 100% */
+@media (max-width: 720px){
+  .pg-toolbar{ grid-template-columns: 1fr; }
+  .pg-search{ justify-content:stretch; }
+  .pg-search input{ width:100%; }
+}
+
+/* Reduz o tamanho dos botões em tablets */
+@media (max-width: 768px){
+  .pg-tab{
+    flex:0 0 200px;
+    width:200px;
+  }
+}
+
+/* Reduz ainda mais em celulares e mantém “gap” curto */
+@media (max-width: 480px){
+  .pg-tab{
+    flex:0 0 160px;
+    width:160px;
+    padding:8px;                /* respiro proporcional menor */
+  }
+  .pg-tabs{ gap:6px; }
+}
 
 
 
