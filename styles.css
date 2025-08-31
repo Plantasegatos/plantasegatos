@@ -1134,84 +1134,16 @@ main[class^="post-"] h3 {
   color: #333;
 }
 
-/* ====== PLANTAS & GATOS – TABS DE TOXICIDADE (enxuto) ====== */
+/* ====== P&G – BUSCA + TABS DE TOXICIDADE (final) ====== */
 
-/* Container: 2 colunas quando couber, 1 coluna em telas estreitas */
-.pg-tabs{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap:12px;
-  margin:18px 0;
-}
-
-/* Botão base (card de imagem) */
-.pg-tab{
-  border:0;
-  padding:0;
-  border-radius:18px;
-  background:#E8DCC3;            /* cor de fundo enquanto a imagem carrega */
-  box-shadow:
-    6px 6px 12px rgba(0,0,0,.10),
-    -6px -6px 12px rgba(255,255,255,.60);
-  cursor:pointer;
-  transition: transform .08s ease, box-shadow .2s ease, outline-color .2s ease;
-  aspect-ratio: 16 / 9;          /* mantém proporção agradável */
-  min-height: 96px;              /* garante área de clique em mobile */
-}
-
-/* Variação quadrada (se estiver usando .pg-tab-square no HTML) */
-.pg-tab.pg-tab-square{
-  aspect-ratio: 1 / 1;
-}
-
-/* Imagem: ocupa 100% e respeita o raio do botão */
-.pg-tab > img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit: cover;             /* cobre o card sem distorcer */
-  border-radius: inherit;
-}
-
-/* Estados de interação e acessibilidade */
-.pg-tab:hover{ transform: translateY(-1px); }
-.pg-tab:active{ transform: translateY(0); }
-.pg-tab[aria-selected="true"]{
-  outline:2px solid #133336;
-  outline-offset:2px;
-  box-shadow:
-    4px 4px 10px rgba(0,0,0,.14),
-    -4px -4px 10px rgba(255,255,255,.70);
-}
-.pg-tab:focus{ outline:none; }
-.pg-tab:focus-visible{
-  outline:3px solid #285F6B;
-  outline-offset:3px;
-}
-
-/* Texto apenas para leitores de tela (para os <span class="sr-only">) */
-.sr-only{
-  position:absolute !important;
-  width:1px; height:1px;
-  margin:-1px; padding:0; border:0;
-  overflow:hidden; clip:rect(0,0,0,0); clip-path: inset(50%);
-}
-
-/* Ajuste fino (opcional): força 1 por linha em telas muito estreitas */
-@media (max-width: 480px){
-  .pg-tabs{ grid-template-columns: 1fr; }
-}
-
-/* ====== PLANTAS & GATOS – BARRA DE BUSCA E TABS DE TOXICIDADE ====== */
-
-/* Container geral */
+/* Toolbar (busca + tabs) */
 .pg-toolbar{
   display:grid;
   gap:12px;
   margin:18px 0;
 }
 
-/* Barra de busca */
+/* ---- Busca (só nesta página) ---- */
 .pg-search{
   display:flex;
   align-items:center;
@@ -1219,89 +1151,71 @@ main[class^="post-"] h3 {
   justify-content:flex-end;
 }
 .pg-search label{
-  font-family:Garamond,serif;
-  color:#133336;
-  opacity:.9;
+  font-family:Garamond,serif; color:#133336; opacity:.9;
 }
 .pg-search input{
   width:min(360px, 70vw);
-  padding:10px 12px;
-  border:0;
-  border-radius:14px;
-  background:#E8DCC3;
-  color:#133336;
-  font-size:1rem;
+  padding:10px 12px; border:0; border-radius:14px;
+  background:#E8DCC3; color:#133336; font-size:1rem;
   box-shadow:
     inset 6px 6px 12px rgba(0,0,0,.08),
     inset -6px -6px 12px rgba(255,255,255,.55);
 }
 
-/* Tabs de toxicidade */
+/* ---- Tabs de toxicidade ---- */
 .pg-tabs{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap:12px;
+  justify-content:center;
 }
 
-/* Botão-base */
+/* Botão-base (card quadrado, responsivo, máx 250px) */
 .pg-tab{
-  border:0;
-  padding:0;
-  border-radius:18px;
-  background:#E8DCC3;
-  box-shadow:
-    6px 6px 12px rgba(0,0,0,.10),
-    -6px -6px 12px rgba(255,255,255,.60);
-  cursor:pointer;
-  transition: transform .1s ease, box-shadow .15s ease;
-  aspect-ratio: 16 / 9;
-  min-height:96px;
+  border:0; padding:0; border-radius:18px; background:#E8DCC3;
+  box-shadow: 6px 6px 12px rgba(0,0,0,.10), -6px -6px 12px rgba(255,255,255,.60);
+  cursor:pointer; transition: transform .1s ease, box-shadow .15s ease;
+  aspect-ratio: 1 / 1; width:100%; max-width:250px; margin:0 auto;
 }
 
-/* Se usar versão quadrada */
-.pg-tab.pg-tab-square{
-  aspect-ratio: 1 / 1;
-}
+/* Se estiver usando a classe .pg-tab-square, mantém compatível */
+.pg-tab.pg-tab-square{ aspect-ratio: 1 / 1; }
 
-/* Imagem dentro do botão */
+/* Imagem preenche o card */
 .pg-tab > img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  border-radius:inherit;
+  display:block; width:100%; height:100%;
+  object-fit:cover; border-radius:inherit;
 }
 
 /* Remover contorno preto default */
-.pg-tab:focus{ outline:none; }
+.pg-tab:focus, .pg-tab:focus-visible{
+  outline:none !important;
+}
 
-/* Estado selecionado */
+/* Hover (flutua leve) */
+.pg-tab:hover{ transform: translateY(-1px); }
+
+/* Selecionado (afundado leve) */
 .pg-tab[aria-selected="true"]{
   box-shadow:
     inset 4px 4px 10px rgba(0,0,0,.18),
     inset -4px -4px 10px rgba(255,255,255,.75);
-  transform: translateY(1px); /* afunda ao ficar ativo */
+  transform: translateY(1px);
 }
 
-/* Hover leve */
-.pg-tab:hover{
-  transform: translateY(-1px);
-}
-
-/* Pressionar (efeito afundar) */
+/* Clique (afunda mais) */
 .pg-tab:active{
   box-shadow:
     inset 6px 6px 12px rgba(0,0,0,.22),
-    inset -6px -6px 12px rgba(255,255,255,.8);
+    inset -6px -6px 12px rgba(255,255,255,.80);
   transform: translateY(2px);
 }
 
-/* Acessibilidade: texto só p/ leitores de tela */
+/* Acessibilidade: texto visualmente oculto */
 .sr-only{
-  position:absolute !important;
-  width:1px; height:1px;
-  margin:-1px; padding:0; border:0;
-  overflow:hidden; clip:rect(0,0,0,0); clip-path: inset(50%);
+  position:absolute !important; width:1px; height:1px;
+  margin:-1px; padding:0; border:0; overflow:hidden;
+  clip:rect(0,0,0,0); clip-path: inset(50%);
 }
 
 /* Mobile */
@@ -1310,6 +1224,7 @@ main[class^="post-"] h3 {
   .pg-search{ justify-content:stretch; }
   .pg-search input{ width:100%; }
 }
+
 
 
 
