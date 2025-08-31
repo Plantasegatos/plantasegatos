@@ -1134,227 +1134,123 @@ main[class^="post-"] h3 {
   color: #333;
 }
 
-/* ==== Filtro de Toxicidade – versão final, sem conflitos ==== */
-
-/* Container: bota os dois botões juntinhos */
-.pg-tabs{
-  display:flex;
-  justify-content:center;   /* centraliza o grupo */
-  align-items:flex-start;
-  gap:6px;                  /* distância entre os botões (ajuste aqui) */
-  flex-wrap:wrap;           /* quebra no mobile quando precisar */
-  margin:16px auto;
-  width:max-content;        /* encolhe ao tamanho dos botões */
+/* ============================
+   TOOLBAR DE FILTROS + BUSCA
+   ============================ */
+.pg-toolbar {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
 }
 
-/* Botão: quadrado, máx. 250px, com “respiro” interno */
-.pg-tab{
-  margin:0;                 /* garante que não existe margem escondida */
-  flex:0 0 250px;           /* tenta 250px quando houver espaço */
-  width:250px;              /* tamanho alvo */
-  max-width:100%;           /* permite encolher */
-  aspect-ratio:1 / 1;
-  padding:12px;             /* espaço entre imagem e borda */
-  box-sizing:border-box;
+/* Container centralizado dos botões */
+.pg-tabs {
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  gap: 2rem;                /* espaço entre os botões */
+  margin: 1rem 0;
+}
 
-  border:0;
-  border-radius:18px;
-  background:#E8DCC3;
+/* Botões quadrados em neomorfismo */
+.pg-tab.pg-tab-square {
+  width: 250px;
+  height: 250px;
+  border-radius: 24px;
+  background: #E8DCC3; /* bege padrão do site */
   box-shadow:
-    6px 6px 12px rgba(0,0,0,.10),
-    -6px -6px 12px rgba(255,255,255,.60);
-
-  display:flex;             /* centraliza a imagem no miolo */
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  transition: transform .1s ease, box-shadow .15s ease;
+    8px 8px 16px rgba(0,0,0,0.15),   /* sombra mais escura */
+    -8px -8px 16px rgba(255,255,255,0.7); /* luz mais clara */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  padding: 0;
 }
 
-/* Imagem centralizada e sem encostar nas bordas */
-.pg-tab > img{
-  max-width:86%;
-  max-height:86%;
-  object-fit:contain;
-  display:block;
-  border-radius:12px;
+.pg-tab.pg-tab-square img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  border-radius: 16px;
 }
 
-/* Sem “linha preta” de foco */
-.pg-tab:focus,
-.pg-tab:focus-visible{ outline:none !important; }
-
-/* Afundar (selecionado/ativo) */
-.pg-tab[aria-selected="true"]{
+/* Hover */
+.pg-tab.pg-tab-square:hover {
   box-shadow:
-    inset 4px 4px 10px rgba(0,0,0,.18),
-    inset -4px -4px 10px rgba(255,255,255,.75);
+    4px 4px 8px rgba(0,0,0,0.2),
+    -4px -4px 8px rgba(255,255,255,0.7);
+  transform: translateY(-2px);
+}
+
+/* Estado ativo (selecionado) */
+.pg-tab.pg-tab-square[aria-selected="true"] {
+  box-shadow:
+    inset 6px 6px 12px rgba(0,0,0,0.2),
+    inset -6px -6px 12px rgba(255,255,255,0.8);
+}
+
+/* Clique curto (feedback) */
+.pg-tab.pg-tab-square:active {
   transform: translateY(1px);
 }
-.pg-tab:active{
-  box-shadow:
-    inset 6px 6px 12px rgba(0,0,0,.22),
-    inset -6px -6px 12px rgba(255,255,255,.80);
-  transform: translateY(2px);
-}
 
-/* Mobile: deixa encolher/empilhar com mesmo “gap” curtinho */
-@media (max-width: 560px){
-  .pg-tabs{ width:100%; }
-  .pg-tab{ flex:1 1 200px; width:auto; }
+/* Busca */
+.pg-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
 }
-
-/* Texto oculto acessível (se usar .sr-only) */
-.sr-only{
-  position:absolute !important; width:1px; height:1px;
-  margin:-1px; padding:0; border:0; overflow:hidden;
-  clip:rect(0,0,0,0); clip-path: inset(50%);
+.pg-search label {
+  font-family: Garamond, serif;
+  color: #133336;
+  opacity: .9;
 }
-
-/* Desktop / padrão */
-.pg-tab{
-  flex:0 0 250px;
-  width:250px;
-  aspect-ratio:1/1;
-  /* ... resto das regras já ajustadas ... */
-}
-
-/* Tablets médios (~até 768px) */
-@media (max-width: 768px){
-  .pg-tab{
-    flex:0 0 200px;   /* encolhe para 200px */
-    width:200px;
-  }
-}
-
-/* Celulares (~até 480px) */
-@media (max-width: 480px){
-  .pg-tab{
-    flex:0 0 160px;   /* menorzinho no celular */
-    width:160px;
-    padding:8px;      /* reduz o respiro interno também */
-  }
-}
-
-/* ====== P&G – Toolbar (Busca + Tabs) consolidado ====== */
-
-/* Toolbar: busca à direita no desktop, empilha no mobile */
-.pg-toolbar{
-  display:grid;
-  grid-template-columns: 1fr auto;   /* conteúdo à esquerda, busca à direita */
-  align-items:center;
-  gap:16px;
-  margin:18px 0;
-}
-
-.pg-search{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  justify-content:flex-end;
-}
-.pg-search label{
-  font-family:Garamond,serif; color:#133336; opacity:.9;
-}
-.pg-search input{
-  width:min(360px, 70vw);
-  padding:10px 12px;
-  border:0; border-radius:14px;
-  background:#E8DCC3; color:#133336; font-size:1rem;
+.pg-search input {
+  width: min(360px, 70vw);
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: #E8DCC3;
+  color: #133336;
+  font-size: 1rem;
   box-shadow:
     inset 6px 6px 12px rgba(0,0,0,.08),
     inset -6px -6px 12px rgba(255,255,255,.55);
 }
 
-/* ====== Tabs de toxicidade ====== */
-.pg-tabs{
-  display:flex;                   /* cola os botões lado a lado */
-  justify-content:center;         /* centraliza o grupo */
-  align-items:flex-start;
-  gap:6px;                        /* distância entre botões */
-  flex-wrap:wrap;                 /* quebra no mobile quando precisar */
-  margin:16px auto 0;             /* sem width:max-content para não afetar a busca */
+/* Contador */
+.pg-counter {
+  opacity: .8;
+  font-size: .95rem;
 }
 
-/* Botão (quadrado, com respiro, neomórfico) */
-.pg-tab{
-  margin:0;
-  flex:0 0 250px;                 /* alvo 250px no desktop */
-  width:250px;
-  max-width:100%;
-  aspect-ratio:1 / 1;
-  padding:12px;                   /* espaço entre imagem e borda */
-  box-sizing:border-box;
-
-  border:0;
-  border-radius:18px;
-  background:#E8DCC3;
-  box-shadow:
-    6px 6px 12px rgba(0,0,0,.10),
-    -6px -6px 12px rgba(255,255,255,.60);
-
-  display:flex; align-items:center; justify-content:center;
-  cursor:pointer;
-  transition: transform .1s ease, box-shadow .15s ease;
+/* Acessibilidade: texto apenas para leitores de tela */
+.sr-only {
+  position: absolute!important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* Imagem centralizada e com folga */
-.pg-tab > img{
-  max-width:86%;
-  max-height:86%;
-  object-fit:contain;
-  display:block;
-  border-radius:12px;
-}
-
-/* Sem “linha preta” de foco e com efeito afundar */
-.pg-tab:focus, .pg-tab:focus-visible{ outline:none !important; }
-.pg-tab:hover{ transform: translateY(-1px); }
-.pg-tab[aria-selected="true"]{
-  box-shadow:
-    inset 4px 4px 10px rgba(0,0,0,.18),
-    inset -4px -4px 10px rgba(255,255,255,.75);
-  transform: translateY(1px);
-}
-.pg-tab:active{
-  box-shadow:
-    inset 6px 6px 12px rgba(0,0,0,.22),
-    inset -6px -6px 12px rgba(255,255,255,.80);
-  transform: translateY(2px);
-}
-
-/* Texto acessível (se usar .sr-only) */
-.sr-only{
-  position:absolute !important; width:1px; height:1px;
-  margin:-1px; padding:0; border:0; overflow:hidden;
-  clip:rect(0,0,0,0); clip-path: inset(50%);
-}
-
-/* ====== Responsivo ====== */
-/* Empilha a busca abaixo e deixa input ocupar 100% */
-@media (max-width: 720px){
-  .pg-toolbar{ grid-template-columns: 1fr; }
-  .pg-search{ justify-content:stretch; }
-  .pg-search input{ width:100%; }
-}
-
-/* Reduz o tamanho dos botões em tablets */
-@media (max-width: 768px){
-  .pg-tab{
-    flex:0 0 200px;
-    width:200px;
+/* Responsivo */
+@media (max-width: 520px) {
+  .pg-tabs { gap: 1rem; }
+  .pg-tab.pg-tab-square {
+    width: 180px;
+    height: 180px;
+    border-radius: 18px;
   }
+  .pg-search { justify-content: stretch; }
+  .pg-search input { width: 100%; }
 }
 
-/* Reduz ainda mais em celulares e mantém “gap” curto */
-@media (max-width: 480px){
-  .pg-tab{
-    flex:0 0 160px;
-    width:160px;
-    padding:8px;                /* respiro proporcional menor */
-  }
-  .pg-tabs{ gap:6px; }
-}
 
 
 
