@@ -1222,6 +1222,40 @@ main[class^="post-"] h3 {
   .pg-search input{ width:100%; }
 }
 
+/* ---- Tabs de toxicidade ---- */
+.pg-tabs{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap:4px;                     /* botões bem próximos */
+  justify-content:center;
+}
+
+/* Botão-base */
+.pg-tab{
+  border:0;
+  padding:12px;                /* cria margem entre imagem e borda */
+  border-radius:18px;
+  background:#E8DCC3;
+  box-shadow: 6px 6px 12px rgba(0,0,0,.10),
+              -6px -6px 12px rgba(255,255,255,.60);
+  cursor:pointer;
+  transition: transform .1s ease, box-shadow .15s ease;
+  aspect-ratio: 1 / 1;
+  width:100%; max-width:250px;
+  display:flex;                /* garante centralização */
+  align-items:center;
+  justify-content:center;
+  box-sizing:border-box;
+}
+
+/* Imagem centralizada com respiro */
+.pg-tab > img{
+  max-width:85%;               /* não deixa encostar nas bordas */
+  max-height:85%;
+  object-fit:contain;
+  display:block;
+  border-radius:12px;
+}
 
 
 
