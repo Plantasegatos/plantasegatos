@@ -1199,16 +1199,16 @@ main[class^="post-"] h3 {
 
 /* Container das abas: alinhamento e espaçamento */
 .pg-tabs {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(84px, 1fr));
-  gap: 0.75rem;
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  gap: 1rem;                 /* espaço entre os botões */
 }
 
 /* Botões quadrados base */
 .pg-tab.pg-tab-square {
   position: relative;
   width: 100%;
-  max-width: 200px;            /* <<< aqui você controla o tamanho máximo */
+  max-width: 250px;            /* <<< aqui você controla o tamanho máximo */
   aspect-ratio: 1 / 1;
   border: 2px solid #e0e0e0;
   border-radius: 12px;
