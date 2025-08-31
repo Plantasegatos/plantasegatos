@@ -1134,130 +1134,83 @@ main[class^="post-"] h3 {
   color: #333;
 }
 
-/* ====== P&G – BUSCA + TABS DE TOXICIDADE (ajustado) ====== */
+/* ==== Filtro de Toxicidade – versão final, sem conflitos ==== */
 
-/* Toolbar (busca + tabs) */
-.pg-toolbar{
-  display:grid;
-  gap:12px;
-  margin:18px 0;
-}
-
-/* ---- Busca ---- */
-.pg-search{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  justify-content:flex-end;
-}
-.pg-search label{
-  font-family:Garamond,serif; color:#133336; opacity:.9;
-}
-.pg-search input{
-  width:min(360px, 70vw);
-  padding:10px 12px; border:0; border-radius:14px;
-  background:#E8DCC3; color:#133336; font-size:1rem;
-  box-shadow:
-    inset 6px 6px 12px rgba(0,0,0,.08),
-    inset -6px -6px 12px rgba(255,255,255,.55);
-}
-
-/* ---- Tabs de toxicidade ---- */
+/* Container: bota os dois botões juntinhos */
 .pg-tabs{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap:8px;                     /* botões mais próximos */
-  justify-content:center;
+  display:flex;
+  justify-content:center;   /* centraliza o grupo */
+  align-items:flex-start;
+  gap:6px;                  /* distância entre os botões (ajuste aqui) */
+  flex-wrap:wrap;           /* quebra no mobile quando precisar */
+  margin:16px auto;
+  width:max-content;        /* encolhe ao tamanho dos botões */
 }
 
-/* Botão-base */
+/* Botão: quadrado, máx. 250px, com “respiro” interno */
 .pg-tab{
-  border:0; padding:10px;       /* padding cria espaço entre imagem e borda */
+  margin:0;                 /* garante que não existe margem escondida */
+  flex:0 0 250px;           /* tenta 250px quando houver espaço */
+  width:250px;              /* tamanho alvo */
+  max-width:100%;           /* permite encolher */
+  aspect-ratio:1 / 1;
+  padding:12px;             /* espaço entre imagem e borda */
+  box-sizing:border-box;
+
+  border:0;
   border-radius:18px;
   background:#E8DCC3;
-  box-shadow: 6px 6px 12px rgba(0,0,0,.10), -6px -6px 12px rgba(255,255,255,.60);
+  box-shadow:
+    6px 6px 12px rgba(0,0,0,.10),
+    -6px -6px 12px rgba(255,255,255,.60);
+
+  display:flex;             /* centraliza a imagem no miolo */
+  align-items:center;
+  justify-content:center;
   cursor:pointer;
   transition: transform .1s ease, box-shadow .15s ease;
-  aspect-ratio: 1 / 1;
-  width:100%; max-width:250px;
-  margin:0 auto;
-  box-sizing:border-box;        /* padding conta dentro do tamanho fixo */
 }
 
-/* Imagem com margem interna */
+/* Imagem centralizada e sem encostar nas bordas */
 .pg-tab > img{
+  max-width:86%;
+  max-height:86%;
+  object-fit:contain;
   display:block;
-  width:100%; height:100%;
-  object-fit:contain;           /* mantém imagem inteira com folga */
-  border-radius:12px;           /* arredonda só um pouco a imagem */
+  border-radius:12px;
 }
 
-/* Sem contorno preto */
-.pg-tab:focus, .pg-tab:focus-visible{ outline:none !important; }
+/* Sem “linha preta” de foco */
+.pg-tab:focus,
+.pg-tab:focus-visible{ outline:none !important; }
 
-/* Hover/ativo */
-.pg-tab:hover{ transform: translateY(-1px); }
+/* Afundar (selecionado/ativo) */
 .pg-tab[aria-selected="true"]{
-  box-shadow: inset 4px 4px 10px rgba(0,0,0,.18),
-              inset -4px -4px 10px rgba(255,255,255,.75);
+  box-shadow:
+    inset 4px 4px 10px rgba(0,0,0,.18),
+    inset -4px -4px 10px rgba(255,255,255,.75);
   transform: translateY(1px);
 }
 .pg-tab:active{
-  box-shadow: inset 6px 6px 12px rgba(0,0,0,.22),
-              inset -6px -6px 12px rgba(255,255,255,.80);
+  box-shadow:
+    inset 6px 6px 12px rgba(0,0,0,.22),
+    inset -6px -6px 12px rgba(255,255,255,.80);
   transform: translateY(2px);
 }
 
-/* Acessibilidade */
+/* Mobile: deixa encolher/empilhar com mesmo “gap” curtinho */
+@media (max-width: 560px){
+  .pg-tabs{ width:100%; }
+  .pg-tab{ flex:1 1 200px; width:auto; }
+}
+
+/* Texto oculto acessível (se usar .sr-only) */
 .sr-only{
   position:absolute !important; width:1px; height:1px;
   margin:-1px; padding:0; border:0; overflow:hidden;
   clip:rect(0,0,0,0); clip-path: inset(50%);
 }
 
-/* Mobile */
-@media (max-width: 480px){
-  .pg-tabs{ grid-template-columns: 1fr; }
-  .pg-search{ justify-content:stretch; }
-  .pg-search input{ width:100%; }
-}
-
-/* ---- Tabs de toxicidade ---- */
-.pg-tabs{
-  display:flex;                /* flex em vez de grid */
-  justify-content:center;      /* centraliza o grupo */
-  gap:12px;                    /* controla a distância entre botões */
-  margin:18px 0;
-  flex-wrap:wrap;              /* se não couber, quebra para baixo */
-}
-
-/* Botão-base */
-.pg-tab{
-  border:0;
-  padding:12px;
-  border-radius:18px;
-  background:#E8DCC3;
-  box-shadow: 6px 6px 12px rgba(0,0,0,.10),
-              -6px -6px 12px rgba(255,255,255,.60);
-  cursor:pointer;
-  transition: transform .1s ease, box-shadow .15s ease;
-  aspect-ratio: 1 / 1;
-  width:100%;
-  max-width:250px;             /* nunca maior que 250 */
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-sizing:border-box;
-}
-
-/* Imagem centralizada com respiro */
-.pg-tab > img{
-  max-width:85%;
-  max-height:85%;
-  object-fit:contain;
-  display:block;
-  border-radius:12px;
-}
 
 
 
