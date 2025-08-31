@@ -20,30 +20,38 @@
       para que você possa criar um ambiente bonito e seguro para seus felinos.
     </p>
 
-<!-- FILTROS (tabs + busca) -->
-<section class="pg-toolbar" role="tablist" aria-label="Filtro de toxicidade">
-  <div class="pg-tabs">
+<!-- FILTROS (busca antes das tabs) -->
+<section class="pg-toolbar" aria-label="Filtro e busca de plantas">
+  <!-- Busca -->
+  <div class="pg-search">
+    <label for="pg-q">Busca</label>
+    <input id="pg-q" type="search"
+           placeholder="por nome popular ou científico…"
+           aria-label="Buscar planta">
+  </div>
+
+  <!-- Tabs de toxicidade -->
+  <div class="pg-tabs" role="tablist" aria-label="Filtro de toxicidade">
     <!-- Botão: NÃO TÓXICAS (imagem sem texto) -->
     <button class="pg-tab pg-tab-image" id="tab-atoxicas" role="tab"
-            aria-selected="true" data-filter="atoxicas" aria-label="Não tóxicas">
+            aria-selected="true" data-filter="atoxicas" aria-controls="pg-grid"
+            aria-label="Não tóxicas">
       <img src="IMG/btn-nao-toxicas.jpg" alt="" loading="lazy">
       <span class="sr-only">Não tóxicas</span>
     </button>
 
     <!-- Botão: TÓXICAS (imagem sem texto) -->
     <button class="pg-tab pg-tab-image" id="tab-toxicas" role="tab"
-            aria-selected="false" data-filter="toxicas" aria-label="Tóxicas">
+            aria-selected="false" data-filter="toxicas" aria-controls="pg-grid"
+            aria-label="Tóxicas">
       <img src="IMG/btn-toxicas.jpg" alt="" loading="lazy">
       <span class="sr-only">Tóxicas</span>
     </button>
   </div>
 
-  <div class="pg-search">
-    <label for="pg-q">Busca</label>
-    <input id="pg-q" type="search" placeholder="por nome popular ou científico…" aria-label="Buscar planta">
-  </div>
-
+  <!-- Contador + mensagem dinâmica -->
   <div class="pg-counter" aria-live="polite"></div>
+  <small id="pg-hint" class="pg-hint" style="display:none" aria-live="polite"></small>
 </section>
 
     <!-- GRID DE PLANTAS -->
