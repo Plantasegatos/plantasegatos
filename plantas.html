@@ -1924,66 +1924,117 @@
 
 <script>
 (function(){
-  const grid = document.querySelector('.blog-container');
+  // ----- Seletores existentes (mantidos) -----
+  const grid     = document.querySelector('.blog-container');
   if (!grid) return;
 
-  const cards = Array.from(grid.querySelectorAll('.plant-card'));
-  const q = document.getElementById('pg-q');
-  const btnAtox = document.getElementById('tab-atoxicas');
-  const btnTox = document.getElementById('tab-toxicas');
-  const counter = document.querySelector('.pg-counter');
+  const cards    = Array.from(grid.querySelectorAll('.plant-card'));
+  const qInput   = document.getElementById('pg-q');
+  const btnAtox  = document.getElementById('tab-atoxicas');
+  const btnTox   = document.getElementById('tab-toxicas');
+  const counter  = document.querySelector('.pg-counter');
+  const hint     = document.getElementById('pg-hint'); // opcional (se existir no HTML)
 
-  // 1) Classificar cada card lendo o texto existente
+  // ----- Normalização para busca (acentos/hífens/espacos) -----
+  const norm = s => (s||"")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+    .replace(/[-‐–—]/g," ").replace(/\s+/g," ")
+    .trim().toLowerCase();
+
+  // ----- Indexação dos cards (compatível com seu HTML atual) -----
+  // Mantém sua lógica: se não houver data-toxica, infere pelo texto do card.
   cards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-    // Palavras-chave (inclui variações vistas no seu arquivo)
-    const isToxic = /☠️|tóxica|altamente tóxica|levemente tóxica|cautela|com atenção/.test(text);
-    const isSafe  = /✅|atóxica|não tóxica|segura|😻 segura/.test(text);
-    // Regra: se marcar como tóxica OU cautela -> tratamos como "toxicas" (prudência)
-    card.dataset.toxica = isToxic && !isSafe ? 'true' : 'false';
-    // Index simples para busca
-    const title = (card.querySelector('h3')?.innerText || '').toLowerCase();
-    const alt   = (card.querySelector('img')?.getAttribute('alt') || '').toLowerCase();
-    card.dataset.name = (title + ' ' + alt).trim();
+    // 1) Toxicidade
+    const explicit = card.getAttribute('data-toxica');
+    if (explicit == null) {
+      const text = card.innerText.toLowerCase();
+      const isToxic = /☠️|tóxica|altamente tóxica|levemente tóxica|cautela|com atenção/.test(text);
+      const isSafe  = /✅|atóxica|não tóxica|segura|😻 segura/.test(text);
+      card.dataset.toxica = (isToxic && !isSafe) ? 'true' : 'false';
+    }
+
+    // 2) Campos para busca
+    const title = (card.querySelector('h3')?.textContent || '');
+    const sci   = (card.querySelector('em, i')?.textContent || '');
+    const alt   = (card.querySelector('img')?.getAttribute('alt') || '');
+    const tags  = card.getAttribute('data-tags') || '';
+    // Index normalizado
+    card.dataset.index = norm([title, sci, alt, tags].join(' '));
   });
 
+  // ----- Estado do filtro (mantido no padrão atual) -----
+  let filter = 'atoxicas'; // 'atoxicas' | 'toxicas'
+
   function setTab(tab){ // 'atoxicas' | 'toxicas'
+    filter = tab;
     const tox = (tab === 'toxicas');
-    btnAtox.setAttribute('aria-selected', (!tox).toString());
-    btnTox.setAttribute('aria-selected', tox.toString());
-    filter();
+    btnAtox?.setAttribute('aria-selected', (!tox).toString());
+    btnTox?.setAttribute('aria-selected', tox.toString());
+    apply();
   }
 
-  function filter(){
-    const term = (q?.value || '').trim().toLowerCase();
-    const showToxic = btnTox.getAttribute('aria-selected') === 'true';
-    let visible = 0;
+  // ----- Busca global → depois aplica filtro (mudança-chave) -----
+  function apply(){
+    const q = norm(qInput?.value || '');
+
+    let hitsAll = 0, hitsShown = 0;
+    let hitsAtox = 0, hitsTox = 0;
 
     cards.forEach(card => {
+      const idx = card.dataset.index || '';
+      const matchText = q ? idx.includes(q) : true;    // 1) BUSCA em todo o conjunto
+      if (!matchText) { card.style.display = 'none'; return; }
+      hitsAll++;
+
       const isToxic = card.dataset.toxica === 'true';
-      const matchTab = showToxic ? isToxic : !isToxic;
-      const name = card.dataset.name || '';
-      const matchText = !term || name.includes(term);
-      const show = matchTab && matchText;
+      const matchFilter = filter === 'toxicas' ? isToxic : !isToxic; // 2) FILTRO por aba
+
+      // estatística por categoria (dos que passaram pela busca)
+      if (isToxic) hitsTox++; else hitsAtox++;
+
+      const show = matchFilter;
       card.style.display = show ? '' : 'none';
-      if (show) visible++;
+      if (show) hitsShown++;
     });
 
+    // ----- Contador amigável -----
     if (counter){
-      const label = showToxic ? 'tóxicas' : 'não tóxicas';
-      counter.textContent = `${visible} planta(s) ${label} encontradas`;
+      if (q) {
+        counter.textContent = `Resultados visíveis: ${hitsShown} (encontrados: ${hitsAll})`;
+      } else {
+        counter.textContent = filter === 'toxicas'
+          ? `Tóxicas: ${hitsTox}`
+          : `Não tóxicas: ${hitsAtox}`;
+      }
+    }
+
+    // ----- Dica se a busca encontrou algo mas o filtro ocultou tudo -----
+    if (hint){
+      if (q && hitsAll > 0 && hitsShown === 0) {
+        const destino = (filter === 'toxicas') ? 'Não tóxicas' : 'Tóxicas';
+        hint.innerHTML = `Encontramos itens para “${qInput.value}” em <strong>${destino}</strong>. <a href="#" id="pg-swap">Trocar filtro</a>`;
+        hint.style.display = 'inline';
+        document.getElementById('pg-swap')?.addEventListener('click', (e)=>{
+          e.preventDefault();
+          setTab(filter === 'toxicas' ? 'atoxicas' : 'toxicas');
+        }, { once:true });
+      } else {
+        hint.style.display = 'none';
+        hint.textContent = '';
+      }
     }
   }
 
-  // Eventos
+  // ----- Eventos (mantidos) -----
   btnAtox?.addEventListener('click', () => setTab('atoxicas'));
   btnTox?.addEventListener('click', () => setTab('toxicas'));
-  q?.addEventListener('input', filter);
+  qInput?.addEventListener('input', apply);
 
-  // Estado inicial
+  // ----- Estado inicial -----
   setTab('atoxicas');
 })();
 </script>
+
 
   
 </body>
