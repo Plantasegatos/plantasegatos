@@ -1,12 +1,5 @@
 [
-  {
-    "titulo": "Fitônias. Seus lares mais verdes e bichanos seguros",
-    "trecho": "Descubra por que essa planta vibrante e segura é a favorita entre quem ama gatos e ambientes vivos.",
-    "link": "blog/fitonia.html",
-    "imagem": "IMG/fitonia-post.png",
-    "data": "2025-04-21"
-  },
-  {
+    {
     "titulo": "Rosa do Deserto: a beleza perigosa que exige distância felina",
     "trecho": "Linda, exótica e letal para gatos. Saiba por que a Rosa do Deserto precisa ser mantida longe dos bichanos — mesmo sendo irresistível.",
     "link": "blog/rosa-do-deserto-post.html",
@@ -390,7 +383,14 @@
   "link": "blog/ronronar-post.html",
   "imagem": "IMG/ronronar-post.jpg",
   "data": "2025-08-31"
-}
+},
+  {
+    "titulo": "Fitônias. Seus lares mais verdes e bichanos seguros",
+    "trecho": "Descubra por que essa planta vibrante e segura é a favorita entre quem ama gatos e ambientes vivos.",
+    "link": "blog/fitonia.html",
+    "imagem": "IMG/fitonia-post.jpg",
+    "data": "2025-09-01"
+  }
 
 
 
