@@ -1250,6 +1250,25 @@ main[class^="post-"] h3 {
   .pg-search { justify-content: stretch; }
   .pg-search input { width: 100%; }
 }
+/* Botão de troca de idioma */
+.lang-switch {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  background: #133336;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font: 500 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  opacity: .92;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.lang-switch:hover {
+  opacity: 1;
+}
 
 
 
