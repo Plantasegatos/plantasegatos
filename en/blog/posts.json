@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "Desert Rose: beautiful but unsafe for cats",
+    "trecho": "Gorgeous and exotic — but toxic. Learn why Desert Rose should stay out of feline reach.",
+    "link": "/en/blog/desert-rose-post.html",
+    "imagem": "/IMG/rosa-do-deserto-post.jpg",
+    "data": "2025-04-29"
+  },
+  {
+    "titulo": "How to make a cat-safe terrarium",
+    "trecho": "Step-by-step to build a stunning terrarium that won’t put your cat at risk.",
+    "link": "/en/blog/cat-safe-terrarium-post.html",
+    "imagem": "/IMG/terrario-seguro-post.jpg",
+    "data": "2025-06-26"
+  },
+  {
+    "titulo": "Plants your cat will probably ignore",
+    "trecho": "Low-temptation picks for calmer homes — aesthetics without feline trouble.",
+    "link": "/en/blog/plants-cats-ignore-post.html",
+    "imagem": "/IMG/plantas-ignorar-post.jpg",
+    "data": "2025-06-30"
+  }
+]
