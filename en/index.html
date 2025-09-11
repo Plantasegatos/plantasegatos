@@ -21,24 +21,51 @@
 <body class="pagina-interna">
   <div id="header"></div>
 
-  <main class="post-plantas">
-    <h2>Welcome to Plantas & Gatos</h2>
-    <p>Your hub for beautiful, cat-safe houseplants, decor, and care tips.</p>
+ <main class="post-plantas">
+  <h2>Welcome to Plantas & Gatos</h2>
+  <p>Your hub for beautiful, cat-safe houseplants, decor, and care tips.</p>
 
-    <img src="../IMG/plantas-e-gatos-hero.jpg" alt="Cozy living room with plants safe for cats" class="post-img" loading="lazy"/>
+  <img src="../IMG/plantas-e-gatos-hero.jpg" alt="Cozy living room with plants safe for cats" class="post-img" loading="lazy"/>
 
-   <section>
-  <h3>Start here</h3>
-  <ul>
-    <li><a href="../en/plantas.html">Plants</a></li>
-    <li><a href="../en/recomendacoes.html">Recommendations</a></li>
-    <li><a href="../en/sobre.html">About</a></li>
-    <li><a href="../en/contato.html">Contact</a></li>
-  </ul>
-</section>
-  </main>
+  <section>
+    <h3>Start here</h3>
+    <ul>
+      <li><a href="../en/plantas.html">Plants</a></li>
+      <li><a href="../en/recomendacoes.html">Recommendations</a></li>
+      <li><a href="../en/sobre.html">About</a></li>
+      <li><a href="../en/contato.html">Contact</a></li>
+    </ul>
+  </section>
+
+  <!-- Aqui ficarão os posts em inglês -->
+  <h3>Latest posts</h3>
+  <div id="posts-container"></div>
+</main>
 
   <a class="lang-switch" href="/">Português</a>
   <div id="footer"></div>
+    <script>
+    fetch('./blog/posts.json')  // busca o /en/blog/posts.json
+      .then(r => r.json())
+      .then(posts => {
+        const container = document.getElementById('posts-container');
+        posts.sort((a,b) => new Date(b.data) - new Date(a.data));
+
+        posts.forEach(post => {
+          const div = document.createElement('div');
+          div.className = 'post-preview';
+          div.innerHTML = `
+            <div class="preview-text">
+              <h3><a href="${post.link}">🌿 ${post.titulo}</a></h3>
+              <p>${post.trecho}</p>
+            </div>
+            <div class="preview-img">
+              <a href="${post.link}"><img src="${post.imagem}" alt="Thumbnail of ${post.titulo}"></a>
+            </div>`;
+          container.appendChild(div);
+        });
+      });
+  </script>
+
 </body>
 </html>
