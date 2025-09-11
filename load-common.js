@@ -1,52 +1,56 @@
-// Detecta se estamos em uma subpasta (blog, plantas ou qualquer outra)
-const isInSubfolder = window.location.pathname.split('/').length > 2;
+(function () {
+  // 1) Detecta se é EN pela tag <html lang="en"> OU pela URL
+  const isEN = (document.documentElement.lang || '').toLowerCase().startsWith('en')
+            || window.location.pathname.startsWith('/en/');
 
-// Caminhos para header e footer
-const headerPath = isInSubfolder ? '../header.html' : 'header.html';
-const footerPath = isInSubfolder ? '../footer.html' : 'footer.html';
+  // 2) Caminho APÓS a raiz do idioma ("/" para PT, "/en/" para EN)
+  const afterLangRoot = isEN
+    ? window.location.pathname.replace(/^\/en\//, '')   // remove prefixo /en/
+    : window.location.pathname.replace(/^\//, '');      // remove a barra inicial
 
-console.log('[DEBUG] Caminho atual:', window.location.pathname);
-console.log('[DEBUG] Subpasta detectada?', isInSubfolder);
-console.log('[DEBUG] Carregando header de:', headerPath);
-console.log('[DEBUG] Carregando footer de:', footerPath);
+  // 3) Profundidade relativa à raiz do idioma
+  //    d = 0 → /en/        | /        (index)
+  //    d = 1 → /en/x.html  | /x.html
+  //    d = 2 → /en/dir/x   | /dir/x
+  const segments = afterLangRoot.split('/').filter(Boolean);
+  const d = segments.length;
 
-// Carregar header
-fetch(headerPath)
-  .then(response => {
-    if (!response.ok) throw new Error(`Erro ao carregar header: ${response.status}`);
-    return response.text();
-  })
-  .then(data => {
-    document.getElementById('header').innerHTML = data;
-    console.log('[DEBUG] Header carregado com sucesso');
-    marcarLinkAtivo();
-  })
-  .catch(err => console.error('[ERRO HEADER]', err));
+  // 4) Para chegar no header/footer que ficam na RAIZ DO IDIOMA:
+  //    prefix = '../' repetido (d - 1), nunca negativo
+  const prefix = d > 1 ? '../'.repeat(d - 1) : '';
 
-// Carregar footer
-fetch(footerPath)
-  .then(response => {
-    if (!response.ok) throw new Error(`Erro ao carregar footer: ${response.status}`);
-    return response.text();
-  })
-  .then(data => {
-    document.getElementById('footer').innerHTML = data;
-    console.log('[DEBUG] Footer carregado com sucesso');
-  })
-  .catch(err => console.error('[ERRO FOOTER]', err));
+  const headerPath = `${prefix}header.html`;
+  const footerPath = `${prefix}footer.html`;
 
-// Destacar link ativo no menu
-function marcarLinkAtivo() {
-  const links = document.querySelectorAll('.neo-menu a');
-  const current = window.location.pathname.split('/').pop();
-  links.forEach(link => {
-    if (link.getAttribute('href') === current) {
-      link.style.color = '#D9A744';
-      link.style.boxShadow = 'inset 6px 6px 12px #0f292d, inset -6px -6px 12px #163d42';
-      link.style.transform = 'translateY(1px)';
-    }
-  });
-}
+  // DEBUG opcional
+  // console.log({ isEN, afterLangRoot, d, prefix, headerPath, footerPath });
+
+  // 5) Carrega Header
+  fetch(headerPath)
+    .then(r => { if (!r.ok) throw new Error(`Header ${r.status}`); return r.text(); })
+    .then(html => { const el = document.getElementById('header'); if (el) el.innerHTML = html; marcarLinkAtivo(); })
+    .catch(e => console.error('[HEADER]', e));
+
+  // 6) Carrega Footer
+  fetch(footerPath)
+    .then(r => { if (!r.ok) throw new Error(`Footer ${r.status}`); return r.text(); })
+    .then(html => { const el = document.getElementById('footer'); if (el) el.innerHTML = html; })
+    .catch(e => console.error('[FOOTER]', e));
+
+  // 7) Destaca link ativo (mantive sua função)
+  function marcarLinkAtivo() {
+    const links = document.querySelectorAll('.neo-menu a');
+    const current = segments.slice(-1)[0] || 'index.html'; // se vazio, considere index
+    links.forEach(link => {
+      if (link.getAttribute('href') === current) {
+        link.style.color = '#D9A744';
+        link.style.boxShadow = 'inset 6px 6px 12px #0f292d, inset -6px -6px 12px #163d42';
+        link.style.transform = 'translateY(1px)';
+      }
+    });
+  }
+})();
+
 
 
 
