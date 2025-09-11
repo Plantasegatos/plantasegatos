@@ -307,6 +307,12 @@ body.sobre footer {
   font-size: 1rem;
   line-height: 1.5;
 }
+/* Título "Latest posts" (ou "Últimos posts") que vem antes do #posts-container */
+main h3:has(+ #posts-container) {
+  text-align: center;
+  font-size: 1.4rem;   /* “um pouquinho” maior */
+  margin: 30px 0 20px;
+}
 
 /* POST PREVIEW - compatibilidade com layout atual */
 .post-preview {
