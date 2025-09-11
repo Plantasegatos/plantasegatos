@@ -36,6 +36,8 @@
       <li><a href="../en/contato.html">Contact</a></li>
     </ul>
   </section>
+<h3>Latest posts</h3>
+<div id="posts-container"></div>
 
   <!-- Aqui ficarão os posts em inglês -->
   <h3>Latest posts</h3>
@@ -44,28 +46,27 @@
 
   <a class="lang-switch" href="/">Português</a>
   <div id="footer"></div>
-    <script>
-    fetch('./blog/posts.json')  // busca o /en/blog/posts.json
-      .then(r => r.json())
-      .then(posts => {
-        const container = document.getElementById('posts-container');
-        posts.sort((a,b) => new Date(b.data) - new Date(a.data));
-
-        posts.forEach(post => {
-          const div = document.createElement('div');
-          div.className = 'post-preview';
-          div.innerHTML = `
-            <div class="preview-text">
-              <h3><a href="${post.link}">🌿 ${post.titulo}</a></h3>
-              <p>${post.trecho}</p>
-            </div>
-            <div class="preview-img">
-              <a href="${post.link}"><img src="${post.imagem}" alt="Thumbnail of ${post.titulo}"></a>
-            </div>`;
-          container.appendChild(div);
-        });
+   <script>
+  fetch('./blog/posts.json')
+    .then(r => r.json())
+    .then(posts => {
+      const container = document.getElementById('posts-container');
+      posts.sort((a,b) => new Date(b.data) - new Date(a.data));
+      posts.forEach(post => {
+        const div = document.createElement('div');
+        div.className = 'post-preview';
+        div.innerHTML = `
+          <div class="preview-text">
+            <h3><a href="${post.link}">🌿 ${post.titulo}</a></h3>
+            <p>${post.trecho}</p>
+          </div>
+          <div class="preview-img">
+            <a href="${post.link}"><img src="${post.imagem}" alt="Thumbnail of ${post.titulo}"></a>
+          </div>`;
+        container.appendChild(div);
       });
-  </script>
+    });
+</script>
 
 </body>
 </html>
