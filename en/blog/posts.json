@@ -1,23 +1,72 @@
 [
   {
-    "titulo": "Desert Rose: beautiful but unsafe for cats",
-    "trecho": "Gorgeous and exotic — but toxic. Learn why Desert Rose should stay out of feline reach.",
-    "link": "/en/blog/desert-rose-post.html",
-    "imagem": "/IMG/rosa-do-deserto-post.jpg",
-    "data": "2025-04-29"
+    "titulo": "Want to Surprise Someone?",
+    "trecho": "Before gifting flowers, find out which ones enchant without putting cats at risk.",
+    "link": "/en/blog/surpresa.html",
+    "imagem": "/IMG/buque-seguro.jpg",
+    "data": "2025-08-20"
   },
   {
-    "titulo": "How to make a cat-safe terrarium",
-    "trecho": "Step-by-step to build a stunning terrarium that won’t put your cat at risk.",
-    "link": "/en/blog/cat-safe-terrarium-post.html",
-    "imagem": "/IMG/terrario-seguro-post.jpg",
-    "data": "2025-06-26"
+    "titulo": "Kidney Disease in Cats: A Practical Guide for Guardians",
+    "trecho": "How to prevent, identify, and manage kidney disease in cats — with practical tips to improve your feline’s quality of life.",
+    "link": "/en/blog/rins-gatos-guia-post.html",
+    "imagem": "/IMG/rins-gatos-guia-post.jpg",
+    "data": "2025-08-22"
   },
   {
-    "titulo": "Plants your cat will probably ignore",
-    "trecho": "Low-temptation picks for calmer homes — aesthetics without feline trouble.",
-    "link": "/en/blog/plants-cats-ignore-post.html",
-    "imagem": "/IMG/plantas-ignorar-post.jpg",
-    "data": "2025-06-30"
+    "titulo": "Orchids: The Complete Guide to Growing at Home",
+    "trecho": "Everything about cultivation, care, propagation, and symbolism — elegant plants that are safe for cats and full of meaning.",
+    "link": "/en/blog/orquideas-post.html",
+    "imagem": "/IMG/orquideas-post.jpg",
+    "data": "2025-08-24"
+  },
+  {
+    "titulo": "Essential Oils, Cats, and Plants: Handle with Extra Care",
+    "trecho": "What relaxes you can intoxicate your cat — and even your plants. Learn how to protect every sense in your home.",
+    "link": "/en/blog/oleos.html",
+    "imagem": "/IMG/oleos-essenciais-post.jpg",
+    "data": "2025-08-26"
+  },
+  {
+    "titulo": "The Millennia-Old Partnership Between Humans and Cats",
+    "trecho": "How humans and cats built a unique 9,000-year bond — from barn guardians in the Middle East to Egyptian deities and modern-day cultural icons.",
+    "link": "/en/blog/parceria-gatos-post.html",
+    "imagem": "/IMG/parceria-gatos-post.jpg",
+    "data": "2025-08-27"
+  },
+  {
+    "titulo": "Cat Purring: Mystery, Healing, and Warning",
+    "trecho": "The magical sound that soothes and delights — yet can also reveal pain or illness. Discover the science and secrets behind purring.",
+    "link": "/en/blog/ronronar-post.html",
+    "imagem": "/IMG/ronronar-post.jpg",
+    "data": "2025-08-31"
+  },
+  {
+    "titulo": "Fittonias: Greener Homes, Safer for Cats",
+    "trecho": "Find out why this vibrant, cat-safe plant is a favorite among those who love lively interiors and feline-friendly greenery.",
+    "link": "/en/blog/fitonia.html",
+    "imagem": "/IMG/fitonia-post.jpg",
+    "data": "2025-09-01"
+  },
+  {
+    "titulo": "Plant Placement: The Secret to a Healthy Indoor Garden",
+    "trecho": "Discover how the right placement transforms your plants: windows, corners, humid rooms and balconies may be the key to a thriving indoor jungle.",
+    "link": "/en/blog/localizacao-plantas-post.html",
+    "imagem": "/IMG/localizacao-plantas-post.jpg",
+    "data": "2025-09-02"
+  },
+  {
+    "titulo": "Feline Stress: Signs, Causes, and How to Help Your Cat Live Better",
+    "trecho": "Cats also struggle with stress and anxiety. Learn to recognize the signs, understand the causes, and create a safer, more predictable environment for your feline.",
+    "link": "/en/blog/estresse-felino-post.html",
+    "imagem": "/IMG/estresse-felino-post.jpg",
+    "data": "2025-09-05"
+  },
+  {
+    "titulo": "Dieffenbachia and Cats: Beauty That Hides Danger",
+    "trecho": "Gorgeous and imposing, but highly toxic to cats. Learn why Dieffenbachia poses serious risks and which safe plants can replace it at home.",
+    "link": "/en/blog/comigo-ninguem-pode-post.html",
+    "imagem": "/IMG/comigo-ninguem-pode-post.jpg",
+    "data": "2025-09-09"
   }
 ]
