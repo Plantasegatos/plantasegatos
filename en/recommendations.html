@@ -6,18 +6,32 @@
   <title>Recommendations | Plants & Cats</title>
   <link rel="stylesheet" href="/styles.css" />
   <script src="/load-common.js" defer></script>
+  <style>
+    .under-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 120px); /* altura ajustada para header/footer */
+      padding: 40px 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .under-wrapper img {
+      max-width: 480px;
+      width: 90%;
+      height: auto;
+      box-shadow: 0 6px 18px rgba(19,51,54,.18);
+      border-radius: 12px;
+    }
+  </style>
 </head>
 <body class="pagina-interna recomendacoes">
   <div id="header"></div>
 
-  <main class="conteudo-underconstruction">
-    <h2>Recommendations</h2>
-    <p>We’re building this section to better serve our international audience.</p>
-    <figure class="uc-figure">
-      <img src="/IMG/under-construction-kitty.svg" alt="Cute cat with a builder helmet holding an Under Construction sign" loading="lazy" class="uc-img">
-      <figcaption>Under construction — check back soon!</figcaption>
-    </figure>
-    <p>In the meantime, feel free to explore our articles and plant guides.</p>
+  <main>
+    <div class="under-wrapper">
+      <img src="/IMG/Underconstruction.jpg" alt="Cute cat with helmet - Under Construction">
+    </div>
   </main>
 
   <a href="/recomendacoes.html" class="lang-switch">🇧🇷 Português</a>
