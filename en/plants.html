@@ -2089,7 +2089,6 @@
   <a href="/plantas.html" class="lang-switch">Português</a>
 
   <div id="footer"></div>
-<script src="load-common.js"></script>
 
 <script>
 (function(){
@@ -2111,8 +2110,8 @@
   // Indexar cards
   cards.forEach(card => {
     const text = card.innerText.toLowerCase();
-    const isToxic = /☠️|tóxica|altamente tóxica|levemente tóxica|cautela|com atenção/.test(text);
-    const isSafe  = /✅|atóxica|não tóxica|segura|😻 segura/.test(text);
+   const isToxic = /☠️|\btoxic\b|\bhighly toxic\b|\bmildly toxic\b|\birritant\b|⚠️|\bcaution\b|tóxica|altamente tóxica|levemente tóxica|cautela|com atenção/.test(text);
+    const isSafe  = /✅|✔️|\bnon[- ]?toxic\b|\bsafe\b|😻/.test(text);
     card.dataset.toxica = (isToxic && !isSafe) ? 'true' : 'false';
 
     const title = (card.querySelector('h3')?.textContent || '');
@@ -2156,8 +2155,13 @@
       if (q) {
         counter.textContent = `${visible} resultado(s) encontrados`;
       } else {
-        const label = (filter === 'toxicas') ? 'tóxicas' : 'não tóxicas';
-        counter.textContent = `${visible} planta(s) ${label}`;
+        const isEN = document.documentElement.lang === 'en';
+const label = (filter === 'toxicas')
+  ? (isEN ? 'toxic' : 'tóxicas')
+  : (isEN ? 'non-toxic' : 'não tóxicas');
+counter.textContent = isEN
+  ? `${visible} plant(s) ${label}`
+  : `${visible} planta(s) ${label}`;
       }
     }
   }
