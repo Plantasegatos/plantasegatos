@@ -509,7 +509,14 @@
   "link": "blog/cada-um-no-seu-quadrado-post.html",
   "imagem": "IMG/cada-um-no-seu-quadrado-post.jpg",
   "data": "2025-10-20"
-}
+},
+    {
+    "titulo": "🌿 Cultivo Indoor: Como Criar um Jardim Dentro de Casa",
+    "trecho": "Sem quintal? Sem problema. Descubra como cultivar plantas lindas e seguras para gatos dentro de casa — mesmo com pouca luz natural.",
+    "link": "blog/cultivo-indoor.html",
+    "imagem": "../IMG/cultivo-indoor-post.png",
+    "data": "2025-05-19"
+  }
 
 
 
