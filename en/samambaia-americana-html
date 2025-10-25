@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boston Fern | Plants & Cats</title>
+  <meta name="description" content="Boston Fern (Nephrolepis exaltata): complete care guide — light, watering, substrate, humidity, propagation, and cat safety."/>
+  <link rel="stylesheet" href="/styles.css"/>
+  <script src="/load-common.js" defer></script>
+</head>
+
+<body class="pagina-interna planta">
+  <div id="header"></div>
+
+  <main class="post-plantas">
+    <h2>Boston Fern</h2>
+    <img src="/IMG/samambaia.jpg" alt="Boston Fern (Nephrolepis exaltata)" class="post-img" loading="lazy"/>
+
+    <section class="info">
+      <p><strong>Scientific name:</strong> <em>Nephrolepis exaltata</em></p>
+      <p><strong>☘️ Toxicity:</strong> Safe for cats</p>
+      <p><strong>☀️ Ideal light:</strong> Bright indirect light or partial shade</p>
+      <p><strong>💧 Watering:</strong> Frequent; keep the soil consistently moist</p>
+    </section>
+
+    <p class="descricao">
+      The <strong>Boston Fern</strong> is a lush tropical plant known for its finely divided, arching fronds that bring softness and movement to any space.  
+      It thrives in humid, shaded environments and is a perfect choice for hanging baskets or decorative planters.  
+      Elegant, timeless, and <strong>safe for cats</strong>, it’s one of the most popular ferns for indoor decoration.
+    </p>
+
+    <!-- ESSENTIAL CARE -->
+    <section class="cuidados" style="margin-top:1rem">
+      <h3>Essential care</h3>
+      <ul>
+        <li><strong>Light:</strong> Prefers bright, indirect light or partial shade; direct sun can burn the leaves.</li>
+        <li><strong>Water:</strong> Keep the substrate evenly moist at all times, but never soggy. Avoid leaving standing water in saucers.</li>
+        <li><strong>Humidity:</strong> High humidity is crucial — mist the fronds regularly or use a humidifier.</li>
+        <li><strong>Substrate:</strong> Rich in organic matter, light, and well-draining (e.g., potting soil, humus, and coconut fiber).</li>
+        <li><strong>Temperature:</strong> Ideal between 18–26 °C (64–79 °F); avoid cold drafts and dry air.</li>
+      </ul>
+    </section>
+
+    <!-- COMMON PROBLEMS -->
+    <section class="cuidados" style="margin-top:1rem">
+      <h3>Common problems</h3>
+      <ul>
+        <li><strong>Yellowing fronds:</strong> Usually due to overwatering or poor drainage.</li>
+        <li><strong>Brown tips:</strong> Caused by dry air or low humidity.</li>
+        <li><strong>Leaf drop:</strong> Can result from cold drafts or sudden environmental changes.</li>
+      </ul>
+    </section>
+
+    <!-- PROPAGATION -->
+    <section class="cuidados" style="margin-top:1rem">
+      <h3>Propagation</h3>
+      <ul>
+        <li><strong>Division:</strong> Separate rhizomes with roots and fronds during repotting in spring.</li>
+        <li><strong>Spores:</strong> Possible but slow; division is the most practical method.</li>
+      </ul>
+    </section>
+
+    <!-- CAT SAFETY -->
+    <section class="cuidados" style="margin-top:1rem">
+      <h3>Cat safety</h3>
+      <ul>
+        <li><strong>Classification:</strong> <strong>Non-toxic</strong> to cats.</li>
+        <li><strong>Best practice:</strong> Even though it’s safe, keep it slightly out of reach to prevent frond damage from playful cats.</li>
+      </ul>
+    </section>
+
+    <p class="curiosidade">
+      💡 The Boston Fern helps purify indoor air by removing formaldehyde and toluene — and it loves humid spots like well-lit bathrooms.
+    </p>
+
+    <!-- CHECKLIST -->
+    <section class="cuidados" style="margin-top:1rem">
+      <h3>Quick checklist</h3>
+      <ul>
+        <li>☀️ Indirect light or partial shade</li>
+        <li>💧 Frequent watering</li>
+        <li>🌫️ High humidity</li>
+        <li>🪴 Light, organic soil</li>
+        <li>🐾 Safe for cats</li>
+      </ul>
+    </section>
+
+    <a href="/en/plants.html" class="back-link">← Back to Plants</a>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
