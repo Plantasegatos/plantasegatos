@@ -1275,6 +1275,10 @@ main[class^="post-"] h3 {
 .lang-switch:hover {
   opacity: 1;
 }
+.social-icons img {
+  width: 42px;
+  height: 42px;
+}
 
 
 
