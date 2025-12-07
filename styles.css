@@ -1279,6 +1279,30 @@ main[class^="post-"] h3 {
   width: 42px;
   height: 42px;
 }
+header {
+  position: relative;
+}
+
+.header-social {
+  position: absolute;
+  top: 18px;       /* ajuste fino */
+  left: 24px;      /* ajuste fino */
+  display: flex;
+  gap: 10px;
+  z-index: 20;     /* garante que fique acima de tudo */
+}
+
+.header-social img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;        /* mantém seu novo padrão redondo */
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.header-social img:hover {
+  transform: scale(1.12);
+  opacity: 0.9;
+}
 
 
 
