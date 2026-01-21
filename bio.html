@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Links Rápidos | Plantas & Gatos</title>
+
   <link rel="stylesheet" href="styles.css">
   <script src="load-common.js" defer></script>
+
   <style>
     main.bio-links {
       display: flex;
@@ -16,11 +18,13 @@
       text-align: center;
       font-family: Garamond, serif;
     }
+
     .bio-links h2 {
       font-size: 1.6rem;
       margin-bottom: 20px;
       color: #133336;
     }
+
     .link-btn {
       display: block;
       padding: 16px;
@@ -29,35 +33,68 @@
       color: #133336;
       font-size: 1.1rem;
       text-decoration: none;
-      box-shadow: 6px 6px 12px rgba(0,0,0,0.1), -6px -6px 12px rgba(255,255,255,0.6);
+      box-shadow: 
+        6px 6px 12px rgba(0,0,0,0.1),
+       -6px -6px 12px rgba(255,255,255,0.6);
       transition: transform 0.1s ease, box-shadow 0.2s ease;
     }
+
     .link-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 8px 8px 16px rgba(0,0,0,0.15), -6px -6px 14px rgba(255,255,255,0.6);
+      box-shadow: 
+        8px 8px 16px rgba(0,0,0,0.15),
+       -6px -6px 14px rgba(255,255,255,0.6);
     }
+
+    /* Spotify */
     .playlist-btn {
       background: linear-gradient(120deg, #1DB954, #198a43);
       color: #fff;
     }
+
+    /* CTA Infográfico */
+    .infografico-btn {
+      background: linear-gradient(120deg, #A94438, #8F3A2F);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .infografico-btn:hover {
+      background: linear-gradient(120deg, #8F3A2F, #763026);
+    }
   </style>
 </head>
+
 <body>
   <div id="header"></div>
 
   <main class="bio-links">
     <h2>Links Rápidos 🌿🐾</h2>
 
+    <a href="index.html" class="link-btn">
+      ✨ Últimos posts
+    </a>
 
-    <a href="index.html" class="link-btn">✨ Últimos posts</a>
-    <a href="https://open.spotify.com/playlist/2g78sXbB5UlpwsqHU9DD5x" target="_blank" class="link-btn playlist-btn">🎧 Playlist: Música que acalma gatos</a>
-    <a href="plantas.html" class="link-btn">🌱 Pesquisar Plantas</a>
-   <a href="https://plantasegatos.com.br/recomendacoes" class="link-btn">
-  🛒 Produtos recomendados
-</a>
+    <a href="plantas.html" class="link-btn">
+      🌱 Pesquisar Plantas
+    </a>
 
+    <a href="infografico-suculentas-gatos.html" class="link-btn infografico-btn">
+      🔴 Infográfico: Suculentas & Gatos
+    </a>
+
+    <a href="https://open.spotify.com/playlist/2g78sXbB5UlpwsqHU9DD5x" 
+       target="_blank" 
+       class="link-btn playlist-btn">
+      🎧 Playlist: Música que acalma gatos
+    </a>
+
+    <a href="https://plantasegatos.com.br/recomendacoes" class="link-btn">
+      🛒 Produtos recomendados
+    </a>
   </main>
 
   <div id="footer"></div>
 </body>
 </html>
+
