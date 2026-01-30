@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Infográfico | O que as suculentas realmente armazenam</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="load-common.js" defer></script>
+
+  <style>
+    body {
+      background-color: #E8DCC3;
+      font-family: Garamond, serif;
+    }
+
+    main.infografico-full {
+      width: 100%;
+      max-width: 1400px;   /* controla “quão grande” no desktop */
+      margin: 40px auto 80px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .infografico-full img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #285F6B;
+    }
+
+    /* Ajuste fino para telas muito grandes */
+    @media (min-width: 1600px) {
+      main.infografico-full {
+        max-width: 1600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER via load-common.js -->
+  <header id="header"></header>
+
+  <main class="infografico-full">
+
+    <img
+      src="IMG/infografico-trajetoria-russian-blue.jpg"
+      alt="Infográfico educativo sobre a trajetória do Russian Blue"
+      loading="eager"
+    />
+
+    <a href="index.html" class="back-link">← Voltar para o site</a>
+
+  </main>
+
+  <!-- FOOTER via load-common.js -->
+  <footer id="footer"></footer>
+
+</body>
+</html>
