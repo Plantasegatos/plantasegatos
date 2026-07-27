@@ -40,76 +40,63 @@
 }
 
 /* =====================================================
-   CABEÇALHO
+   CABEÇALHO LIMPO
 ===================================================== */
 
 .home-v4 .home-header {
   position: relative;
   z-index: 1000;
   width: 100%;
-  background: rgba(245, 239, 226, 0.98);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(14px);
-  overflow: visible;
+  background: #f5efe2;
+  border-bottom: 1px solid rgba(19, 51, 54, 0.12);
 }
 
 .home-v4 .home-header__inner {
-  position: relative;
-  width: min(100% - 48px, 1440px);
-  min-height: 76px;
+  width: min(100% - 80px, 1460px);
+  min-height: 104px;
   margin-inline: auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-
-  overflow: visible;
+  gap: 32px;
 }
 
 .home-v4 .home-brand {
-  margin-left: auto;
-  color: var(--green);
+  margin: 0;
+  color: #133336;
   font-family: Garamond, Georgia, serif;
-  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-size: clamp(1.85rem, 2.5vw, 2.65rem);
   font-weight: 600;
+  line-height: 1;
   text-decoration: none;
 }
 
-/* =====================================================
-   BOTÃO E EIXO DO LEQUE
-===================================================== */
-
-.home-v4 .fan-menu {
-  position: relative;
-  z-index: 20;
+.home-v4 .home-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.home-v4 .fan-trigger {
-  position: relative;
-  z-index: 30;
+.home-v4 .home-social {
+  width: 46px;
+  height: 46px;
 
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
+  display: grid;
+  place-items: center;
 
-  min-height: 48px;
-  padding: 0 0 0 20px;
+  border: 2px solid #d9a744;
+  border-radius: 50%;
 
-  border: 0;
-  border-radius: 999px;
+  background: #133336;
+  color: #d9a744;
 
-  background: var(--gold);
-  color: var(--green);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-
-  box-shadow: 0 10px 24px rgba(83, 58, 12, 0.15);
-  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(19, 51, 54, 0.12);
 
   transition:
     transform 180ms ease,
@@ -117,285 +104,10 @@
     background-color 180ms ease;
 }
 
-.home-v4 .fan-trigger:hover {
-  transform: translateY(-2px);
-  background: #e2b853;
-  box-shadow: 0 14px 28px rgba(83, 58, 12, 0.21);
-}
-
-.home-v4 .fan-trigger__pivot {
-  position: relative;
-  z-index: 40;
-
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 50%;
-  background: var(--green);
-  color: #fffaf0;
-
-  box-shadow: 0 0 0 3px rgba(245, 239, 226, 0.78);
-}
-
-.home-v4 .fan-trigger__lines,
-.home-v4 .fan-trigger__lines::before,
-.home-v4 .fan-trigger__lines::after {
-  width: 16px;
-  height: 2px;
-  border-radius: 2px;
-  background: currentColor;
-}
-
-.home-v4 .fan-trigger__lines {
-  position: relative;
-  transition: background-color 180ms ease;
-}
-
-.home-v4 .fan-trigger__lines::before,
-.home-v4 .fan-trigger__lines::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  transition:
-    transform 260ms ease,
-    top 260ms ease;
-}
-
-.home-v4 .fan-trigger__lines::before {
-  top: -5px;
-}
-
-.home-v4 .fan-trigger__lines::after {
-  top: 5px;
-}
-
-.home-v4 .fan-menu.is-open .fan-trigger__lines {
-  background: transparent;
-}
-
-.home-v4 .fan-menu.is-open .fan-trigger__lines::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.home-v4 .fan-menu.is-open .fan-trigger__lines::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-/* =====================================================
-   LEQUE
-   O ponto de rotação coincide com o círculo verde.
-===================================================== */
-
-.home-v4 .fan-center {
-  --blade-width: 310px;
-  --blade-height: 64px;
-
-  position: absolute;
-  z-index: 10;
-
-  /* centro do leque = centro do círculo verde */
-  top: 50%;
-  right: 24px;
-
-  width: var(--blade-width);
-  height: 420px;
-
-  transform: translateY(-50%);
-
-  pointer-events: none;
-  visibility: hidden;
-  overflow: visible;
-}
-
-.home-v4 .fan-menu.is-open .fan-navigation {
-  pointer-events: auto;
-  visibility: visible;
-}
-
-.home-v4 .fan-navigation__stage {
-  position: absolute;
-  inset: 0;
-  overflow: visible;
-}
-
-/*
-  As lâminas abrem para baixo e para a esquerda.
-  Isso mantém o leque visível, apesar de o botão estar no topo da página.
-*/
-
-.home-v4 .fan-slice {
-  position: absolute;
-  z-index: calc(20 - var(--slice-index));
-
-  top: 50%;
-  right: 0;
-
-  width: var(--blade-width);
-  height: var(--blade-height);
-
-  transform-origin: calc(100% - 24px) 50%;
-  transform:
-    translateY(-50%)
-    rotate(0deg)
-    scaleX(0.06);
-
-  opacity: 0;
-
-  color: #fffaf0;
-  text-decoration: none;
-
-  transition:
-    transform 560ms cubic-bezier(.18, .9, .22, 1),
-    opacity 220ms ease;
-
-  transition-delay: calc(var(--slice-index) * 42ms);
-}
-
-.home-v4 .fan-slice--1 {
-  --open-angle: 4deg;
-  --label-angle: -4deg;
-}
-
-.home-v4 .fan-slice--2 {
-  --open-angle: -12deg;
-  --label-angle: 12deg;
-}
-
-.home-v4 .fan-slice--3 {
-  --open-angle: -28deg;
-  --label-angle: 28deg;
-}
-
-.home-v4 .fan-slice--4 {
-  --open-angle: -44deg;
-  --label-angle: 44deg;
-}
-
-.home-v4 .fan-slice--5 {
-  --open-angle: -60deg;
-  --label-angle: 60deg;
-}
-
-.home-v4 .fan-slice--6 {
-  --open-angle: -76deg;
-  --label-angle: 76deg;
-}
-
-.home-v4 .fan-menu.is-open .fan-slice {
-  opacity: 1;
-  transform:
-    translateY(-50%)
-    rotate(var(--open-angle))
-    scaleX(1);
-}
-
-.home-v4 .fan-slice__surface {
-  position: absolute;
-  inset: 0;
-
-  border-radius: 36px 8px 8px 36px;
-  border: 1px solid rgba(255, 255, 255, 0.13);
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(40, 125, 114, 0.98),
-      rgba(19, 51, 54, 0.99)
-    );
-
-  box-shadow: 0 12px 28px rgba(7, 27, 26, 0.22);
-
-  transform-origin: calc(100% - 24px) 50%;
-
-  transition:
-    filter 180ms ease,
-    transform 180ms ease,
-    background 180ms ease;
-}
-
-/*
-  O conteúdo acompanha a lâmina até a posição correta,
-  mas recebe a rotação inversa para continuar horizontal.
-*/
-
-.home-v4 .fan-slice__content {
-  position: absolute;
-  z-index: 2;
-
-  left: 24px;
-  top: 50%;
-
-  width: 205px;
-  min-height: 48px;
-
-  display: grid;
-  grid-template-columns: 28px 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 10px;
-  align-content: center;
-
-  transform:
-    translateY(-50%)
-    rotate(var(--label-angle));
-
-  transform-origin: 62% 50%;
-}
-
-.home-v4 .fan-slice__number {
-  grid-row: 1 / 3;
-  align-self: center;
-
-  color: var(--gold);
-
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.66rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-.home-v4 .fan-slice strong {
-  align-self: end;
-
-  color: #fffaf0;
-
-  font-family: Garamond, Georgia, serif;
-  font-size: 1.18rem;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.home-v4 .fan-slice small {
-  align-self: start;
-  margin-top: 3px;
-
-  color: rgba(255, 250, 240, 0.68);
-
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.61rem;
-  line-height: 1.22;
-}
-
-.home-v4 .fan-slice:hover .fan-slice__surface,
-.home-v4 .fan-slice:focus-visible .fan-slice__surface {
-  filter: brightness(1.12);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(52, 146, 133, 1),
-      rgba(22, 63, 59, 1)
-    );
-  transform: translateX(-9px);
-}
-
-/* O antigo círculo dourado interno não é mais necessário. */
-.home-v4 .fan-center {
-  display: none !important;
+.home-v4 .home-social:hover {
+  transform: translateY(-3px);
+  background: #1d504a;
+  box-shadow: 0 12px 26px rgba(19, 51, 54, 0.22);
 }
 
 /* =====================================================
@@ -415,7 +127,7 @@
 
   width: 100% !important;
   max-width: none !important;
-  min-height: clamp(650px, 88vh, 980px);
+  min-height: clamp(700px, 88vh, 920px);
   margin: 0 !important;
 
   display: grid;
@@ -457,9 +169,13 @@
 }
 
 .home-v4 .home-hero__content {
-  width: min(1180px, calc(100% - 40px));
+  position: relative;
+  z-index: 10;
+
+  width: min(100% - 80px, 1460px);
   margin-inline: auto;
-  padding: 100px 0 88px;
+  padding: 100px 690px 88px 0;
+
   color: #fffaf0;
 }
 
@@ -482,13 +198,13 @@
 }
 
 .home-v4 .home-hero h1 {
-  max-width: 970px;
+  max-width: 790px;
   margin: 0;
 
   color: #fffaf0;
 
   font-family: Garamond, Georgia, serif;
-  font-size: clamp(3.7rem, 7.5vw, 7.4rem);
+  font-size: clamp(3.7rem, 6.8vw, 7rem);
   font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 0.91;
@@ -532,6 +248,278 @@
 .home-v4 .home-primary-action:hover,
 .home-v4 .download-banner a:hover {
   transform: translateY(-2px);
+}
+
+/* =====================================================
+   LEQUE NO HERO
+===================================================== */
+
+.home-v4 .hero-fan-area {
+  position: absolute;
+  z-index: 20;
+
+  top: 135px;
+  right: max(48px, calc((100vw - 1460px) / 2));
+
+  width: 660px;
+  height: 590px;
+
+  pointer-events: none;
+}
+
+.home-v4 .hero-fan-label {
+  position: absolute;
+  z-index: 40;
+
+  top: -30px;
+  left: 4px;
+
+  margin: 0;
+
+  color: #d9a744;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.home-v4 .fan-menu {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.home-v4 .fan-trigger {
+  position: absolute;
+  z-index: 50;
+
+  top: 0;
+  left: 0;
+
+  width: 92px;
+  height: 92px;
+  padding: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid #d9a744;
+  border-radius: 50%;
+
+  background: #123b37;
+  color: #d9a744;
+
+  box-shadow:
+    0 14px 34px rgba(4, 24, 22, 0.35),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.025);
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.home-v4 .fan-trigger:hover {
+  transform: scale(1.04);
+  background: #1a5049;
+}
+
+.home-v4 .fan-trigger__lines,
+.home-v4 .fan-trigger__lines::before,
+.home-v4 .fan-trigger__lines::after {
+  width: 32px;
+  height: 3px;
+  border-radius: 4px;
+  background: currentColor;
+}
+
+.home-v4 .fan-trigger__lines {
+  position: relative;
+}
+
+.home-v4 .fan-trigger__lines::before,
+.home-v4 .fan-trigger__lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+
+  transition:
+    top 220ms ease,
+    transform 220ms ease;
+}
+
+.home-v4 .fan-trigger__lines::before {
+  top: -10px;
+}
+
+.home-v4 .fan-trigger__lines::after {
+  top: 10px;
+}
+
+.home-v4 .fan-menu.is-open .fan-trigger__lines {
+  background: transparent;
+}
+
+.home-v4 .fan-menu.is-open .fan-trigger__lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.home-v4 .fan-menu.is-open .fan-trigger__lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.home-v4 .fan-navigation {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.home-v4 .fan-menu.is-open .fan-navigation {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.home-v4 .fan-navigation__stage {
+  position: absolute;
+  inset: 0;
+}
+
+.home-v4 .fan-slice {
+  --blade-width: 570px;
+  --blade-height: 98px;
+
+  position: absolute;
+  z-index: calc(20 - var(--slice-index));
+
+  top: 46px;
+  left: 46px;
+
+  width: var(--blade-width);
+  height: var(--blade-height);
+
+  color: #fffaf0;
+  text-decoration: none;
+
+  transform-origin: 0 50%;
+  transform:
+    rotate(0deg)
+    scaleX(0.08);
+
+  opacity: 0;
+
+  transition:
+    transform 580ms cubic-bezier(.16, .9, .24, 1),
+    opacity 240ms ease;
+
+  transition-delay: calc(var(--slice-index) * 48ms);
+}
+
+.home-v4 .fan-slice--1 { --open-angle: 0deg; }
+.home-v4 .fan-slice--2 { --open-angle: 12deg; }
+.home-v4 .fan-slice--3 { --open-angle: 24deg; }
+.home-v4 .fan-slice--4 { --open-angle: 36deg; }
+.home-v4 .fan-slice--5 { --open-angle: 48deg; }
+.home-v4 .fan-slice--6 { --open-angle: 60deg; }
+
+.home-v4 .fan-menu.is-open .fan-slice {
+  opacity: 1;
+  transform:
+    rotate(var(--open-angle))
+    scaleX(1);
+}
+
+.home-v4 .fan-slice__surface {
+  position: absolute;
+  inset: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px 58px 58px 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1b5d55 0%,
+      #287d72 62%,
+      #4d9983 100%
+    );
+
+  box-shadow:
+    0 16px 32px rgba(3, 24, 22, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+  transition:
+    filter 180ms ease,
+    transform 180ms ease;
+}
+
+.home-v4 .fan-slice:hover .fan-slice__surface,
+.home-v4 .fan-slice:focus-visible .fan-slice__surface {
+  filter: brightness(1.12);
+  transform: translateX(8px);
+}
+
+.home-v4 .fan-slice__content {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+
+  display: grid;
+  grid-template-columns: 48px 1px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 20px;
+
+  padding: 0 46px 0 112px;
+}
+
+.home-v4 .fan-slice__number {
+  color: #f2bd45;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.home-v4 .fan-slice__divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 250, 240, 0.28);
+}
+
+.home-v4 .fan-slice__text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.home-v4 .fan-slice__text strong {
+  color: #fffaf0;
+
+  font-family: Garamond, Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.home-v4 .fan-slice__text small {
+  color: rgba(255, 250, 240, 0.82);
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+
+.home-v4 .fan-center,
+.home-v4 .fan-trigger__label,
+.home-v4 .fan-trigger__pivot {
+  display: none !important;
 }
 
 /* =====================================================
@@ -874,7 +862,16 @@
    RESPONSIVIDADE
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1180px) {
+  .home-v4 .hero-fan-area {
+    transform: scale(0.82);
+    transform-origin: top right;
+  }
+
+  .home-v4 .home-hero__content {
+    padding-right: 520px;
+  }
+
   .home-v4 .guide-grid,
   .home-v4 .editorial-intro__grid,
   .home-v4 .editorial-statement {
@@ -890,98 +887,59 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .home-v4 .home-header__inner {
-    width: calc(100% - 28px);
-    min-height: 68px;
+    width: calc(100% - 32px);
+    min-height: 82px;
   }
 
-  .home-v4 .fan-trigger {
-    min-width: 48px;
-    padding-left: 0;
+  .home-v4 .home-social {
+    width: 40px;
+    height: 40px;
   }
 
-  .home-v4 .fan-trigger__label {
-    display: none;
+  .home-v4 .home-hero {
+    min-height: 1130px;
+    display: block;
   }
 
-  .home-v4 .home-brand {
-    font-size: 1.25rem;
+  .home-v4 .home-hero__content {
+    width: calc(100% - 32px);
+    padding: 90px 0 0;
   }
 
-  /*
-    No celular o leque radial fica estreito demais.
-    As lâminas passam a abrir em cascata abaixo do botão,
-    preservando a ideia visual sem sacrificar a leitura.
-  */
-
-  .home-v4 .fan-navigation {
-    position: fixed;
-    top: 68px;
-    left: 0;
-    right: auto;
-
-    width: 100vw;
-    height: calc(100dvh - 68px);
-
-    transform: none;
-
-    background: rgba(7, 25, 24, 0.52);
-    backdrop-filter: blur(6px);
-  }
-
-  .home-v4 .fan-navigation__stage {
-    position: relative;
-    width: 100%;
-    max-width: 390px;
-    height: auto;
-    margin: 20px 0 0 14px;
-  }
-
-  .home-v4 .fan-slice,
-  .home-v4 .fan-menu.is-open .fan-slice {
+  .home-v4 .hero-fan-area {
     position: relative;
     top: auto;
     right: auto;
 
-    width: calc(100vw - 40px);
-    max-width: 360px;
-    height: 62px;
-    margin-bottom: 8px;
+    width: calc(100% - 32px);
+    height: 560px;
+    margin: 46px auto 0;
 
-    transform-origin: left center;
-    transform: translateX(0) rotate(0deg) scaleX(1);
+    transform: scale(0.76);
+    transform-origin: top left;
+  }
+}
 
-    border-radius: 999px;
+@media (max-width: 720px) {
+  .home-v4 .home-header__inner {
+    width: calc(100% - 28px);
+    min-height: 76px;
   }
 
-  .home-v4 .fan-slice {
-    opacity: 0;
-    transform: translateX(-18px) scaleX(0.96);
+  .home-v4 .home-brand {
+    font-size: 1.55rem;
   }
 
-  .home-v4 .fan-menu.is-open .fan-slice {
-    opacity: 1;
+  .home-v4 .home-socials {
+    gap: 8px;
   }
 
-  .home-v4 .fan-slice__surface {
-    border-radius: 999px;
-  }
-
-  .home-v4 .fan-slice__content {
-    left: 18px;
-    width: calc(100% - 50px);
-
-    transform: translateY(-50%) rotate(0deg);
-    transform-origin: center;
-  }
-
-  .home-v4 .fan-slice strong {
-    font-size: 1.08rem;
-  }
-
-  .home-v4 .fan-slice small {
-    font-size: 0.58rem;
+  .home-v4 .home-social {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
   }
 
   .home-v4 .home-main {
@@ -989,7 +947,7 @@
   }
 
   .home-v4 .home-hero {
-    min-height: 720px;
+    min-height: 980px;
   }
 
   .home-v4 .home-hero__content,
@@ -1000,7 +958,7 @@
   }
 
   .home-v4 .home-hero__content {
-    padding: 90px 0 58px;
+    padding-top: 72px;
   }
 
   .home-v4 .home-hero h1 {
@@ -1009,6 +967,12 @@
 
   .home-v4 .home-primary-action {
     width: 100%;
+  }
+
+  .home-v4 .hero-fan-area {
+    height: 440px;
+    margin-top: 40px;
+    transform: scale(0.57);
   }
 
   .home-v4 .editorial-intro {
