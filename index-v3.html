@@ -3,315 +3,632 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Conteúdo acessível e fundamentado sobre gatos, plantas, saúde, comportamento, genética, raças e convivência segura." />
-  <title>Plantas & Gatos | Ciência felina e convivência segura</title>
+
+  <meta
+    name="description"
+    content="Conteúdo acessível e fundamentado sobre gatos, plantas, saúde, comportamento, genética, raças e convivência segura."
+  />
+
+  <title>Plantas &amp; Gatos | Ciência felina e convivência segura</title>
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="home-v3.css" />
 </head>
 
 <body class="pagina-interna index home-v3">
-  <header class="home-topbar">
-  <div class="home-topbar__inner">
 
-    <details class="home-menu">
-      <summary>
-        <span class="home-menu__icon" aria-hidden="true">
+  <!-- =====================================================
+       CABEÇALHO EXCLUSIVO DA HOME
+  ====================================================== -->
+  <header class="home-topbar">
+    <div class="home-topbar__inner">
+
+      <button
+        class="portal-trigger"
+        id="portalTrigger"
+        type="button"
+        aria-expanded="false"
+        aria-controls="portalPanel"
+      >
+        <span class="portal-trigger__icon" aria-hidden="true">
           <span></span>
           <span></span>
           <span></span>
         </span>
 
         <span>Explore o portal</span>
-      </summary>
+      </button>
 
-      <div class="home-menu__panel" aria-label="Índice do portal">
+      <a
+        class="home-brand"
+        href="index-v3.html"
+        aria-label="Página inicial Plantas &amp; Gatos"
+      >
+        <span class="home-brand__name">Plantas &amp; Gatos</span>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- =====================================================
+       LAYOUT: HOME À ESQUERDA + ÍNDICE EDITORIAL À DIREITA
+  ====================================================== -->
+  <div class="portal-layout" id="portalLayout">
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="portal-page">
+
+      <main class="home-main">
+
+        <!-- HERO -->
+        <section class="home-hero" aria-labelledby="home-title">
+          <div class="home-hero__overlay"></div>
+
+          <div class="home-hero__content">
+            <p class="home-eyebrow">Plantas &amp; Gatos</p>
+
+            <h1 id="home-title">
+              Ciência felina e convivência segura
+            </h1>
+
+            <p class="home-hero__text">
+              Conhecimento acessível sobre gatos, plantas e o ambiente
+              que compartilhamos com eles.
+            </p>
+
+            <div class="home-actions" aria-label="Ações principais">
+              <a
+                class="home-btn home-btn--primary"
+                href="plantas.html"
+              >
+                Consultar plantas
+              </a>
+
+              <a
+                class="home-btn home-btn--secondary"
+                href="#explorar"
+              >
+                Explorar conteúdos
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTRODUÇÃO -->
+        <section
+          class="home-intro home-section"
+          aria-labelledby="intro-title"
+        >
+          <p class="home-section__label">
+            Conhecimento com propósito
+          </p>
+
+          <h2 id="intro-title">
+            Informação responsável para quem deseja compreender
+            melhor os gatos
+          </h2>
+
+          <p>
+            Conteúdos sobre comportamento, saúde, genética, raças,
+            toxicologia, botânica e convivência doméstica, apresentados
+            de forma clara e apoiados em referências técnicas.
+          </p>
+        </section>
+
+        <!-- TEMAS -->
+        <section
+          id="explorar"
+          class="home-section"
+          aria-labelledby="explorar-title"
+        >
+          <div class="home-section__heading">
+            <div>
+              <p class="home-section__label">Explore o portal</p>
+              <h2 id="explorar-title">Escolha um tema</h2>
+            </div>
+
+            <a class="home-text-link" href="blog/">
+              Ver todos os conteúdos
+            </a>
+          </div>
+
+          <div class="home-topic-grid">
+
+            <a
+              class="home-topic-card home-topic-card--featured"
+              href="plantas.html"
+            >
+              <span class="home-topic-card__icon" aria-hidden="true">🌿</span>
+              <span class="home-topic-card__title">Plantas</span>
+              <span class="home-topic-card__text">
+                Consulte plantas seguras, tóxicas e seus cuidados.
+              </span>
+            </a>
+
+            <a class="home-topic-card" href="blog/">
+              <span class="home-topic-card__icon" aria-hidden="true">🐈</span>
+              <span class="home-topic-card__title">Raças</span>
+              <span class="home-topic-card__text">
+                História, padrões, genética, saúde e temperamento.
+              </span>
+            </a>
+
+            <a class="home-topic-card" href="blog/">
+              <span class="home-topic-card__icon" aria-hidden="true">🧬</span>
+              <span class="home-topic-card__title">Genética</span>
+              <span class="home-topic-card__text">
+                Cores, pelagens, olhos e hereditariedade felina.
+              </span>
+            </a>
+
+            <a class="home-topic-card" href="blog/">
+              <span class="home-topic-card__icon" aria-hidden="true">💊</span>
+              <span class="home-topic-card__title">Saúde</span>
+              <span class="home-topic-card__text">
+                Prevenção, sinais de alerta e cuidados responsáveis.
+              </span>
+            </a>
+
+            <a class="home-topic-card" href="blog/">
+              <span class="home-topic-card__icon" aria-hidden="true">🧠</span>
+              <span class="home-topic-card__title">Comportamento</span>
+              <span class="home-topic-card__text">
+                Entenda necessidades, comunicação e bem-estar.
+              </span>
+            </a>
+
+            <a class="home-topic-card" href="blog/">
+              <span class="home-topic-card__icon" aria-hidden="true">🏡</span>
+              <span class="home-topic-card__title">Casa e convivência</span>
+              <span class="home-topic-card__text">
+                Ambientes seguros, enriquecimento e vida compartilhada.
+              </span>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- GUIAS ESSENCIAIS -->
+        <section
+          class="home-section home-guides"
+          aria-labelledby="guides-title"
+        >
+          <div class="home-section__heading">
+            <div>
+              <p class="home-section__label">Seleção editorial</p>
+              <h2 id="guides-title">Guias essenciais</h2>
+            </div>
+          </div>
+
+          <div class="home-guide-grid">
+
+            <article class="home-guide home-guide--large">
+              <div
+                class="home-guide__media home-guide__media--ragdoll"
+                role="img"
+                aria-label="Gato Ragdoll em ambiente claro"
+              ></div>
+
+              <div class="home-guide__content">
+                <p class="home-guide__category">Raças</p>
+
+                <h3>
+                  Ragdoll: história, padrões e temperamento
+                </h3>
+
+                <p>
+                  Conheça uma das raças mais reconhecidas pela docilidade,
+                  pelos olhos azuis e pela ampla variedade de padrões.
+                </p>
+
+                <a href="blog/">
+                  Explorar conteúdos sobre Ragdoll
+                </a>
+              </div>
+            </article>
+
+            <article class="home-guide">
+              <div
+                class="home-guide__media home-guide__media--genetics"
+                role="img"
+                aria-label="Close editorial de um gato"
+              ></div>
+
+              <div class="home-guide__content">
+                <p class="home-guide__category">Genética</p>
+
+                <h3>
+                  Como cores e padrões são formados
+                </h3>
+
+                <p>
+                  Uma introdução acessível à genética das cores,
+                  manchas e pelagens felinas.
+                </p>
+
+                <a href="blog/">
+                  Ler sobre genética felina
+                </a>
+              </div>
+            </article>
+
+            <article class="home-guide">
+              <div
+                class="home-guide__media home-guide__media--plants"
+                role="img"
+                aria-label="Folhagem ornamental em ambiente doméstico"
+              ></div>
+
+              <div class="home-guide__content">
+                <p class="home-guide__category">Segurança</p>
+
+                <h3>
+                  Plantas tóxicas e não tóxicas
+                </h3>
+
+                <p>
+                  Consulte nosso banco de plantas antes de levar
+                  uma nova espécie para casa.
+                </p>
+
+                <a href="plantas.html">
+                  Consultar banco de plantas
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- FERRAMENTA DE PESQUISA -->
+        <section class="home-tool" aria-labelledby="tool-title">
+          <div class="home-tool__content">
+            <p class="home-section__label home-section__label--light">
+              Ferramenta do portal
+            </p>
+
+            <h2 id="tool-title">
+              Uma planta chamou sua atenção?
+            </h2>
+
+            <p>
+              Pesquise pelo nome popular ou científico e descubra se ela
+              é adequada para um ambiente com gatos.
+            </p>
+
+            <form
+              class="home-search"
+              action="plantas.html"
+              method="get"
+            >
+              <label class="sr-only" for="home-plant-search">
+                Nome da planta
+              </label>
+
+              <input
+                id="home-plant-search"
+                name="q"
+                type="search"
+                placeholder="Digite o nome da planta"
+              />
+
+              <button type="submit">
+                Pesquisar
+              </button>
+            </form>
+
+            <a class="home-tool__link" href="plantas.html">
+              Abrir o banco completo de plantas
+            </a>
+          </div>
+        </section>
+
+        <!-- ARTIGOS RECENTES -->
+        <section
+          class="home-section"
+          aria-labelledby="recent-title"
+        >
+          <div class="home-section__heading">
+            <div>
+              <p class="home-section__label">Novidades</p>
+              <h2 id="recent-title">Artigos recentes</h2>
+            </div>
+
+            <a class="home-text-link" href="blog/">
+              Ver todos
+            </a>
+          </div>
+
+          <div
+            id="home-recent-posts"
+            class="home-recent-grid"
+            aria-live="polite"
+          >
+            <p class="home-loading">
+              Carregando artigos recentes…
+            </p>
+          </div>
+        </section>
+
+        <!-- COMPROMISSO EDITORIAL -->
+        <section
+          class="home-editorial"
+          aria-labelledby="editorial-title"
+        >
+          <div>
+            <p class="home-section__label">
+              Compromisso editorial
+            </p>
+
+            <h2 id="editorial-title">
+              Ciência acessível, sem simplificações irresponsáveis
+            </h2>
+          </div>
+
+          <p>
+            O Plantas &amp; Gatos transforma literatura técnica em conteúdo
+            compreensível, preservando contexto, limites das evidências
+            e a necessidade de avaliação veterinária quando aplicável.
+          </p>
+        </section>
+
+        <!-- GUIA GRATUITO -->
+        <section
+          class="home-download"
+          aria-labelledby="download-title"
+        >
+          <div class="home-download__content">
+            <p class="home-section__label home-section__label--light">
+              Guia gratuito
+            </p>
+
+            <h2 id="download-title">
+              5 plantas aromáticas seguras para gatos
+            </h2>
+
+            <p>
+              Um material introdutório para trazer mais verde ao ambiente
+              sem ignorar a segurança dos felinos.
+            </p>
+
+            <a
+              class="home-btn home-btn--light"
+              href="baixe.html"
+            >
+              Baixar o guia
+            </a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- RODAPÉ COMPARTILHADO -->
+      <div id="footer"></div>
+
+    </div>
+
+    <!-- =====================================================
+         PAINEL LATERAL DIREITO
+    ====================================================== -->
+    <aside
+      class="portal-panel"
+      id="portalPanel"
+      aria-hidden="true"
+      aria-label="Índice editorial do portal"
+    >
+      <div class="portal-panel__top">
+        <div>
+          <p class="portal-panel__eyebrow">
+            Índice editorial
+          </p>
+
+          <h2>Explore o portal</h2>
+        </div>
+
         <button
-          class="home-menu__close"
+          class="portal-panel__close"
+          id="portalClose"
           type="button"
-          aria-label="Fechar menu"
+          aria-label="Fechar índice do portal"
         >
           ×
         </button>
-
-        <div class="home-menu__heading">
-          <p>Explore o portal</p>
-          <strong>Escolha um assunto</strong>
-        </div>
-
-        <nav class="home-menu__links" aria-label="Navegação principal">
-
-          <a href="plantas.html">
-            <span>01</span>
-
-            <div>
-              <strong>Plantas</strong>
-              <small>
-                Espécies seguras, tóxicas, cuidados e identificação.
-              </small>
-            </div>
-          </a>
-
-          <a href="blog/">
-            <span>02</span>
-
-            <div>
-              <strong>Raças</strong>
-              <small>
-                História, genética, padrões, saúde e temperamento.
-              </small>
-            </div>
-          </a>
-
-          <a href="blog/">
-            <span>03</span>
-
-            <div>
-              <strong>Genética</strong>
-              <small>
-                Cores, pelagens, olhos e hereditariedade felina.
-              </small>
-            </div>
-          </a>
-
-          <a href="blog/">
-            <span>04</span>
-
-            <div>
-              <strong>Saúde</strong>
-              <small>
-                Medicina felina, prevenção e cuidados responsáveis.
-              </small>
-            </div>
-          </a>
-
-          <a href="blog/">
-            <span>05</span>
-
-            <div>
-              <strong>Comportamento</strong>
-              <small>
-                Comunicação, necessidades e bem-estar dos gatos.
-              </small>
-            </div>
-          </a>
-
-          <a href="blog/">
-            <span>06</span>
-
-            <div>
-              <strong>Casa e convivência</strong>
-              <small>
-                Ambientes seguros, enriquecimento e vida compartilhada.
-              </small>
-            </div>
-          </a>
-
-        </nav>
-
-        <div class="home-menu__secondary">
-          <p>Outros caminhos</p>
-
-          <a href="#guides-title">Guias essenciais</a>
-          <a href="plantas.html">Banco de plantas</a>
-          <a href="blog/">Artigos recentes</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="contato.html">Contato</a>
-        </div>
-
-        <div class="home-menu__footer">
-          <a href="/en/" lang="en">English version</a>
-        </div>
       </div>
-    </details>
 
-    <a
-      class="home-brand"
-      href="index-v3.html"
-      aria-label="Página inicial Plantas &amp; Gatos"
-    >
-      <span class="home-brand__name">Plantas &amp; Gatos</span>
-      <span class="home-brand__tagline">Ciência felina acessível</span>
-    </a>
+      <p class="portal-panel__intro">
+        Escolha uma área para começar.
+      </p>
+
+      <nav
+        class="portal-index"
+        aria-label="Áreas do portal"
+      >
+
+        <a
+          href="plantas.html"
+          class="portal-index__item"
+          data-description="Espécies seguras, plantas tóxicas, identificação e cuidados."
+        >
+          <span class="portal-index__number">01</span>
+          <span class="portal-index__title">Plantas</span>
+          <span class="portal-index__arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          href="blog/"
+          class="portal-index__item"
+          data-description="História, características, padrões, temperamento e saúde."
+        >
+          <span class="portal-index__number">02</span>
+          <span class="portal-index__title">Raças</span>
+          <span class="portal-index__arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          href="blog/"
+          class="portal-index__item"
+          data-description="Cores, pelagens, olhos, hereditariedade e seleção."
+        >
+          <span class="portal-index__number">03</span>
+          <span class="portal-index__title">Genética</span>
+          <span class="portal-index__arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          href="blog/"
+          class="portal-index__item"
+          data-description="Prevenção, medicina felina e cuidados baseados em evidências."
+        >
+          <span class="portal-index__number">04</span>
+          <span class="portal-index__title">Saúde</span>
+          <span class="portal-index__arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          href="blog/"
+          class="portal-index__item"
+          data-description="Comunicação, emoções, necessidades e bem-estar felino."
+        >
+          <span class="portal-index__number">05</span>
+          <span class="portal-index__title">Comportamento</span>
+          <span class="portal-index__arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          href="blog/"
+          class="portal-index__item"
+          data-description="Ambientes seguros, enriquecimento e convivência cotidiana."
+        >
+          <span class="portal-index__number">06</span>
+          <span class="portal-index__title">Casa e convivência</span>
+          <span class="portal-index__arrow" aria-hidden="true">↗</span>
+        </a>
+
+      </nav>
+
+      <!-- MICRODESCRIÇÕES AO PASSAR O MOUSE -->
+      <div class="portal-description" aria-live="polite">
+        <p class="portal-description__label">
+          Sobre esta área
+        </p>
+
+        <p
+          class="portal-description__text"
+          id="portalDescription"
+        >
+          Passe o mouse sobre um tema para conhecer seu conteúdo.
+        </p>
+      </div>
+
+      <div class="portal-panel__secondary">
+        <a href="#guides-title">Guias essenciais</a>
+        <a href="plantas.html">Banco de plantas</a>
+        <a href="blog/">Artigos recentes</a>
+        <a href="sobre.html">Sobre o projeto</a>
+        <a href="contato.html">Contato</a>
+        <a href="/en/" lang="en">English version</a>
+      </div>
+
+    </aside>
 
   </div>
-</header>
 
-  <main class="home-main">
-    <section class="home-hero" aria-labelledby="home-title">
-      <div class="home-hero__overlay"></div>
-      <div class="home-hero__content">
-        <p class="home-eyebrow">Plantas &amp; Gatos</p>
-        <h1 id="home-title">Ciência felina e convivência segura</h1>
-        <p class="home-hero__text">
-          Conhecimento acessível sobre gatos, plantas e o ambiente que compartilhamos com eles.
-        </p>
-        <div class="home-actions" aria-label="Ações principais">
-          <a class="home-btn home-btn--primary" href="plantas.html">Consultar plantas</a>
-          <a class="home-btn home-btn--secondary" href="#explorar">Explorar conteúdos</a>
-        </div>
-      </div>
-    </section>
+  <!-- =====================================================
+       CONTROLE DO PAINEL E MICRODESCRIÇÕES
+  ====================================================== -->
+  <script>
+    (() => {
+      const layout = document.getElementById('portalLayout');
+      const trigger = document.getElementById('portalTrigger');
+      const panel = document.getElementById('portalPanel');
+      const closeButton = document.getElementById('portalClose');
+      const description = document.getElementById('portalDescription');
+      const indexItems = document.querySelectorAll('.portal-index__item');
 
-    <section class="home-intro home-section" aria-labelledby="intro-title">
-      <p class="home-section__label">Conhecimento com propósito</p>
-      <h2 id="intro-title">Informação responsável para quem deseja compreender melhor os gatos</h2>
-      <p>
-        Conteúdos sobre comportamento, saúde, genética, raças, toxicologia, botânica e convivência doméstica,
-        apresentados de forma clara e apoiados em referências técnicas.
-      </p>
-    </section>
+      if (!layout || !trigger || !panel || !closeButton) {
+        return;
+      }
 
-    <section id="explorar" class="home-section" aria-labelledby="explorar-title">
-      <div class="home-section__heading">
-        <div>
-          <p class="home-section__label">Explore o portal</p>
-          <h2 id="explorar-title">Escolha um tema</h2>
-        </div>
-        <a class="home-text-link" href="blog/">Ver todos os conteúdos</a>
-      </div>
+      const openPanel = () => {
+        layout.classList.add('is-open');
+        document.body.classList.add('portal-is-open');
 
-      <div class="home-topic-grid">
-        <a class="home-topic-card home-topic-card--featured" href="plantas.html">
-          <span class="home-topic-card__icon" aria-hidden="true">🌿</span>
-          <span class="home-topic-card__title">Plantas</span>
-          <span class="home-topic-card__text">Consulte plantas seguras, tóxicas e seus cuidados.</span>
-        </a>
+        trigger.setAttribute('aria-expanded', 'true');
+        panel.setAttribute('aria-hidden', 'false');
+      };
 
-        <a class="home-topic-card" href="blog/">
-          <span class="home-topic-card__icon" aria-hidden="true">🐈</span>
-          <span class="home-topic-card__title">Raças</span>
-          <span class="home-topic-card__text">História, padrões, genética, saúde e temperamento.</span>
-        </a>
+      const closePanel = () => {
+        layout.classList.remove('is-open');
+        document.body.classList.remove('portal-is-open');
 
-        <a class="home-topic-card" href="blog/">
-          <span class="home-topic-card__icon" aria-hidden="true">🧬</span>
-          <span class="home-topic-card__title">Genética</span>
-          <span class="home-topic-card__text">Cores, pelagens, olhos e hereditariedade felina.</span>
-        </a>
+        trigger.setAttribute('aria-expanded', 'false');
+        panel.setAttribute('aria-hidden', 'true');
 
-        <a class="home-topic-card" href="blog/">
-          <span class="home-topic-card__icon" aria-hidden="true">💊</span>
-          <span class="home-topic-card__title">Saúde</span>
-          <span class="home-topic-card__text">Prevenção, sinais de alerta e cuidados responsáveis.</span>
-        </a>
+        trigger.focus();
+      };
 
-        <a class="home-topic-card" href="blog/">
-          <span class="home-topic-card__icon" aria-hidden="true">🧠</span>
-          <span class="home-topic-card__title">Comportamento</span>
-          <span class="home-topic-card__text">Entenda necessidades, comunicação e bem-estar.</span>
-        </a>
+      trigger.addEventListener('click', () => {
+        if (layout.classList.contains('is-open')) {
+          closePanel();
+        } else {
+          openPanel();
+        }
+      });
 
-        <a class="home-topic-card" href="blog/">
-          <span class="home-topic-card__icon" aria-hidden="true">🏡</span>
-          <span class="home-topic-card__title">Casa e convivência</span>
-          <span class="home-topic-card__text">Ambientes seguros, enriquecimento e vida compartilhada.</span>
-        </a>
-      </div>
-    </section>
+      closeButton.addEventListener('click', closePanel);
 
-    <section class="home-section home-guides" aria-labelledby="guides-title">
-      <div class="home-section__heading">
-        <div>
-          <p class="home-section__label">Seleção editorial</p>
-          <h2 id="guides-title">Guias essenciais</h2>
-        </div>
-      </div>
+      document.addEventListener('keydown', event => {
+        if (
+          event.key === 'Escape' &&
+          layout.classList.contains('is-open')
+        ) {
+          closePanel();
+        }
+      });
 
-      <div class="home-guide-grid">
-        <article class="home-guide home-guide--large">
-          <div class="home-guide__media home-guide__media--ragdoll" role="img" aria-label="Gato Ragdoll em ambiente claro"></div>
-          <div class="home-guide__content">
-            <p class="home-guide__category">Raças</p>
-            <h3>Ragdoll: história, padrões e temperamento</h3>
-            <p>Conheça uma das raças mais reconhecidas pela docilidade, pelos olhos azuis e pela ampla variedade de padrões.</p>
-            <a href="blog/">Explorar conteúdos sobre Ragdoll</a>
-          </div>
-        </article>
+      indexItems.forEach(item => {
+        const showDescription = () => {
+          const text = item.dataset.description;
 
-        <article class="home-guide">
-          <div class="home-guide__media home-guide__media--genetics" role="img" aria-label="Close editorial de um gato"></div>
-          <div class="home-guide__content">
-            <p class="home-guide__category">Genética</p>
-            <h3>Como cores e padrões são formados</h3>
-            <p>Uma introdução acessível à genética das cores, manchas e pelagens felinas.</p>
-            <a href="blog/">Ler sobre genética felina</a>
-          </div>
-        </article>
+          if (!text || !description) {
+            return;
+          }
 
-        <article class="home-guide">
-          <div class="home-guide__media home-guide__media--plants" role="img" aria-label="Folhagem ornamental em ambiente doméstico"></div>
-          <div class="home-guide__content">
-            <p class="home-guide__category">Segurança</p>
-            <h3>Plantas tóxicas e não tóxicas</h3>
-            <p>Consulte nosso banco de plantas antes de levar uma nova espécie para casa.</p>
-            <a href="plantas.html">Consultar banco de plantas</a>
-          </div>
-        </article>
-      </div>
-    </section>
+          description.classList.add('is-changing');
 
-    <section class="home-tool" aria-labelledby="tool-title">
-      <div class="home-tool__content">
-        <p class="home-section__label home-section__label--light">Ferramenta do portal</p>
-        <h2 id="tool-title">Uma planta chamou sua atenção?</h2>
-        <p>Pesquise pelo nome popular ou científico e descubra se ela é adequada para um ambiente com gatos.</p>
+          window.setTimeout(() => {
+            description.textContent = text;
+            description.classList.remove('is-changing');
+          }, 130);
+        };
 
-        <form class="home-search" action="plantas.html" method="get">
-          <label class="sr-only" for="home-plant-search">Nome da planta</label>
-          <input id="home-plant-search" name="q" type="search" placeholder="Digite o nome da planta" />
-          <button type="submit">Pesquisar</button>
-        </form>
+        item.addEventListener('mouseenter', showDescription);
+        item.addEventListener('focus', showDescription);
+      });
+    })();
+  </script>
 
-        <a class="home-tool__link" href="plantas.html">Abrir o banco completo de plantas</a>
-      </div>
-    </section>
-
-    <section class="home-section" aria-labelledby="recent-title">
-      <div class="home-section__heading">
-        <div>
-          <p class="home-section__label">Novidades</p>
-          <h2 id="recent-title">Artigos recentes</h2>
-        </div>
-        <a class="home-text-link" href="blog/">Ver todos</a>
-      </div>
-
-      <div id="home-recent-posts" class="home-recent-grid" aria-live="polite">
-        <p class="home-loading">Carregando artigos recentes…</p>
-      </div>
-    </section>
-
-    <section class="home-editorial" aria-labelledby="editorial-title">
-      <div>
-        <p class="home-section__label">Compromisso editorial</p>
-        <h2 id="editorial-title">Ciência acessível, sem simplificações irresponsáveis</h2>
-      </div>
-      <p>
-        O Plantas &amp; Gatos transforma literatura técnica em conteúdo compreensível, preservando contexto,
-        limites das evidências e a necessidade de avaliação veterinária quando aplicável.
-      </p>
-    </section>
-
-    <section class="home-download" aria-labelledby="download-title">
-      <div class="home-download__content">
-        <p class="home-section__label home-section__label--light">Guia gratuito</p>
-        <h2 id="download-title">5 plantas aromáticas seguras para gatos</h2>
-        <p>Um material introdutório para trazer mais verde ao ambiente sem ignorar a segurança dos felinos.</p>
-        <a class="home-btn home-btn--light" href="baixe.html">Baixar o guia</a>
-      </div>
-    </section>
-  </main>
-
-  <div id="footer"></div>
-
+  <!-- =====================================================
+       CARREGAMENTO DOS ARTIGOS RECENTES
+  ====================================================== -->
   <script>
     fetch('blog/posts.json')
       .then(response => {
-        if (!response.ok) throw new Error(`Não foi possível carregar os posts: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(
+            `Não foi possível carregar os posts: ${response.status}`
+          );
+        }
+
         return response.json();
       })
       .then(posts => {
         const container = document.getElementById('home-recent-posts');
+
+        if (!container || !Array.isArray(posts)) {
+          return;
+        }
+
         const recentPosts = [...posts]
           .sort((a, b) => new Date(b.data) - new Date(a.data))
           .slice(0, 6);
@@ -321,38 +638,82 @@
         recentPosts.forEach(post => {
           const article = document.createElement('article');
           article.className = 'home-recent-card';
+
           article.innerHTML = `
-            <a class="home-recent-card__image" href="${post.link}" aria-label="Ler ${post.titulo}">
-              <img src="${post.imagem}" alt="${post.titulo}" loading="lazy">
+            <a
+              class="home-recent-card__image"
+              href="${post.link}"
+              aria-label="Ler ${post.titulo}"
+            >
+              <img
+                src="${post.imagem}"
+                alt="${post.titulo}"
+                loading="lazy"
+              >
             </a>
+
             <div class="home-recent-card__content">
-              <p class="home-recent-card__meta">Artigo recente</p>
-              <h3><a href="${post.link}">${post.titulo}</a></h3>
+              <p class="home-recent-card__meta">
+                Artigo recente
+              </p>
+
+              <h3>
+                <a href="${post.link}">
+                  ${post.titulo}
+                </a>
+              </h3>
+
               <p>${post.trecho}</p>
-              <a class="home-recent-card__link" href="${post.link}">Ler artigo</a>
+
+              <a
+                class="home-recent-card__link"
+                href="${post.link}"
+              >
+                Ler artigo
+              </a>
             </div>
           `;
+
           container.appendChild(article);
         });
       })
       .catch(error => {
-        console.error(error);
+        console.error('[POSTS]', error);
+
         const container = document.getElementById('home-recent-posts');
-        container.innerHTML = '<p class="home-loading">Não foi possível carregar os artigos agora.</p>';
+
+        if (container) {
+          container.innerHTML =
+            '<p class="home-loading">Não foi possível carregar os artigos agora.</p>';
+        }
       });
   </script>
 
+  <!-- =====================================================
+       CARREGAMENTO DO RODAPÉ COMPARTILHADO
+  ====================================================== -->
   <script>
     fetch('footer.html')
       .then(response => {
-        if (!response.ok) throw new Error(`Não foi possível carregar o rodapé: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(
+            `Não foi possível carregar o rodapé: ${response.status}`
+          );
+        }
+
         return response.text();
       })
       .then(html => {
         const footer = document.getElementById('footer');
-        if (footer) footer.innerHTML = html;
+
+        if (footer) {
+          footer.innerHTML = html;
+        }
       })
-      .catch(error => console.error('[FOOTER]', error));
+      .catch(error => {
+        console.error('[FOOTER]', error);
+      });
   </script>
+
 </body>
 </html>
