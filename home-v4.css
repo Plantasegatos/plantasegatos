@@ -1025,3 +1025,20 @@
     animation-iteration-count: 1 !important;
   }
 }
+.home-social {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 58%;
+}
+
+.home-social--instagram {
+    background-image: url("IMG/instagram-gold.png");
+}
+
+.home-social--pinterest {
+    background-image: url("IMG/pinterest-gold.png");
+}
+
+.home-social--spotify {
+    background-image: url("IMG/spotify-gold.png");
+}
