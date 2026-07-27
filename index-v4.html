@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="home-v4.css">
+  <link rel="stylesheet" href="home-v4-fan.css">
 </head>
 
 <body class="home-v4">
@@ -86,6 +87,47 @@
         <a class="home-primary-action" href="plantas.html">
           Consultar banco de plantas
         </a>
+      </div>
+
+      <div class="hero-fan-area">
+        <p class="hero-fan-label">Comece aqui</p>
+        <div class="fan-menu" id="fanMenu">
+          <button class="fan-trigger" id="fanTrigger" type="button"
+            aria-expanded="false" aria-controls="fanNavigation"
+            aria-label="Abrir navegação do portal">
+            <span class="fan-trigger__lines" aria-hidden="true"></span>
+          </button>
+
+          <nav class="fan-navigation" id="fanNavigation"
+            aria-label="Explore o portal" aria-hidden="true">
+            <div class="fan-navigation__stage">
+              <a href="plantas.html" class="fan-slice fan-slice--1" style="--slice-index:1">
+                <span class="fan-slice__surface"></span>
+                <span class="fan-slice__content"><span class="fan-slice__number">01</span><span class="fan-slice__divider"></span><span class="fan-slice__text"><strong>Plantas</strong><small>Segurança, toxicidade e cuidados</small></span></span>
+              </a>
+              <a href="blog/" class="fan-slice fan-slice--2" style="--slice-index:2">
+                <span class="fan-slice__surface"></span>
+                <span class="fan-slice__content"><span class="fan-slice__number">02</span><span class="fan-slice__divider"></span><span class="fan-slice__text"><strong>Raças</strong><small>História, padrões e temperamento</small></span></span>
+              </a>
+              <a href="blog/" class="fan-slice fan-slice--3" style="--slice-index:3">
+                <span class="fan-slice__surface"></span>
+                <span class="fan-slice__content"><span class="fan-slice__number">03</span><span class="fan-slice__divider"></span><span class="fan-slice__text"><strong>Genética</strong><small>Cores, padrões e hereditariedade</small></span></span>
+              </a>
+              <a href="blog/" class="fan-slice fan-slice--4" style="--slice-index:4">
+                <span class="fan-slice__surface"></span>
+                <span class="fan-slice__content"><span class="fan-slice__number">04</span><span class="fan-slice__divider"></span><span class="fan-slice__text"><strong>Saúde</strong><small>Prevenção, manejo e bem-estar</small></span></span>
+              </a>
+              <a href="blog/" class="fan-slice fan-slice--5" style="--slice-index:5">
+                <span class="fan-slice__surface"></span>
+                <span class="fan-slice__content"><span class="fan-slice__number">05</span><span class="fan-slice__divider"></span><span class="fan-slice__text"><strong>Comportamento</strong><small>Entendendo emoções e sinais</small></span></span>
+              </a>
+              <a href="blog/" class="fan-slice fan-slice--6" style="--slice-index:6">
+                <span class="fan-slice__surface"></span>
+                <span class="fan-slice__content"><span class="fan-slice__number">06</span><span class="fan-slice__divider"></span><span class="fan-slice__text"><strong>Casa</strong><small>Ambientes, plantas e convivência</small></span></span>
+              </a>
+            </div>
+          </nav>
+        </div>
       </div>
     </section>
 
