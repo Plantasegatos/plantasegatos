@@ -325,3 +325,51 @@
     transform-origin: top center;
   }
 }
+/* =====================================================
+   AJUSTES FINAIS — CABEÇALHO E COMEÇE AQUI
+===================================================== */
+
+body.home-v4 .home-brand {
+  font-size: 3.4rem !important;
+  line-height: 1 !important;
+}
+
+body.home-v4 .home-socials {
+  gap: 18px !important;
+}
+
+body.home-v4 .home-social {
+  width: 54px !important;
+  height: 54px !important;
+  min-width: 54px !important;
+  min-height: 54px !important;
+  flex: 0 0 54px !important;
+}
+
+body.home-v4 .home-social img {
+  display: block !important;
+  width: 54px !important;
+  height: 54px !important;
+  max-width: 54px !important;
+  max-height: 54px !important;
+  object-fit: contain !important;
+}
+
+body.home-v4 .hero-fan-area {
+  right: 42px !important;
+}
+
+body.home-v4 .hero-fan-label {
+  top: 76px !important;
+  left: auto !important;
+  right: 3px !important;
+  width: 150px !important;
+  text-align: center !important;
+  transform: none !important;
+}
+
+body.home-v4 .fan-trigger {
+  top: 118px !important;
+  left: auto !important;
+  right: 19px !important;
+}
