@@ -370,8 +370,8 @@ body.home-v4 .fan-trigger {
 }
 
 .home-v4 .home-social img {
-  width: 80% !important;
-  height: 80% !important;
+  width: 60% !important;
+  height: 60% !important;
   object-fit: contain !important;
   transform: scale(1.0);
   transform-origin: center;
