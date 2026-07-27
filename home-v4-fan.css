@@ -13,7 +13,7 @@
 
 .home-v4 .home-header__inner {
   width: min(calc(100% - 80px), 1460px);
-  min-height: 104px;
+  min-height: 124px;
   margin-inline: auto;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@
 .home-v4 .home-brand {
   color: #133336;
   font-family: Garamond, Georgia, serif;
-  font-size: clamp(1.85rem, 2.5vw, 2.65rem);
+  font-size: clamp(2.25rem, 3vw, 3.25rem);
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
@@ -33,13 +33,13 @@
 .home-v4 .home-socials {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
 }
 
 .home-v4 .home-social {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px;
+  width: 72px !important;
+  height: 72px !important;
+  min-width: 72px;
   display: grid !important;
   place-items: center;
   padding: 0 !important;
@@ -107,12 +107,12 @@
   position: absolute;
   z-index: 70;
   top: 126px;
-  right: -8px;
+  right: -38px;
   width: 170px;
   margin: 0;
   color: #d9a744;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-align: center;
@@ -292,7 +292,7 @@
     width: calc(100% - 32px);
     min-height: 82px;
   }
-  .home-v4 .home-social { width: 36px !important; height: 36px !important; min-width: 36px; }
+  .home-v4 .home-social { width: 52px !important; height: 52px !important; min-width: 52px; }
   .home-v4 .home-hero { min-height: 1120px; }
   .home-v4 .home-hero__content {
     width: calc(100% - 32px) !important;
@@ -315,9 +315,9 @@
 }
 
 @media (max-width: 620px) {
-  .home-v4 .home-brand { font-size: 1.55rem; }
+  .home-v4 .home-brand { font-size: 1.85rem; }
   .home-v4 .home-socials { gap: 8px; }
-  .home-v4 .home-social { width: 32px !important; height: 32px !important; min-width: 32px; }
+  .home-v4 .home-social { width: 42px !important; height: 42px !important; min-width: 42px; }
   .home-v4 .home-hero { min-height: 930px; }
   .home-v4 .hero-fan-area {
     margin-left: 50%;
