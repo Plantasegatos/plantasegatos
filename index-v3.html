@@ -11,7 +11,36 @@
 </head>
 
 <body class="pagina-interna index home-v3">
-  <div id="header"></div>
+  <header class="home-topbar">
+    <div class="home-topbar__inner">
+      <a class="home-brand" href="index-v3.html" aria-label="Página inicial Plantas &amp; Gatos">
+        <span class="home-brand__name">Plantas &amp; Gatos</span>
+        <span class="home-brand__tagline">Ciência felina acessível</span>
+      </a>
+
+      <nav class="home-nav" aria-label="Navegação principal">
+        <a href="plantas.html">Plantas</a>
+        <a href="#explorar">Conteúdos</a>
+        <a href="blog/">Blog</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+
+      <div class="home-topbar__actions">
+        <a class="home-language" href="/en/" lang="en">EN</a>
+        <details class="home-menu">
+          <summary aria-label="Abrir menu">Menu</summary>
+          <div class="home-menu__panel">
+            <a href="plantas.html">Plantas</a>
+            <a href="#explorar">Conteúdos</a>
+            <a href="blog/">Blog</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+            <a href="/en/" lang="en">English</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
 
   <main class="home-main">
     <section class="home-hero" aria-labelledby="home-title">
@@ -218,7 +247,17 @@
       });
   </script>
 
-  <script src="load-common.js"></script>
-  <a class="lang-switch" href="/en/">English</a>
+  <script>
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error(`Não foi possível carregar o rodapé: ${response.status}`);
+        return response.text();
+      })
+      .then(html => {
+        const footer = document.getElementById('footer');
+        if (footer) footer.innerHTML = html;
+      })
+      .catch(error => console.error('[FOOTER]', error));
+  </script>
 </body>
 </html>
