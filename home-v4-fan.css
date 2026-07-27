@@ -347,3 +347,7 @@ body.home-v4 .fan-trigger {
   left: auto !important;
   right: 19px !important;
 }
+.home-v4 .home-social {
+  background: rgba(217, 167, 68, 0.18) !important;
+  outline: 2px solid #d9a744 !important;
+}
