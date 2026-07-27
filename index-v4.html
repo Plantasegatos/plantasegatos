@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Conteúdo acessível e fundamentado sobre gatos, plantas, saúde, comportamento, genética, raças e convivência segura."
+  >
+
+  <title>Plantas & Gatos | Ciência felina e convivência segura</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home-v4.css">
+</head>
+
+<body class="home-v4">
+
+  <!-- =====================================================
+       CABEÇALHO EXCLUSIVO DA HOME
+  ====================================================== -->
+  <header class="home-header">
+    <div class="home-header__inner">
+
+      <div class="fan-menu" id="fanMenu">
+
+        <button
+          class="fan-trigger"
+          id="fanTrigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="fanNavigation"
+        >
+          <span class="fan-trigger__label">Explore o portal</span>
+
+          <span class="fan-trigger__pivot" aria-hidden="true">
+            <span class="fan-trigger__lines"></span>
+          </span>
+        </button>
+
+        <nav
+          class="fan-navigation"
+          id="fanNavigation"
+          aria-label="Áreas do portal"
+          aria-hidden="true"
+        >
+          <div class="fan-navigation__stage">
+
+            <a
+              class="fan-slice fan-slice--1"
+              href="plantas.html"
+              style="--slice-index: 0"
+            >
+              <span class="fan-slice__surface"></span>
+
+              <span class="fan-slice__content">
+                <span class="fan-slice__number">01</span>
+                <strong>Plantas</strong>
+                <small>Segurança, toxicidade e cuidados</small>
+              </span>
+            </a>
+
+            <a
+              class="fan-slice fan-slice--2"
+              href="blog/"
+              style="--slice-index: 1"
+            >
+              <span class="fan-slice__surface"></span>
+
+              <span class="fan-slice__content">
+                <span class="fan-slice__number">02</span>
+                <strong>Raças</strong>
+                <small>História, padrões e temperamento</small>
+              </span>
+            </a>
+
+            <a
+              class="fan-slice fan-slice--3"
+              href="blog/"
+              style="--slice-index: 2"
+            >
+              <span class="fan-slice__surface"></span>
+
+              <span class="fan-slice__content">
+                <span class="fan-slice__number">03</span>
+                <strong>Genética</strong>
+                <small>Cores, pelagens e hereditariedade</small>
+              </span>
+            </a>
+
+            <a
+              class="fan-slice fan-slice--4"
+              href="blog/"
+              style="--slice-index: 3"
+            >
+              <span class="fan-slice__surface"></span>
+
+              <span class="fan-slice__content">
+                <span class="fan-slice__number">04</span>
+                <strong>Saúde</strong>
+                <small>Prevenção e medicina felina</small>
+              </span>
+            </a>
+
+            <a
+              class="fan-slice fan-slice--5"
+              href="blog/"
+              style="--slice-index: 4"
+            >
+              <span class="fan-slice__surface"></span>
+
+              <span class="fan-slice__content">
+                <span class="fan-slice__number">05</span>
+                <strong>Comportamento</strong>
+                <small>Comunicação, emoções e bem-estar</small>
+              </span>
+            </a>
+
+            <a
+              class="fan-slice fan-slice--6"
+              href="blog/"
+              style="--slice-index: 5"
+            >
+              <span class="fan-slice__surface"></span>
+
+              <span class="fan-slice__content">
+                <span class="fan-slice__number">06</span>
+                <strong>Casa</strong>
+                <small>Ambiente e convivência segura</small>
+              </span>
+            </a>
+
+            <button
+              class="fan-center"
+              id="fanClose"
+              type="button"
+              aria-label="Fechar o leque"
+            >
+              ×
+            </button>
+
+          </div>
+        </nav>
+
+      </div>
+
+      <a
+        class="home-brand"
+        href="index-v4.html"
+        aria-label="Página inicial Plantas & Gatos"
+      >
+        Plantas &amp; Gatos
+      </a>
+
+    </div>
+  </header>
+
+  <!-- =====================================================
+       CONTEÚDO PRINCIPAL
+  ====================================================== -->
+  <main class="home-main">
+
+    <!-- HERO -->
+    <section class="home-hero" aria-labelledby="homeTitle">
+      <div class="home-hero__veil"></div>
+
+      <div class="home-hero__content">
+        <p class="home-kicker">Ciência, botânica e comportamento</p>
+
+        <h1 id="homeTitle">
+          Compreender um gato é aprender a enxergar o mundo pelos olhos dele.
+        </h1>
+
+        <p class="home-hero__text">
+          Conhecimento acessível e responsável sobre gatos, plantas
+          e a convivência que construímos com eles.
+        </p>
+
+        <a class="home-primary-action" href="plantas.html">
+          Consultar banco de plantas
+        </a>
+      </div>
+    </section>
+
+    <!-- INTRODUÇÃO EDITORIAL -->
+    <section class="editorial-intro">
+      <p class="section-label">Plantas &amp; Gatos</p>
+
+      <div class="editorial-intro__grid">
+        <h2>
+          Um portal para compreender, cuidar e conviver melhor.
+        </h2>
+
+        <p>
+          Conteúdo fundamentado sobre saúde, comportamento, genética,
+          raças, toxicologia, botânica e ambiente doméstico.
+        </p>
+      </div>
+    </section>
+
+    <!-- GUIAS ESSENCIAIS -->
+    <section class="home-section" aria-labelledby="guidesTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Seleção editorial</p>
+          <h2 id="guidesTitle">Guias essenciais</h2>
+        </div>
+
+        <a href="blog/">Ver todos os conteúdos</a>
+      </div>
+
+      <div class="guide-grid">
+
+        <article class="guide-card guide-card--large">
+          <a class="guide-card__image guide-card__image--ragdoll" href="blog/">
+            <span class="sr-only">Conteúdos sobre Ragdoll</span>
+          </a>
+
+          <div class="guide-card__content">
+            <p class="guide-card__category">Raças</p>
+
+            <h3>Ragdoll: história, padrões e temperamento</h3>
+
+            <p>
+              A origem da raça, sua variedade genética e a seleção
+              que construiu o comportamento conhecido como boneca de pano.
+            </p>
+
+            <a href="blog/">Explorar o guia</a>
+          </div>
+        </article>
+
+        <article class="guide-card">
+          <a class="guide-card__image guide-card__image--genetics" href="blog/">
+            <span class="sr-only">Conteúdos sobre genética felina</span>
+          </a>
+
+          <div class="guide-card__content">
+            <p class="guide-card__category">Genética</p>
+
+            <h3>Como as cores e os padrões são formados</h3>
+
+            <p>
+              Uma introdução clara à herança das cores, manchas,
+              olhos e pelagens felinas.
+            </p>
+
+            <a href="blog/">Ler sobre genética</a>
+          </div>
+        </article>
+
+        <article class="guide-card">
+          <a class="guide-card__image guide-card__image--plants" href="plantas.html">
+            <span class="sr-only">Banco de plantas</span>
+          </a>
+
+          <div class="guide-card__content">
+            <p class="guide-card__category">Segurança</p>
+
+            <h3>Plantas tóxicas e não tóxicas</h3>
+
+            <p>
+              Consulte o banco antes de levar uma nova espécie
+              para um ambiente compartilhado com gatos.
+            </p>
+
+            <a href="plantas.html">Consultar plantas</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BANCO DE PLANTAS -->
+    <section class="plant-tool" aria-labelledby="plantToolTitle">
+      <div class="plant-tool__content">
+        <p class="section-label section-label--light">Ferramenta do portal</p>
+
+        <h2 id="plantToolTitle">Encontre uma planta</h2>
+
+        <p>
+          Pesquise pelo nome popular ou científico para consultar
+          toxicidade, luz, rega e cuidados.
+        </p>
+
+        <form class="plant-search" action="plantas.html" method="get">
+          <label class="sr-only" for="plantSearch">Nome da planta</label>
+
+          <input
+            id="plantSearch"
+            name="q"
+            type="search"
+            placeholder="Digite o nome da planta"
+          >
+
+          <button type="submit">Pesquisar</button>
+        </form>
+
+        <a class="plant-tool__link" href="plantas.html">
+          Abrir o banco completo
+        </a>
+      </div>
+    </section>
+
+    <!-- ARTIGOS RECENTES -->
+    <section class="home-section" aria-labelledby="recentTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Novidades</p>
+          <h2 id="recentTitle">Artigos recentes</h2>
+        </div>
+
+        <a href="blog/">Ver todos</a>
+      </div>
+
+      <div
+        class="recent-grid"
+        id="recentPosts"
+        aria-live="polite"
+      >
+        <p class="loading-message">Carregando artigos recentes…</p>
+      </div>
+    </section>
+
+    <!-- COMPROMISSO EDITORIAL -->
+    <section class="editorial-statement">
+      <div>
+        <p class="section-label">Compromisso editorial</p>
+
+        <h2>
+          Ciência acessível sem simplificações irresponsáveis.
+        </h2>
+      </div>
+
+      <p>
+        Traduzimos literatura técnica preservando contexto,
+        limites das evidências e a necessidade de avaliação
+        veterinária quando aplicável.
+      </p>
+    </section>
+
+    <!-- GUIA GRATUITO -->
+    <section class="download-banner">
+      <div class="download-banner__content">
+        <p class="section-label section-label--light">Guia gratuito</p>
+
+        <h2>5 plantas aromáticas seguras para gatos</h2>
+
+        <p>
+          Um material introdutório para trazer mais verde ao ambiente
+          sem ignorar a segurança felina.
+        </p>
+
+        <a href="baixe.html">Baixar o guia</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="home-v4.js" defer></script>
+</body>
+</html>
