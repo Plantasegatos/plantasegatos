@@ -604,3 +604,147 @@
     padding: 62px 0;
   }
 }
+/* =====================================================
+   Cabeçalho v3.2
+   Botão à esquerda e marca à direita
+===================================================== */
+
+.home-v3 .home-topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Menu fica à esquerda */
+.home-v3 .home-menu {
+  order: 1;
+}
+
+/* Marca fica à direita */
+.home-v3 .home-brand {
+  order: 2;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Inverte a posição visual do subtítulo */
+.home-v3 .home-brand__tagline {
+  order: -1;
+  padding-right: 14px;
+  padding-left: 0;
+  border-right: 1px solid rgba(19, 51, 54, 0.2);
+  border-left: 0;
+}
+
+/* O painel continua surgindo pela direita da tela */
+.home-v3 .home-menu__panel {
+  right: 0;
+  left: auto;
+}
+
+/* Links editoriais do painel */
+
+.home-v3 .home-menu__links a {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+  padding: 18px 0;
+  color: var(--home-ink);
+  text-decoration: none;
+}
+
+.home-v3 .home-menu__links a > span {
+  padding-top: 4px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--home-green-light);
+}
+
+.home-v3 .home-menu__links a div {
+  display: grid;
+  gap: 5px;
+}
+
+.home-v3 .home-menu__links a strong {
+  font-family: Garamond, Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.home-v3 .home-menu__links a small {
+  max-width: 34ch;
+  color: var(--home-ink-soft);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.home-v3 .home-menu__links a:hover strong {
+  color: var(--home-green-light);
+}
+
+/* Links secundários */
+
+.home-v3 .home-menu__secondary {
+  display: grid;
+  gap: 10px;
+  margin-top: 32px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(19, 51, 54, 0.12);
+}
+
+.home-v3 .home-menu__secondary p {
+  margin: 0 0 7px;
+  color: var(--home-green-light);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-v3 .home-menu__secondary a {
+  color: var(--home-ink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.home-v3 .home-menu__secondary a:hover {
+  color: var(--home-green-light);
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  .home-v3 .home-topbar__inner {
+    width: calc(100% - 28px);
+    min-height: 68px;
+  }
+
+  .home-v3 .home-brand {
+    margin-left: auto;
+  }
+
+  .home-v3 .home-brand__tagline {
+    display: none;
+  }
+
+  .home-v3 .home-brand__name {
+    font-size: 1.25rem;
+  }
+
+  .home-v3 .home-menu > summary {
+    min-width: 46px;
+    justify-content: center;
+  }
+
+  .home-v3 .home-menu > summary > span:last-child {
+    display: none;
+  }
+}
