@@ -1,0 +1,443 @@
+
+/* Ajustes da home v4: header limpo + leque dentro do hero */
+
+.home-v4 .home-header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  background: #f5efe2;
+  border-bottom: 1px solid rgba(19, 51, 54, 0.12);
+}
+
+.home-v4 .home-header__inner {
+  width: min(100% - 80px, 1460px);
+  min-height: 104px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.home-v4 .home-brand {
+  color: #133336;
+  font-family: Garamond, Georgia, serif;
+  font-size: clamp(1.85rem, 2.5vw, 2.65rem);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.home-v4 .home-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-v4 .home-social {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #d9a744;
+  border-radius: 50%;
+  background: #133336;
+  color: #d9a744;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(19, 51, 54, 0.12);
+}
+
+.home-v4 .home-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 760px;
+}
+
+.home-v4 .home-hero__content {
+  position: relative;
+  z-index: 10;
+  width: min(100% - 80px, 1460px);
+  margin-inline: auto;
+  padding-right: 690px;
+}
+
+.home-v4 .home-hero h1 {
+  max-width: 790px;
+}
+
+.home-v4 .hero-fan-area {
+  position: absolute;
+  z-index: 20;
+  top: 135px;
+  right: max(48px, calc((100vw - 1460px) / 2));
+  width: 660px;
+  height: 590px;
+  pointer-events: none;
+}
+
+.home-v4 .hero-fan-label {
+  position: absolute;
+  z-index: 40;
+  top: -30px;
+  left: 4px;
+  margin: 0;
+  color: #d9a744;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.home-v4 .fan-menu {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.home-v4 .fan-trigger {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 92px;
+  height: 92px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 2px solid #d9a744;
+  border-radius: 50%;
+  background: #123b37;
+  color: #d9a744;
+  box-shadow: 0 14px 34px rgba(4, 24, 22, 0.35);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.home-v4 .fan-trigger__lines,
+.home-v4 .fan-trigger__lines::before,
+.home-v4 .fan-trigger__lines::after {
+  width: 32px;
+  height: 3px;
+  border-radius: 4px;
+  background: currentColor;
+}
+
+.home-v4 .fan-trigger__lines {
+  position: relative;
+}
+
+.home-v4 .fan-trigger__lines::before,
+.home-v4 .fan-trigger__lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: top 220ms ease, transform 220ms ease;
+}
+
+.home-v4 .fan-trigger__lines::before { top: -10px; }
+.home-v4 .fan-trigger__lines::after { top: 10px; }
+
+.home-v4 .fan-menu.is-open .fan-trigger__lines {
+  background: transparent;
+}
+
+.home-v4 .fan-menu.is-open .fan-trigger__lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.home-v4 .fan-menu.is-open .fan-trigger__lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.home-v4 .fan-navigation {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.home-v4 .fan-menu.is-open .fan-navigation {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.home-v4 .fan-navigation__stage {
+  position: absolute;
+  inset: 0;
+}
+
+.home-v4 .fan-slice {
+  --blade-width: 570px;
+  --blade-height: 98px;
+  position: absolute;
+  z-index: calc(20 - var(--slice-index));
+  top: 46px;
+  left: 46px;
+  width: var(--blade-width);
+  height: var(--blade-height);
+  color: #fffaf0;
+  text-decoration: none;
+  transform-origin: 0 50%;
+  transform: rotate(0deg) scaleX(0.08);
+  opacity: 0;
+  transition: transform 580ms cubic-bezier(.16, .9, .24, 1), opacity 240ms ease;
+  transition-delay: calc(var(--slice-index) * 48ms);
+}
+
+.home-v4 .fan-slice--1 { --open-angle: 0deg; }
+.home-v4 .fan-slice--2 { --open-angle: 12deg; }
+.home-v4 .fan-slice--3 { --open-angle: 24deg; }
+.home-v4 .fan-slice--4 { --open-angle: 36deg; }
+.home-v4 .fan-slice--5 { --open-angle: 48deg; }
+.home-v4 .fan-slice--6 { --open-angle: 60deg; }
+
+.home-v4 .fan-menu.is-open .fan-slice {
+  opacity: 1;
+  transform: rotate(var(--open-angle)) scaleX(1);
+}
+
+.home-v4 .fan-slice__surface {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px 58px 58px 10px;
+  background: linear-gradient(90deg, #1b5d55 0%, #287d72 62%, #4d9983 100%);
+  box-shadow: 0 16px 32px rgba(3, 24, 22, 0.28);
+}
+
+.home-v4 .fan-slice__content {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 48px 1px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 20px;
+  padding: 0 46px 0 112px;
+}
+
+.home-v4 .fan-slice__number {
+  color: #f2bd45;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.home-v4 .fan-slice__divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 250, 240, 0.28);
+}
+
+.home-v4 .fan-slice__text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.home-v4 .fan-slice__text strong {
+  color: #fffaf0;
+  font-family: Garamond, Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.home-v4 .fan-slice__text small {
+  color: rgba(255, 250, 240, 0.82);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.84rem;
+}
+
+.home-v4 .fan-center {
+  display: none !important;
+}
+
+@media (max-width: 1180px) {
+  .home-v4 .hero-fan-area {
+    transform: scale(0.82);
+    transform-origin: top right;
+  }
+
+  .home-v4 .home-hero__content {
+    padding-right: 520px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-v4 .home-header__inner {
+    width: calc(100% - 32px);
+    min-height: 82px;
+  }
+
+  .home-v4 .home-hero {
+    min-height: 1150px;
+  }
+
+  .home-v4 .home-hero__content {
+    width: calc(100% - 32px);
+    padding-right: 0;
+  }
+
+  .home-v4 .hero-fan-area {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: calc(100% - 32px);
+    height: 560px;
+    margin: 30px auto 0;
+    transform: scale(0.76);
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-v4 .home-brand {
+    font-size: 1.55rem;
+  }
+
+  .home-v4 .home-socials {
+    gap: 8px;
+  }
+
+  .home-v4 .home-social {
+    width: 35px;
+    height: 35px;
+  }
+
+  .home-v4 .hero-fan-area {
+    height: 440px;
+    transform: scale(0.57);
+  }
+}
+
+/* =====================================================
+   VERSÃO FINAL DO HERO — TEXTO AMPLO + LEQUE À ESQUERDA
+   Este bloco prevalece sobre as regras anteriores.
+===================================================== */
+
+@media (min-width: 901px) {
+  .home-v4 .home-hero {
+    min-height: 760px;
+  }
+
+  .home-v4 .home-hero__content {
+    width: min(100% - 80px, 1460px);
+    padding-right: 530px;
+  }
+
+  .home-v4 .home-hero h1 {
+    max-width: 960px;
+    font-size: clamp(4.4rem, 6.2vw, 7rem);
+    line-height: 0.92;
+  }
+
+  .home-v4 .home-hero__text {
+    max-width: 690px;
+  }
+
+  .home-v4 .hero-fan-area {
+    top: 112px;
+    right: max(34px, calc((100vw - 1500px) / 2));
+    width: 650px;
+    height: 610px;
+  }
+
+  .home-v4 .fan-trigger {
+    top: 166px;
+    right: 0;
+    left: auto;
+    width: 94px;
+    height: 94px;
+  }
+
+  .home-v4 .hero-fan-label {
+    top: 128px;
+    right: 0;
+    left: auto;
+    width: 150px;
+    text-align: center;
+    transform: translateX(28px);
+  }
+
+  .home-v4 .fan-slice {
+    --blade-width: 520px;
+    --blade-height: 86px;
+
+    top: 170px;
+    right: 46px;
+    left: auto;
+
+    transform-origin: 100% 50%;
+    transform: rotate(0deg) scaleX(0.06);
+  }
+
+  .home-v4 .fan-slice--1 { --open-angle: -34deg; }
+  .home-v4 .fan-slice--2 { --open-angle: -21deg; }
+  .home-v4 .fan-slice--3 { --open-angle: -8deg; }
+  .home-v4 .fan-slice--4 { --open-angle: 5deg; }
+  .home-v4 .fan-slice--5 { --open-angle: 18deg; }
+  .home-v4 .fan-slice--6 { --open-angle: 31deg; }
+
+  .home-v4 .fan-menu.is-open .fan-slice {
+    transform: rotate(var(--open-angle)) scaleX(1);
+  }
+
+  .home-v4 .fan-slice__surface {
+    border-radius: 52px 10px 10px 52px;
+    border-color: rgba(217, 167, 68, 0.72);
+    background: linear-gradient(
+      90deg,
+      rgba(24, 86, 78, 0.98) 0%,
+      rgba(19, 67, 62, 0.99) 58%,
+      rgba(13, 48, 45, 1) 100%
+    );
+    box-shadow: 0 14px 30px rgba(3, 24, 22, 0.30);
+  }
+
+  .home-v4 .fan-slice__content {
+    grid-template-columns: 42px 1px minmax(0, 1fr);
+    column-gap: 17px;
+    padding: 0 86px 0 34px;
+  }
+
+  .home-v4 .fan-slice__number {
+    font-size: 0.92rem;
+  }
+
+  .home-v4 .fan-slice__divider {
+    height: 42px;
+  }
+
+  .home-v4 .fan-slice__text strong {
+    font-size: 1.52rem;
+  }
+
+  .home-v4 .fan-slice__text small {
+    display: none;
+  }
+
+  .home-v4 .fan-slice:hover .fan-slice__surface,
+  .home-v4 .fan-slice:focus-visible .fan-slice__surface {
+    filter: brightness(1.12);
+    transform: translateX(-10px);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .home-v4 .hero-fan-area {
+    transform: scale(0.78);
+    transform-origin: top right;
+  }
+
+  .home-v4 .home-hero__content {
+    padding-right: 430px;
+  }
+
+  .home-v4 .home-hero h1 {
+    max-width: 760px;
+  }
+}
