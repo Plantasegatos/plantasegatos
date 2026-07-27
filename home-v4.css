@@ -259,7 +259,7 @@
   z-index: 20;
 
   top: 135px;
-  right: max(48px, calc((100vw - 1460px) / 2));
+  right: max(24px, calc((100vw - 1540px) / 2));
 
   width: 660px;
   height: 590px;
