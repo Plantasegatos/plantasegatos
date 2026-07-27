@@ -373,6 +373,6 @@ body.home-v4 .fan-trigger {
   width: 80% !important;
   height: 80% !important;
   object-fit: contain !important;
-  transform: scale(2.4);
+  transform: scale(1.0);
   transform-origin: center;
 }
