@@ -361,3 +361,18 @@ body.home-v4 .fan-trigger {
     width: 120px !important;
     height: 120px !important;
 }
+.home-v4 .home-social {
+  width: 72px !important;
+  height: 72px !important;
+  min-width: 72px !important;
+  flex: 0 0 72px !important;
+  overflow: hidden;
+}
+
+.home-v4 .home-social img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  transform: scale(2.4);
+  transform-origin: center;
+}
