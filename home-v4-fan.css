@@ -24,7 +24,7 @@
 .home-v4 .home-brand {
   color: #133336;
   font-family: Garamond, Georgia, serif;
-  font-size: clamp(2.25rem, 3vw, 3.25rem);
+  font-size: clamp(3rem, 4vw, 4rem);
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
@@ -37,8 +37,8 @@
 }
 
 .home-v4 .home-social {
-  width: 72px !important;
-  height: 72px !important;
+  width: 144px !important;
+  height: 144px !important;
   min-width: 72px;
   display: grid !important;
   place-items: center;
