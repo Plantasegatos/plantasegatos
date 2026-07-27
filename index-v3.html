@@ -18,27 +18,33 @@
         <span class="home-brand__tagline">Ciência felina acessível</span>
       </a>
 
-      <nav class="home-nav" aria-label="Navegação principal">
-        <a href="plantas.html">Plantas</a>
-        <a href="#explorar">Conteúdos</a>
-        <a href="blog/">Blog</a>
-        <a href="sobre.html">Sobre</a>
-      </nav>
+      <details class="home-menu">
+        <summary>
+          <span class="home-menu__icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>Comece aqui</span>
+        </summary>
 
-      <div class="home-topbar__actions">
-        <a class="home-language" href="/en/" lang="en">EN</a>
-        <details class="home-menu">
-          <summary aria-label="Abrir menu">Menu</summary>
-          <div class="home-menu__panel">
-            <a href="plantas.html">Plantas</a>
-            <a href="#explorar">Conteúdos</a>
-            <a href="blog/">Blog</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-            <a href="/en/" lang="en">English</a>
+        <div class="home-menu__panel" aria-label="Menu principal">
+          <div class="home-menu__heading">
+            <p>Explore o portal</p>
+            <strong>Por onde deseja começar?</strong>
           </div>
-        </details>
-      </div>
+
+          <nav class="home-menu__links" aria-label="Navegação principal">
+            <a href="plantas.html"><span>01</span> Banco de plantas</a>
+            <a href="#explorar"><span>02</span> Explorar conteúdos</a>
+            <a href="blog/"><span>03</span> Artigos recentes</a>
+            <a href="sobre.html"><span>04</span> Sobre o projeto</a>
+            <a href="contato.html"><span>05</span> Contato</a>
+          </nav>
+
+          <div class="home-menu__footer">
+            <a href="/en/" lang="en">English version</a>
+          </div>
+        </div>
+      </details>
     </div>
   </header>
 
