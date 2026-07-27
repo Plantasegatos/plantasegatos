@@ -1,60 +1,55 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const fanMenu = document.getElementById("fanMenu");
-  const fanTrigger = document.getElementById("fanTrigger");
-  const fanNavigation = document.getElementById("fanNavigation");
-  const fanClose = document.getElementById("fanClose");
+document.addEventListener("DOMContentLoaded", function () {
+  const menu = document.getElementById("fanMenu");
+  const botao = document.getElementById("fanTrigger");
+  const navegacao = document.getElementById("fanNavigation");
 
-  if (!fanMenu || !fanTrigger || !fanNavigation) {
-    console.error("Menu em leque: elementos do HTML não encontrados.");
+  if (!menu || !botao || !navegacao) {
+    console.error("Menu em leque: elementos não encontrados no HTML.", {
+      fanMenu: menu,
+      fanTrigger: botao,
+      fanNavigation: navegacao
+    });
+
     return;
   }
 
-  function openFan() {
-    fanMenu.classList.add("is-open");
-    fanTrigger.setAttribute("aria-expanded", "true");
-    fanNavigation.setAttribute("aria-hidden", "false");
+  function abrirMenu() {
+    menu.classList.add("is-open");
+    botao.setAttribute("aria-expanded", "true");
+    navegacao.setAttribute("aria-hidden", "false");
   }
 
-  function closeFan() {
-    fanMenu.classList.remove("is-open");
-    fanTrigger.setAttribute("aria-expanded", "false");
-    fanNavigation.setAttribute("aria-hidden", "true");
+  function fecharMenu() {
+    menu.classList.remove("is-open");
+    botao.setAttribute("aria-expanded", "false");
+    navegacao.setAttribute("aria-hidden", "true");
   }
 
-  fanTrigger.addEventListener("click", event => {
+  botao.addEventListener("click", function (event) {
+    event.preventDefault();
     event.stopPropagation();
 
-    const isOpen = fanMenu.classList.contains("is-open");
-
-    if (isOpen) {
-      closeFan();
+    if (menu.classList.contains("is-open")) {
+      fecharMenu();
     } else {
-      openFan();
+      abrirMenu();
     }
   });
 
-  if (fanClose) {
-    fanClose.addEventListener("click", event => {
-      event.stopPropagation();
-      closeFan();
-      fanTrigger.focus();
-    });
-  }
-
-  fanNavigation.addEventListener("click", event => {
+  navegacao.addEventListener("click", function (event) {
     event.stopPropagation();
   });
 
-  document.addEventListener("click", event => {
-    if (!fanMenu.contains(event.target)) {
-      closeFan();
+  document.addEventListener("click", function (event) {
+    if (!menu.contains(event.target)) {
+      fecharMenu();
     }
   });
 
-  document.addEventListener("keydown", event => {
+  document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-      closeFan();
-      fanTrigger.focus();
+      fecharMenu();
+      botao.focus();
     }
   });
 });
