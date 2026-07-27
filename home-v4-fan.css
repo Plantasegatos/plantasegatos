@@ -24,7 +24,7 @@
 .home-v4 .home-brand {
   color: #133336;
   font-family: Garamond, Georgia, serif;
-  font-size: clamp(3rem, 4vw, 4rem);
+  font-size: clamp(3.6rem, 4.6vw, 4.8rem);
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
@@ -37,8 +37,8 @@
 }
 
 .home-v4 .home-social {
-  width: 144px !important;
-  height: 144px !important;
+  width: 72px !important;
+  height: 72px !important;
   min-width: 72px;
   display: grid !important;
   place-items: center;
@@ -328,32 +328,6 @@
 /* =====================================================
    AJUSTES FINAIS — CABEÇALHO E COMEÇE AQUI
 ===================================================== */
-
-body.home-v4 .home-brand {
-  font-size: 3.4rem !important;
-  line-height: 1 !important;
-}
-
-body.home-v4 .home-socials {
-  gap: 18px !important;
-}
-
-body.home-v4 .home-social {
-  width: 54px !important;
-  height: 54px !important;
-  min-width: 54px !important;
-  min-height: 54px !important;
-  flex: 0 0 54px !important;
-}
-
-body.home-v4 .home-social img {
-  display: block !important;
-  width: 54px !important;
-  height: 54px !important;
-  max-width: 54px !important;
-  max-height: 54px !important;
-  object-fit: contain !important;
-}
 
 body.home-v4 .hero-fan-area {
   right: 42px !important;
