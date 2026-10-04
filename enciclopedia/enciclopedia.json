@@ -1,0 +1,86 @@
+{
+  "titulo": "Enciclopédia Genética Felina",
+  "versao": 1,
+  "capitulos": [
+    {
+      "id": "c01",
+      "numero": 1,
+      "titulo": "Fundamentos da Genética Felina",
+      "pasta": "capitulo-01",
+      "edicoes": [
+        {
+          "id": "e01",
+          "numero": 1,
+          "titulo": "Onde está escrita a informação?",
+          "capa": "/IMG/enciclopedia/capitulo-01/e01/c01-e01-capa.jpg",
+          "base": "/IMG/enciclopedia/capitulo-01/e01/",
+          "prefixo": "c01-e01-",
+          "slides": 12
+        },
+        {
+          "id": "e02",
+          "numero": 2,
+          "titulo": "Genótipo × Fenótipo",
+          "capa": "/IMG/enciclopedia/capitulo-01/e02/c01-e02-capa.jpg",
+          "base": "/IMG/enciclopedia/capitulo-01/e02/",
+          "prefixo": "c01-e02-",
+          "slides": 9
+        },
+        {
+          "id": "e03",
+          "numero": 3,
+          "titulo": "Mutação e variação genética",
+          "capa": "/IMG/enciclopedia/capitulo-01/e03/c01-e03-capa.jpg",
+          "base": "/IMG/enciclopedia/capitulo-01/e03/",
+          "prefixo": "c01-e03-",
+          "slides": 12
+        },
+        {
+          "id": "e04",
+          "numero": 4,
+          "titulo": "De onde vêm os genes de um filhote?",
+          "capa": "/IMG/enciclopedia/capitulo-01/e04/c01-e04-capa.jpg",
+          "base": "/IMG/enciclopedia/capitulo-01/e04/",
+          "prefixo": "c01-e04-",
+          "slides": 11
+        },
+        {
+          "id": "e05",
+          "numero": 5,
+          "titulo": "Alelos",
+          "capa": "/IMG/enciclopedia/capitulo-01/e05/c01-e05-capa.jpg",
+          "base": "/IMG/enciclopedia/capitulo-01/e05/",
+          "prefixo": "c01-e05-",
+          "slides": 9
+        },
+        {
+          "id": "e06",
+          "numero": 6,
+          "titulo": "Dominância e recessividade",
+          "capa": "/IMG/enciclopedia/capitulo-01/e06/c01-e06-capa.jpg",
+          "base": "/IMG/enciclopedia/capitulo-01/e06/",
+          "prefixo": "c01-e06-",
+          "slides": 10
+        },
+        {
+          "id": "e07",
+          "numero": 7,
+          "titulo": "Além da dominância completa",
+          "capa": "/IMG/enciclopedia/capitulo-01/e07/c01-e07-capa.jpg",
+          "base": "/IMG/enciclopedia/capitulo-01/e07/",
+          "prefixo": "c01-e07-",
+          "slides": 8
+        },
+        {
+          "id": "e08",
+          "numero": 8,
+          "titulo": "Epistasia",
+          "capa": "/IMG/enciclopedia/capitulo-01/e08/c01-e08-capa.jpg",
+          "base": "/IMG/enciclopedia/capitulo-01/e08/",
+          "prefixo": "c01-e08-",
+          "slides": 10
+        }
+      ]
+    }
+  ]
+}
