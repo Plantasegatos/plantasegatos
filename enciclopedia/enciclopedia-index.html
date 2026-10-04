@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enciclopédia Genética Felina do Plantas & Gatos: uma jornada visual e progressiva pelos fundamentos da genética dos gatos.">
+  <title>Enciclopédia Genética Felina | Plantas & Gatos</title>
+
+  <!-- Mantém a base visual do portal -->
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    :root {
+      --paper: #f3ead8;
+      --paper-light: #fbf7ee;
+      --ink: #1a3a36;
+      --gold: #b48635;
+      --muted: #6f6a5f;
+      --line: rgba(26, 58, 54, .18);
+      --shadow: 0 18px 45px rgba(33, 29, 21, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper-light);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .ency-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(251,247,238,.96);
+    }
+
+    .ency-header__inner {
+      width: min(1180px, calc(100% - 40px));
+      min-height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .ency-brand,
+    .ency-back {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .ency-brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .ency-back {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .86rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .ency-hero {
+      padding: 88px 20px 70px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(180,134,53,.08), transparent 35%),
+        linear-gradient(180deg, #f8f0df 0%, var(--paper-light) 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .ency-kicker,
+    .chapter-label {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .ency-hero h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: .9;
+      font-weight: 500;
+      letter-spacing: -.045em;
+    }
+
+    .ency-hero__text {
+      max-width: 720px;
+      margin: 30px auto 0;
+      color: #4f514a;
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      line-height: 1.65;
+    }
+
+    .ency-main {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 70px 0 100px;
+    }
+
+    .chapter-heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .chapter-heading h2 {
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -.035em;
+    }
+
+    .chapter-heading__intro {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    .edition-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 38px 28px;
+      padding-top: 42px;
+    }
+
+    .edition-card {
+      min-width: 0;
+    }
+
+    .edition-card__button {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .edition-card__image-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: #e8dcc3;
+      box-shadow: var(--shadow);
+    }
+
+    .edition-card__image {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .edition-card__button:hover .edition-card__image,
+    .edition-card__button:focus-visible .edition-card__image {
+      transform: scale(1.018);
+    }
+
+    .edition-card__meta {
+      padding-top: 18px;
+    }
+
+    .edition-card__number {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .edition-card h3 {
+      margin: 0;
+      font-size: 1.55rem;
+      line-height: 1.15;
+      font-weight: 500;
+    }
+
+    .edition-card__count {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .88rem;
+    }
+
+    .loading,
+    .error {
+      grid-column: 1 / -1;
+      padding: 40px 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Leitor */
+    .reader {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      background: rgba(17, 24, 22, .96);
+      color: white;
+    }
+
+    .reader.is-open {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .reader__top {
+      min-height: 72px;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid rgba(255,255,255,.13);
+    }
+
+    .reader__eyebrow {
+      margin: 0 0 4px;
+      color: #d9a744;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .67rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .reader__title {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .reader__close,
+    .reader__nav {
+      border: 1px solid rgba(255,255,255,.25);
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
+
+    .reader__close {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+    }
+
+    .reader__stage {
+      min-height: 0;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      overflow: auto;
+    }
+
+    .reader__image {
+      display: block;
+      max-width: min(760px, 92vw);
+      max-height: calc(100vh - 180px);
+      width: auto;
+      height: auto;
+      box-shadow: 0 25px 80px rgba(0,0,0,.38);
+    }
+
+    .reader__controls {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 12px 20px;
+      border-top: 1px solid rgba(255,255,255,.13);
+    }
+
+    .reader__nav {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .reader__nav:disabled {
+      opacity: .3;
+      cursor: default;
+    }
+
+    .reader__counter {
+      min-width: 82px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .82rem;
+    }
+
+    body.reader-open { overflow: hidden; }
+
+    .ency-footer {
+      padding: 34px 20px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .8rem;
+    }
+
+    @media (max-width: 860px) {
+      .chapter-heading {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .edition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .ency-header__inner,
+      .ency-main {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .ency-hero {
+        padding: 62px 18px 50px;
+      }
+
+      .ency-main {
+        padding-top: 50px;
+      }
+
+      .edition-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .reader__top {
+        padding-inline: 16px;
+      }
+
+      .reader__stage {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="ency-header">
+    <div class="ency-header__inner">
+      <a class="ency-brand" href="/">Plantas &amp; Gatos</a>
+      <a class="ency-back" href="/">Voltar ao portal</a>
+    </div>
+  </header>
+
+  <section class="ency-hero">
+    <p class="ency-kicker">Projeto editorial</p>
+    <h1>Enciclopédia<br>Genética Felina</h1>
+    <p class="ency-hero__text">
+      Uma construção progressiva e visual para compreender como genes,
+      cromossomos e mecanismos de herança participam da extraordinária
+      diversidade dos gatos.
+    </p>
+  </section>
+
+  <main class="ency-main">
+    <section aria-labelledby="chapterTitle">
+      <div class="chapter-heading">
+        <div>
+          <p class="chapter-label">Capítulo 1</p>
+          <h2 id="chapterTitle">Fundamentos da Genética Felina</h2>
+        </div>
+
+        <p class="chapter-heading__intro">
+          Dos conceitos fundamentais de DNA e cromossomos às relações entre
+          alelos e genes. Cada edição acrescenta uma nova peça à construção
+          do conhecimento.
+        </p>
+      </div>
+
+      <div class="edition-grid" id="editionGrid" aria-live="polite">
+        <p class="loading">Carregando a Enciclopédia…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ency-footer">
+    Plantas &amp; Gatos · Ciência acessível, contexto e responsabilidade editorial
+  </footer>
+
+  <div class="reader" id="reader" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+    <div class="reader__top">
+      <div>
+        <p class="reader__eyebrow" id="readerEdition"></p>
+        <h2 class="reader__title" id="readerTitle"></h2>
+      </div>
+      <button class="reader__close" id="readerClose" type="button" aria-label="Fechar">×</button>
+    </div>
+
+    <div class="reader__stage">
+      <img class="reader__image" id="readerImage" src="" alt="">
+    </div>
+
+    <div class="reader__controls">
+      <button class="reader__nav" id="readerPrev" type="button">← Anterior</button>
+      <span class="reader__counter" id="readerCounter"></span>
+      <button class="reader__nav" id="readerNext" type="button">Próxima →</button>
+    </div>
+  </div>
+
+  <script>
+    const DATA_URL = "/enciclopedia/enciclopedia.json";
+
+    const grid = document.getElementById("editionGrid");
+    const reader = document.getElementById("reader");
+    const readerImage = document.getElementById("readerImage");
+    const readerTitle = document.getElementById("readerTitle");
+    const readerEdition = document.getElementById("readerEdition");
+    const readerCounter = document.getElementById("readerCounter");
+    const readerPrev = document.getElementById("readerPrev");
+    const readerNext = document.getElementById("readerNext");
+    const readerClose = document.getElementById("readerClose");
+
+    let editions = [];
+    let currentEdition = null;
+    let currentSlide = 0;
+
+    function slidePath(edition, slideNumber) {
+      const number = String(slideNumber).padStart(2, "0");
+      return `${edition.base}${edition.prefix}${number}.jpg`;
+    }
+
+    function renderEditions() {
+      grid.innerHTML = "";
+
+      editions.forEach((edition) => {
+        const article = document.createElement("article");
+        article.className = "edition-card";
+
+        const button = document.createElement("button");
+        button.className = "edition-card__button";
+        button.type = "button";
+        button.setAttribute(
+          "aria-label",
+          `Abrir edição ${edition.numero}: ${edition.titulo}`
+        );
+
+        button.innerHTML = `
+          <div class="edition-card__image-wrap">
+            <img
+              class="edition-card__image"
+              src="${edition.capa}"
+              alt="Capa da edição ${edition.numero}: ${edition.titulo}"
+              loading="lazy"
+            >
+          </div>
+          <div class="edition-card__meta">
+            <p class="edition-card__number">Edição ${String(edition.numero).padStart(2, "0")}</p>
+            <h3>${edition.titulo}</h3>
+            <p class="edition-card__count">${edition.slides} lâminas</p>
+          </div>
+        `;
+
+        button.addEventListener("click", () => openEdition(edition));
+        article.appendChild(button);
+        grid.appendChild(article);
+      });
+    }
+
+    function openEdition(edition) {
+      currentEdition = edition;
+      currentSlide = 1;
+
+      readerTitle.textContent = edition.titulo;
+      readerEdition.textContent =
+        `Capítulo 1 · Edição ${String(edition.numero).padStart(2, "0")}`;
+
+      reader.classList.add("is-open");
+      document.body.classList.add("reader-open");
+      updateReader();
+      readerClose.focus();
+    }
+
+    function updateReader() {
+      if (!currentEdition) return;
+
+      readerImage.src = slidePath(currentEdition, currentSlide);
+      readerImage.alt =
+        `${currentEdition.titulo} — lâmina ${currentSlide} de ${currentEdition.slides}`;
+
+      readerCounter.textContent =
+        `${currentSlide} / ${currentEdition.slides}`;
+
+      readerPrev.disabled = currentSlide <= 1;
+      readerNext.disabled = currentSlide >= currentEdition.slides;
+    }
+
+    function closeReader() {
+      reader.classList.remove("is-open");
+      document.body.classList.remove("reader-open");
+      readerImage.src = "";
+      currentEdition = null;
+    }
+
+    readerPrev.addEventListener("click", () => {
+      if (currentEdition && currentSlide > 1) {
+        currentSlide--;
+        updateReader();
+      }
+    });
+
+    readerNext.addEventListener("click", () => {
+      if (currentEdition && currentSlide < currentEdition.slides) {
+        currentSlide++;
+        updateReader();
+      }
+    });
+
+    readerClose.addEventListener("click", closeReader);
+
+    reader.addEventListener("click", (event) => {
+      if (event.target === reader) closeReader();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!reader.classList.contains("is-open")) return;
+
+      if (event.key === "Escape") closeReader();
+      if (event.key === "ArrowLeft" && !readerPrev.disabled) readerPrev.click();
+      if (event.key === "ArrowRight" && !readerNext.disabled) readerNext.click();
+    });
+
+    fetch(DATA_URL)
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then((data) => {
+        const chapter = data.capitulos?.[0];
+
+        if (!chapter || !Array.isArray(chapter.edicoes)) {
+          throw new Error("Estrutura do JSON não reconhecida.");
+        }
+
+        editions = chapter.edicoes;
+        renderEditions();
+      })
+      .catch((error) => {
+        console.error("Erro ao carregar a Enciclopédia:", error);
+        grid.innerHTML = `
+          <p class="error">
+            Não foi possível carregar as edições da Enciclopédia.
+          </p>
+        `;
+      });
+  </script>
+</body>
+</html>
