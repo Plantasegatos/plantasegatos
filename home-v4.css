@@ -1281,3 +1281,21 @@
 .home-v4 .guide-card:hover .guide-card__content>a::after{
     transform:translateX(4px);
 }
+/* =========================================================
+   ENCICLOPÉDIA GENÉTICA FELINA
+   Imagem do destaque principal
+========================================================= */
+
+.guide-card__image--encyclopedia {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(15, 48, 45, 0.04) 0%,
+      rgba(15, 48, 45, 0.12) 100%
+    ),
+    url("/IMG/enciclopedia/capitulo-01/e01/c01-e01-capa.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
