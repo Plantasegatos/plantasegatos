@@ -1587,15 +1587,22 @@
   "link": "/en/blog/rom-rom-post.html",
   "imagem": "/IMG/rom-rom-post.jpg",
   "data": "2026-10-10"
-},
-  
+}, 
 {
   "titulo": "Love Beyond Life: Cats, Loss, and the Bonds That Remain",
   "trecho": "The story of a cat returning to a grave in Indonesia, and what science tells us about feline attachment, loss, and behavior.",
   "link": "/en/blog/amor-alem-da-vida-post.html",
   "imagem": "/IMG/amor-alem-da-vida-post.jpg",
   "data": "2026-10-14"
+},
+{
+  "titulo": "FIP Is No Longer a Death Sentence",
+  "trecho": "Feline infectious peritonitis was once considered almost invariably fatal. Discover the science of feline coronavirus, the challenges of diagnosis and the antiviral treatments transforming FIP outcomes.",
+  "link": "/en/blog/pif-2_0-post.html",
+  "imagem": "/IMG/pif-2_0-post.jpg",
+  "data": "2026-10-16"
 }
+
 
 
 
