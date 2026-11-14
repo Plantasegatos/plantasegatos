@@ -154,7 +154,9 @@
 <a href="#artigos-botanica">Ver todos</a>
 </div>
 <div aria-live="polite" class="v5-catalog-grid" id="botanyPosts">
-<p class="loading-message">Carregando artigos de Botânica…</p>
+<a class="v5-catalog-card" href="/blog/orquideas-parasitas-post.html"><img src="/IMG/orquideas-parasitas-post.jpg" alt="" loading="lazy"/><h3>Orquídeas São Parasitas? Entenda Como Elas Vivem Sobre as Árvores</h3><p>Elas crescem sobre troncos e galhos, mas não roubam a seiva da árvore. Entenda o epifitismo, como as orquídeas obtêm água e nutrientes e o papel extraordinário de suas raízes aéreas.</p><time datetime="2026-09-04">2026-09-04</time></a>
+<a class="v5-catalog-card" href="/blog/rosas-seguras-post.html"><img src="/IMG/rosas-seguras-post.jpg" alt="" loading="lazy"/><h3>Rosas Seguras: O Presente Perfeito do Dia dos Namorados Para Quem Tem Gatos</h3><p>Rosas são oficialmente não tóxicas para gatos segundo a ASPCA, mas o mosquitinho que costuma acompanhar o buquê pode causar mal estar. Conheça a história da rosa e como montar um arranjo seguro.</p><time datetime="2026-06-12">2026-06-12</time></a>
+<a class="v5-catalog-card" href="/blog/catnip-post.html"><img src="/IMG/catnip-post.jpg" alt="" loading="lazy"/><h3>Catnip: A Erva que Enlouquece os Gatos e Curava os Humanos</h3><p>O Nepeta cataria fascina gatos há milênios — mas a ciência explica tudo: da química do nepetalactone ao papel do sistema opioide, passando pela história grega e romana e pelos substitutos como silvervine e valeriana para os 30% de gatos que não respondem.</p><time datetime="2026-05-25">2026-05-25</time></a>
 </div>
 </section>
 <section class="v5-contact" id="contato"><p class="v5-kicker">Vamos conversar</p><h2>Plantas &amp; Gatos</h2><p>Encontre-nos nas redes sociais.</p><div><a href="https://www.instagram.com/plantasngatos/">Instagram</a><a href="https://www.pinterest.com/plantasngatos/">Pinterest</a><a href="https://open.spotify.com/user/31lahpdfwlpli7qhfaux6w6mxk4a">Spotify</a></div></section></main>
@@ -279,9 +281,9 @@
  function render(){const key=location.hash.slice(1).replace(/^artigos-/,''); if(!location.hash.startsWith('#artigos-')||!Object.prototype.hasOwnProperty.call(labels,key)){catalog.hidden=true;return;} const wasHidden=catalog.hidden;catalog.hidden=false;title.textContent=labels[key];document.querySelectorAll('[data-filter]').forEach(a=>{if(a.dataset.filter===key)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});grid.replaceChildren();if(!posts){status.textContent=failed?'Não foi possível carregar os artigos. Atualize a página para tentar novamente.':'Carregando artigos…';}else{const selected=posts.filter(p=>key==='todos'||p.categoria===key);status.textContent=selected.length+' artigos';for(const p of selected){const a=document.createElement('a');a.className='v5-catalog-card';a.href=url(p.link)||'#explore';const img=document.createElement('img');img.alt='';img.loading='lazy';if(p.imagem)img.src=url(p.imagem);img.onerror=()=>img.remove();const h=document.createElement('h3');h.textContent=p.titulo;const d=document.createElement('p');d.textContent=p.trecho||'';const t=document.createElement('time');t.dateTime=p.data||'';t.textContent=p.data||'';a.append(img,h,d,t);grid.append(a);}}if(wasHidden)requestAnimationFrame(()=>catalog.scrollIntoView({block:'start'}));}
  function renderBotanica(){
   const container=document.getElementById('botanyPosts');
-  container.replaceChildren();
   const selected=posts.filter(p=>p.categoria==='botanica').slice(0,3);
-  if(!selected.length){container.textContent='Nenhum artigo de Botânica disponível.';return;}
+  if(!container||!selected.length)return;
+  container.replaceChildren();
   for(const p of selected){
    const a=document.createElement('a');a.className='v5-catalog-card';a.href=url(p.link)||'#artigos-botanica';
    if(p.imagem){const img=document.createElement('img');img.alt='';img.loading='lazy';img.src=url(p.imagem);img.onerror=()=>img.remove();a.append(img);}
@@ -289,7 +291,7 @@
   }
  }
  window.addEventListener('hashchange',render);render();
- fetch('/posts.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(data=>{if(!Array.isArray(data))throw Error('Formato inválido');posts=data.slice().sort((a,b)=>String(b.data||'').localeCompare(String(a.data||'')));document.querySelectorAll('.v5-category').forEach(panel=>{const p=posts.find(x=>x.categoria===panel.dataset.category&&x.imagem);if(!p)return;const img=panel.querySelector('img'), candidate=new Image();candidate.onload=()=>{img.src=candidate.src;};candidate.src=url(p.imagem);});renderBotanica();render();}).catch(()=>{failed=true;document.getElementById('botanyPosts').textContent='Não foi possível carregar os artigos de Botânica.';render();});
+ fetch('/posts.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(data=>{if(!Array.isArray(data))throw Error('Formato inválido');posts=data.slice().sort((a,b)=>String(b.data||'').localeCompare(String(a.data||'')));renderBotanica();document.querySelectorAll('.v5-category').forEach(panel=>{const p=posts.find(x=>x.categoria===panel.dataset.category&&x.imagem);if(!p)return;const img=panel.querySelector('img'), candidate=new Image();candidate.onload=()=>{img.src=candidate.src;};candidate.src=url(p.imagem);});render();}).catch(()=>{failed=true;render();});
 })();
 </script></body>
 </html>
