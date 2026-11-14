@@ -297,5 +297,111 @@
  window.addEventListener('hashchange',render);render();
  fetch('/posts.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(data=>{if(!Array.isArray(data))throw Error('Formato inválido');posts=data.slice().sort((a,b)=>String(b.data||'').localeCompare(String(a.data||'')));document.querySelectorAll('.v5-category').forEach(panel=>{const p=posts.find(x=>x.categoria===panel.dataset.category&&x.imagem);if(!p)return;const img=panel.querySelector('img'), candidate=new Image();candidate.onload=()=>{img.src=candidate.src;};candidate.src=url(p.imagem);});render();}).catch(()=>{failed=true;render();});
 })();
-</script></body>
+
+       <script>
+(function () {
+
+  const container = document.getElementById('botanyPosts');
+
+  if (!container) return;
+
+  function normalizarCaminho(caminho) {
+
+    if (!caminho) return '';
+
+    if (/^https?:\/\//i.test(caminho)) {
+      return caminho;
+    }
+
+    return '/' + caminho.replace(
+      /^(?:\.\/|\.\.\/|\/)+/,
+      ''
+    );
+
+  }
+
+  fetch('/posts.json')
+    .then(resposta => {
+
+      if (!resposta.ok) {
+        throw new Error('Erro ao carregar os artigos');
+      }
+
+      return resposta.json();
+
+    })
+    .then(posts => {
+
+      const botanica = posts
+        .filter(post => post.categoria === 'botanica')
+        .sort((a, b) =>
+          String(b.data || '').localeCompare(
+            String(a.data || '')
+          )
+        )
+        .slice(0, 3);
+
+      container.replaceChildren();
+
+      if (!botanica.length) {
+
+        container.textContent =
+          'Nenhum artigo de Botânica disponível.';
+
+        return;
+
+      }
+
+      botanica.forEach(post => {
+
+        const card = document.createElement('a');
+
+        card.className = 'v5-catalog-card';
+
+        card.href = normalizarCaminho(post.link);
+
+        const imagem = document.createElement('img');
+
+        imagem.src = normalizarCaminho(post.imagem);
+
+        imagem.alt = post.titulo || '';
+
+        imagem.loading = 'lazy';
+
+        const titulo = document.createElement('h3');
+
+        titulo.textContent = post.titulo;
+
+        const descricao = document.createElement('p');
+
+        descricao.textContent = post.trecho || '';
+
+        const data = document.createElement('time');
+
+        data.dateTime = post.data || '';
+
+        data.textContent = post.data || '';
+
+        card.append(
+          imagem,
+          titulo,
+          descricao,
+          data
+        );
+
+        container.appendChild(card);
+
+      });
+
+    })
+    .catch(() => {
+
+      container.textContent =
+        'Não foi possível carregar os artigos de Botânica.';
+
+    });
+
+})();
+</script>
+</body>
 </html>
