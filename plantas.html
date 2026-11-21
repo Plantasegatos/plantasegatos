@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -2265,87 +2265,6 @@
 })();
 </script>
 
-
-<script>
-(function(){
-  const grid     = document.querySelector('.blog-container');
-  if (!grid) return;
-
-  const cards    = Array.from(grid.querySelectorAll('.plant-card'));
-  const qInput   = document.getElementById('pg-q');
-  const btnAtox  = document.getElementById('tab-atoxicas');
-  const btnTox   = document.getElementById('tab-toxicas');
-  const counter  = document.querySelector('.pg-counter');
-
-  // Normalização (acentos/hífens)
-  const norm = s => (s||"")
-    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
-    .replace(/[-‐–—]/g," ").replace(/\s+/g," ")
-    .trim().toLowerCase();
-
-  // Indexar cards
-  cards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-    const isToxic = /☠️|tóxica|altamente tóxica|levemente tóxica|cautela|com atenção/.test(text);
-    const isSafe  = /✅|atóxica|não tóxica|segura|😻 segura/.test(text);
-    card.dataset.toxica = (isToxic && !isSafe) ? 'true' : 'false';
-
-    const title = (card.querySelector('h3')?.textContent || '');
-    const sci   = (card.querySelector('em, i')?.textContent || '');
-    const alt   = (card.querySelector('img')?.getAttribute('alt') || '');
-    const tags  = card.getAttribute('data-tags') || '';
-    card.dataset.index = norm([title, sci, alt, tags].join(' '));
-  });
-
-  let filter = 'atoxicas'; // estado inicial
-
-  function setTab(tab){
-    filter = tab;
-    const tox = (tab === 'toxicas');
-    btnAtox?.setAttribute('aria-selected', (!tox).toString());
-    btnTox?.setAttribute('aria-selected', tox.toString());
-    apply();
-  }
-
-  function apply(){
-    const q = norm(qInput?.value || '');
-    let visible = 0;
-
-    cards.forEach(card => {
-      const idx = card.dataset.index || '';
-      const isToxic = card.dataset.toxica === 'true';
-
-      // Regra:
-      // - Se tem busca: ignora filtro de tox/não tox (mostra qualquer match)
-      // - Se não tem busca: aplica filtro de aba
-      const matchText   = q ? idx.includes(q) : true;
-      const matchFilter = q ? true : (filter === 'toxicas' ? isToxic : !isToxic);
-
-      const show = matchText && matchFilter;
-      card.style.display = show ? '' : 'none';
-      if (show) visible++;
-    });
-
-    // Atualiza contador
-    if (counter){
-      if (q) {
-        counter.textContent = `${visible} resultado(s) encontrados`;
-      } else {
-        const label = (filter === 'toxicas') ? 'tóxicas' : 'não tóxicas';
-        counter.textContent = `${visible} planta(s) ${label}`;
-      }
-    }
-  }
-
-  // Eventos
-  btnAtox?.addEventListener('click', () => setTab('atoxicas'));
-  btnTox?.addEventListener('click', () => setTab('toxicas'));
-  qInput?.addEventListener('input', apply);
-
-  // Estado inicial
-  setTab('atoxicas');
-})();
-</script>
 
   <a href="/en/plants.html" class="lang-switch">English</a>
 
