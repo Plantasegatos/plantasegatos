@@ -2139,7 +2139,132 @@
   </main>
 
   <div id="footer"></div>
-<script src="load-common.js"></script>
+
+<script>
+(function () {
+  const grid = document.querySelector('.blog-container');
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll('.plant-card'));
+  const qInput = document.getElementById('pg-q');
+  const btnAtox = document.getElementById('tab-atoxicas');
+  const btnTox = document.getElementById('tab-toxicas');
+  const counter = document.querySelector('.pg-counter');
+
+  // Normaliza textos para pesquisa e classificação
+  const norm = s => (s || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[-‐–—]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+  // Classificação exclusivamente pelo campo de toxicidade
+  function classify(card) {
+    const label = norm(
+      card.querySelector('div > p')?.textContent || ''
+    ).split('•')[0].trim();
+
+    // Classificação de cautela ou indeterminada
+    if (/cautela|atencao|varia|desconhecid|nao classificad|nao determinada/.test(label)) {
+      return 'revisao';
+    }
+
+    // Não tóxica, inclusive com advertências físicas
+    if (/nao toxica|atoxica|segura/.test(label)) {
+      return 'atoxica';
+    }
+
+    // Tóxica
+    if (/toxica|toxico|nociv|☠/.test(label)) {
+      return 'toxica';
+    }
+
+    // Nunca presumir segurança
+    return 'revisao';
+  }
+
+  // Indexação
+  cards.forEach(card => {
+    card.dataset.toxicidade = classify(card);
+
+    const title = card.querySelector('h3')?.textContent || '';
+    const scientific = card.querySelector('em, i')?.textContent || '';
+    const alt = card.querySelector('img')?.getAttribute('alt') || '';
+    const tags = card.getAttribute('data-tags') || '';
+
+    card.dataset.index = norm(
+      [title, scientific, alt, tags].join(' ')
+    );
+  });
+
+  let filter = 'atoxicas';
+
+  function setTab(tab) {
+    filter = tab;
+    const tox = tab === 'toxicas';
+
+    btnAtox?.setAttribute('aria-selected', String(!tox));
+    btnTox?.setAttribute('aria-selected', String(tox));
+
+    apply();
+  }
+
+  function apply() {
+    const q = norm(qInput?.value || '');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const status = card.dataset.toxicidade;
+      const idx = card.dataset.index || '';
+
+      // Busca em todas as categorias
+      const matchText = !q || idx.includes(q);
+
+      // Revisão aparece na aba de risco, nunca na segura
+      const matchFilter = q
+        ? true
+        : filter === 'toxicas'
+          ? status !== 'atoxica'
+          : status === 'atoxica';
+
+      const show = matchText && matchFilter;
+      card.style.display = show ? '' : 'none';
+
+      if (show) visible++;
+    });
+
+    if (counter) {
+      if (q) {
+        counter.textContent =
+          `${visible} resultado(s) encontrados`;
+      } else if (filter === 'toxicas') {
+        const confirmed = cards.filter(c =>
+          c.dataset.toxicidade === 'toxica'
+        ).length;
+
+        const review = cards.filter(c =>
+          c.dataset.toxicidade === 'revisao'
+        ).length;
+
+        counter.textContent =
+          `${confirmed} tóxica(s) • ${review} em revisão`;
+      } else {
+        counter.textContent =
+          `${visible} planta(s) não tóxicas`;
+      }
+    }
+  }
+
+  btnAtox?.addEventListener('click', () => setTab('atoxicas'));
+  btnTox?.addEventListener('click', () => setTab('toxicas'));
+  qInput?.addEventListener('input', apply);
+
+  setTab('atoxicas');
+})();
+</script>
+
 
 <script>
 (function(){
