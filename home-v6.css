@@ -404,7 +404,6 @@
 
 /* FERRAMENTA */
 
-.home-v4 .plant-tool,
 .home-v4 .download-banner {
   width: min(1280px, calc(100% - 40px));
   margin: 72px auto;
