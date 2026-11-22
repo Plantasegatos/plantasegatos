@@ -643,8 +643,7 @@
     grid-template-columns: 1fr;
   }
 
-  .home-v4 .plant-tool,
-  .home-v4 .download-banner {
+.home-v4 .download-banner {
     width: calc(100% - 20px);
     margin: 42px auto;
     border-radius: 26px;
