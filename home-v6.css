@@ -650,15 +650,6 @@
     border-radius: 26px;
   }
 
-  .home-v4 .plant-search {
-    grid-template-columns: 1fr;
-    border-radius: 22px;
-  }
-
-  .home-v4 .plant-search button {
-    width: 100%;
-  }
-
   .home-v4 .editorial-statement {
     gap: 26px;
     padding: 62px 0;
