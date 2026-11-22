@@ -316,8 +316,7 @@
 
 .home-v4 .section-heading > a,
 .home-v4 .guide-card__content > a,
-.home-v4 .recent-card__link,
-.home-v4 .plant-tool__link {
+.home-v4 .recent-card__link {
   color: var(--green);
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
