@@ -591,10 +591,6 @@
 ===================================================== */
 
 @media (max-width: 1180px) {
-  .home-v4 .hero-fan-area {
-    transform: scale(0.82);
-    transform-origin: top right;
-  }
 
   .home-v4 .home-hero__content {
     padding-right: 520px;
