@@ -288,7 +288,7 @@
   });container.replaceChildren(fragment);
  }
  window.addEventListener('hashchange',render);render();
- fetch('/posts.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(data=>{if(!Array.isArray(data))throw Error('Formato inválido');posts=data.slice().sort((a,b)=>String(b.data||'').localeCompare(String(a.data||'')));renderBotanica();document.querySelectorAll('.v5-category').forEach(panel=>{const p=posts.find(x=>x.categoria===panel.dataset.category&&x.imagem);if(!p)return;const img=panel.querySelector('img'), candidate=new Image();candidate.onload=()=>{img.src=candidate.src;};candidate.src=url(p.imagem);});render();}).catch(()=>{failed=true;render();});
+ fetch('/blog/posts.json', {cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(data=>{if(!Array.isArray(data))throw Error('Formato inválido');posts=data.slice().sort((a,b)=>String(b.data||'').localeCompare(String(a.data||'')));renderBotanica();document.querySelectorAll('.v5-category').forEach(panel=>{const p=posts.find(x=>x.categoria===panel.dataset.category&&x.imagem);if(!p)return;const img=panel.querySelector('img'), candidate=new Image();candidate.onload=()=>{img.src=candidate.src;};candidate.src=url(p.imagem);});render();}).catch(()=>{failed=true;render();});
 })();
 </script></body>
 </html>
