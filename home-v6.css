@@ -632,18 +632,6 @@
     padding: 90px 0 0;
   }
 
-  .home-v4 .hero-fan-area {
-    position: relative;
-    top: auto;
-    right: auto;
-
-    width: calc(100% - 32px);
-    height: 560px;
-    margin: 46px auto 0;
-
-    transform: scale(0.76);
-    transform-origin: top left;
-  }
 }
 
 @media (max-width: 720px) {
